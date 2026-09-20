@@ -1,0 +1,9 @@
+<div class="dark-heresy-v1 chat-card characteristic-test {{#if success}}success{{else}}failure{{/if}}">
+  <h3 class="card-title">{{label}}</h3>
+  <p>{{localize "DH.Roll.Target"}} : {{target}}{{#if modifier}} ({{modifier}}){{/if}}</p>
+  <p>{{localize "DH.Roll.Result"}} : {{result}}</p>
+  <p class="outcome">
+    {{#if success}}{{localize "DH.Roll.Success"}}{{else}}{{localize "DH.Roll.Failure"}}{{/if}}
+    — {{localize "DH.Roll.Degree"}} {{degree}}
+  </p>
+</div>

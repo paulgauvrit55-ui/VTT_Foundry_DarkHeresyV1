@@ -1,0 +1,41 @@
+{
+  "DH": {
+    "Characteristic": {
+      "CC": "Capacité de Combat",
+      "CT": "Capacité de Tir",
+      "Force": "Force",
+      "Endurance": "Endurance",
+      "Agilite": "Agilité",
+      "Intelligence": "Intelligence",
+      "Perception": "Perception",
+      "ForceMentale": "Force Mentale",
+      "Sociabilite": "Sociabilité",
+      "Bonus": "Bonus de caractéristique"
+    },
+    "CharacteristicAbbrev": {
+      "CC": "CC",
+      "CT": "CT",
+      "Force": "F",
+      "Endurance": "E",
+      "Agilite": "Ag",
+      "Intelligence": "Int",
+      "Perception": "Per",
+      "ForceMentale": "FM",
+      "Sociabilite": "Soc"
+    },
+    "SheetLabel": {
+      "Acolyte": "Fiche d'Acolyte"
+    },
+    "Roll": {
+      "DifficultyPromptTitle": "Modificateur de difficulté",
+      "DifficultyModifier": "Modificateur (+30 à -30)",
+      "Roll": "Lancer",
+      "Cancel": "Annuler",
+      "Target": "Cible",
+      "Result": "Résultat",
+      "Success": "Réussite",
+      "Failure": "Échec",
+      "Degree": "Degré :"
+    }
+  }
+}

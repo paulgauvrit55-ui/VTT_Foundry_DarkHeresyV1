@@ -1,0 +1,64 @@
+.dark-heresy-v1.sheet.actor .sheet-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor .sheet-header .profile-img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border: none;
+}
+
+.dark-heresy-v1.sheet.actor .sheet-header .charname input {
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.dark-heresy-v1.sheet.actor .characteristics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor .characteristic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--color-border-light-tertiary, #999);
+  border-radius: 4px;
+  padding: 0.35rem;
+}
+
+.dark-heresy-v1.sheet.actor .characteristic-label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dark-heresy-v1.sheet.actor .characteristic input[type="number"] {
+  width: 3.5rem;
+  text-align: center;
+}
+
+.dark-heresy-v1.sheet.actor .characteristic-bonus {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.dark-heresy-v1.chat-card.characteristic-test .card-title {
+  margin: 0 0 0.25rem;
+}
+
+.dark-heresy-v1.chat-card.characteristic-test.success .outcome {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.dark-heresy-v1.chat-card.characteristic-test.failure .outcome {
+  color: #c62828;
+  font-weight: bold;
+}

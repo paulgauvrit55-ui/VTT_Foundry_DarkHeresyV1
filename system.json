@@ -1,0 +1,34 @@
+{
+  "id": "dark-heresy-v1",
+  "title": "Dark Heresy (V1 - VF)",
+  "description": "Système non officiel (usage privé) pour Dark Heresy, 1ère édition (VF), sur Foundry VTT.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13.351",
+    "verified": "13.351"
+  },
+  "esmodules": [
+    "module/dark-heresy-v1.mjs"
+  ],
+  "styles": [
+    "styles/dark-heresy-v1.css"
+  ],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "acolyte": {
+        "htmlFields": ["biography"]
+      }
+    }
+  },
+  "gridDistance": 1,
+  "gridUnits": "m",
+  "primaryTokenAttribute": null,
+  "secondaryTokenAttribute": null
+}

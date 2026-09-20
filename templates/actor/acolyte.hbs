@@ -1,0 +1,20 @@
+<header class="sheet-header">
+  <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}">
+  <h1 class="charname">
+    <input name="name" type="text" value="{{actor.name}}">
+  </h1>
+</header>
+
+<section class="characteristics">
+  {{#each characteristics as |characteristic|}}
+    <div class="characteristic">
+      <a class="characteristic-label rollable" data-action="rollCharacteristic" data-characteristic="{{characteristic.key}}" title="{{characteristic.label}}">
+        {{characteristic.abbrev}}
+      </a>
+      <input type="number" name="system.characteristics.{{characteristic.key}}.value" value="{{characteristic.value}}">
+      {{#if characteristic.hasBonus}}
+        <span class="characteristic-bonus" title="{{localize 'DH.Characteristic.Bonus'}}">{{characteristic.bonus}}</span>
+      {{/if}}
+    </div>
+  {{/each}}
+</section>
