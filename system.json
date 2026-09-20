@@ -30,5 +30,7 @@
   "gridDistance": 1,
   "gridUnits": "m",
   "primaryTokenAttribute": null,
-  "secondaryTokenAttribute": null
+  "secondaryTokenAttribute": null,
+  "download": "https://github.com/paulgauvrit55-ui/VTT_Foundry_DarkHeresyV1/releases/download/Test/VTT_Foundry_DarkHeresyV1_0.0.1.zip",
+  "manifest": "https://github.com/paulgauvrit55-ui/VTT_Foundry_DarkHeresyV1/releases/download/Test/system.json"
 }
