@@ -474,7 +474,7 @@
   flex: 1 1 100%;
 }
 
-.dark-heresy-v1.sheet.actor .weapon-field-attributes input {
+.dark-heresy-v1.sheet.actor .weapon-field-attributes input[type="text"] {
   width: 100%;
 }
 
