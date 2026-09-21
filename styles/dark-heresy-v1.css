@@ -1,18 +1,30 @@
-/* Le formulaire racine EST la fenêtre de contenu (tag: "form", cf. core `.application
-   .window-content { overflow: hidden }`) : c'est donc lui qui doit porter le scroll vertical.
-   Sans `min-height: 0`, c'est un enfant flex qui grandit pour contenir tout son contenu (taille
-   "auto" par défaut d'un flex-item) au lieu de se limiter à l'espace disponible dans la fenêtre :
-   rien ne "déborde" alors de son propre point de vue, donc `overflow-y: auto` seul n'affiche
-   aucune barre de défilement. Une `height` figée (essayée précédemment) "corrige" ça aussi mais
-   fige la taille indépendamment du redimensionnement réel de la fenêtre par Foundry, ce qui
-   décale la poignée de redimensionnement (`.window-resize-handle`) hors du coin de la fenêtre. */
-.dark-heresy-v1.sheet.actor {
+/* Correction précédente erronée : contrairement à ce qu'on pensait, notre `<form>` racine
+   (tag: "form" dans DEFAULT_OPTIONS) N'EST PAS `.window-content` — vérifié via l'inspecteur
+   DOM (`Exemples/CaptureB.png`) sur Foundry v13 : le core insère un `<section
+   class="window-content">` distinct À L'INTÉRIEUR du form, qui contient lui-même notre partie
+   rendue (`data-application-part="body"`, ici `.acolyte-body` / `.item-body`). Appliquer le
+   scroll sur le form (comme avant) n'avait donc aucun effet : c'est `.window-content` qui
+   porte encore `overflow: hidden` du core et qu'il faut cibler.
+   Même bug de flex-item que documenté avant, mais un niveau plus bas : `.window-content` est
+   lui-même un enfant flex (colonne) du form aux côtés de `.window-header`, avec `flex: 1` posé
+   en ligne par le core mais `min-height: auto` par défaut — il grandit donc pour contenir tout
+   son contenu au lieu de se limiter à l'espace restant dans la fenêtre (dont la taille, elle,
+   est figée par le core via `style="height: …"` sur le form). Rien ne "déborde" alors de son
+   propre point de vue → pas de barre de défilement, et le core masque le débordement réel
+   avec `overflow: hidden`. Fix (standard pour ce bug connu d'ApplicationV2, cf. PR crucible
+   https://github.com/foundryvtt/crucible/pull/1483) : `min-height: 0` pour autoriser le
+   rétrécissement sous la taille du contenu + `overflow-y: auto` pour afficher le scroll sur
+   ce qui déborde alors réellement. Ne pas remettre ces règles sur le form lui-même : sa taille
+   est déjà figée par le core (position/redimensionnement de fenêtre), lui appliquer
+   `min-height: 0` est sans effet utile et écrire le scroll dessus ne fait rien tant que
+   `.window-content` (l'enfant qui a réellement `overflow: hidden`) n'est pas aussi corrigé. */
+.dark-heresy-v1.sheet.actor .window-content {
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-.dark-heresy-v1.sheet.item {
+.dark-heresy-v1.sheet.item .window-content {
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
