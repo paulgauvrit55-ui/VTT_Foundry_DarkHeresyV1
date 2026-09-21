@@ -47,6 +47,7 @@
   object-fit: cover;
   border: 1px solid var(--color-border-light-tertiary, #999);
   flex: 0 0 auto;
+  cursor: pointer;
 }
 
 .dark-heresy-v1.sheet.actor .header-fields {

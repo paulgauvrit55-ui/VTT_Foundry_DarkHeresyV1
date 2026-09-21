@@ -27,7 +27,8 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       createTalent: AcolyteSheet.#createTalent,
       deleteItem: AcolyteSheet.#deleteItem,
       changeTab: AcolyteSheet.#changeTab,
-      toggleTalent: AcolyteSheet.#toggleTalent
+      toggleTalent: AcolyteSheet.#toggleTalent,
+      editImage: AcolyteSheet.#editImage
     }
   };
 
@@ -135,6 +136,19 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
 
   static async #toggleTalent(event, target) {
     target.closest(".talent-entry")?.classList.toggle("collapsed");
+  }
+
+  static async #editImage(event, target) {
+    const attr = target.dataset.edit;
+    const current = foundry.utils.getProperty(this.actor, attr);
+    const fp = new FilePicker({
+      current,
+      type: "image",
+      callback: path => this.actor.update({ [attr]: path }),
+      top: this.position.top + 40,
+      left: this.position.left + 10
+    });
+    return fp.browse();
   }
 
   static async #rollCharacteristic(event, target) {
