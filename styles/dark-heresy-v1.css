@@ -1,15 +1,15 @@
 /* Le formulaire racine EST la fenêtre de contenu (tag: "form") : c'est donc lui qui doit
-   porter le scroll vertical, sans quoi le contenu déborde silencieusement hors fenêtre. */
+   porter le scroll vertical, sans quoi le contenu déborde silencieusement hors fenêtre.
+   Pas de `height` explicite ici : Foundry dimensionne déjà `.window-content` pour remplir
+   la fenêtre (et redimensionne cette valeur en direct) — lui imposer une hauteur figée cassait
+   ce calcul et décalait la poignée de redimensionnement (`.window-resize-handle`, positionnée
+   en absolu par rapport à ce même conteneur) au milieu du contenu au lieu du coin de la fenêtre. */
 .dark-heresy-v1.sheet.actor {
-  display: block;
-  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 .dark-heresy-v1.sheet.item {
-  display: block;
-  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -89,6 +89,16 @@
 .dark-heresy-v1.sheet.actor .header-resource.fate { background: #bcd4ec; }
 .dark-heresy-v1.sheet.actor .header-resource.fatigue { background: #f2e79e; }
 
+/* Fonds clairs fixes, indépendants du thème clair/sombre de Foundry : le texte doit donc
+   l'être aussi, plutôt que d'hériter de la couleur claire par défaut du thème sombre
+   (illisible sur ces fonds). */
+.dark-heresy-v1.sheet.actor .header-resource,
+.dark-heresy-v1.sheet.actor .header-resource label,
+.dark-heresy-v1.sheet.actor .header-resource-values input,
+.dark-heresy-v1.sheet.actor .header-resource-values .resource-derived {
+  color: #1b1b1b;
+}
+
 .dark-heresy-v1.sheet.actor .header-resource label {
   font-weight: bold;
   font-size: 0.8rem;
@@ -122,6 +132,7 @@
   padding: 0.5rem;
   border-radius: 4px 4px 0 0;
   background: #d0d0d0;
+  color: #1b1b1b;
   cursor: pointer;
   font-weight: bold;
 }
@@ -188,6 +199,8 @@
   text-align: center;
   border: none;
   background: transparent;
+  /* Fond peach fixe, indépendant du thème sombre : texte forcé en foncé pour rester lisible. */
+  color: #1b1b1b;
 }
 
 .dark-heresy-v1.sheet.actor .characteristic-value-row.has-bonus .characteristic-bonus {
@@ -327,6 +340,7 @@
   width: 100%;
   min-height: 4rem;
   background: #f6d7a7;
+  color: #1b1b1b;
   border: 1px solid var(--color-border-light-tertiary, #999);
   border-radius: 4px;
   margin-top: 0.25rem;
