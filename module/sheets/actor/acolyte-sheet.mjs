@@ -3,11 +3,18 @@ import { DH } from "../../config.mjs";
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
+/** Onglets de la fiche (mockup `Exemples/LayoutTab1.png`) : seul le premier est développé pour l'instant. */
+const TABS = [
+  { id: "characteristics", label: "DH.Tabs.Characteristics" },
+  { id: "combat", label: "DH.Tabs.Combat" },
+  { id: "resources", label: "DH.Tabs.Resources" }
+];
+
 export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
     classes: ["dark-heresy-v1", "sheet", "actor", "acolyte"],
     tag: "form",
-    position: { width: 640, height: 760 },
+    position: { width: 760, height: 800 },
     window: { resizable: true },
     form: { submitOnChange: true, closeOnSubmit: false },
     actions: {
@@ -18,7 +25,9 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       rollAdvancedSkill: AcolyteSheet.#rollAdvancedSkill,
       createAdvancedSkill: AcolyteSheet.#createAdvancedSkill,
       createTalent: AcolyteSheet.#createTalent,
-      deleteItem: AcolyteSheet.#deleteItem
+      deleteItem: AcolyteSheet.#deleteItem,
+      changeTab: AcolyteSheet.#changeTab,
+      toggleTalent: AcolyteSheet.#toggleTalent
     }
   };
 
@@ -28,10 +37,14 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
     body: { template: "systems/dark-heresy-v1/templates/actor/acolyte.hbs" }
   };
 
+  /** Onglet actif, conservé sur l'instance pour survivre aux re-renders déclenchés par les updates. */
+  #activeTab = TABS[0].id;
+
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     context.actor = this.actor;
     context.system = this.actor.system;
+    context.tabs = TABS.map(tab => ({ id: tab.id, label: game.i18n.localize(tab.label) }));
     context.characteristics = Object.entries(this.actor.system.characteristics).map(([key, characteristic]) => ({
       key,
       value: characteristic.value,
@@ -92,6 +105,16 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
     for (const element of this.element.querySelectorAll("[data-item-field]")) {
       element.addEventListener("change", this.#onItemFieldChange.bind(this));
     }
+    this.#applyActiveTab();
+  }
+
+  #applyActiveTab() {
+    for (const nav of this.element.querySelectorAll("[data-action='changeTab']")) {
+      nav.classList.toggle("active", nav.dataset.tab === this.#activeTab);
+    }
+    for (const content of this.element.querySelectorAll(".tab-content")) {
+      content.classList.toggle("active", content.dataset.tab === this.#activeTab);
+    }
   }
 
   async #onItemFieldChange(event) {
@@ -103,6 +126,15 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
     const field = input.dataset.itemField;
     const value = input.type === "number" ? Number(input.value) : input.value;
     await item.update({ [field]: value });
+  }
+
+  static async #changeTab(event, target) {
+    this.#activeTab = target.dataset.tab;
+    this.#applyActiveTab();
+  }
+
+  static async #toggleTalent(event, target) {
+    target.closest(".talent-entry")?.classList.toggle("collapsed");
   }
 
   static async #rollCharacteristic(event, target) {

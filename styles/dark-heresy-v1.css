@@ -1,17 +1,49 @@
+/* Le formulaire racine EST la fenêtre de contenu (tag: "form") : c'est donc lui qui doit
+   porter le scroll vertical, sans quoi le contenu déborde silencieusement hors fenêtre. */
+.dark-heresy-v1.sheet.actor {
+  display: block;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dark-heresy-v1.sheet.item {
+  display: block;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ---------- En-tête (persistant, hors onglets) ---------- */
+
 .dark-heresy-v1.sheet.actor .sheet-header,
 .dark-heresy-v1.sheet.item .sheet-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.75rem;
   padding: 0.5rem;
 }
 
 .dark-heresy-v1.sheet.actor .sheet-header .profile-img,
 .dark-heresy-v1.sheet.item .sheet-header .profile-img {
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
   object-fit: cover;
-  border: none;
+  border: 1px solid var(--color-border-light-tertiary, #999);
+  flex: 0 0 auto;
+}
+
+.dark-heresy-v1.sheet.actor .header-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.dark-heresy-v1.sheet.actor .sheet-header .charname,
+.dark-heresy-v1.sheet.item .sheet-header .itemname {
+  margin: 0;
 }
 
 .dark-heresy-v1.sheet.actor .sheet-header .charname input,
@@ -21,41 +53,121 @@
   width: 100%;
 }
 
-.dark-heresy-v1.sheet.item .form-group {
+.dark-heresy-v1.sheet.actor .identity-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.dark-heresy-v1.sheet.actor .identity-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.dark-heresy-v1.sheet.actor .identity-field label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.dark-heresy-v1.sheet.actor .header-resources {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor .header-resource {
+  flex: 1;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dark-heresy-v1.sheet.actor .header-resource.wounds { background: #cde3ab; }
+.dark-heresy-v1.sheet.actor .header-resource.fate { background: #bcd4ec; }
+.dark-heresy-v1.sheet.actor .header-resource.fatigue { background: #f2e79e; }
+
+.dark-heresy-v1.sheet.actor .header-resource label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.dark-heresy-v1.sheet.actor .header-resource-values {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
+}
+
+.dark-heresy-v1.sheet.actor .header-resource-values input,
+.dark-heresy-v1.sheet.actor .header-resource-values .resource-derived {
+  width: 2.75rem;
+  text-align: center;
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Onglets ---------- */
+
+.dark-heresy-v1.sheet.actor .sheet-tabs {
+  display: flex;
+  gap: 0.35rem;
+  padding: 0 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor .sheet-tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 4px 4px 0 0;
+  background: #d0d0d0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dark-heresy-v1.sheet.actor .sheet-tab.active {
+  background: #e8746b;
+  color: #fff;
+}
+
+.dark-heresy-v1.sheet.actor .sheet-body {
   padding: 0 0.5rem 0.5rem;
 }
 
-.dark-heresy-v1.sheet.item .form-group.stacked {
-  flex-direction: column;
-  align-items: stretch;
+.dark-heresy-v1.sheet.actor .tab-content {
+  display: none;
 }
 
-.dark-heresy-v1.sheet.item .form-group label {
-  font-weight: bold;
-  min-width: 8rem;
+.dark-heresy-v1.sheet.actor .tab-content.active {
+  display: block;
 }
 
-.dark-heresy-v1.sheet.item .form-group.stacked textarea {
-  min-height: 8rem;
+.dark-heresy-v1.sheet.actor .section-title {
+  text-align: center;
+  margin: 0.5rem 0;
 }
 
-.dark-heresy-v1.sheet.actor .characteristics {
+.dark-heresy-v1.sheet.actor .placeholder-note {
+  opacity: 0.7;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ---------- Caractéristiques ---------- */
+
+.dark-heresy-v1.sheet.actor .characteristics-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
-  padding: 0.5rem;
 }
 
-.dark-heresy-v1.sheet.actor .characteristic {
+.dark-heresy-v1.sheet.actor .characteristic-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--color-border-light-tertiary, #999);
-  border-radius: 4px;
-  padding: 0.35rem;
+  gap: 0.2rem;
 }
 
 .dark-heresy-v1.sheet.actor .characteristic-label {
@@ -63,22 +175,175 @@
   cursor: pointer;
 }
 
-.dark-heresy-v1.sheet.actor .characteristic input[type="number"] {
-  width: 3.5rem;
+.dark-heresy-v1.sheet.actor .characteristic-value-row {
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #f6d7a7;
+}
+
+.dark-heresy-v1.sheet.actor .characteristic-value-row input {
+  flex: 1;
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+
+.dark-heresy-v1.sheet.actor .characteristic-value-row.has-bonus .characteristic-bonus {
+  flex: 0 0 3.5rem;
+  background: #e8746b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ---------- Compétences ---------- */
+
+.dark-heresy-v1.sheet.actor .skills-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border-light-tertiary, #999);
+}
+
+.dark-heresy-v1.sheet.actor .skills.advanced-skills {
+  border-left: 1px solid var(--color-border-light-tertiary, #999);
+  padding-left: 1rem;
+}
+
+.dark-heresy-v1.sheet.actor .skills-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-heresy-v1.sheet.actor .skills-header h3 {
+  margin: 0;
+}
+
+.dark-heresy-v1.sheet.actor .skill-row {
+  display: grid;
+  grid-template-columns: 1fr 5.5rem 3rem 2.5rem;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.15rem 0;
+}
+
+.dark-heresy-v1.sheet.actor .skill-row.advanced {
+  grid-template-columns: 1fr 4rem 5.5rem 2.75rem 2.5rem 1.25rem;
+}
+
+.dark-heresy-v1.sheet.actor .skill-row-header {
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--color-border-light-tertiary, #999);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
+}
+
+.dark-heresy-v1.sheet.actor .skill-label,
+.dark-heresy-v1.sheet.actor .skill-name {
+  cursor: pointer;
+}
+
+.dark-heresy-v1.sheet.actor input.skill-name {
+  cursor: text;
+}
+
+.dark-heresy-v1.sheet.actor .skill-characteristic {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+.dark-heresy-v1.sheet.actor .skill-row input[type="number"] {
+  width: 100%;
   text-align: center;
 }
 
-.dark-heresy-v1.sheet.actor .characteristic-bonus {
-  font-size: 0.8rem;
-  opacity: 0.8;
+.dark-heresy-v1.sheet.actor .skill-total {
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
 }
+
+.dark-heresy-v1.sheet.actor .delete-row {
+  text-align: center;
+  opacity: 0.6;
+}
+
+.dark-heresy-v1.sheet.actor .delete-row:hover {
+  opacity: 1;
+  color: #c62828;
+}
+
+/* ---------- Talents ---------- */
+
+.dark-heresy-v1.sheet.actor .talents {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border-light-tertiary, #999);
+}
+
+.dark-heresy-v1.sheet.actor .talents-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-heresy-v1.sheet.actor .talents-header h3 {
+  margin: 0;
+}
+
+.dark-heresy-v1.sheet.actor .talent-entry {
+  margin: 0.35rem 0;
+}
+
+.dark-heresy-v1.sheet.actor .talent-entry-header {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dark-heresy-v1.sheet.actor .talent-entry-header .talent-name {
+  flex: 1;
+  font-weight: bold;
+}
+
+.dark-heresy-v1.sheet.actor .talent-toggle {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.dark-heresy-v1.sheet.actor .talent-entry.collapsed .talent-toggle {
+  transform: rotate(-90deg);
+}
+
+.dark-heresy-v1.sheet.actor .talent-description {
+  width: 100%;
+  min-height: 4rem;
+  background: #f6d7a7;
+  border: 1px solid var(--color-border-light-tertiary, #999);
+  border-radius: 4px;
+  margin-top: 0.25rem;
+  resize: vertical;
+}
+
+.dark-heresy-v1.sheet.actor .talent-entry.collapsed .talent-description {
+  display: none;
+}
+
+/* ---------- Onglet Ressources & Progression ---------- */
 
 .dark-heresy-v1.sheet.actor .resources {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
-  padding: 0.5rem;
-  border-top: 1px solid var(--color-border-light-tertiary, #999);
+  padding: 0.5rem 0;
 }
 
 .dark-heresy-v1.sheet.actor .resource-pool,
@@ -118,14 +383,8 @@
   opacity: 0.7;
 }
 
-.dark-heresy-v1.sheet.actor .resource-derived {
-  opacity: 0.8;
-  min-width: 2rem;
-  text-align: center;
-}
-
 .dark-heresy-v1.sheet.actor .insanity {
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   border-top: 1px solid var(--color-border-light-tertiary, #999);
 }
 
@@ -161,71 +420,30 @@
   flex: 1;
 }
 
-.dark-heresy-v1.sheet.actor .skills,
-.dark-heresy-v1.sheet.actor .talents {
-  padding: 0.5rem;
-  border-top: 1px solid var(--color-border-light-tertiary, #999);
-}
+/* ---------- Fiches d'Item (talent / compétence avancée) ---------- */
 
-.dark-heresy-v1.sheet.actor .skills-header,
-.dark-heresy-v1.sheet.actor .talents-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.dark-heresy-v1.sheet.actor .skills-header h3,
-.dark-heresy-v1.sheet.actor .talents-header h3 {
-  margin: 0;
-}
-
-.dark-heresy-v1.sheet.actor .skill-row {
+.dark-heresy-v1.sheet.item .form-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 0.2rem 0;
+  padding: 0 0.5rem 0.5rem;
 }
 
-.dark-heresy-v1.sheet.actor .skill-label {
-  flex: 1;
-  cursor: pointer;
+.dark-heresy-v1.sheet.item .form-group.stacked {
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.dark-heresy-v1.sheet.actor .skill-row.advanced .skill-name {
-  flex: 1;
-}
-
-.dark-heresy-v1.sheet.actor .skill-characteristic {
-  opacity: 0.7;
-  font-size: 0.85rem;
-}
-
-.dark-heresy-v1.sheet.actor .skill-row input[type="number"] {
-  width: 3rem;
-  text-align: center;
-}
-
-.dark-heresy-v1.sheet.actor .skill-total {
+.dark-heresy-v1.sheet.item .form-group label {
   font-weight: bold;
-  cursor: pointer;
-  min-width: 2rem;
-  text-align: center;
+  min-width: 8rem;
 }
 
-.dark-heresy-v1.sheet.actor .talent-row {
-  display: flex;
-  gap: 0.35rem;
-  align-items: center;
-  margin: 0.25rem 0;
+.dark-heresy-v1.sheet.item .form-group.stacked textarea {
+  min-height: 8rem;
 }
 
-.dark-heresy-v1.sheet.actor .talent-row .talent-name {
-  flex: 0 0 30%;
-}
-
-.dark-heresy-v1.sheet.actor .talent-row .talent-description {
-  flex: 1;
-}
+/* ---------- Cartes de chat ---------- */
 
 .dark-heresy-v1.chat-card.characteristic-test .card-title {
   margin: 0 0 0.25rem;

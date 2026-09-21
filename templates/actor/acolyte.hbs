@@ -1,167 +1,219 @@
 <div class="acolyte-body">
   <header class="sheet-header">
     <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}">
-    <h1 class="charname">
-      <input name="name" type="text" value="{{actor.name}}">
-    </h1>
+
+    <div class="header-fields">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{actor.name}}">
+      </h1>
+
+      <div class="identity-row">
+        <div class="identity-field">
+          <label>{{localize "DH.Identity.Homeworld"}}</label>
+          <input type="text" name="system.homeworld" value="{{system.homeworld}}">
+        </div>
+        <div class="identity-field">
+          <label>{{localize "DH.Identity.Career"}}</label>
+          <input type="text" name="system.career" value="{{system.career}}">
+        </div>
+      </div>
+
+      <div class="header-resources">
+        <div class="header-resource wounds">
+          <label>{{localize "DH.Resources.Wounds"}}</label>
+          <div class="header-resource-values">
+            <input type="number" name="system.resources.wounds.value" value="{{system.resources.wounds.value}}">
+            <span>/</span>
+            <input type="number" name="system.resources.wounds.max" value="{{system.resources.wounds.max}}">
+          </div>
+        </div>
+
+        <div class="header-resource fate">
+          <label>{{localize "DH.Resources.Fate"}}</label>
+          <div class="header-resource-values">
+            <input type="number" name="system.resources.fate.value" value="{{system.resources.fate.value}}">
+            <span>/</span>
+            <input type="number" name="system.resources.fate.max" value="{{system.resources.fate.max}}">
+          </div>
+        </div>
+
+        <div class="header-resource fatigue">
+          <label>{{localize "DH.Resources.Fatigue"}}</label>
+          <div class="header-resource-values">
+            <input type="number" name="system.resources.fatigue" value="{{system.resources.fatigue}}">
+            <span>/</span>
+            <span class="resource-derived" title="{{localize 'DH.Resources.FatigueMax'}}">{{system.resources.fatigueMax}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section class="characteristics">
-    {{#each characteristics as |characteristic|}}
-      <div class="characteristic">
-        <a class="characteristic-label rollable" data-action="rollCharacteristic" data-characteristic="{{characteristic.key}}" title="{{characteristic.label}}">
-          {{characteristic.abbrev}}
-        </a>
-        <input type="number" name="system.characteristics.{{characteristic.key}}.value" value="{{characteristic.value}}">
-        {{#if characteristic.hasBonus}}
-          <span class="characteristic-bonus" title="{{localize 'DH.Characteristic.Bonus'}}">{{characteristic.bonus}}</span>
-        {{/if}}
-      </div>
+  <nav class="sheet-tabs">
+    {{#each tabs as |tab|}}
+      <a class="sheet-tab" data-action="changeTab" data-tab="{{tab.id}}">{{tab.label}}</a>
     {{/each}}
-  </section>
+  </nav>
 
-  <section class="resources">
-    <div class="resource-pool">
-      <label>{{localize "DH.Resources.Wounds"}}</label>
-      <input type="number" name="system.resources.wounds.value" value="{{system.resources.wounds.value}}">
-      <span class="resource-separator">/</span>
-      <input type="number" name="system.resources.wounds.max" value="{{system.resources.wounds.max}}">
-    </div>
+  <section class="sheet-body">
+    <div class="tab-content" data-tab="characteristics">
+      <h2 class="section-title">{{localize "DH.Tabs.Characteristics"}}</h2>
 
-    <div class="resource-pool">
-      <label>{{localize "DH.Resources.Fate"}}</label>
-      <input type="number" name="system.resources.fate.value" value="{{system.resources.fate.value}}">
-      <span class="resource-separator">/</span>
-      <input type="number" name="system.resources.fate.max" value="{{system.resources.fate.max}}">
-    </div>
-
-    <div class="resource-pool">
-      <label>{{localize "DH.Resources.Fatigue"}}</label>
-      <input type="number" name="system.resources.fatigue" value="{{system.resources.fatigue}}">
-      <span class="resource-separator">/</span>
-      <span class="resource-derived" title="{{localize 'DH.Resources.FatigueMax'}}">{{system.resources.fatigueMax}}</span>
-    </div>
-
-    <div class="resource-single">
-      <label>{{localize "DH.Resources.Movement"}}</label>
-      <input type="number" name="system.resources.movement" value="{{system.resources.movement}}">
-    </div>
-
-    <div class="resource-single">
-      <label>{{localize "DH.Resources.Insanity"}}</label>
-      <input type="number" name="system.resources.insanity" value="{{system.resources.insanity}}">
-    </div>
-
-    <div class="resource-single">
-      <label>{{localize "DH.Resources.Corruption"}}</label>
-      <input type="number" name="system.resources.corruption" value="{{system.resources.corruption}}">
-    </div>
-
-    <div class="resource-pool">
-      <label>{{localize "DH.Resources.Experience"}}</label>
-      <input type="number" name="system.resources.experience.spent" value="{{system.resources.experience.spent}}">
-      <span class="resource-separator">/</span>
-      <input type="number" name="system.resources.experience.total" value="{{system.resources.experience.total}}">
-    </div>
-
-    <div class="resource-single">
-      <label>{{localize "DH.Resources.Thrones"}}</label>
-      <input type="number" name="system.resources.thrones" value="{{system.resources.thrones}}">
-    </div>
-
-    <div class="resource-single">
-      <label>{{localize "DH.Resources.MonthlyIncome"}}</label>
-      <input type="number" name="system.resources.monthlyIncome" value="{{system.resources.monthlyIncome}}">
-    </div>
-  </section>
-
-  <section class="insanity">
-    <div class="insanity-degree">
-      <label>{{localize "DH.InsanityDegree.Label"}}</label>
-      <select name="system.insanityDegree">
-        {{#each insanityDegrees as |degree|}}
-          <option value="{{degree.key}}" {{#if (eq degree.key ../system.insanityDegree)}}selected{{/if}}>{{degree.label}}</option>
+      <div class="characteristics-grid">
+        {{#each characteristics as |characteristic|}}
+          <div class="characteristic-box">
+            <a class="characteristic-label rollable" data-action="rollCharacteristic" data-characteristic="{{characteristic.key}}">
+              {{characteristic.label}}
+            </a>
+            <div class="characteristic-value-row {{#if characteristic.hasBonus}}has-bonus{{/if}}">
+              <input type="number" name="system.characteristics.{{characteristic.key}}.value" value="{{characteristic.value}}">
+              {{#if characteristic.hasBonus}}
+                <span class="characteristic-bonus" title="{{localize 'DH.Characteristic.Bonus'}}">{{characteristic.bonus}}</span>
+              {{/if}}
+            </div>
+          </div>
         {{/each}}
-      </select>
-    </div>
-
-    <div class="mental-disorders">
-      <div class="mental-disorders-header">
-        <h3>{{localize "DH.MentalDisorders.Title"}}</h3>
-        <a data-action="addMentalDisorder" title="{{localize 'DH.MentalDisorders.Add'}}"><i class="fa-solid fa-plus"></i></a>
       </div>
-      {{#each mentalDisorders as |disorder|}}
-        <div class="mental-disorder">
-          <input type="text" name="system.mentalDisorders.{{disorder.index}}.name" value="{{disorder.name}}" placeholder="{{localize 'DH.MentalDisorders.Name'}}">
-          <input type="text" name="system.mentalDisorders.{{disorder.index}}.description" value="{{disorder.description}}" placeholder="{{localize 'DH.MentalDisorders.Description'}}">
-          <a data-action="deleteMentalDisorder" data-index="{{disorder.index}}" title="{{localize 'DH.MentalDisorders.Delete'}}"><i class="fa-solid fa-trash"></i></a>
-        </div>
-      {{/each}}
-    </div>
-  </section>
 
-  <section class="skills">
-    <div class="skills-header">
-      <h3>{{localize "DH.Skill.BaseTitle"}}</h3>
+      <div class="skills-columns">
+        <div class="skills base-skills">
+          <div class="skills-header">
+            <h3>{{localize "DH.Skill.BaseTitle"}}</h3>
+          </div>
+          <div class="skill-row skill-row-header">
+            <span class="col-name">{{localize "DH.Skill.ColName"}}</span>
+            <span class="col-mastery">{{localize "DH.Skill.ColMastery"}}</span>
+            <span class="col-bonus">{{localize "DH.Skill.ColBonus"}}</span>
+            <span class="col-total">{{localize "DH.Skill.ColRoll"}}</span>
+          </div>
+          {{#each baseSkills as |skill|}}
+            <div class="skill-row">
+              <span class="col-name skill-name">{{skill.label}} <span class="skill-characteristic">({{skill.abbrev}})</span></span>
+              <select class="col-mastery" name="system.skills.{{skill.key}}.mastery">
+                {{#each skill.masteryLevels as |level|}}
+                  <option value="{{level.key}}" {{#if level.selected}}selected{{/if}}>{{level.label}}</option>
+                {{/each}}
+              </select>
+              <input type="number" class="col-bonus" name="system.skills.{{skill.key}}.bonus" value="{{skill.bonus}}">
+              <a class="col-total skill-total rollable" data-action="rollBaseSkill" data-skill="{{skill.key}}" title="{{localize 'DH.Skill.Roll'}}">{{skill.total}}</a>
+            </div>
+          {{/each}}
+        </div>
+
+        <div class="skills advanced-skills">
+          <div class="skills-header">
+            <h3>{{localize "DH.Skill.AdvancedTitle"}}</h3>
+            <a data-action="createAdvancedSkill" title="{{localize 'DH.AdvancedSkill.Add'}}"><i class="fa-solid fa-plus"></i></a>
+          </div>
+          <div class="skill-row advanced skill-row-header">
+            <span class="col-name">{{localize "DH.Skill.ColName"}}</span>
+            <span class="col-characteristic">{{localize "DH.AdvancedSkill.ColCharacteristic"}}</span>
+            <span class="col-mastery">{{localize "DH.Skill.ColMastery"}}</span>
+            <span class="col-bonus">{{localize "DH.Skill.ColBonus"}}</span>
+            <span class="col-total">{{localize "DH.Skill.ColRoll"}}</span>
+          </div>
+          {{#each advancedSkills as |skill|}}
+            <div class="skill-row advanced" data-item-id="{{skill.id}}">
+              <input type="text" class="col-name skill-name" value="{{skill.name}}" data-item-field="name">
+              <select class="col-characteristic" data-item-field="system.characteristic">
+                {{#each skill.characteristics as |characteristic|}}
+                  <option value="{{characteristic.key}}" {{#if characteristic.selected}}selected{{/if}}>{{characteristic.label}}</option>
+                {{/each}}
+              </select>
+              <select class="col-mastery" data-item-field="system.mastery">
+                {{#each skill.masteryLevels as |level|}}
+                  <option value="{{level.key}}" {{#if level.selected}}selected{{/if}}>{{level.label}}</option>
+                {{/each}}
+              </select>
+              <input type="number" class="col-bonus" data-item-field="system.bonus" value="{{skill.bonus}}">
+              <a class="col-total skill-total rollable" data-action="rollAdvancedSkill" title="{{localize 'DH.Skill.Roll'}}">{{skill.total}}</a>
+              <a class="delete-row" data-action="deleteItem" title="{{localize 'DH.AdvancedSkill.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="talents">
+        <div class="talents-header">
+          <h3>{{localize "DH.Talent.Title"}}</h3>
+          <a data-action="createTalent" title="{{localize 'DH.Talent.Add'}}"><i class="fa-solid fa-plus"></i></a>
+        </div>
+        {{#each talents as |talent|}}
+          <div class="talent-entry" data-item-id="{{talent.id}}">
+            <div class="talent-entry-header">
+              <input type="text" class="talent-name" value="{{talent.name}}" data-item-field="name">
+              <a class="talent-toggle" data-action="toggleTalent" title="{{localize 'DH.Talent.Toggle'}}"><i class="fa-solid fa-chevron-down"></i></a>
+              <a class="delete-row" data-action="deleteItem" title="{{localize 'DH.Talent.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+            <textarea class="talent-description" data-item-field="system.description" placeholder="{{localize 'DH.Talent.Description'}}">{{talent.description}}</textarea>
+          </div>
+        {{/each}}
+      </div>
     </div>
-    <div class="skills-list">
-      {{#each baseSkills as |skill|}}
-        <div class="skill-row">
-          <a class="skill-label rollable" data-action="rollBaseSkill" data-skill="{{skill.key}}">
-            {{skill.label}} <span class="skill-characteristic">({{skill.abbrev}})</span>
-          </a>
-          <select name="system.skills.{{skill.key}}.mastery">
-            {{#each skill.masteryLevels as |level|}}
-              <option value="{{level.key}}" {{#if level.selected}}selected{{/if}}>{{level.label}}</option>
+
+    <div class="tab-content" data-tab="combat">
+      <p class="placeholder-note">{{localize "DH.Tabs.CombatPlaceholder"}}</p>
+    </div>
+
+    <div class="tab-content" data-tab="resources">
+      <div class="resources">
+        <div class="resource-single">
+          <label>{{localize "DH.Resources.Movement"}}</label>
+          <input type="number" name="system.resources.movement" value="{{system.resources.movement}}">
+        </div>
+
+        <div class="resource-single">
+          <label>{{localize "DH.Resources.Insanity"}}</label>
+          <input type="number" name="system.resources.insanity" value="{{system.resources.insanity}}">
+        </div>
+
+        <div class="resource-single">
+          <label>{{localize "DH.Resources.Corruption"}}</label>
+          <input type="number" name="system.resources.corruption" value="{{system.resources.corruption}}">
+        </div>
+
+        <div class="resource-pool">
+          <label>{{localize "DH.Resources.Experience"}}</label>
+          <input type="number" name="system.resources.experience.spent" value="{{system.resources.experience.spent}}">
+          <span class="resource-separator">/</span>
+          <input type="number" name="system.resources.experience.total" value="{{system.resources.experience.total}}">
+        </div>
+
+        <div class="resource-single">
+          <label>{{localize "DH.Resources.Thrones"}}</label>
+          <input type="number" name="system.resources.thrones" value="{{system.resources.thrones}}">
+        </div>
+
+        <div class="resource-single">
+          <label>{{localize "DH.Resources.MonthlyIncome"}}</label>
+          <input type="number" name="system.resources.monthlyIncome" value="{{system.resources.monthlyIncome}}">
+        </div>
+      </div>
+
+      <div class="insanity">
+        <div class="insanity-degree">
+          <label>{{localize "DH.InsanityDegree.Label"}}</label>
+          <select name="system.insanityDegree">
+            {{#each insanityDegrees as |degree|}}
+              <option value="{{degree.key}}" {{#if (eq degree.key ../system.insanityDegree)}}selected{{/if}}>{{degree.label}}</option>
             {{/each}}
           </select>
-          <input type="number" name="system.skills.{{skill.key}}.bonus" value="{{skill.bonus}}">
-          <a class="skill-total rollable" data-action="rollBaseSkill" data-skill="{{skill.key}}" title="{{localize 'DH.Skill.Roll'}}">{{skill.total}}</a>
         </div>
-      {{/each}}
-    </div>
-  </section>
 
-  <section class="skills">
-    <div class="skills-header">
-      <h3>{{localize "DH.Skill.AdvancedTitle"}}</h3>
-      <a data-action="createAdvancedSkill" title="{{localize 'DH.AdvancedSkill.Add'}}"><i class="fa-solid fa-plus"></i></a>
-    </div>
-    <div class="skills-list">
-      {{#each advancedSkills as |skill|}}
-        <div class="skill-row advanced" data-item-id="{{skill.id}}">
-          <input type="text" class="skill-name" value="{{skill.name}}" data-item-field="name">
-          <select data-item-field="system.characteristic">
-            {{#each skill.characteristics as |characteristic|}}
-              <option value="{{characteristic.key}}" {{#if characteristic.selected}}selected{{/if}}>{{characteristic.label}}</option>
-            {{/each}}
-          </select>
-          <select data-item-field="system.mastery">
-            {{#each skill.masteryLevels as |level|}}
-              <option value="{{level.key}}" {{#if level.selected}}selected{{/if}}>{{level.label}}</option>
-            {{/each}}
-          </select>
-          <input type="number" data-item-field="system.bonus" value="{{skill.bonus}}">
-          <a class="skill-total rollable" data-action="rollAdvancedSkill" title="{{localize 'DH.Skill.Roll'}}">{{skill.total}}</a>
-          <a data-action="deleteItem" title="{{localize 'DH.AdvancedSkill.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        <div class="mental-disorders">
+          <div class="mental-disorders-header">
+            <h3>{{localize "DH.MentalDisorders.Title"}}</h3>
+            <a data-action="addMentalDisorder" title="{{localize 'DH.MentalDisorders.Add'}}"><i class="fa-solid fa-plus"></i></a>
+          </div>
+          {{#each mentalDisorders as |disorder|}}
+            <div class="mental-disorder">
+              <input type="text" name="system.mentalDisorders.{{disorder.index}}.name" value="{{disorder.name}}" placeholder="{{localize 'DH.MentalDisorders.Name'}}">
+              <input type="text" name="system.mentalDisorders.{{disorder.index}}.description" value="{{disorder.description}}" placeholder="{{localize 'DH.MentalDisorders.Description'}}">
+              <a data-action="deleteMentalDisorder" data-index="{{disorder.index}}" title="{{localize 'DH.MentalDisorders.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+          {{/each}}
         </div>
-      {{/each}}
-    </div>
-  </section>
-
-  <section class="talents">
-    <div class="talents-header">
-      <h3>{{localize "DH.Talent.Title"}}</h3>
-      <a data-action="createTalent" title="{{localize 'DH.Talent.Add'}}"><i class="fa-solid fa-plus"></i></a>
-    </div>
-    <div class="talents-list">
-      {{#each talents as |talent|}}
-        <div class="talent-row" data-item-id="{{talent.id}}">
-          <input type="text" class="talent-name" value="{{talent.name}}" data-item-field="name">
-          <input type="text" class="talent-description" value="{{talent.description}}" data-item-field="system.description" placeholder="{{localize 'DH.Talent.Description'}}">
-          <a data-action="deleteItem" title="{{localize 'DH.Talent.Delete'}}"><i class="fa-solid fa-trash"></i></a>
-        </div>
-      {{/each}}
+      </div>
     </div>
   </section>
 </div>

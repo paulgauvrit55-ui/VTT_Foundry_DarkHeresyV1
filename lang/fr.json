@@ -28,6 +28,16 @@
       "Talent": "Fiche de Talent",
       "AdvancedSkill": "Fiche de Compétence avancée"
     },
+    "Tabs": {
+      "Characteristics": "Caractéristiques et Compétences",
+      "Combat": "Inventaire & Combat",
+      "Resources": "Ressources & Progression",
+      "CombatPlaceholder": "Contenu à venir (armes, armures, inventaire — étape 4)."
+    },
+    "Identity": {
+      "Homeworld": "Monde natal",
+      "Career": "Carrière"
+    },
     "Resources": {
       "Wounds": "Points de Blessures",
       "Fate": "Points de Destin",
@@ -60,6 +70,10 @@
       "BaseTitle": "Compétences de base",
       "AdvancedTitle": "Compétences avancées",
       "Roll": "Lancer un test de compétence",
+      "ColName": "Nom",
+      "ColMastery": "Maîtrise",
+      "ColBonus": "Bonus",
+      "ColRoll": "Jet",
       "Charisme": "Charisme",
       "Commandement": "Commandement",
       "Contorsionnisme": "Contorsionnisme",
@@ -89,6 +103,7 @@
     },
     "AdvancedSkill": {
       "Characteristic": "Caractéristique liée",
+      "ColCharacteristic": "Caract.",
       "Mastery": "Maîtrise",
       "Bonus": "Bonus",
       "Description": "Description",
@@ -101,6 +116,7 @@
       "Description": "Description",
       "Add": "Ajouter un talent",
       "Delete": "Supprimer ce talent",
+      "Toggle": "Afficher/masquer la description",
       "NewName": "Nouveau talent"
     },
     "Roll": {

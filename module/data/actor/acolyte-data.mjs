@@ -40,6 +40,9 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
 
     return {
       characteristics: new SchemaField(characteristics),
+      // Champs libres (spec §5) : pas de moteur de carrière, juste affichés dans l'en-tête de fiche.
+      homeworld: new StringField({ required: false, blank: true }),
+      career: new StringField({ required: false, blank: true }),
       resources: new SchemaField({
         wounds: resourcePoolField(),
         fate: resourcePoolField(),
