@@ -25,6 +25,7 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
 
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
+    context.actor = this.actor;
     context.system = this.actor.system;
     context.characteristics = Object.entries(this.actor.system.characteristics).map(([key, characteristic]) => ({
       key,
