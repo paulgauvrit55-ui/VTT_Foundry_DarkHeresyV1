@@ -24,7 +24,9 @@
       "Sociabilite": "Soc"
     },
     "SheetLabel": {
-      "Acolyte": "Fiche d'Acolyte"
+      "Acolyte": "Fiche d'Acolyte",
+      "Talent": "Fiche de Talent",
+      "AdvancedSkill": "Fiche de Compétence avancée"
     },
     "Resources": {
       "Wounds": "Points de Blessures",
@@ -53,6 +55,53 @@
       "Description": "Description",
       "Add": "Ajouter un trouble mental",
       "Delete": "Supprimer ce trouble mental"
+    },
+    "Skill": {
+      "BaseTitle": "Compétences de base",
+      "AdvancedTitle": "Compétences avancées",
+      "Roll": "Lancer un test de compétence",
+      "Charisme": "Charisme",
+      "Commandement": "Commandement",
+      "Contorsionnisme": "Contorsionnisme",
+      "Deguisement": "Déguisement",
+      "DeplacementSilencieux": "Déplacement silencieux",
+      "Dissimulation": "Dissimulation",
+      "Duperie": "Duperie",
+      "Enquete": "Enquête",
+      "Escalade": "Escalade",
+      "Esquive": "Esquive",
+      "Evaluation": "Évaluation",
+      "Fouille": "Fouille",
+      "Intimidation": "Intimidation",
+      "Jeu": "Jeu",
+      "Logique": "Logique",
+      "Marchandage": "Marchandage",
+      "Natation": "Natation",
+      "Psychologie": "Psychologie",
+      "ResistanceIntoxications": "Résistance aux intoxications",
+      "Vigilance": "Vigilance"
+    },
+    "SkillMastery": {
+      "Untrained": "Non acquise",
+      "Level0": "0",
+      "Level10": "+10",
+      "Level20": "+20"
+    },
+    "AdvancedSkill": {
+      "Characteristic": "Caractéristique liée",
+      "Mastery": "Maîtrise",
+      "Bonus": "Bonus",
+      "Description": "Description",
+      "Add": "Ajouter une compétence avancée",
+      "Delete": "Supprimer cette compétence avancée",
+      "NewName": "Nouvelle compétence avancée"
+    },
+    "Talent": {
+      "Title": "Talents",
+      "Description": "Description",
+      "Add": "Ajouter un talent",
+      "Delete": "Supprimer ce talent",
+      "NewName": "Nouveau talent"
     },
     "Roll": {
       "DifficultyPromptTitle": "Modificateur de difficulté",

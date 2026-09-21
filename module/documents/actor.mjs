@@ -1,4 +1,5 @@
 import { rollCharacteristicTest } from "../dice/characteristic-roll.mjs";
+import { rollBaseSkillTest, rollAdvancedSkillTest } from "../dice/skill-roll.mjs";
 
 export default class DarkHeresyActor extends Actor {
   /**
@@ -7,5 +8,21 @@ export default class DarkHeresyActor extends Actor {
    */
   async rollCharacteristicTest(characteristicKey) {
     return rollCharacteristicTest(this, characteristicKey);
+  }
+
+  /**
+   * Lance un test de compétence de base (spec §3) pour cet acteur.
+   * @param {string} skillKey Clé de `DH.baseSkills` (ex. "vigilance").
+   */
+  async rollBaseSkillTest(skillKey) {
+    return rollBaseSkillTest(this, skillKey);
+  }
+
+  /**
+   * Lance un test de compétence avancée (spec §3) pour cet acteur.
+   * @param {Item} item Item `advancedSkill` possédé par cet acteur.
+   */
+  async rollAdvancedSkillTest(item) {
+    return rollAdvancedSkillTest(this, item);
   }
 }

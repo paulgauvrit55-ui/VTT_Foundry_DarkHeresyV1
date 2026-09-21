@@ -29,3 +29,43 @@ DH.insanityDegrees = {
   derange: "DH.InsanityDegree.Derange",
   terminal: "DH.InsanityDegree.Terminal"
 };
+
+/**
+ * Compétences de base (spec §3) : liste fixe, chacune rattachée à une
+ * caractéristique (clé de `DH.characteristics`). Champs fixes du Data Model
+ * `acolyte` (§skills.<clé>), pas des Items — cf. Guide_Implementation_FVTT.md §2.3.
+ */
+DH.baseSkills = {
+  charisme: { label: "DH.Skill.Charisme", characteristic: "sociabilite" },
+  commandement: { label: "DH.Skill.Commandement", characteristic: "sociabilite" },
+  contorsionnisme: { label: "DH.Skill.Contorsionnisme", characteristic: "agilite" },
+  deguisement: { label: "DH.Skill.Deguisement", characteristic: "sociabilite" },
+  deplacementSilencieux: { label: "DH.Skill.DeplacementSilencieux", characteristic: "agilite" },
+  dissimulation: { label: "DH.Skill.Dissimulation", characteristic: "agilite" },
+  duperie: { label: "DH.Skill.Duperie", characteristic: "sociabilite" },
+  enquete: { label: "DH.Skill.Enquete", characteristic: "sociabilite" },
+  escalade: { label: "DH.Skill.Escalade", characteristic: "force" },
+  esquive: { label: "DH.Skill.Esquive", characteristic: "agilite" },
+  evaluation: { label: "DH.Skill.Evaluation", characteristic: "intelligence" },
+  fouille: { label: "DH.Skill.Fouille", characteristic: "perception" },
+  intimidation: { label: "DH.Skill.Intimidation", characteristic: "force" },
+  jeu: { label: "DH.Skill.Jeu", characteristic: "intelligence" },
+  logique: { label: "DH.Skill.Logique", characteristic: "intelligence" },
+  marchandage: { label: "DH.Skill.Marchandage", characteristic: "sociabilite" },
+  natation: { label: "DH.Skill.Natation", characteristic: "force" },
+  psychologie: { label: "DH.Skill.Psychologie", characteristic: "perception" },
+  resistanceIntoxications: { label: "DH.Skill.ResistanceIntoxications", characteristic: "endurance" },
+  vigilance: { label: "DH.Skill.Vigilance", characteristic: "perception" }
+};
+
+/**
+ * Paliers de maîtrise d'une compétence (spec §3) : chaque acquisition
+ * redondante (jusqu'à 3 fois) confère +10, plafonné à +20. Les compétences
+ * de base ajoutent la valeur spéciale "untrained" (utilisable à char./2).
+ */
+DH.skillMasteryLevels = {
+  untrained: "DH.SkillMastery.Untrained",
+  0: "DH.SkillMastery.Level0",
+  10: "DH.SkillMastery.Level10",
+  20: "DH.SkillMastery.Level20"
+};

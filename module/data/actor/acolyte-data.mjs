@@ -23,6 +23,14 @@ function mentalDisorderField() {
   });
 }
 
+/** Compétence de base (spec §3) : maîtrise (Non acquise/0/+10/+20) + bonus libre éditable. */
+function baseSkillField() {
+  return new SchemaField({
+    mastery: new StringField({ required: true, initial: "untrained", choices: ["untrained", "0", "10", "20"] }),
+    bonus: new NumberField({ required: true, integer: true, initial: 0 })
+  });
+}
+
 export default class AcolyteData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const characteristics = {};
@@ -48,6 +56,9 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
       }),
       insanityDegree: new StringField({ required: true, initial: "stable", choices: Object.keys(DH.insanityDegrees) }),
       mentalDisorders: new ArrayField(mentalDisorderField()),
+      skills: new SchemaField(
+        Object.fromEntries(Object.keys(DH.baseSkills).map(key => [key, baseSkillField()]))
+      ),
       biography: new HTMLField({ required: false, blank: true })
     };
   }
@@ -62,5 +73,15 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
 
     // Plafond de Fatigue = Bonus d'Endurance (spec §2.3, §9.7) : dérivé, non stocké.
     this.resources.fatigueMax = this.characteristics.endurance.bonus;
+
+    // Valeur finale d'une compétence de base (spec §3) : caractéristique liée (divisée par
+    // deux si non acquise) + palier de maîtrise + bonus libre.
+    for (const [key, skill] of Object.entries(this.skills)) {
+      const characteristic = this.characteristics[DH.baseSkills[key].characteristic];
+      const untrained = skill.mastery === "untrained";
+      const base = untrained ? Math.floor(characteristic.value / 2) : characteristic.value;
+      const masteryBonus = untrained ? 0 : Number(skill.mastery);
+      skill.total = base + masteryBonus + skill.bonus;
+    }
   }
 }

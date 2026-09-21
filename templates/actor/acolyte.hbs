@@ -99,4 +99,69 @@
       {{/each}}
     </div>
   </section>
+
+  <section class="skills">
+    <div class="skills-header">
+      <h3>{{localize "DH.Skill.BaseTitle"}}</h3>
+    </div>
+    <div class="skills-list">
+      {{#each baseSkills as |skill|}}
+        <div class="skill-row">
+          <a class="skill-label rollable" data-action="rollBaseSkill" data-skill="{{skill.key}}">
+            {{skill.label}} <span class="skill-characteristic">({{skill.abbrev}})</span>
+          </a>
+          <select name="system.skills.{{skill.key}}.mastery">
+            {{#each skill.masteryLevels as |level|}}
+              <option value="{{level.key}}" {{#if level.selected}}selected{{/if}}>{{level.label}}</option>
+            {{/each}}
+          </select>
+          <input type="number" name="system.skills.{{skill.key}}.bonus" value="{{skill.bonus}}">
+          <a class="skill-total rollable" data-action="rollBaseSkill" data-skill="{{skill.key}}" title="{{localize 'DH.Skill.Roll'}}">{{skill.total}}</a>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="skills-header">
+      <h3>{{localize "DH.Skill.AdvancedTitle"}}</h3>
+      <a data-action="createAdvancedSkill" title="{{localize 'DH.AdvancedSkill.Add'}}"><i class="fa-solid fa-plus"></i></a>
+    </div>
+    <div class="skills-list">
+      {{#each advancedSkills as |skill|}}
+        <div class="skill-row advanced" data-item-id="{{skill.id}}">
+          <input type="text" class="skill-name" value="{{skill.name}}" data-item-field="name">
+          <select data-item-field="system.characteristic">
+            {{#each skill.characteristics as |characteristic|}}
+              <option value="{{characteristic.key}}" {{#if characteristic.selected}}selected{{/if}}>{{characteristic.label}}</option>
+            {{/each}}
+          </select>
+          <select data-item-field="system.mastery">
+            {{#each skill.masteryLevels as |level|}}
+              <option value="{{level.key}}" {{#if level.selected}}selected{{/if}}>{{level.label}}</option>
+            {{/each}}
+          </select>
+          <input type="number" data-item-field="system.bonus" value="{{skill.bonus}}">
+          <a class="skill-total rollable" data-action="rollAdvancedSkill" title="{{localize 'DH.Skill.Roll'}}">{{skill.total}}</a>
+          <a data-action="deleteItem" title="{{localize 'DH.AdvancedSkill.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="talents">
+    <div class="talents-header">
+      <h3>{{localize "DH.Talent.Title"}}</h3>
+      <a data-action="createTalent" title="{{localize 'DH.Talent.Add'}}"><i class="fa-solid fa-plus"></i></a>
+    </div>
+    <div class="talents-list">
+      {{#each talents as |talent|}}
+        <div class="talent-row" data-item-id="{{talent.id}}">
+          <input type="text" class="talent-name" value="{{talent.name}}" data-item-field="name">
+          <input type="text" class="talent-description" value="{{talent.description}}" data-item-field="system.description" placeholder="{{localize 'DH.Talent.Description'}}">
+          <a data-action="deleteItem" title="{{localize 'DH.Talent.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </div>
+      {{/each}}
+    </div>
+  </section>
 </div>

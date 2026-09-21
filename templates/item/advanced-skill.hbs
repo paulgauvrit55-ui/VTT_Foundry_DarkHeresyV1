@@ -1,0 +1,36 @@
+<div class="advanced-skill-body">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}">
+    <h1 class="itemname">
+      <input name="name" type="text" value="{{item.name}}">
+    </h1>
+  </header>
+
+  <div class="form-group">
+    <label>{{localize "DH.AdvancedSkill.Characteristic"}}</label>
+    <select name="system.characteristic">
+      {{#each characteristics as |characteristic|}}
+        <option value="{{characteristic.key}}" {{#if (eq characteristic.key ../system.characteristic)}}selected{{/if}}>{{characteristic.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.AdvancedSkill.Mastery"}}</label>
+    <select name="system.mastery">
+      {{#each masteryLevels as |level|}}
+        <option value="{{level.key}}" {{#if (eq level.key ../system.mastery)}}selected{{/if}}>{{level.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.AdvancedSkill.Bonus"}}</label>
+    <input type="number" name="system.bonus" value="{{system.bonus}}">
+  </div>
+
+  <div class="form-group stacked">
+    <label>{{localize "DH.AdvancedSkill.Description"}}</label>
+    <textarea name="system.description">{{system.description}}</textarea>
+  </div>
+</div>

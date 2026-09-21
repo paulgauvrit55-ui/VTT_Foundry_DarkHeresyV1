@@ -25,6 +25,14 @@
       "acolyte": {
         "htmlFields": ["biography"]
       }
+    },
+    "Item": {
+      "talent": {
+        "htmlFields": ["description"]
+      },
+      "advancedSkill": {
+        "htmlFields": ["description"]
+      }
     }
   },
   "gridDistance": 1,
