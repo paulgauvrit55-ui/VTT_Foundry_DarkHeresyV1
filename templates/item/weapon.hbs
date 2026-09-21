@@ -1,0 +1,74 @@
+<div class="weapon-body">
+  <header class="sheet-header">
+    <h1 class="itemname">
+      <input name="name" type="text" value="{{item.name}}">
+    </h1>
+  </header>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.Group"}}</label>
+    <select name="system.group">
+      {{#each weaponGroups as |group|}}
+        <option value="{{group.key}}" {{#if group.selected}}selected{{/if}}>{{group.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.DamageFormula"}}</label>
+    <input type="text" name="system.damageFormula" value="{{system.damageFormula}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.DamageType"}}</label>
+    <select name="system.damageType">
+      {{#each damageTypes as |type|}}
+        <option value="{{type.key}}" {{#if type.selected}}selected{{/if}}>{{type.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.Penetration"}}</label>
+    <input type="number" name="system.penetration" value="{{system.penetration}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.Bonus"}}</label>
+    <input type="number" name="system.bonus" value="{{system.bonus}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.Tearing"}}</label>
+    <input type="checkbox" name="system.tearing" {{#if system.tearing}}checked{{/if}}>
+  </div>
+
+  {{#unless isMelee}}
+    <div class="form-group">
+      <label>{{localize "DH.Weapon.Range"}}</label>
+      <input type="number" name="system.range" value="{{system.range}}">
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "DH.Weapon.FireModes"}}</label>
+      <input type="text" name="system.fireModes" value="{{system.fireModes}}">
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "DH.Weapon.Reload"}}</label>
+      <input type="text" name="system.reload" value="{{system.reload}}">
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "DH.Weapon.Ammo"}}</label>
+      <input type="number" name="system.ammo.current" value="{{system.ammo.current}}">
+      <span>/</span>
+      <input type="number" name="system.ammo.max" value="{{system.ammo.max}}">
+    </div>
+  {{/unless}}
+
+  <div class="form-group stacked">
+    <label>{{localize "DH.Weapon.Attributes"}}</label>
+    <input type="text" name="system.attributes" value="{{system.attributes}}">
+  </div>
+</div>

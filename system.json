@@ -32,6 +32,10 @@
       },
       "advancedSkill": {
         "htmlFields": ["description"]
+      },
+      "weapon": {},
+      "gear": {
+        "htmlFields": ["description"]
       }
     }
   },

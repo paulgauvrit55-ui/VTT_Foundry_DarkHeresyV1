@@ -69,3 +69,51 @@ DH.skillMasteryLevels = {
   10: "DH.SkillMastery.Level10",
   20: "DH.SkillMastery.Level20"
 };
+
+/**
+ * Groupes d'armes (spec §6.1) : déterminent le talent de formation requis et si le Bonus de
+ * Force s'ajoute aux dégâts. Sert aussi de champ discriminant corps-à-corps/distance sur
+ * l'Item `weapon` (seul "corpsACorps" désigne une arme de mêlée) — cf. Guide_Implementation_FVTT.md §2.3.
+ */
+DH.weaponGroups = {
+  corpsACorps: "DH.WeaponGroup.CorpsACorps",
+  jet: "DH.WeaponGroup.Jet",
+  base: "DH.WeaponGroup.Base",
+  poing: "DH.WeaponGroup.Poing",
+  lourde: "DH.WeaponGroup.Lourde"
+};
+
+/** Types de dégâts (spec §6.1) : déterminent la table de dégâts critiques applicable (consultée manuellement, §2.4ter). */
+DH.damageTypes = {
+  energie: "DH.DamageType.Energie",
+  explosif: "DH.DamageType.Explosif",
+  impact: "DH.DamageType.Impact",
+  penetrant: "DH.DamageType.Penetrant"
+};
+
+/**
+ * Localisations de la table de touche (spec §9.3.2, reprise pour l'armure §6.4) : bornes du
+ * d100 inversé utilisées à la fois pour l'affichage des plages sur les boîtes d'armure et pour
+ * le calcul de la localisation touchée après un test d'attaque réussi.
+ */
+DH.armourLocations = {
+  tete: { label: "DH.ArmourLocation.Tete", rangeLabel: "01-10", min: 1, max: 10 },
+  brasDroit: { label: "DH.ArmourLocation.BrasDroit", rangeLabel: "11-20", min: 11, max: 20 },
+  brasGauche: { label: "DH.ArmourLocation.BrasGauche", rangeLabel: "21-30", min: 21, max: 30 },
+  corps: { label: "DH.ArmourLocation.Corps", rangeLabel: "31-70", min: 31, max: 70 },
+  jambeDroite: { label: "DH.ArmourLocation.JambeDroite", rangeLabel: "71-85", min: 71, max: 85 },
+  jambeGauche: { label: "DH.ArmourLocation.JambeGauche", rangeLabel: "86-100", min: 86, max: 100 }
+};
+
+/**
+ * Calcule la localisation touchée (spec §9.3.2) en inversant les deux chiffres du résultat du
+ * d100 (ex. 37 → 73) et en le comparant aux bornes de `DH.armourLocations`. Un résultat de 100
+ * (chiffres "00") s'inverse en lui-même.
+ * @param {number} result Résultat du d100 (1-100).
+ * @returns {string} Clé de `DH.armourLocations`.
+ */
+DH.getHitLocation = function (result) {
+  const digits = String(result).padStart(2, "0").slice(-2).split("").reverse().join("");
+  const inverted = Number(digits) || 100;
+  return Object.entries(DH.armourLocations).find(([, loc]) => inverted >= loc.min && inverted <= loc.max)?.[0];
+};

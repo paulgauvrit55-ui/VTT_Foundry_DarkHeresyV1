@@ -1,0 +1,8 @@
+<div class="dark-heresy-v1 chat-card weapon-damage">
+  <h3 class="card-title">{{label}}</h3>
+  <p>{{localize "DH.Attack.DamageType"}} : {{damageTypeLabel}}</p>
+  <p>{{localize "DH.Attack.Penetration"}} : {{penetration}}</p>
+  {{#if forceBonus}}<p>{{localize "DH.Attack.ForceBonus"}} : +{{forceBonus}}</p>{{/if}}
+  {{#if tearing}}<p class="tearing-note">{{localize "DH.WeaponAttribute.Tearing"}}</p>{{/if}}
+  <p class="outcome">{{localize "DH.Attack.Total"}} : {{total}}</p>
+</div>

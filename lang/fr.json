@@ -26,13 +26,14 @@
     "SheetLabel": {
       "Acolyte": "Fiche d'Acolyte",
       "Talent": "Fiche de Talent",
-      "AdvancedSkill": "Fiche de Compétence avancée"
+      "AdvancedSkill": "Fiche de Compétence avancée",
+      "Weapon": "Fiche d'Arme",
+      "Gear": "Fiche d'Objet"
     },
     "Tabs": {
       "Characteristics": "Caractéristiques et Compétences",
       "Combat": "Inventaire & Combat",
-      "Resources": "Ressources & Progression",
-      "CombatPlaceholder": "Contenu à venir (armes, armures, inventaire — étape 4)."
+      "Resources": "Ressources & Progression"
     },
     "Identity": {
       "Homeworld": "Monde natal",
@@ -129,6 +130,71 @@
       "Success": "Réussite",
       "Failure": "Échec",
       "Degree": "Degré :"
+    },
+    "Weapon": {
+      "RangedTitle": "Armes à distance",
+      "MeleeTitle": "Armes de mêlée",
+      "Add": "Ajouter une arme",
+      "Delete": "Supprimer cette arme",
+      "NewName": "Nouvelle arme",
+      "Attack": "Test d'attaque",
+      "Damage": "Lancer les dégâts",
+      "Toggle": "Afficher/masquer le profil",
+      "Group": "Type d'arme",
+      "DamageFormula": "Dégâts",
+      "DamageType": "Type de dégâts",
+      "Penetration": "Pénétration",
+      "Bonus": "Bonus",
+      "Range": "Portée",
+      "FireModes": "Modes de tir",
+      "Reload": "Rechargement",
+      "Ammo": "Munitions",
+      "Tearing": "Déchirante",
+      "Attributes": "Attributs"
+    },
+    "WeaponGroup": {
+      "CorpsACorps": "Corps à corps",
+      "Jet": "De jet",
+      "Base": "De base",
+      "Poing": "De poing",
+      "Lourde": "Lourde"
+    },
+    "DamageType": {
+      "Energie": "Énergie",
+      "Explosif": "Explosif",
+      "Impact": "Impact",
+      "Penetrant": "Pénétrant"
+    },
+    "Armour": {
+      "Title": "Armure"
+    },
+    "ArmourLocation": {
+      "Tete": "Tête",
+      "BrasDroit": "Bras droit",
+      "BrasGauche": "Bras gauche",
+      "Corps": "Corps",
+      "JambeDroite": "Jambe droite",
+      "JambeGauche": "Jambe gauche"
+    },
+    "Gear": {
+      "Title": "Inventaire",
+      "Add": "Ajouter un objet",
+      "Delete": "Supprimer cet objet",
+      "NewName": "Nouvel objet",
+      "Weight": "Poids",
+      "Description": "Description",
+      "CarriedWeight": "Poids porté"
+    },
+    "Attack": {
+      "Location": "Localisation touchée",
+      "DamageType": "Type de dégâts",
+      "RollDamage": "Lancer les dégâts",
+      "Penetration": "Pénétration",
+      "ForceBonus": "Bonus de Force",
+      "Total": "Dégâts totaux"
+    },
+    "WeaponAttribute": {
+      "Tearing": "Déchirante : meilleur des deux jets de dégâts"
     }
   }
 }

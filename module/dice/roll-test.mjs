@@ -5,9 +5,15 @@ import { promptDifficultyModifier } from "../apps/roll-dialog.mjs";
  * calculée (caractéristique ou compétence) : prompt du modificateur de difficulté,
  * jet de 1d100, calcul du degré de réussite/échec, puis carte de chat.
  * @param {Actor} actor
- * @param {{label: string, target: number}} options
+ * @param {object} options
+ * @param {string} options.label
+ * @param {number} options.target
+ * @param {string} [options.template] Template de carte de chat, par défaut celui du test générique.
+ * @param {(rollInfo: {result: number, success: boolean, degree: number}) => object} [options.buildExtraContext]
+ *   Callback fournissant des données additionnelles à fusionner dans le contexte du template
+ *   (ex. localisation touchée pour une carte d'attaque à l'arme, §2.4ter), calculée après le jet.
  */
-export async function resolveTargetTest(actor, { label, target }) {
+export async function resolveTargetTest(actor, { label, target, template, buildExtraContext } = {}) {
   const modifier = await promptDifficultyModifier();
   if (modifier === null) return null;
 
@@ -17,9 +23,12 @@ export async function resolveTargetTest(actor, { label, target }) {
   const success = result <= finalTarget;
   const degree = Math.floor(Math.abs(finalTarget - result) / 10);
 
+  const context = { label, target: finalTarget, modifier, result, success, degree };
+  if (buildExtraContext) Object.assign(context, buildExtraContext({ result, success, degree }));
+
   const content = await foundry.applications.handlebars.renderTemplate(
-    `systems/${game.system.id}/templates/chat/characteristic-test.hbs`,
-    { label, target: finalTarget, modifier, result, success, degree }
+    template ?? `systems/${game.system.id}/templates/chat/characteristic-test.hbs`,
+    context
   );
 
   await ChatMessage.create({
@@ -29,5 +38,5 @@ export async function resolveTargetTest(actor, { label, target }) {
     content
   });
 
-  return { roll, success, degree };
+  return { roll, success, degree, result, finalTarget };
 }

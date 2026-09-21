@@ -152,7 +152,164 @@
     </div>
 
     <div class="tab-content" data-tab="combat">
-      <p class="placeholder-note">{{localize "DH.Tabs.CombatPlaceholder"}}</p>
+      <div class="combat-columns">
+        <div class="weapons ranged-weapons">
+          <div class="weapons-header">
+            <h3>{{localize "DH.Weapon.RangedTitle"}}</h3>
+            <a data-action="createWeapon" data-category="ranged" title="{{localize 'DH.Weapon.Add'}}"><i class="fa-solid fa-plus"></i></a>
+          </div>
+          {{#each rangedWeapons as |weapon|}}
+            <div class="weapon-entry" data-item-id="{{weapon.id}}">
+              <div class="weapon-entry-header">
+                <input type="text" class="weapon-name" value="{{weapon.name}}" data-item-field="name">
+                <a data-action="rollWeaponDamage" title="{{localize 'DH.Weapon.Damage'}}"><i class="fa-solid fa-burst"></i></a>
+                <a data-action="rollWeaponAttack" title="{{localize 'DH.Weapon.Attack'}}"><i class="fa-solid fa-crosshairs"></i></a>
+                <a class="weapon-toggle" data-action="toggleWeapon" title="{{localize 'DH.Weapon.Toggle'}}"><i class="fa-solid fa-chevron-down"></i></a>
+                <a class="delete-row" data-action="deleteItem" title="{{localize 'DH.Weapon.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+              </div>
+              <div class="weapon-profile">
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.DamageFormula"}}</label>
+                  <input type="text" data-item-field="system.damageFormula" value="{{weapon.damageFormula}}">
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.DamageType"}}</label>
+                  <select data-item-field="system.damageType">
+                    {{#each weapon.damageTypes as |type|}}
+                      <option value="{{type.key}}" {{#if type.selected}}selected{{/if}}>{{type.label}}</option>
+                    {{/each}}
+                  </select>
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.Penetration"}}</label>
+                  <input type="number" data-item-field="system.penetration" value="{{weapon.penetration}}">
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.Bonus"}}</label>
+                  <input type="number" data-item-field="system.bonus" value="{{weapon.bonus}}">
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.Range"}}</label>
+                  <input type="number" data-item-field="system.range" value="{{weapon.range}}">
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.FireModes"}}</label>
+                  <input type="text" data-item-field="system.fireModes" value="{{weapon.fireModes}}">
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.Reload"}}</label>
+                  <input type="text" data-item-field="system.reload" value="{{weapon.reload}}">
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.Ammo"}}</label>
+                  <div class="weapon-ammo">
+                    <input type="number" data-item-field="system.ammo.current" value="{{weapon.ammo.current}}">
+                    <span>/</span>
+                    <input type="number" data-item-field="system.ammo.max" value="{{weapon.ammo.max}}">
+                  </div>
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.Group"}}</label>
+                  <select data-item-field="system.group">
+                    {{#each weapon.groups as |group|}}
+                      <option value="{{group.key}}" {{#if group.selected}}selected{{/if}}>{{group.label}}</option>
+                    {{/each}}
+                  </select>
+                </div>
+                <div class="weapon-field weapon-field-tearing">
+                  <label>{{localize "DH.Weapon.Tearing"}}</label>
+                  <input type="checkbox" data-item-field="system.tearing" {{#if weapon.tearing}}checked{{/if}}>
+                </div>
+                <div class="weapon-field weapon-field-attributes">
+                  <label>{{localize "DH.Weapon.Attributes"}}</label>
+                  <input type="text" data-item-field="system.attributes" value="{{weapon.attributes}}">
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+
+        <div class="weapons melee-weapons">
+          <div class="weapons-header">
+            <h3>{{localize "DH.Weapon.MeleeTitle"}}</h3>
+            <a data-action="createWeapon" data-category="melee" title="{{localize 'DH.Weapon.Add'}}"><i class="fa-solid fa-plus"></i></a>
+          </div>
+          {{#each meleeWeapons as |weapon|}}
+            <div class="weapon-entry" data-item-id="{{weapon.id}}">
+              <div class="weapon-entry-header">
+                <input type="text" class="weapon-name" value="{{weapon.name}}" data-item-field="name">
+                <a data-action="rollWeaponDamage" title="{{localize 'DH.Weapon.Damage'}}"><i class="fa-solid fa-burst"></i></a>
+                <a data-action="rollWeaponAttack" title="{{localize 'DH.Weapon.Attack'}}"><i class="fa-solid fa-crosshairs"></i></a>
+                <a class="weapon-toggle" data-action="toggleWeapon" title="{{localize 'DH.Weapon.Toggle'}}"><i class="fa-solid fa-chevron-down"></i></a>
+                <a class="delete-row" data-action="deleteItem" title="{{localize 'DH.Weapon.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+              </div>
+              <div class="weapon-profile">
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.DamageFormula"}}</label>
+                  <input type="text" data-item-field="system.damageFormula" value="{{weapon.damageFormula}}">
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.DamageType"}}</label>
+                  <select data-item-field="system.damageType">
+                    {{#each weapon.damageTypes as |type|}}
+                      <option value="{{type.key}}" {{#if type.selected}}selected{{/if}}>{{type.label}}</option>
+                    {{/each}}
+                  </select>
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.Penetration"}}</label>
+                  <input type="number" data-item-field="system.penetration" value="{{weapon.penetration}}">
+                </div>
+                <div class="weapon-field">
+                  <label>{{localize "DH.Weapon.Bonus"}}</label>
+                  <input type="number" data-item-field="system.bonus" value="{{weapon.bonus}}">
+                </div>
+                <div class="weapon-field weapon-field-tearing">
+                  <label>{{localize "DH.Weapon.Tearing"}}</label>
+                  <input type="checkbox" data-item-field="system.tearing" {{#if weapon.tearing}}checked{{/if}}>
+                </div>
+                <div class="weapon-field weapon-field-attributes">
+                  <label>{{localize "DH.Weapon.Attributes"}}</label>
+                  <input type="text" data-item-field="system.attributes" value="{{weapon.attributes}}">
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="combat-columns">
+        <div class="armour-section">
+          <h3>{{localize "DH.Armour.Title"}}</h3>
+          <div class="armour-grid">
+            {{#each armourLocations as |location|}}
+              <div class="armour-box armour-{{location.key}}">
+                <label>{{location.label}}</label>
+                <span class="armour-range">{{location.rangeLabel}}</span>
+                <input type="number" name="system.armour.{{location.key}}.value" value="{{location.value}}">
+              </div>
+            {{/each}}
+          </div>
+        </div>
+
+        <div class="inventory-section">
+          <div class="inventory-header">
+            <h3>{{localize "DH.Gear.Title"}}</h3>
+            <a data-action="createGear" title="{{localize 'DH.Gear.Add'}}"><i class="fa-solid fa-plus"></i></a>
+          </div>
+          <p class="inventory-weight">
+            {{localize "DH.Gear.CarriedWeight"}} :
+            <span>{{carriedWeight}}</span> / <input type="number" name="system.resources.carryCapacity" value="{{carryCapacity}}">
+          </p>
+          {{#each gearItems as |gear|}}
+            <div class="gear-row" data-item-id="{{gear.id}}">
+              <input type="text" class="gear-name" value="{{gear.name}}" data-item-field="name">
+              <input type="number" class="gear-weight" data-item-field="system.weight" value="{{gear.weight}}">
+              <a class="delete-row" data-action="deleteItem" title="{{localize 'DH.Gear.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
     </div>
 
     <div class="tab-content" data-tab="resources">

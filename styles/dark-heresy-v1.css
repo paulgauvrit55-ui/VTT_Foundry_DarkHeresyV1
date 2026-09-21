@@ -368,6 +368,201 @@
   display: none;
 }
 
+/* ---------- Onglet Inventaire & Combat ---------- */
+
+.dark-heresy-v1.sheet.actor .combat-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border-light-tertiary, #999);
+}
+
+.dark-heresy-v1.sheet.actor .melee-weapons,
+.dark-heresy-v1.sheet.actor .inventory-section {
+  border-left: 1px solid var(--color-border-light-tertiary, #999);
+  padding-left: 1rem;
+}
+
+.dark-heresy-v1.sheet.actor .weapons-header,
+.dark-heresy-v1.sheet.actor .inventory-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-heresy-v1.sheet.actor .weapons-header h3,
+.dark-heresy-v1.sheet.actor .inventory-header h3,
+.dark-heresy-v1.sheet.actor .armour-section h3 {
+  margin: 0;
+}
+
+.dark-heresy-v1.sheet.actor .armour-section h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-entry {
+  margin: 0.35rem 0;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-entry-header {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-entry-header .weapon-name {
+  flex: 1;
+  font-weight: bold;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-toggle {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-entry.collapsed .weapon-toggle {
+  transform: rotate(-90deg);
+}
+
+.dark-heresy-v1.sheet.actor .weapon-profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: #f6d7a7;
+  border: 1px solid var(--color-border-light-tertiary, #999);
+  border-radius: 4px;
+  margin-top: 0.25rem;
+  padding: 0.4rem;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-entry.collapsed .weapon-profile {
+  display: none;
+}
+
+/* Fond peach fixe, indépendant du thème sombre : texte forcé en foncé pour rester lisible. */
+.dark-heresy-v1.sheet.actor .weapon-profile,
+.dark-heresy-v1.sheet.actor .weapon-profile label {
+  color: #1b1b1b;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-field label {
+  font-size: 0.7rem;
+  font-weight: bold;
+  opacity: 0.85;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-field input[type="text"],
+.dark-heresy-v1.sheet.actor .weapon-field select {
+  width: 6rem;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-field input[type="number"] {
+  width: 3.5rem;
+  text-align: center;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-field-tearing {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-end;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-field-attributes {
+  flex: 1 1 10rem;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-field-attributes input {
+  width: 100%;
+}
+
+.dark-heresy-v1.sheet.actor .weapon-ammo {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dark-heresy-v1.sheet.actor .armour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.dark-heresy-v1.sheet.actor .armour-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  width: 100%;
+  background: #f6d7a7;
+  color: #1b1b1b;
+  border: 1px solid var(--color-border-light-tertiary, #999);
+  border-radius: 6px;
+  padding: 0.35rem;
+}
+
+.dark-heresy-v1.sheet.actor .armour-box label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.dark-heresy-v1.sheet.actor .armour-range {
+  font-size: 0.7rem;
+  opacity: 0.75;
+}
+
+.dark-heresy-v1.sheet.actor .armour-box input {
+  width: 3.5rem;
+  text-align: center;
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0.25);
+  color: #1b1b1b;
+}
+
+.dark-heresy-v1.sheet.actor .armour-tete { grid-column: 2; grid-row: 1; }
+.dark-heresy-v1.sheet.actor .armour-brasDroit { grid-column: 1; grid-row: 2; }
+.dark-heresy-v1.sheet.actor .armour-corps { grid-column: 2; grid-row: 2; }
+.dark-heresy-v1.sheet.actor .armour-brasGauche { grid-column: 3; grid-row: 2; }
+.dark-heresy-v1.sheet.actor .armour-jambeDroite { grid-column: 1; grid-row: 3; }
+.dark-heresy-v1.sheet.actor .armour-jambeGauche { grid-column: 3; grid-row: 3; }
+
+.dark-heresy-v1.sheet.actor .inventory-weight {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dark-heresy-v1.sheet.actor .inventory-weight input {
+  width: 3.5rem;
+  text-align: center;
+}
+
+.dark-heresy-v1.sheet.actor .gear-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0;
+}
+
+.dark-heresy-v1.sheet.actor .gear-name {
+  flex: 1;
+}
+
+.dark-heresy-v1.sheet.actor .gear-weight {
+  width: 4rem;
+  text-align: center;
+}
+
 /* ---------- Onglet Ressources & Progression ---------- */
 
 .dark-heresy-v1.sheet.actor .resources {
@@ -488,4 +683,20 @@
 .dark-heresy-v1.chat-card.characteristic-test.failure .outcome {
   color: #c62828;
   font-weight: bold;
+}
+
+.dark-heresy-v1.chat-card.weapon-attack.success .outcome,
+.dark-heresy-v1.chat-card.weapon-damage .outcome {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.dark-heresy-v1.chat-card.weapon-attack.failure .outcome {
+  color: #c62828;
+  font-weight: bold;
+}
+
+.dark-heresy-v1.chat-card .weapon-damage-roll {
+  width: 100%;
+  margin-top: 0.25rem;
 }

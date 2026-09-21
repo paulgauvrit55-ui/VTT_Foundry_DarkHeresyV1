@@ -1,5 +1,6 @@
 import { rollCharacteristicTest } from "../dice/characteristic-roll.mjs";
 import { rollBaseSkillTest, rollAdvancedSkillTest } from "../dice/skill-roll.mjs";
+import { rollWeaponAttackTest, rollWeaponDamageTest } from "../dice/weapon-roll.mjs";
 
 export default class DarkHeresyActor extends Actor {
   /**
@@ -24,5 +25,21 @@ export default class DarkHeresyActor extends Actor {
    */
   async rollAdvancedSkillTest(item) {
     return rollAdvancedSkillTest(this, item);
+  }
+
+  /**
+   * Lance un test d'attaque à l'arme (spec §9.3.1) pour cet acteur.
+   * @param {Item} item Item `weapon` possédé par cet acteur.
+   */
+  async rollWeaponAttackTest(item) {
+    return rollWeaponAttackTest(this, item);
+  }
+
+  /**
+   * Lance le jet de dégâts d'une arme (spec §9.3.3) pour cet acteur.
+   * @param {Item} item Item `weapon` possédé par cet acteur.
+   */
+  async rollWeaponDamageTest(item) {
+    return rollWeaponDamageTest(this, item);
   }
 }

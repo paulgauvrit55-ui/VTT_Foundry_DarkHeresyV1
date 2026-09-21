@@ -28,7 +28,12 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       deleteItem: AcolyteSheet.#deleteItem,
       changeTab: AcolyteSheet.#changeTab,
       toggleTalent: AcolyteSheet.#toggleTalent,
-      editImage: AcolyteSheet.#editImage
+      editImage: AcolyteSheet.#editImage,
+      createWeapon: AcolyteSheet.#createWeapon,
+      toggleWeapon: AcolyteSheet.#toggleWeapon,
+      rollWeaponAttack: AcolyteSheet.#rollWeaponAttack,
+      rollWeaponDamage: AcolyteSheet.#rollWeaponDamage,
+      createGear: AcolyteSheet.#createGear
     }
   };
 
@@ -98,6 +103,47 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       description: item.system.description
     }));
 
+    const rangedWeaponGroups = Object.entries(DH.weaponGroups)
+      .filter(([key]) => key !== "corpsACorps")
+      .map(([key, label]) => ({ key, label: game.i18n.localize(label) }));
+    const damageTypeOptions = Object.entries(DH.damageTypes).map(([key, label]) => ({
+      key,
+      label: game.i18n.localize(label)
+    }));
+    const mapWeapon = item => ({
+      id: item.id,
+      name: item.name,
+      isMelee: item.system.isMelee,
+      groups: rangedWeaponGroups.map(group => ({ ...group, selected: group.key === item.system.group })),
+      damageFormula: item.system.damageFormula,
+      damageTypes: damageTypeOptions.map(type => ({ ...type, selected: type.key === item.system.damageType })),
+      penetration: item.system.penetration,
+      bonus: item.system.bonus,
+      tearing: item.system.tearing,
+      attributes: item.system.attributes,
+      range: item.system.range,
+      fireModes: item.system.fireModes,
+      reload: item.system.reload,
+      ammo: item.system.ammo
+    });
+    context.rangedWeapons = this.actor.itemTypes.weapon.filter(item => !item.system.isMelee).map(mapWeapon);
+    context.meleeWeapons = this.actor.itemTypes.weapon.filter(item => item.system.isMelee).map(mapWeapon);
+
+    context.gearItems = this.actor.itemTypes.gear.map(item => ({
+      id: item.id,
+      name: item.name,
+      weight: item.system.weight
+    }));
+    context.carriedWeight = this.actor.system.resources.carriedWeight;
+    context.carryCapacity = this.actor.system.resources.carryCapacity;
+
+    context.armourLocations = Object.entries(DH.armourLocations).map(([key, config]) => ({
+      key,
+      label: game.i18n.localize(config.label),
+      rangeLabel: config.rangeLabel,
+      value: this.actor.system.armour[key].value
+    }));
+
     return context;
   }
 
@@ -125,7 +171,7 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
     if (!item) return;
 
     const field = input.dataset.itemField;
-    const value = input.type === "number" ? Number(input.value) : input.value;
+    const value = input.type === "checkbox" ? input.checked : input.type === "number" ? Number(input.value) : input.value;
     await item.update({ [field]: value });
   }
 
@@ -181,6 +227,36 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
   static async #deleteItem(event, target) {
     const itemId = target.closest("[data-item-id]")?.dataset.itemId;
     if (itemId) await this.actor.deleteEmbeddedDocuments("Item", [itemId]);
+  }
+
+  static async #createWeapon(event, target) {
+    const isMelee = target.dataset.category === "melee";
+    await this.actor.createEmbeddedDocuments("Item", [{
+      name: game.i18n.localize("DH.Weapon.NewName"),
+      type: "weapon",
+      system: { group: isMelee ? "corpsACorps" : "base" }
+    }]);
+  }
+
+  static async #toggleWeapon(event, target) {
+    target.closest(".weapon-entry")?.classList.toggle("collapsed");
+  }
+
+  static async #rollWeaponAttack(event, target) {
+    const item = this.actor.items.get(target.closest("[data-item-id]")?.dataset.itemId);
+    if (item) await this.actor.rollWeaponAttackTest(item);
+  }
+
+  static async #rollWeaponDamage(event, target) {
+    const item = this.actor.items.get(target.closest("[data-item-id]")?.dataset.itemId);
+    if (item) await this.actor.rollWeaponDamageTest(item);
+  }
+
+  static async #createGear() {
+    await this.actor.createEmbeddedDocuments("Item", [{
+      name: game.i18n.localize("DH.Gear.NewName"),
+      type: "gear"
+    }]);
   }
 
   static async #addMentalDisorder() {
