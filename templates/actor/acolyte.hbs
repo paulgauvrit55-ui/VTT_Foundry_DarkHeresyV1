@@ -216,10 +216,6 @@
                     {{/each}}
                   </select>
                 </div>
-                <div class="weapon-field weapon-field-tearing">
-                  <label>{{localize "DH.Weapon.Tearing"}}</label>
-                  <input type="checkbox" data-item-field="system.tearing" {{#if weapon.tearing}}checked{{/if}}>
-                </div>
                 <div class="weapon-field weapon-field-attributes">
                   <label>{{localize "DH.Weapon.Attributes"}}</label>
                   <input type="text" data-item-field="system.attributes" value="{{weapon.attributes}}">
@@ -263,10 +259,6 @@
                 <div class="weapon-field">
                   <label>{{localize "DH.Weapon.Bonus"}}</label>
                   <input type="number" data-item-field="system.bonus" value="{{weapon.bonus}}">
-                </div>
-                <div class="weapon-field weapon-field-tearing">
-                  <label>{{localize "DH.Weapon.Tearing"}}</label>
-                  <input type="checkbox" data-item-field="system.tearing" {{#if weapon.tearing}}checked{{/if}}>
                 </div>
                 <div class="weapon-field weapon-field-attributes">
                   <label>{{localize "DH.Weapon.Attributes"}}</label>

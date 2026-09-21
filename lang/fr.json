@@ -149,7 +149,6 @@
       "FireModes": "Modes de tir",
       "Reload": "Rechargement",
       "Ammo": "Munitions",
-      "Tearing": "Déchirante",
       "Attributes": "Attributs"
     },
     "WeaponGroup": {
@@ -192,9 +191,6 @@
       "Penetration": "Pénétration",
       "ForceBonus": "Bonus de Force",
       "Total": "Dégâts totaux"
-    },
-    "WeaponAttribute": {
-      "Tearing": "Déchirante : meilleur des deux jets de dégâts"
     }
   }
 }

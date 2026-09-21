@@ -470,15 +470,8 @@
   text-align: center;
 }
 
-.dark-heresy-v1.sheet.actor .weapon-field-tearing {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.35rem;
-  align-self: flex-end;
-}
-
 .dark-heresy-v1.sheet.actor .weapon-field-attributes {
-  flex: 1 1 10rem;
+  flex: 1 1 100%;
 }
 
 .dark-heresy-v1.sheet.actor .weapon-field-attributes input {
@@ -699,4 +692,33 @@
 .dark-heresy-v1.chat-card .weapon-damage-roll {
   width: 100%;
   margin-top: 0.25rem;
+}
+
+.dark-heresy-v1.chat-card .damage-breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0.25rem 0;
+}
+
+.dark-heresy-v1.chat-card .damage-part {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.6rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  background: var(--color-bg-option, #ddd);
+}
+
+.dark-heresy-v1.chat-card .damage-part.die {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Dé écarté par un modificateur kh/kl/dh/dl de la formule : grisé, non compté dans le total. */
+.dark-heresy-v1.chat-card .damage-part.discarded {
+  opacity: 0.45;
+  text-decoration: line-through;
 }

@@ -1,15 +1,16 @@
 import { DH } from "../../config.mjs";
 
-const { SchemaField, StringField, NumberField, BooleanField } = foundry.data.fields;
+const { SchemaField, StringField, NumberField } = foundry.data.fields;
 
 /**
  * Profil d'arme (spec §6.1) : un seul type d'Item pour corps-à-corps et distance — le champ
  * `group` sert de discriminant (seul "corpsACorps" désigne une arme de mêlée), cf.
  * Guide_Implementation_FVTT.md §2.3. Poids/prix/disponibilité volontairement absents (spec
  * §6.1 : "champs sus-mentionnés moins le prix, poids et la disponibilité").
- * Seul l'attribut Déchirante (`tearing`) a un effet mécanique (double jet de dégâts, meilleur
- * des deux) — les autres attributs restent des tags informatifs dans le champ libre `attributes`
- * (décision actée, Guide_Implementation_FVTT.md §2.4bis/§3.5).
+ * Aucun attribut d'arme n'a d'effet mécanique automatisé, y compris Déchirante : tous restent
+ * des tags informatifs dans le champ libre `attributes` (décision révisée du 2026-09-21, qui
+ * amende Guide_Implementation_FVTT.md §2.4bis — le double jet de dégâts pour Déchirante était
+ * jugé superflu, le joueur peut exprimer un effet similaire directement dans la formule de dés).
  */
 export default class WeaponData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
@@ -19,7 +20,6 @@ export default class WeaponData extends foundry.abstract.TypeDataModel {
       damageType: new StringField({ required: true, initial: "impact", choices: Object.keys(DH.damageTypes) }),
       penetration: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
       bonus: new NumberField({ required: true, integer: true, initial: 0 }),
-      tearing: new BooleanField({ required: true, initial: false }),
       attributes: new StringField({ required: false, blank: true }),
       // Champs pertinents uniquement pour les armes à distance (masqués sur la fiche pour les
       // armes de mêlée), mais conservés dans le schéma pour toutes les armes par simplicité.

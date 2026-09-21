@@ -38,11 +38,6 @@
     <input type="number" name="system.bonus" value="{{system.bonus}}">
   </div>
 
-  <div class="form-group">
-    <label>{{localize "DH.Weapon.Tearing"}}</label>
-    <input type="checkbox" name="system.tearing" {{#if system.tearing}}checked{{/if}}>
-  </div>
-
   {{#unless isMelee}}
     <div class="form-group">
       <label>{{localize "DH.Weapon.Range"}}</label>

@@ -119,7 +119,6 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       damageTypes: damageTypeOptions.map(type => ({ ...type, selected: type.key === item.system.damageType })),
       penetration: item.system.penetration,
       bonus: item.system.bonus,
-      tearing: item.system.tearing,
       attributes: item.system.attributes,
       range: item.system.range,
       fireModes: item.system.fireModes,
