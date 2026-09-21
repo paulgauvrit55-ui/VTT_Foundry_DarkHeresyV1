@@ -1,15 +1,19 @@
-/* Le formulaire racine EST la fenêtre de contenu (tag: "form") : c'est donc lui qui doit
-   porter le scroll vertical, sans quoi le contenu déborde silencieusement hors fenêtre.
-   Pas de `height` explicite ici : Foundry dimensionne déjà `.window-content` pour remplir
-   la fenêtre (et redimensionne cette valeur en direct) — lui imposer une hauteur figée cassait
-   ce calcul et décalait la poignée de redimensionnement (`.window-resize-handle`, positionnée
-   en absolu par rapport à ce même conteneur) au milieu du contenu au lieu du coin de la fenêtre. */
+/* Le formulaire racine EST la fenêtre de contenu (tag: "form", cf. core `.application
+   .window-content { overflow: hidden }`) : c'est donc lui qui doit porter le scroll vertical.
+   Sans `min-height: 0`, c'est un enfant flex qui grandit pour contenir tout son contenu (taille
+   "auto" par défaut d'un flex-item) au lieu de se limiter à l'espace disponible dans la fenêtre :
+   rien ne "déborde" alors de son propre point de vue, donc `overflow-y: auto` seul n'affiche
+   aucune barre de défilement. Une `height` figée (essayée précédemment) "corrige" ça aussi mais
+   fige la taille indépendamment du redimensionnement réel de la fenêtre par Foundry, ce qui
+   décale la poignée de redimensionnement (`.window-resize-handle`) hors du coin de la fenêtre. */
 .dark-heresy-v1.sheet.actor {
+  min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 .dark-heresy-v1.sheet.item {
+  min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
