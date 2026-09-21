@@ -16,3 +16,16 @@ DH.characteristics = {
   forceMentale: { label: "DH.Characteristic.ForceMentale", abbrev: "DH.CharacteristicAbbrev.ForceMentale", hasBonus: true },
   sociabilite: { label: "DH.Characteristic.Sociabilite", abbrev: "DH.CharacteristicAbbrev.Sociabilite", hasBonus: true }
 };
+
+/**
+ * Échelle du degré de folie (spec §2.4) — sélection manuelle par le joueur,
+ * les paliers de PF exacts n'étant pas chiffrés dans la spec.
+ */
+DH.insanityDegrees = {
+  stable: "DH.InsanityDegree.Stable",
+  instable: "DH.InsanityDegree.Instable",
+  perturbe: "DH.InsanityDegree.Perturbe",
+  desequilibre: "DH.InsanityDegree.Desequilibre",
+  derange: "DH.InsanityDegree.Derange",
+  terminal: "DH.InsanityDegree.Terminal"
+};

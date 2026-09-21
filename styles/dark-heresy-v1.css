@@ -49,6 +49,94 @@
   opacity: 0.8;
 }
 
+.dark-heresy-v1.sheet.actor .resources {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-top: 1px solid var(--color-border-light-tertiary, #999);
+}
+
+.dark-heresy-v1.sheet.actor .resource-pool,
+.dark-heresy-v1.sheet.actor .resource-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--color-border-light-tertiary, #999);
+  border-radius: 4px;
+  padding: 0.35rem;
+}
+
+.dark-heresy-v1.sheet.actor .resource-pool label,
+.dark-heresy-v1.sheet.actor .resource-single label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.dark-heresy-v1.sheet.actor .resource-pool {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dark-heresy-v1.sheet.actor .resource-pool label {
+  width: 100%;
+  text-align: center;
+}
+
+.dark-heresy-v1.sheet.actor .resource-pool input,
+.dark-heresy-v1.sheet.actor .resource-single input {
+  width: 3.5rem;
+  text-align: center;
+}
+
+.dark-heresy-v1.sheet.actor .resource-separator {
+  opacity: 0.7;
+}
+
+.dark-heresy-v1.sheet.actor .resource-derived {
+  opacity: 0.8;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.dark-heresy-v1.sheet.actor .insanity {
+  padding: 0.5rem;
+  border-top: 1px solid var(--color-border-light-tertiary, #999);
+}
+
+.dark-heresy-v1.sheet.actor .insanity-degree {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorders-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorders-header h3 {
+  margin: 0;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorder {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  margin: 0.25rem 0;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorder input[name$=".name"] {
+  flex: 0 0 30%;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorder input[name$=".description"] {
+  flex: 1;
+}
+
 .dark-heresy-v1.chat-card.characteristic-test .card-title {
   margin: 0 0 0.25rem;
 }

@@ -26,6 +26,34 @@
     "SheetLabel": {
       "Acolyte": "Fiche d'Acolyte"
     },
+    "Resources": {
+      "Wounds": "Points de Blessures",
+      "Fate": "Points de Destin",
+      "Movement": "Mouvement",
+      "Fatigue": "Fatigue",
+      "FatigueMax": "Fatigue maximale (Bonus d'Endurance)",
+      "Insanity": "Points de Folie",
+      "Corruption": "Points de Corruption",
+      "Experience": "Points d'Expérience",
+      "Thrones": "Trônes",
+      "MonthlyIncome": "Revenu mensuel actuel"
+    },
+    "InsanityDegree": {
+      "Label": "Degré de folie",
+      "Stable": "Stable",
+      "Instable": "Instable",
+      "Perturbe": "Perturbé",
+      "Desequilibre": "Déséquilibré",
+      "Derange": "Dérangé",
+      "Terminal": "Stade terminal"
+    },
+    "MentalDisorders": {
+      "Title": "Troubles mentaux",
+      "Name": "Nom",
+      "Description": "Description",
+      "Add": "Ajouter un trouble mental",
+      "Delete": "Supprimer ce trouble mental"
+    },
     "Roll": {
       "DifficultyPromptTitle": "Modificateur de difficulté",
       "DifficultyModifier": "Modificateur (+30 à -30)",

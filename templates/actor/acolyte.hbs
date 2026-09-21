@@ -19,4 +19,84 @@
       </div>
     {{/each}}
   </section>
+
+  <section class="resources">
+    <div class="resource-pool">
+      <label>{{localize "DH.Resources.Wounds"}}</label>
+      <input type="number" name="system.resources.wounds.value" value="{{system.resources.wounds.value}}">
+      <span class="resource-separator">/</span>
+      <input type="number" name="system.resources.wounds.max" value="{{system.resources.wounds.max}}">
+    </div>
+
+    <div class="resource-pool">
+      <label>{{localize "DH.Resources.Fate"}}</label>
+      <input type="number" name="system.resources.fate.value" value="{{system.resources.fate.value}}">
+      <span class="resource-separator">/</span>
+      <input type="number" name="system.resources.fate.max" value="{{system.resources.fate.max}}">
+    </div>
+
+    <div class="resource-pool">
+      <label>{{localize "DH.Resources.Fatigue"}}</label>
+      <input type="number" name="system.resources.fatigue" value="{{system.resources.fatigue}}">
+      <span class="resource-separator">/</span>
+      <span class="resource-derived" title="{{localize 'DH.Resources.FatigueMax'}}">{{system.resources.fatigueMax}}</span>
+    </div>
+
+    <div class="resource-single">
+      <label>{{localize "DH.Resources.Movement"}}</label>
+      <input type="number" name="system.resources.movement" value="{{system.resources.movement}}">
+    </div>
+
+    <div class="resource-single">
+      <label>{{localize "DH.Resources.Insanity"}}</label>
+      <input type="number" name="system.resources.insanity" value="{{system.resources.insanity}}">
+    </div>
+
+    <div class="resource-single">
+      <label>{{localize "DH.Resources.Corruption"}}</label>
+      <input type="number" name="system.resources.corruption" value="{{system.resources.corruption}}">
+    </div>
+
+    <div class="resource-pool">
+      <label>{{localize "DH.Resources.Experience"}}</label>
+      <input type="number" name="system.resources.experience.spent" value="{{system.resources.experience.spent}}">
+      <span class="resource-separator">/</span>
+      <input type="number" name="system.resources.experience.total" value="{{system.resources.experience.total}}">
+    </div>
+
+    <div class="resource-single">
+      <label>{{localize "DH.Resources.Thrones"}}</label>
+      <input type="number" name="system.resources.thrones" value="{{system.resources.thrones}}">
+    </div>
+
+    <div class="resource-single">
+      <label>{{localize "DH.Resources.MonthlyIncome"}}</label>
+      <input type="number" name="system.resources.monthlyIncome" value="{{system.resources.monthlyIncome}}">
+    </div>
+  </section>
+
+  <section class="insanity">
+    <div class="insanity-degree">
+      <label>{{localize "DH.InsanityDegree.Label"}}</label>
+      <select name="system.insanityDegree">
+        {{#each insanityDegrees as |degree|}}
+          <option value="{{degree.key}}" {{#if (eq degree.key ../system.insanityDegree)}}selected{{/if}}>{{degree.label}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class="mental-disorders">
+      <div class="mental-disorders-header">
+        <h3>{{localize "DH.MentalDisorders.Title"}}</h3>
+        <a data-action="addMentalDisorder" title="{{localize 'DH.MentalDisorders.Add'}}"><i class="fa-solid fa-plus"></i></a>
+      </div>
+      {{#each mentalDisorders as |disorder|}}
+        <div class="mental-disorder">
+          <input type="text" name="system.mentalDisorders.{{disorder.index}}.name" value="{{disorder.name}}" placeholder="{{localize 'DH.MentalDisorders.Name'}}">
+          <input type="text" name="system.mentalDisorders.{{disorder.index}}.description" value="{{disorder.description}}" placeholder="{{localize 'DH.MentalDisorders.Description'}}">
+          <a data-action="deleteMentalDisorder" data-index="{{disorder.index}}" title="{{localize 'DH.MentalDisorders.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        </div>
+      {{/each}}
+    </div>
+  </section>
 </div>

@@ -7,11 +7,13 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
   static DEFAULT_OPTIONS = {
     classes: ["dark-heresy-v1", "sheet", "actor", "acolyte"],
     tag: "form",
-    position: { width: 640, height: 520 },
+    position: { width: 640, height: 760 },
     window: { resizable: true },
     form: { submitOnChange: true, closeOnSubmit: false },
     actions: {
-      rollCharacteristic: AcolyteSheet.#rollCharacteristic
+      rollCharacteristic: AcolyteSheet.#rollCharacteristic,
+      addMentalDisorder: AcolyteSheet.#addMentalDisorder,
+      deleteMentalDisorder: AcolyteSheet.#deleteMentalDisorder
     }
   };
 
@@ -32,10 +34,29 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       label: game.i18n.localize(DH.characteristics[key].label),
       abbrev: game.i18n.localize(DH.characteristics[key].abbrev)
     }));
+    context.insanityDegrees = Object.entries(DH.insanityDegrees).map(([key, label]) => ({
+      key,
+      label: game.i18n.localize(label)
+    }));
+    context.mentalDisorders = this.actor.system.mentalDisorders.map((disorder, index) => ({ ...disorder, index }));
     return context;
   }
 
   static async #rollCharacteristic(event, target) {
     await this.actor.rollCharacteristicTest(target.dataset.characteristic);
+  }
+
+  static async #addMentalDisorder() {
+    const disorders = this.actor.system.mentalDisorders.map(d => ({ name: d.name, description: d.description }));
+    disorders.push({ name: "", description: "" });
+    await this.actor.update({ "system.mentalDisorders": disorders });
+  }
+
+  static async #deleteMentalDisorder(event, target) {
+    const index = Number(target.dataset.index);
+    const disorders = this.actor.system.mentalDisorders
+      .filter((_, i) => i !== index)
+      .map(d => ({ name: d.name, description: d.description }));
+    await this.actor.update({ "system.mentalDisorders": disorders });
   }
 }
