@@ -144,7 +144,13 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       ammo: item.system.ammo
     }));
 
-    context.gearItems = this.actor.itemTypes.gear.map(item => ({
+    // Liste d'inventaire (spec §6.5) : objets `gear` + armes, ces dernières étant aussi des
+    // objets physiques depuis la décision #19 — cf. `acolyte-sheet.mjs` pour le détail.
+    context.gearItems = [
+      ...this.actor.itemTypes.gear,
+      ...this.actor.itemTypes.weapon,
+      ...this.actor.itemTypes.rangedWeapon
+    ].map(item => ({
       id: item.id,
       name: item.name,
       weight: item.system.weight

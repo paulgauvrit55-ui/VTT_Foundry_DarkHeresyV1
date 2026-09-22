@@ -1,13 +1,17 @@
 import { DH } from "../../config.mjs";
+import { physicalItemSchema } from "../shared-fields.mjs";
 
 const { SchemaField, StringField, NumberField } = foundry.data.fields;
 
 /**
  * Profil d'arme à distance (spec §6.1) : type d'Item distinct de `weapon` (corps-à-corps) depuis
  * le 2026-09-22, avec les champs propres au tir (portée, modes de tir, rechargement, munitions)
- * — cf. `weapon-data.mjs` pour le contexte de la scission. Poids/prix/disponibilité
- * volontairement absents (spec §6.1). Aucun attribut d'arme n'a d'effet mécanique automatisé
- * (décision révisée du 2026-09-21, cf. `weapon-data.mjs`).
+ * — cf. `weapon-data.mjs` pour le contexte de la scission. Comme `weapon`, porte aussi les
+ * champs communs à tout objet physique (`physicalItemSchema`, décision #19) — poids/prix/
+ * disponibilité absents du profil de combat affiché sur la fiche d'acolyte (spec §6.1), mais
+ * stockés pour l'entrée d'inventaire (poids) et la fiche d'Item (prix/disponibilité). Aucun
+ * attribut d'arme n'a d'effet mécanique automatisé (décision révisée du 2026-09-21, cf.
+ * `weapon-data.mjs`).
  */
 export default class RangedWeaponData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
@@ -24,7 +28,8 @@ export default class RangedWeaponData extends foundry.abstract.TypeDataModel {
       ammo: new SchemaField({
         current: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         max: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
-      })
+      }),
+      ...physicalItemSchema()
     };
   }
 

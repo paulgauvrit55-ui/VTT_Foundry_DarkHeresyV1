@@ -1,4 +1,5 @@
 import { DH } from "../../config.mjs";
+import { physicalItemSchema } from "../shared-fields.mjs";
 
 const { StringField, NumberField } = foundry.data.fields;
 
@@ -7,8 +8,12 @@ const { StringField, NumberField } = foundry.data.fields;
  * corps-à-corps et distance avec un champ `group` comme discriminant ; désormais scindé en deux
  * types d'Item distincts (celui-ci et `rangedWeapon`, cf. `ranged-weapon-data.mjs`) pour que le
  * drag & drop depuis un compendium range directement l'arme dans la bonne liste de la fiche
- * d'acolyte — cf. Guide_Implementation_FVTT.md §3.15. Poids/prix/disponibilité volontairement
- * absents (spec §6.1 : "champs sus-mentionnés moins le prix, poids et la disponibilité").
+ * d'acolyte — cf. Guide_Implementation_FVTT.md §3.15. Une arme est aussi un objet d'inventaire
+ * (spec §6.1 : "Poids, Prix, Disponibilité") : elle porte donc les mêmes champs qu'un `gear`
+ * (`physicalItemSchema`, décision #19) — ils restent absents du **profil de combat** affiché sur
+ * la fiche d'acolyte (spec §6.1 : "champs sus-mentionnés moins le prix, poids et la
+ * disponibilité"), mais l'Item les stocke pour son entrée dans la liste d'inventaire (poids) et
+ * sa propre fiche (prix/disponibilité, jamais affichés sur la fiche de l'Actor).
  * Aucun attribut d'arme n'a d'effet mécanique automatisé, y compris Déchirante : tous restent
  * des tags informatifs dans le champ libre `attributes` (décision révisée du 2026-09-21, qui
  * amende Guide_Implementation_FVTT.md §2.4bis — le double jet de dégâts pour Déchirante était
@@ -21,7 +26,8 @@ export default class WeaponData extends foundry.abstract.TypeDataModel {
       damageType: new StringField({ required: true, initial: "impact", choices: Object.keys(DH.damageTypes) }),
       penetration: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
       bonus: new NumberField({ required: true, integer: true, initial: 0 }),
-      attributes: new StringField({ required: false, blank: true })
+      attributes: new StringField({ required: false, blank: true }),
+      ...physicalItemSchema()
     };
   }
 

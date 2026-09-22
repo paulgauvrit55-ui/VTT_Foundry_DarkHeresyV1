@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Nom de l'objet",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 0,
+      "availability": "Banal",
+      "description": "Description de l'objet."
+    }
+  }
+]

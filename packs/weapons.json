@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Nom de l'arme de corps à corps",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Tags séparés par des virgules (ex. Déchirante, Primitive)",
+      "weight": 1,
+      "price": 0,
+      "availability": "Banal",
+      "description": "Description libre de l'arme."
+    }
+  }
+]

@@ -5,7 +5,7 @@ export default class TalentSheet extends HandlebarsApplicationMixin(ItemSheetV2)
   static DEFAULT_OPTIONS = {
     classes: ["dark-heresy-v1", "sheet", "item", "talent"],
     tag: "form",
-    position: { width: 480, height: 360 },
+    position: { width: 480, height: 420 },
     window: { resizable: true },
     form: { submitOnChange: true, closeOnSubmit: false }
   };

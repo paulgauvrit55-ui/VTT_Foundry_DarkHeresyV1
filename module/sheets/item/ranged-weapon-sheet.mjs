@@ -7,7 +7,7 @@ export default class RangedWeaponSheet extends HandlebarsApplicationMixin(ItemSh
   static DEFAULT_OPTIONS = {
     classes: ["dark-heresy-v1", "sheet", "item", "ranged-weapon"],
     tag: "form",
-    position: { width: 480, height: 620 },
+    position: { width: 480, height: 760 },
     window: { resizable: true },
     form: { submitOnChange: true, closeOnSubmit: false }
   };

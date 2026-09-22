@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Nom de l'arme à distance",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Tags séparés par des virgules (ex. Déchirante, Fiable)",
+      "range": 100,
+      "fireModes": "Simple/Rafale(3)/Auto(10)",
+      "reload": "1AC",
+      "ammo": {
+        "current": 30,
+        "max": 30
+      },
+      "weight": 1,
+      "price": 0,
+      "availability": "Banal",
+      "description": "Description libre de l'arme."
+    }
+  }
+]

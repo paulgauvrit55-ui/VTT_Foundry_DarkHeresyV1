@@ -125,6 +125,7 @@
     },
     "Talent": {
       "Title": "Talents",
+      "Prerequisites": "Prérequis",
       "Description": "Description",
       "Add": "Ajouter un talent",
       "Delete": "Supprimer ce talent",
@@ -193,7 +194,9 @@
       "NewName": "Nouvel objet",
       "Weight": "Poids",
       "Description": "Description",
-      "CarriedWeight": "Poids porté"
+      "CarriedWeight": "Poids porté",
+      "Price": "Prix (Trônes)",
+      "Availability": "Disponibilité"
     },
     "Attack": {
       "Location": "Localisation touchée",

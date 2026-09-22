@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Nom de la compétence avancée",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Description de la compétence."
+    }
+  }
+]

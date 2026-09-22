@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Nom du talent",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Prérequis du talent (ex. caractéristique minimale, autre talent requis).",
+      "description": "Description talent (règles/effets)."
+    }
+  }
+]

@@ -7,7 +7,7 @@ export default class WeaponSheet extends HandlebarsApplicationMixin(ItemSheetV2)
   static DEFAULT_OPTIONS = {
     classes: ["dark-heresy-v1", "sheet", "item", "weapon"],
     tag: "form",
-    position: { width: 480, height: 560 },
+    position: { width: 480, height: 700 },
     window: { resizable: true },
     form: { submitOnChange: true, closeOnSubmit: false }
   };
