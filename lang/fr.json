@@ -29,7 +29,8 @@
       "AdvancedSkill": "Fiche de Compétence avancée",
       "Weapon": "Fiche d'Arme de corps-à-corps",
       "RangedWeapon": "Fiche d'Arme à distance",
-      "Gear": "Fiche d'Objet"
+      "Gear": "Fiche d'Objet",
+      "Npc": "Fiche de PNJ/Créature"
     },
     "Tabs": {
       "Characteristics": "Caractéristiques et Compétences",
@@ -201,6 +202,46 @@
       "Penetration": "Pénétration",
       "ForceBonus": "Bonus de Force",
       "Total": "Dégâts totaux"
+    },
+    "Trait": {
+      "Title": "Traits",
+      "Description": "Description",
+      "Add": "Ajouter un trait",
+      "Delete": "Supprimer ce trait",
+      "Toggle": "Afficher/masquer la description"
+    },
+    "Threat": {
+      "Category": "Catégorie de menace",
+      "Degree": "Degré de menace"
+    },
+    "ThreatCategory": {
+      "Hereticus": "Hereticus",
+      "Malleus": "Malleus",
+      "Obscuro": "Obscuro",
+      "Xenos": "Xenos"
+    },
+    "ThreatDegree": {
+      "Minima": "Minima",
+      "Minoris": "Minoris",
+      "Majoris": "Majoris",
+      "Extremis": "Extremis",
+      "Terminus": "Terminus"
+    },
+    "Size": {
+      "Title": "Taille",
+      "TresPetite": "Très petite",
+      "Petite": "Petite",
+      "Normale": "Normale",
+      "Grande": "Grande",
+      "Enorme": "Énorme",
+      "Massive": "Massive",
+      "Titanesque": "Titanesque"
+    },
+    "Speed": {
+      "Half": "Demi-mvt",
+      "Full": "Mvt complet",
+      "Charge": "Charge",
+      "Run": "Course"
     }
   }
 }

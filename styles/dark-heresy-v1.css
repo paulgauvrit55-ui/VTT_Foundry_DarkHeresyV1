@@ -162,6 +162,36 @@
   border-color: rgba(0, 0, 0, 0.25);
 }
 
+/* ---------- Fiche PNJ (profil condensé, spec §12, pas d'onglets) ---------- */
+
+.dark-heresy-v1.sheet.actor.npc .header-resources {
+  max-width: 10rem;
+}
+
+.dark-heresy-v1.sheet.actor .npc-speed-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor .npc-speed-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.dark-heresy-v1.sheet.actor .npc-speed-field label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.dark-heresy-v1.sheet.actor .npc-speed-field input {
+  width: 100%;
+  text-align: center;
+}
+
 /* ---------- Onglets ---------- */
 
 .dark-heresy-v1.sheet.actor .sheet-tabs {
@@ -215,7 +245,8 @@
 .dark-heresy-v1.sheet.actor .characteristics-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  row-gap: 0.5rem;
+  column-gap: 2rem;
 }
 
 .dark-heresy-v1.sheet.actor .characteristic-box {

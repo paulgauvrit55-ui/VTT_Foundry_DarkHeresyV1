@@ -24,6 +24,9 @@
     "Actor": {
       "acolyte": {
         "htmlFields": ["biography"]
+      },
+      "npc": {
+        "htmlFields": ["biography"]
       }
     },
     "Item": {

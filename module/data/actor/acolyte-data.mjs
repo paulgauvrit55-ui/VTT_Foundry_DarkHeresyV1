@@ -1,28 +1,15 @@
-import { DH } from "../../config.mjs";
+import {
+  characteristicsSchema,
+  resourcePoolField,
+  nameDescriptionField,
+  baseSkillsSchema,
+  armourSchema,
+  computeCharacteristicBonuses,
+  computeBaseSkillTotals,
+  computeCarriedWeight
+} from "../shared-fields.mjs";
 
 const { SchemaField, NumberField, StringField, HTMLField, ArrayField } = foundry.data.fields;
-
-function characteristicField(initial = 30) {
-  return new SchemaField({
-    value: new NumberField({ required: true, integer: true, min: 0, initial })
-  });
-}
-
-/** Ressource avec valeur courante et maximum, tous deux saisis à la main (spec §2.3). */
-function resourcePoolField() {
-  return new SchemaField({
-    value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
-    max: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
-  });
-}
-
-/** Entrée nom + description (spec §2.4) : forme commune aux troubles mentaux et aux malignités. */
-function nameDescriptionField() {
-  return new SchemaField({
-    name: new StringField({ required: true, blank: true }),
-    description: new StringField({ required: true, blank: true })
-  });
-}
 
 /** Achat de progression (spec §5.2) : entrée libre nom + coût en PX consigné par le joueur. */
 function progressionEntryField() {
@@ -32,23 +19,10 @@ function progressionEntryField() {
   });
 }
 
-/** Compétence de base (spec §3) : maîtrise (Non acquise/0/+10/+20) + bonus libre éditable. */
-function baseSkillField() {
-  return new SchemaField({
-    mastery: new StringField({ required: true, initial: "untrained", choices: ["untrained", "0", "10", "20"] }),
-    bonus: new NumberField({ required: true, integer: true, initial: 0 })
-  });
-}
-
 export default class AcolyteData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
-    const characteristics = {};
-    for (const key of Object.keys(DH.characteristics)) {
-      characteristics[key] = characteristicField();
-    }
-
     return {
-      characteristics: new SchemaField(characteristics),
+      characteristics: characteristicsSchema(),
       // Champs libres (spec §5) : pas de moteur de carrière, juste affichés dans l'en-tête de fiche.
       homeworld: new StringField({ required: false, blank: true }),
       career: new StringField({ required: false, blank: true }),
@@ -85,25 +59,14 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
       // `armour` avec agrégation automatique) — décision utilisateur du 2026-09-21, cohérente
       // avec le mockup `Exemples/LayoutTab2.png` (aucun bouton d'ajout/suppression dessiné,
       // contrairement aux listes d'armes/objets) et avec le précédent Mouvement/port de charge.
-      armour: new SchemaField(
-        Object.fromEntries(Object.keys(DH.armourLocations).map(key => [key, new SchemaField({
-          value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
-        })]))
-      ),
-      skills: new SchemaField(
-        Object.fromEntries(Object.keys(DH.baseSkills).map(key => [key, baseSkillField()]))
-      ),
+      armour: armourSchema(),
+      skills: baseSkillsSchema(),
       biography: new HTMLField({ required: false, blank: true })
     };
   }
 
-  /** Bonus de caractéristique = chiffre des dizaines (spec §2.2), recalculé à chaque préparation. */
   prepareDerivedData() {
-    for (const [key, characteristic] of Object.entries(this.characteristics)) {
-      characteristic.bonus = DH.characteristics[key].hasBonus
-        ? Math.floor(characteristic.value / 10)
-        : null;
-    }
+    computeCharacteristicBonuses(this.characteristics);
 
     // Plafond de Fatigue = Bonus d'Endurance (spec §2.3, §9.7) : dérivé, non stocké.
     this.resources.fatigueMax = this.characteristics.endurance.bonus;
@@ -115,17 +78,8 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
 
     // Poids porté = somme des poids des objets d'inventaire (spec §6.5) ; les armes en sont
     // exclues (spec §6.1 : champs de la liste d'armes "moins ... le poids").
-    const gearItems = this.parent?.itemTypes?.gear ?? [];
-    this.resources.carriedWeight = gearItems.reduce((sum, item) => sum + (item.system.weight ?? 0), 0);
+    this.resources.carriedWeight = computeCarriedWeight(this.parent);
 
-    // Valeur finale d'une compétence de base (spec §3) : caractéristique liée (divisée par
-    // deux si non acquise) + palier de maîtrise + bonus libre.
-    for (const [key, skill] of Object.entries(this.skills)) {
-      const characteristic = this.characteristics[DH.baseSkills[key].characteristic];
-      const untrained = skill.mastery === "untrained";
-      const base = untrained ? Math.floor(characteristic.value / 2) : characteristic.value;
-      const masteryBonus = untrained ? 0 : Number(skill.mastery);
-      skill.total = base + masteryBonus + skill.bonus;
-    }
+    computeBaseSkillTotals(this.skills, this.characteristics);
   }
 }

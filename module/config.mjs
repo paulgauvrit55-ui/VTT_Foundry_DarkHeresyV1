@@ -93,6 +93,42 @@ DH.armourLocations = {
 };
 
 /**
+ * Niveau de Menace des PNJ/créatures (spec §12) : catégorie qualifiant la nature de la menace.
+ * Simple repère d'échelle pour le MJ, sans effet mécanique direct sur les jets.
+ */
+DH.threatCategories = {
+  hereticus: "DH.ThreatCategory.Hereticus",
+  malleus: "DH.ThreatCategory.Malleus",
+  obscuro: "DH.ThreatCategory.Obscuro",
+  xenos: "DH.ThreatCategory.Xenos"
+};
+
+/** Niveau de Menace des PNJ/créatures (spec §12) : degré qualifiant l'ampleur de la menace. */
+DH.threatDegrees = {
+  minima: "DH.ThreatDegree.Minima",
+  minoris: "DH.ThreatDegree.Minoris",
+  majoris: "DH.ThreatDegree.Majoris",
+  extremis: "DH.ThreatDegree.Extremis",
+  terminus: "DH.ThreatDegree.Terminus"
+};
+
+/**
+ * Modificateur de taille des PNJ/créatures (spec §12, Table 12-2) : échelle informative
+ * affichée sur le profil, sans moteur automatisé qui l'appliquerait aux tests d'attaque/
+ * Esquive/Bonus d'Agilité — cohérent avec les autres tables non automatisées du projet
+ * (Guide_Implementation_FVTT.md, décisions #4-#6), le MJ applique l'ajustement lui-même.
+ */
+DH.sizeCategories = {
+  tresPetite: "DH.Size.TresPetite",
+  petite: "DH.Size.Petite",
+  normale: "DH.Size.Normale",
+  grande: "DH.Size.Grande",
+  enorme: "DH.Size.Enorme",
+  massive: "DH.Size.Massive",
+  titanesque: "DH.Size.Titanesque"
+};
+
+/**
  * Calcule la localisation touchée (spec §9.3.2) en inversant les deux chiffres du résultat du
  * d100 (ex. 37 → 73) et en le comparant aux bornes de `DH.armourLocations`. Un résultat de 100
  * (chiffres "00") s'inverse en lui-même.
