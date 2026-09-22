@@ -18,19 +18,6 @@ DH.characteristics = {
 };
 
 /**
- * Échelle du degré de folie (spec §2.4) — sélection manuelle par le joueur,
- * les paliers de PF exacts n'étant pas chiffrés dans la spec.
- */
-DH.insanityDegrees = {
-  stable: "DH.InsanityDegree.Stable",
-  instable: "DH.InsanityDegree.Instable",
-  perturbe: "DH.InsanityDegree.Perturbe",
-  desequilibre: "DH.InsanityDegree.Desequilibre",
-  derange: "DH.InsanityDegree.Derange",
-  terminal: "DH.InsanityDegree.Terminal"
-};
-
-/**
  * Compétences de base (spec §3) : liste fixe, chacune rattachée à une
  * caractéristique (clé de `DH.characteristics`). Champs fixes du Data Model
  * `acolyte` (§skills.<clé>), pas des Items — cf. Guide_Implementation_FVTT.md §2.3.

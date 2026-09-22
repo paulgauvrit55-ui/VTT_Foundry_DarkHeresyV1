@@ -51,21 +51,30 @@
       "Thrones": "Trônes",
       "MonthlyIncome": "Revenu mensuel actuel"
     },
-    "InsanityDegree": {
-      "Label": "Degré de folie",
-      "Stable": "Stable",
-      "Instable": "Instable",
-      "Perturbe": "Perturbé",
-      "Desequilibre": "Déséquilibré",
-      "Derange": "Dérangé",
-      "Terminal": "Stade terminal"
-    },
     "MentalDisorders": {
       "Title": "Troubles mentaux",
       "Name": "Nom",
       "Description": "Description",
       "Add": "Ajouter un trouble mental",
       "Delete": "Supprimer ce trouble mental"
+    },
+    "Malignancies": {
+      "Title": "Malignités",
+      "Name": "Nom",
+      "Description": "Description",
+      "Add": "Ajouter une malignité",
+      "Delete": "Supprimer cette malignité"
+    },
+    "Progression": {
+      "Title": "Progression",
+      "ExperienceUnspent": "PX non dépensés",
+      "ExperienceSpent": "PX dépensés",
+      "ExperienceTotal": "PX totaux",
+      "PurchasesTitle": "Achats",
+      "Name": "Nom",
+      "Cost": "Coût (PX)",
+      "Add": "Ajouter un achat",
+      "Delete": "Supprimer cet achat"
     },
     "Skill": {
       "BaseTitle": "Compétences de base",

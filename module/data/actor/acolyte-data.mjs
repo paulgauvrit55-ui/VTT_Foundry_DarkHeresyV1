@@ -16,10 +16,19 @@ function resourcePoolField() {
   });
 }
 
-function mentalDisorderField() {
+/** Entrée nom + description (spec §2.4) : forme commune aux troubles mentaux et aux malignités. */
+function nameDescriptionField() {
   return new SchemaField({
     name: new StringField({ required: true, blank: true }),
     description: new StringField({ required: true, blank: true })
+  });
+}
+
+/** Achat de progression (spec §5.2) : entrée libre nom + coût en PX consigné par le joueur. */
+function progressionEntryField() {
+  return new SchemaField({
+    name: new StringField({ required: true, blank: true }),
+    cost: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
   });
 }
 
@@ -51,6 +60,7 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
         insanity: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         corruption: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         experience: new SchemaField({
+          // "unspent" n'est pas stocké : dérivé de total - spent à chaque préparation.
           spent: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
           total: new NumberField({ required: true, integer: true, min: 0, initial: 400 })
         }),
@@ -61,8 +71,15 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
         // talents/équipements pouvant faire varier le seuil réel.
         carryCapacity: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
       }),
-      insanityDegree: new StringField({ required: true, initial: "stable", choices: Object.keys(DH.insanityDegrees) }),
-      mentalDisorders: new ArrayField(mentalDisorderField()),
+      mentalDisorders: new ArrayField(nameDescriptionField()),
+      // Malignités (spec §2.5) : fonctionnellement identique aux troubles mentaux, mais liée
+      // aux Points de Corruption plutôt qu'aux Points de Folie — décision utilisateur du
+      // 2026-09-22, remplace la liste déroulante "degré de folie" prévue en §2.4 (jugée
+      // superflue par l'utilisateur, retirée).
+      malignancies: new ArrayField(nameDescriptionField()),
+      // Suivi manuel des achats de progression (spec §5.2) : les joueurs gèrent eux-mêmes la
+      // progression (§5.1), ce champ ne fait que consigner nom + coût en PX de chaque achat.
+      progression: new ArrayField(progressionEntryField()),
       // Armure par localisation (spec §6.4) : champs manuels saisis par le joueur (pas d'Item
       // `armour` avec agrégation automatique) — décision utilisateur du 2026-09-21, cohérente
       // avec le mockup `Exemples/LayoutTab2.png` (aucun bouton d'ajout/suppression dessiné,
@@ -89,6 +106,9 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
 
     // Plafond de Fatigue = Bonus d'Endurance (spec §2.3, §9.7) : dérivé, non stocké.
     this.resources.fatigueMax = this.characteristics.endurance.bonus;
+
+    // PX non dépensés = total - dépensé (spec §5.2) : dérivé, non stocké.
+    this.resources.experience.unspent = this.resources.experience.total - this.resources.experience.spent;
 
     // Poids porté = somme des poids des objets d'inventaire (spec §6.5) ; les armes en sont
     // exclues (spec §6.1 : champs de la liste d'armes "moins ... le poids").

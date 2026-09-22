@@ -33,7 +33,11 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       toggleWeapon: AcolyteSheet.#toggleWeapon,
       rollWeaponAttack: AcolyteSheet.#rollWeaponAttack,
       rollWeaponDamage: AcolyteSheet.#rollWeaponDamage,
-      createGear: AcolyteSheet.#createGear
+      createGear: AcolyteSheet.#createGear,
+      addMalignancy: AcolyteSheet.#addMalignancy,
+      deleteMalignancy: AcolyteSheet.#deleteMalignancy,
+      addProgression: AcolyteSheet.#addProgression,
+      deleteProgression: AcolyteSheet.#deleteProgression
     }
   };
 
@@ -59,11 +63,9 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       label: game.i18n.localize(DH.characteristics[key].label),
       abbrev: game.i18n.localize(DH.characteristics[key].abbrev)
     }));
-    context.insanityDegrees = Object.entries(DH.insanityDegrees).map(([key, label]) => ({
-      key,
-      label: game.i18n.localize(label)
-    }));
     context.mentalDisorders = this.actor.system.mentalDisorders.map((disorder, index) => ({ ...disorder, index }));
+    context.malignancies = this.actor.system.malignancies.map((malignancy, index) => ({ ...malignancy, index }));
+    context.progression = this.actor.system.progression.map((entry, index) => ({ ...entry, index }));
 
     // Ordre explicite : les clés numériques d'un objet JS ("0"/"10"/"20") s'énumèrent avant
     // les clés textuelles ("untrained"), quel que soit l'ordre d'écriture — Object.entries()
@@ -259,16 +261,38 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
   }
 
   static async #addMentalDisorder() {
-    const disorders = this.actor.system.mentalDisorders.map(d => ({ name: d.name, description: d.description }));
-    disorders.push({ name: "", description: "" });
-    await this.actor.update({ "system.mentalDisorders": disorders });
+    await this.#addListEntry("mentalDisorders", { name: "", description: "" });
   }
 
   static async #deleteMentalDisorder(event, target) {
-    const index = Number(target.dataset.index);
-    const disorders = this.actor.system.mentalDisorders
-      .filter((_, i) => i !== index)
-      .map(d => ({ name: d.name, description: d.description }));
-    await this.actor.update({ "system.mentalDisorders": disorders });
+    await this.#deleteListEntry("mentalDisorders", Number(target.dataset.index));
+  }
+
+  static async #addMalignancy() {
+    await this.#addListEntry("malignancies", { name: "", description: "" });
+  }
+
+  static async #deleteMalignancy(event, target) {
+    await this.#deleteListEntry("malignancies", Number(target.dataset.index));
+  }
+
+  static async #addProgression() {
+    await this.#addListEntry("progression", { name: "", cost: 0 });
+  }
+
+  static async #deleteProgression(event, target) {
+    await this.#deleteListEntry("progression", Number(target.dataset.index));
+  }
+
+  /** Ajoute une entrée à l'un des champs `ArrayField` d'objets simples de l'acolyte (troubles mentaux, malignités, progression). */
+  async #addListEntry(path, blank) {
+    const list = this.actor.system[path].map(entry => ({ ...entry }));
+    list.push(blank);
+    await this.actor.update({ [`system.${path}`]: list });
+  }
+
+  async #deleteListEntry(path, index) {
+    const list = this.actor.system[path].filter((_, i) => i !== index).map(entry => ({ ...entry }));
+    await this.actor.update({ [`system.${path}`]: list });
   }
 }

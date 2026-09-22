@@ -50,6 +50,33 @@
   cursor: pointer;
 }
 
+.dark-heresy-v1.sheet.actor .portrait-block {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.2rem;
+  flex: 0 0 auto;
+  width: 96px;
+}
+
+.dark-heresy-v1.sheet.actor .movement-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.dark-heresy-v1.sheet.actor .movement-field label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.dark-heresy-v1.sheet.actor .movement-field input {
+  width: 100%;
+  text-align: center;
+}
+
 .dark-heresy-v1.sheet.actor .header-fields {
   flex: 1;
   display: flex;
@@ -558,14 +585,81 @@
 
 /* ---------- Onglet Ressources & Progression ---------- */
 
-.dark-heresy-v1.sheet.actor .resources {
+.dark-heresy-v1.sheet.actor .insanity-corruption-columns {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-  padding: 0.5rem 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
-.dark-heresy-v1.sheet.actor .resource-pool,
+.dark-heresy-v1.sheet.actor .corruption-column {
+  border-left: 1px solid var(--color-border-light-tertiary, #999);
+  padding-left: 1rem;
+}
+
+.dark-heresy-v1.sheet.actor .resource-current {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor .resource-current input {
+  width: 4rem;
+  text-align: center;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorders-header,
+.dark-heresy-v1.sheet.actor .malignancies-header,
+.dark-heresy-v1.sheet.actor .progression-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorders-header h4,
+.dark-heresy-v1.sheet.actor .malignancies-header h4,
+.dark-heresy-v1.sheet.actor .progression-list-header h4 {
+  margin: 0;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorder,
+.dark-heresy-v1.sheet.actor .malignancy {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  margin: 0.25rem 0;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorder input[name$=".name"],
+.dark-heresy-v1.sheet.actor .malignancy input[name$=".name"] {
+  flex: 0 0 30%;
+}
+
+.dark-heresy-v1.sheet.actor .mental-disorder input[name$=".description"],
+.dark-heresy-v1.sheet.actor .malignancy input[name$=".description"] {
+  flex: 1;
+}
+
+.dark-heresy-v1.sheet.actor .progression {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border-light-tertiary, #999);
+}
+
+.dark-heresy-v1.sheet.actor .progression-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.dark-heresy-v1.sheet.actor .experience-row,
+.dark-heresy-v1.sheet.actor .thrones-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .dark-heresy-v1.sheet.actor .resource-single {
   display: flex;
   flex-direction: column;
@@ -575,68 +669,37 @@
   padding: 0.35rem;
 }
 
-.dark-heresy-v1.sheet.actor .resource-pool label,
 .dark-heresy-v1.sheet.actor .resource-single label {
   font-weight: bold;
   font-size: 0.8rem;
 }
 
-.dark-heresy-v1.sheet.actor .resource-pool {
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.dark-heresy-v1.sheet.actor .resource-pool label {
-  width: 100%;
-  text-align: center;
-}
-
-.dark-heresy-v1.sheet.actor .resource-pool input,
-.dark-heresy-v1.sheet.actor .resource-single input {
+.dark-heresy-v1.sheet.actor .resource-single input,
+.dark-heresy-v1.sheet.actor .resource-single .resource-derived {
   width: 3.5rem;
   text-align: center;
 }
 
-.dark-heresy-v1.sheet.actor .resource-separator {
-  opacity: 0.7;
+.dark-heresy-v1.sheet.actor .progression-entries {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem 1rem;
+  margin-top: 0.25rem;
 }
 
-.dark-heresy-v1.sheet.actor .insanity {
-  padding: 0.5rem 0;
-  border-top: 1px solid var(--color-border-light-tertiary, #999);
-}
-
-.dark-heresy-v1.sheet.actor .insanity-degree {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.dark-heresy-v1.sheet.actor .mental-disorders-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.dark-heresy-v1.sheet.actor .mental-disorders-header h3 {
-  margin: 0;
-}
-
-.dark-heresy-v1.sheet.actor .mental-disorder {
+.dark-heresy-v1.sheet.actor .progression-entry {
   display: flex;
   gap: 0.35rem;
   align-items: center;
-  margin: 0.25rem 0;
 }
 
-.dark-heresy-v1.sheet.actor .mental-disorder input[name$=".name"] {
-  flex: 0 0 30%;
-}
-
-.dark-heresy-v1.sheet.actor .mental-disorder input[name$=".description"] {
+.dark-heresy-v1.sheet.actor .progression-entry input[name$=".name"] {
   flex: 1;
+}
+
+.dark-heresy-v1.sheet.actor .progression-entry input[name$=".cost"] {
+  width: 3.5rem;
+  text-align: center;
 }
 
 /* ---------- Fiches d'Item (talent / compétence avancée) ---------- */
