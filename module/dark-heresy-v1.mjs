@@ -15,6 +15,7 @@ import WeaponSheet from "./sheets/item/weapon-sheet.mjs";
 import RangedWeaponSheet from "./sheets/item/ranged-weapon-sheet.mjs";
 import GearSheet from "./sheets/item/gear-sheet.mjs";
 import { registerWeaponAttackCard } from "./chat/weapon-attack-card.mjs";
+import { seedCompendiums } from "./compendium-seed.mjs";
 
 Hooks.once("init", () => {
   CONFIG.DH = DH;
@@ -74,3 +75,5 @@ Hooks.once("init", () => {
 
   registerWeaponAttackCard();
 });
+
+Hooks.once("ready", seedCompendiums);

@@ -245,6 +245,14 @@
       "Full": "Mvt complet",
       "Charge": "Charge",
       "Run": "Course"
+    },
+    "CompendiumSeed": {
+      "Talents": "Talents",
+      "AdvancedSkills": "Compétences avancées",
+      "Weapons": "Armes de corps à corps",
+      "RangedWeapons": "Armes à distance",
+      "Gear": "Objets",
+      "Error": "Dark Heresy V1 : échec du pré-remplissage du compendium « {name} » (voir la console)."
     }
   }
 }

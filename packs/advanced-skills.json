@@ -1,13 +1,1102 @@
 [
   {
-    "name": "Nom de la compétence avancée",
+    "name": "Acrobatie",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (mouvement), Agilité. Culbutes, bonds et sauts périlleux ; la difficulté dépend de la manoeuvre. Désengagement : un test d'Acrobatie réduit l'action de désengagement à une demi-action. Sauts : remplace le test d'Agilité ou de Force. Généralement une action complète."
+    }
+  },
+  {
+    "name": "Alphabétisation",
     "img": "icons/svg/item-bag.svg",
     "type": "advancedSkill",
     "system": {
       "characteristic": "intelligence",
       "mastery": "0",
       "bonus": 0,
-      "description": "Description de la compétence."
+      "description": "Compétence avancée, Intelligence. Permet de lire et d'écrire toutes les langues parlées. Pas de test en temps normal ; le MJ peut en demander un face à un dialecte complexe, une écriture alambiquée ou un style archaïque. Lire une page (750 mots) : 1 minute."
+    }
+  },
+  {
+    "name": "Baratin",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "sociabilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (interaction), Sociabilité. Flot de paroles pour confondre et distraire. Test opposé à la Force Mentale (ou Psychologie) de la cible : si vous gagnez et qu'elle échoue, elle ne peut rien faire pendant 1 round, +1 round par degré de réussite. Si les deux réussissent, le plus grand nombre de degrés l'emporte. Contre plusieurs cibles semblables : un seul test du MJ, affecte un nombre de cibles égal au bonus de Sociabilité. Sans effet sur les PNJ en danger ou menacés ; la cible doit comprendre votre langue. Action complète."
+    }
+  },
+  {
+    "name": "Chimiomaîtrise",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat, investigation), Intelligence. Manipulation, préparation et identification de produits chimiques, toxines, poisons et drogues. Préparer ou appliquer un produit : test de Chimiomaîtrise (modificateurs du MJ) ; échec = substance détruite ; 5 degrés d'échec ou plus = empoisonnement accidentel ou overdose. Antivenin ou antidote : temps réduit de moitié sur un test réussi. Administrer une substance : action complète. Fabrication de toxines selon les règles de création d'objets (p. 98)."
+    }
+  },
+  {
+    "name": "Codes secrets (acolyte)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de comprendre les codes (signaux manuels, symboles) qu'utilisent certains groupes pour communiquer avertissements, cibles ou planques. Aucun test pour les messages simples ; test pour les signaux complexes ou partiels. Action complète pour communiquer ou inscrire un signal, action gratuite pour le comprendre. Diffusion de messages entre acolytes d'une même cellule (chaque cellule a son propre code)."
+    }
+  },
+  {
+    "name": "Codes secrets (jargon militaire)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de comprendre les codes (signaux manuels, symboles) qu'utilisent certains groupes pour communiquer avertissements, cibles ou planques. Aucun test pour les messages simples ; test pour les signaux complexes ou partiels. Action complète pour communiquer ou inscrire un signal, action gratuite pour le comprendre. Transmission d'ordres aux troupes par signes, chants ou musique."
+    }
+  },
+  {
+    "name": "Codes secrets (occulte)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de comprendre les codes (signaux manuels, symboles) qu'utilisent certains groupes pour communiquer avertissements, cibles ou planques. Aucun test pour les messages simples ; test pour les signaux complexes ou partiels. Action complète pour communiquer ou inscrire un signal, action gratuite pour le comprendre. Gestes mystiques pour se concentrer lors d'une incantation, identifier des sorciers, implorer ou fustiger les démons."
+    }
+  },
+  {
+    "name": "Codes secrets (pègre)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de comprendre les codes (signaux manuels, symboles) qu'utilisent certains groupes pour communiquer avertissements, cibles ou planques. Aucun test pour les messages simples ; test pour les signaux complexes ou partiels. Action complète pour communiquer ou inscrire un signal, action gratuite pour le comprendre. Gestes, tenues, signes et arguties des organisations criminelles."
+    }
+  },
+  {
+    "name": "Codes secrets (société secrète)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de comprendre les codes (signaux manuels, symboles) qu'utilisent certains groupes pour communiquer avertissements, cibles ou planques. Aucun test pour les messages simples ; test pour les signaux complexes ou partiels. Action complète pour communiquer ou inscrire un signal, action gratuite pour le comprendre. Signes d'identification et messages simples d'une société secrète ou d'un culte (chacun a son propre code)."
+    }
+  },
+  {
+    "name": "Concentration",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "forceMentale",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Force Mentale. Action complète pour faire le vide (mantras, méditation, psyconduit) : sur un test réussi, dès le round suivant, ajoutez votre bonus de Force Mentale au jet de Puissance du pouvoir psychique manifesté. En cas d'échec, aucun bonus. Sans effet secondaire si vous n'utilisez finalement pas de pouvoir."
+    }
+  },
+  {
+    "name": "Conduite (véhicules antigrav)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (opérateur), Agilité. Conduite normale sans test ; test en cas de terrain accidenté, vitesse excessive ou manoeuvre audacieuse. Course-poursuite : tests de Conduite opposés. Habituellement une demi-action. Land Speeders et autres antigrav."
+    }
+  },
+  {
+    "name": "Conduite (marcheurs)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (opérateur), Agilité. Conduite normale sans test ; test en cas de terrain accidenté, vitesse excessive ou manoeuvre audacieuse. Course-poursuite : tests de Conduite opposés. Habituellement une demi-action. Véhicules marcheurs."
+    }
+  },
+  {
+    "name": "Conduite (véhicules terrestres)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (opérateur), Agilité. Conduite normale sans test ; test en cas de terrain accidenté, vitesse excessive ou manoeuvre audacieuse. Course-poursuite : tests de Conduite opposés. Habituellement une demi-action. Autos, camions et autres véhicules terrestres."
+    }
+  },
+  {
+    "name": "Connaissances générales (Adeptus Arbites)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Branches et sectes de l'Arbites, hiérarchie et procédures classiques."
+    }
+  },
+  {
+    "name": "Connaissances générales (Administratum)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Grandes lignes du fonctionnement et des règles de l'Administratum."
+    }
+  },
+  {
+    "name": "Connaissances générales (Credo impérial)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Rites et pratiques du culte impérial, observances liées à l'Empereur, saints célèbres."
+    }
+  },
+  {
+    "name": "Connaissances générales (culte de la Machine)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Symboles et pratiques du Mechanicus, formes de salut officielles, identification des grades."
+    }
+  },
+  {
+    "name": "Connaissances générales (Ecclésiarchie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Hiérarchie du culte de l'Empereur, grades, formes de salut et pratiques générales."
+    }
+  },
+  {
+    "name": "Connaissances générales (Garde Impériale)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Hiérarchie, logistique et structure de la Garde Impériale, pratiques tactiques et stratégiques courantes."
+    }
+  },
+  {
+    "name": "Connaissances générales (guerre)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Grandes batailles, héros et officiers célèbres, grands stratagèmes."
+    }
+  },
+  {
+    "name": "Connaissances générales (Imperium)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Secteurs, segmentae et mondes les plus célèbres de l'Imperium."
+    }
+  },
+  {
+    "name": "Connaissances générales (pègre)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Crime organisé et groupes séditieux au sein de l'Imperium."
+    }
+  },
+  {
+    "name": "Connaissances générales (technologie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances acquises sur le tas des habitudes, institutions, traditions, personnalités et superstitions d'un monde, d'un groupe ou d'une organisation. Un test réussi rappelle les grandes lignes du sujet, chaque degré de réussite apportant une information supplémentaire (MJ). Usage instantané : soit vous savez, soit vous ne savez pas. Litanies et rites simples pour apaiser les esprits de la machine."
+    }
+  },
+  {
+    "name": "Connaissances interdites (Adeptus Mechanicus)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Disciples du Dieu-Machine : observances, croyances et philosophie."
+    }
+  },
+  {
+    "name": "Connaissances interdites (archéotechnologie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Grandes oeuvres technologiques du passé et notions de leur fonction."
+    }
+  },
+  {
+    "name": "Connaissances interdites (Bibliothèque Interdite)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Contenu, travaux et occupants de la Bibliothèque Interdite."
+    }
+  },
+  {
+    "name": "Connaissances interdites (cultes)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Cultes impériaux célèbres, sectes et cabales dissidentes."
+    }
+  },
+  {
+    "name": "Connaissances interdites (démonologie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Entités connues du Warp et leurs manifestations."
+    }
+  },
+  {
+    "name": "Connaissances interdites (hérésie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Actes et pratiques hérétiques aux yeux de l'Imperium."
+    }
+  },
+  {
+    "name": "Connaissances interdites (Inquisition)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Grandes lignes (rumeurs et ouï-dire) de l'Inquisition."
+    }
+  },
+  {
+    "name": "Connaissances interdites (mutants)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Mutations stables et instables et leurs résultats."
+    }
+  },
+  {
+    "name": "Connaissances interdites (ordos)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Malleus, Hereticus ou Xenos au choix : pratiques de cet ordo."
+    }
+  },
+  {
+    "name": "Connaissances interdites (psykers)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Signes des psykers, fruits de leurs pouvoirs et étendue de leurs capacités."
+    }
+  },
+  {
+    "name": "Connaissances interdites (Warp)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Fonctionnement du Warp, liens avec l'espace réel, influence sur les voyages stellaires."
+    }
+  },
+  {
+    "name": "Connaissances interdites (xenos)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Connaissances périlleuses et souvent hérétiques issues de sources hétérodoxes ; leur simple possession peut attirer l'Inquisition. Un test réussi rappelle les grandes lignes du sujet, +1 information par degré de réussite (MJ). Apprendre cette compétence en jeu ou s'en servir peut coûter des points de Corruption ou de Folie (MJ). Usage instantané. Espèces xenos les plus courantes de l'Imperium."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (animaux)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Classification des animaux et propriétés des créatures."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (archaïque)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Passé trouble de l'Imperium et évolution de l'humanité au fil des millénaires."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (astromancie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Étoiles, corps célestes, nature des mondes, usage théorique des télescopes et astrolabes."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (bureaucratie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Gestion des gouvernements (surtout l'Administratum), formes, branches et lignes politiques."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (chimie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Substances chimiques, applications alchimiques et utilisation dans l'Imperium."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (Credo impérial)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Rituels de l'Ecclésiarchie, construction des temples, liturgie ; permet de mener les rituels."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (cryptologie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Codes, messages, langages secrets et clés numériques ; casser ou créer un code."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (héraldique)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Principes de l'héraldique, couleurs, sceaux et objets héraldiques de l'Imperium."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (jugements)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Sanctions des crimes et hérésies selon le droit impérial."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (légendes)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Grandes histoires d'antan (Hérésie d'Horus, Moyen Âge Technologique)."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (numérologie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Propriétés mystérieuses des chiffres."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (occulte)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Rituels, théories, superstitions et usages mystiques des objets occultes."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (philosophie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Théories de pensée, de croyance et de critique ; débats et oeuvres philosophiques."
+    }
+  },
+  {
+    "name": "Connaissances scholastiques (Tactica Imperialis)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Intelligence. Savoir universitaire approfondi dans un domaine précis ; permet d'identifier un objet, une créature ou un lieu et, avec les ressources adéquates, d'effectuer des recherches (un test toutes les 1d10 heures). Degrés de réussite : 0 = informations de base de la formation ; 1 = informations peu connues ; 2 = informations obscures ; 3+ = informations extrêmement rares. Se souvenir d'un détail est instantané. Théories militaires, déploiement de troupes, techniques de combat ; préparer une bataille ou déduire l'issue d'une guerre."
+    }
+  },
+  {
+    "name": "Démolition",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat), Intelligence. Engins explosifs posés ou réglés (pas ceux que l'on jette). Fabrication : selon les règles de création d'objets, au moins 1 minute. Pose : test de Démolition (action complète) ; réussite = explosif posé avec le déclencheur choisi ; échec = il n'explose pas ; 5 degrés d'échec ou plus = explosion accidentelle. Difficulté augmentée volontairement : +2 dégâts par cran ou par minute supplémentaire. Notez les degrés de réussite : ils servent aux tests opposés pour détecter ou désamorcer. Désamorçage : test opposé à celui du poseur (action complète), retentable au round suivant ; 5 degrés d'échec ou plus = explosion."
+    }
+  },
+  {
+    "name": "Dressage",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Monter, soigner et maîtriser les animaux domestiques (molosses, chevaux, grox) ; test pour remarquer une maladie ou pour des soins spéciaux. Dressage : un test par semaine ; un succès pour un tour simple, trois pour un tour difficile, dix pour un tour étonnant. Calmer un animal sauvage ou hostile : test (action complète), malus possible. Sans effet sur les animaux cybernétiques."
+    }
+  },
+  {
+    "name": "Escamotage",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Agilité. Faire disparaître des objets, faire les poches, tours de passe-passe ; difficulté selon la taille de l'objet, test généralement opposé à la Vigilance de l'adversaire (ou moitié de sa Perception). Utilisable à la place de Jeu pour tricher (+20 au test de Jeu en cas de réussite ; 5 degrés d'échec ou plus = supercherie révélée). Demi-action, ou action gratuite avec un malus de -10."
+    }
+  },
+  {
+    "name": "Expression artistique (chanteur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "sociabilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Sociabilité. Divertir ou subjuguer un public et gagner de l'argent (comme Métier). Représentation charmante (conteur ou chanteur) : test Assez difficile (-10) à la place de Charisme. Représentation ensorcelante (musicien ou chanteur) : test Assez difficile (-10) à la place de Baratin, avec les règles de Baratin. Durée très variable. Représentation charmante et représentation ensorcelante possibles."
+    }
+  },
+  {
+    "name": "Expression artistique (conteur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "sociabilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Sociabilité. Divertir ou subjuguer un public et gagner de l'argent (comme Métier). Représentation charmante (conteur ou chanteur) : test Assez difficile (-10) à la place de Charisme. Représentation ensorcelante (musicien ou chanteur) : test Assez difficile (-10) à la place de Baratin, avec les règles de Baratin. Durée très variable. Représentation charmante possible."
+    }
+  },
+  {
+    "name": "Expression artistique (danseur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "sociabilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Sociabilité. Divertir ou subjuguer un public et gagner de l'argent (comme Métier). Représentation charmante (conteur ou chanteur) : test Assez difficile (-10) à la place de Charisme. Représentation ensorcelante (musicien ou chanteur) : test Assez difficile (-10) à la place de Baratin, avec les règles de Baratin. Durée très variable. Divertir ou subjuguer par la danse."
+    }
+  },
+  {
+    "name": "Expression artistique (musicien)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "sociabilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Sociabilité. Divertir ou subjuguer un public et gagner de l'argent (comme Métier). Représentation charmante (conteur ou chanteur) : test Assez difficile (-10) à la place de Charisme. Représentation ensorcelante (musicien ou chanteur) : test Assez difficile (-10) à la place de Baratin, avec les règles de Baratin. Durée très variable. Représentation ensorcelante possible."
+    }
+  },
+  {
+    "name": "Filature",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Agilité. Suivre un individu ou un véhicule sans se faire remarquer, en se déplaçant d'abri en abri ou en feignant une autre activité. Test toujours opposé à la Vigilance de l'adversaire (ou moitié de sa Perception). Un test suffit pour 1 minute de filature."
+    }
+  },
+  {
+    "name": "Interrogatoire",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "forceMentale",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (investigation), Force Mentale. Test opposé à la Force Mentale du sujet (modificateurs selon matériel et circonstances) : en cas de victoire, une réponse +1 par degré de réussite. Échec sérieux : le sujet subit 1d10 + bonus de Force Mentale dégâts ; 5 degrés d'échec ou plus : mêmes dégâts et le sujet gagne +30 en Force Mentale pour résister aux interrogatoires. Chaque test prend 1d5 heures et inflige 1 niveau de Fatigue à la cible."
+    }
+  },
+  {
+    "name": "Intrusion",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Agilité. Se défaire des serrures et systèmes de sécurité ; difficulté selon la qualité de l'ouvrage, les systèmes complexes pouvant demander plusieurs tests ou degrés de réussite. 1 minute, moins 10 secondes par degré de réussite."
+    }
+  },
+  {
+    "name": "Langage secret (acolytes)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Langue obscure, proche d'un code, propre à un corps de métier, une organisation ou une classe. Pas de test si tous les interlocuteurs la connaissent ; le MJ peut en exiger dans une rue bruyante ou au coeur d'une bataille. Généralement une action gratuite. Phrases codées et inflexions propres à une cellule d'acolytes (chaque cellule a sa version)."
+    }
+  },
+  {
+    "name": "Langage secret (Administratum)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Langue obscure, proche d'un code, propre à un corps de métier, une organisation ou une classe. Pas de test si tous les interlocuteurs la connaissent ; le MJ peut en exiger dans une rue bruyante ou au coeur d'une bataille. Généralement une action gratuite. Acronymes, jargons et procédures administratives de l'Administratum."
+    }
+  },
+  {
+    "name": "Langage secret (Ecclésiarchie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Langue obscure, proche d'un code, propre à un corps de métier, une organisation ou une classe. Pas de test si tous les interlocuteurs la connaissent ; le MJ peut en exiger dans une rue bruyante ou au coeur d'une bataille. Généralement une action gratuite. Langage allégorique et métaphorique en haut gothique spécialisé."
+    }
+  },
+  {
+    "name": "Langage secret (militaire)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Langue obscure, proche d'un code, propre à un corps de métier, une organisation ou une classe. Pas de test si tous les interlocuteurs la connaissent ; le MJ peut en exiger dans une rue bruyante ou au coeur d'une bataille. Généralement une action gratuite. Phrases codées, jargon et références aux anciennes batailles."
+    }
+  },
+  {
+    "name": "Langage secret (rue)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Langue obscure, proche d'un code, propre à un corps de métier, une organisation ou une classe. Pas de test si tous les interlocuteurs la connaissent ; le MJ peut en exiger dans une rue bruyante ou au coeur d'une bataille. Généralement une action gratuite. Dialecte de bas gothique et argot des couches populaires."
+    }
+  },
+  {
+    "name": "Langage secret (technologique)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Langue obscure, proche d'un code, propre à un corps de métier, une organisation ou une classe. Pas de test si tous les interlocuteurs la connaissent ; le MJ peut en exiger dans une rue bruyante ou au coeur d'une bataille. Généralement une action gratuite. Lingua Technis de l'Adeptus Mechanicus : jargon, binaire, ondes sonores."
+    }
+  },
+  {
+    "name": "Langue (bas gothique)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de communiquer dans une langue commune. Pas de test si tous les interlocuteurs la connaissent. Généralement une action gratuite. Langage commun de l'Imperium."
+    }
+  },
+  {
+    "name": "Langue (dialecte des ruches)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de communiquer dans une langue commune. Pas de test si tous les interlocuteurs la connaissent. Généralement une action gratuite. Forme de bas gothique propre à chaque ruche."
+    }
+  },
+  {
+    "name": "Langue (dialecte spatial)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de communiquer dans une langue commune. Pas de test si tous les interlocuteurs la connaissent. Généralement une action gratuite. Code, argot et idiome propres à chaque vaisseau."
+    }
+  },
+  {
+    "name": "Langue (dialecte tribal)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de communiquer dans une langue commune. Pas de test si tous les interlocuteurs la connaissent. Généralement une action gratuite. Langue primitive des autochtones d'une planète."
+    }
+  },
+  {
+    "name": "Langue (haut gothique)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Permet de communiquer dans une langue commune. Pas de test si tous les interlocuteurs la connaissent. Généralement une action gratuite. Langage de la noblesse, du droit impérial et de la liturgie de l'Ecclésiarchie."
+    }
+  },
+  {
+    "name": "Lecture sur les lèvres",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "perception",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Perception. Capter une conversation hors de portée de voix ; il faut voir clairement la bouche du locuteur et comprendre sa langue. Difficulté Moyenne (+0), +1 cran par tranche de 10 mètres (annulé par un équipement bonifiant la vue). Un succès révèle la teneur de la conversation, chaque degré de réussite dévoilant des détails. Action complète, valable tant que la cible parle."
+    }
+  },
+  {
+    "name": "Medicae",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Premiers secours (action complète, une fois par blessure) : un test réussi élimine bonus d'Intelligence dégâts sur un patient Légèrement blessé, 1 dégât sur un Gravement blessé, 1 dégât critique sur un Mortellement blessé ; 3 degrés d'échec ou plus = 1 dégât supplémentaire (test d'Endurance ou mort à 0 point de Blessures). Soins intensifs : jusqu'à bonus d'Intelligence patients (-10 par patient en plus) ; test par jour (Légèrement blessé) ou par semaine (Gravement/Mortellement blessé) ; réussite = récupération double +1 par degré de réussite ; 3 degrés d'échec ou plus = 1 point de Blessures perdu ; 5 degrés d'échec ou plus = 1d10 points de Blessures perdus (voir Mort subite pour les critiques)."
+    }
+  },
+  {
+    "name": "Métier (apothicaire)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Mélange et prépare des remèdes à base de plantes."
+    }
+  },
+  {
+    "name": "Métier (armurier)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "force",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Fabrique et entretient armes et armures ; pose les améliorations d'arme."
+    }
+  },
+  {
+    "name": "Métier (artiste)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Produit des oeuvres d'art."
+    }
+  },
+  {
+    "name": "Métier (cartographe)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Prend des mesures précises et trace des cartes."
+    }
+  },
+  {
+    "name": "Métier (copiste)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Reproduit textes et manuscrits enluminés ; fait aussi de faux documents."
+    }
+  },
+  {
+    "name": "Métier (cuisinier)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Prépare à manger et identifie les aliments."
+    }
+  },
+  {
+    "name": "Métier (embaumeur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Traite les cadavres pour les préserver de la corruption."
+    }
+  },
+  {
+    "name": "Métier (fermier)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "force",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Cultive des terres et élève des animaux."
+    }
+  },
+  {
+    "name": "Métier (forgeron)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "force",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Forge le métal."
+    }
+  },
+  {
+    "name": "Métier (graveur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Grave motifs, textes et icônes sur divers matériaux."
+    }
+  },
+  {
+    "name": "Métier (maçon)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Réalise des constructions en pierre."
+    }
+  },
+  {
+    "name": "Métier (marchand)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "sociabilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Déniche, négocie et vend des marchandises."
+    }
+  },
+  {
+    "name": "Métier (mineur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "force",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Extrait des minéraux, creuse des mines et identifie les dangers liés."
+    }
+  },
+  {
+    "name": "Métier (ouvrier)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Évalue, conçoit et construit bâtiments, véhicules, etc."
+    }
+  },
+  {
+    "name": "Métier (prospecteur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "force",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Trouve et identifie des biens précieux."
+    }
+  },
+  {
+    "name": "Métier (tanneur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "force",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Prépare et tanne les peaux."
+    }
+  },
+  {
+    "name": "Métier (technomécano)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Entretient les objets mécaniques et technologiques sans vraiment comprendre la machine."
+    }
+  },
+  {
+    "name": "Métier (valet)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "sociabilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Peaufine les apparences, écarte les importuns et pourvoit aux besoins de son employeur."
+    }
+  },
+  {
+    "name": "Métier (voyant)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "sociabilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (artisanat). Connaissance d'un métier : gagner sa vie, fabriquer des objets de son corps de métier (règles de création d'objets p. 98), identifier le travail d'un artisan ou en apprendre plus sur un objet. Un test représente 1 journée de labeur ; identifier un objet ou un artisan : action complète. Fait mine de prédire l'avenir."
+    }
+  },
+  {
+    "name": "Orientation (stellaire)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Planifier un itinéraire, éviter de se perdre et estimer un temps de voyage selon relief, cosmographie, saison et climat. Un test quotidien suffit en temps normal, plus selon les circonstances. Plusieurs heures pour tracer un itinéraire, moins d'une minute pour savoir où l'on se trouve. Navigation entre les planètes à l'aide de cartes spatiales et de rituels cartomantiques."
+    }
+  },
+  {
+    "name": "Orientation (surface)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Planifier un itinéraire, éviter de se perdre et estimer un temps de voyage selon relief, cosmographie, saison et climat. Un test quotidien suffit en temps normal, plus selon les circonstances. Plusieurs heures pour tracer un itinéraire, moins d'une minute pour savoir où l'on se trouve. Déplacement à la surface d'une planète avec logiboussole, carte ou connaissances géographiques."
+    }
+  },
+  {
+    "name": "Pilotage (vaisseaux civils)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (opérateur), Agilité. Prendre les commandes de tout appareil, de l'ornithoptère au vaisseau spatial. Pas de test en temps normal ; test en cas d'orage violent, vitesse excessive ou manoeuvre audacieuse. Course-poursuite : tests de Pilotage opposés. Habituellement une demi-action. Vaisseaux atmosphériques et spatiaux civils."
+    }
+  },
+  {
+    "name": "Pilotage (vaisseaux militaires)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (opérateur), Agilité. Prendre les commandes de tout appareil, de l'ornithoptère au vaisseau spatial. Pas de test en temps normal ; test en cas d'orage violent, vitesse excessive ou manoeuvre audacieuse. Course-poursuite : tests de Pilotage opposés. Habituellement une demi-action. Vaisseaux atmosphériques et spatiaux militaires."
+    }
+  },
+  {
+    "name": "Pilotage (vaisseaux spatiaux)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "agilite",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée (opérateur), Agilité. Prendre les commandes de tout appareil, de l'ornithoptère au vaisseau spatial. Pas de test en temps normal ; test en cas d'orage violent, vitesse excessive ou manoeuvre audacieuse. Course-poursuite : tests de Pilotage opposés. Habituellement une demi-action. Gros vaisseaux spatiaux."
+    }
+  },
+  {
+    "name": "Pistage",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Suivre une proie. Piste évidente : aucun test ; sinon test dont la difficulté dépend des traces (neige fraîche : Assez difficile (-10) à Difficile (-20)) ; traces indistinctes : vitesse réduite de moitié. Gibier dissimulant ses traces : test opposé à sa Dissimulation. Permet aussi d'estimer distance, effectifs et race de la cible. Action gratuite dans une action de mouvement."
+    }
+  },
+  {
+    "name": "Psyniscience",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "perception",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Perception. Percevoir les flux du Warp : détecter démons et psykers (portée : bonus de Perception + 1d10 mètres, +1d10 + BP mètres par degré de réussite) ou les phénomènes psychiques inhabituels. Degrés de réussite : 0 = l'Immaterium a été perturbé ; 1 = emplacement approximatif ; 2+ = emplacement exact de l'individu canalisant ou bloquant l'Immaterium. Le MJ peut effectuer le test en secret. Action complète."
+    }
+  },
+  {
+    "name": "Survie",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Survivre en pleine nature ou terrain hostile : pêche, chasse, feu, nourriture, abri, lieu sûr ; difficulté selon l'environnement. Échec : rien trouvé ; 5 degrés d'échec ou plus : ennuis (éboulement, tanière, baies empoisonnées). Environ 1 heure, moins 10 minutes par degré de réussite ; réduit à 1 minute en situation d'urgence."
+    }
+  },
+  {
+    "name": "Technomaîtrise",
+    "img": "icons/svg/item-bag.svg",
+    "type": "advancedSkill",
+    "system": {
+      "characteristic": "intelligence",
+      "mastery": "0",
+      "bonus": 0,
+      "description": "Compétence avancée, Intelligence. Réparer les objets mécaniques et comprendre les artefacts techniques inhabituels. Pas de test pour un équipement simple (vox, auspex) ; test face à un objet inhabituel, une défaillance ou des circonstances difficiles. Réparation : difficulté selon complexité et dommages. Peut servir à créer un objet (Métier est préférable). Comprendre un objet : 1 minute ; réparer : 1 heure moins 10 minutes par degré de réussite."
     }
   }
 ]
