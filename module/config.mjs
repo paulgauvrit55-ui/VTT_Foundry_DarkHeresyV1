@@ -58,12 +58,12 @@ DH.skillMasteryLevels = {
 };
 
 /**
- * Groupes d'armes (spec §6.1) : déterminent le talent de formation requis et si le Bonus de
- * Force s'ajoute aux dégâts. Sert aussi de champ discriminant corps-à-corps/distance sur
- * l'Item `weapon` (seul "corpsACorps" désigne une arme de mêlée) — cf. Guide_Implementation_FVTT.md §2.3.
+ * Groupes d'armes à distance (spec §6.1) : déterminent le talent de formation requis et si le
+ * Bonus de Force s'ajoute aux dégâts. Corps à corps n'y figure plus (retiré le 2026-09-22) :
+ * le discriminant corps-à-corps/distance est désormais porté par le type d'Item lui-même
+ * (`weapon` vs `rangedWeapon`) plutôt que par ce champ — cf. Guide_Implementation_FVTT.md §3.15.
  */
 DH.weaponGroups = {
-  corpsACorps: "DH.WeaponGroup.CorpsACorps",
   jet: "DH.WeaponGroup.Jet",
   base: "DH.WeaponGroup.Base",
   poing: "DH.WeaponGroup.Poing",

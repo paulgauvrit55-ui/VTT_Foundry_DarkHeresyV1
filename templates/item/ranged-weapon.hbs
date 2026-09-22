@@ -1,9 +1,18 @@
-<div class="weapon-body">
+<div class="ranged-weapon-body">
   <header class="sheet-header">
     <h1 class="itemname">
       <input name="name" type="text" value="{{item.name}}">
     </h1>
   </header>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.Group"}}</label>
+    <select name="system.group">
+      {{#each weaponGroups as |group|}}
+        <option value="{{group.key}}" {{#if group.selected}}selected{{/if}}>{{group.label}}</option>
+      {{/each}}
+    </select>
+  </div>
 
   <div class="form-group">
     <label>{{localize "DH.Weapon.DamageFormula"}}</label>
@@ -27,6 +36,28 @@
   <div class="form-group">
     <label>{{localize "DH.Weapon.Bonus"}}</label>
     <input type="number" name="system.bonus" value="{{system.bonus}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.Range"}}</label>
+    <input type="number" name="system.range" value="{{system.range}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.FireModes"}}</label>
+    <input type="text" name="system.fireModes" value="{{system.fireModes}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.Reload"}}</label>
+    <input type="text" name="system.reload" value="{{system.reload}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Weapon.Ammo"}}</label>
+    <input type="number" name="system.ammo.current" value="{{system.ammo.current}}">
+    <span>/</span>
+    <input type="number" name="system.ammo.max" value="{{system.ammo.max}}">
   </div>
 
   <div class="form-group stacked">

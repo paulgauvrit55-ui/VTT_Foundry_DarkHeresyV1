@@ -27,7 +27,8 @@
       "Acolyte": "Fiche d'Acolyte",
       "Talent": "Fiche de Talent",
       "AdvancedSkill": "Fiche de Compétence avancée",
-      "Weapon": "Fiche d'Arme",
+      "Weapon": "Fiche d'Arme de corps-à-corps",
+      "RangedWeapon": "Fiche d'Arme à distance",
       "Gear": "Fiche d'Objet"
     },
     "Tabs": {
@@ -49,7 +50,7 @@
       "Corruption": "Points de Corruption",
       "Experience": "Points d'Expérience",
       "Thrones": "Trônes",
-      "MonthlyIncome": "Revenu mensuel actuel"
+      "MonthlyIncome": "Revenu mensuel"
     },
     "MentalDisorders": {
       "Title": "Troubles mentaux",
@@ -67,7 +68,7 @@
     },
     "Progression": {
       "Title": "Progression",
-      "ExperienceUnspent": "PX non dépensés",
+      "ExperienceUnspent": "PX restants",
       "ExperienceSpent": "PX dépensés",
       "ExperienceTotal": "PX totaux",
       "PurchasesTitle": "Achats",
@@ -145,7 +146,8 @@
       "MeleeTitle": "Armes de mêlée",
       "Add": "Ajouter une arme",
       "Delete": "Supprimer cette arme",
-      "NewName": "Nouvelle arme",
+      "NewName": "Nouvelle arme de corps à corps",
+      "NewRangedName": "Nouvelle arme à distance",
       "Attack": "Test d'attaque",
       "Damage": "Lancer les dégâts",
       "Toggle": "Afficher/masquer le profil",
@@ -161,7 +163,6 @@
       "Attributes": "Attributs"
     },
     "WeaponGroup": {
-      "CorpsACorps": "Corps à corps",
       "Jet": "De jet",
       "Base": "De base",
       "Poing": "De poing",

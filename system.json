@@ -34,6 +34,7 @@
         "htmlFields": ["description"]
       },
       "weapon": {},
+      "rangedWeapon": {},
       "gear": {
         "htmlFields": ["description"]
       }

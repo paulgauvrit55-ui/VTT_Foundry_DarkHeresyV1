@@ -105,20 +105,35 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       description: item.system.description
     }));
 
-    const rangedWeaponGroups = Object.entries(DH.weaponGroups)
-      .filter(([key]) => key !== "corpsACorps")
-      .map(([key, label]) => ({ key, label: game.i18n.localize(label) }));
+    const weaponGroupOptions = Object.entries(DH.weaponGroups).map(([key, label]) => ({
+      key,
+      label: game.i18n.localize(label)
+    }));
     const damageTypeOptions = Object.entries(DH.damageTypes).map(([key, label]) => ({
       key,
       label: game.i18n.localize(label)
     }));
-    const mapWeapon = item => ({
+    const damageTypesFor = item => damageTypeOptions.map(type => ({ ...type, selected: type.key === item.system.damageType }));
+
+    // Deux types d'Item distincts (`weapon` corps-à-corps / `rangedWeapon` distance) depuis le
+    // 2026-09-22 : le drag & drop depuis un compendium range ainsi directement l'arme dans la
+    // bonne liste, `itemTypes` se chargeant du tri sans filtre manuel sur `system.group`.
+    context.meleeWeapons = this.actor.itemTypes.weapon.map(item => ({
       id: item.id,
       name: item.name,
-      isMelee: item.system.isMelee,
-      groups: rangedWeaponGroups.map(group => ({ ...group, selected: group.key === item.system.group })),
       damageFormula: item.system.damageFormula,
-      damageTypes: damageTypeOptions.map(type => ({ ...type, selected: type.key === item.system.damageType })),
+      damageTypes: damageTypesFor(item),
+      penetration: item.system.penetration,
+      bonus: item.system.bonus,
+      attributes: item.system.attributes
+    }));
+
+    context.rangedWeapons = this.actor.itemTypes.rangedWeapon.map(item => ({
+      id: item.id,
+      name: item.name,
+      groups: weaponGroupOptions.map(group => ({ ...group, selected: group.key === item.system.group })),
+      damageFormula: item.system.damageFormula,
+      damageTypes: damageTypesFor(item),
       penetration: item.system.penetration,
       bonus: item.system.bonus,
       attributes: item.system.attributes,
@@ -126,9 +141,7 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       fireModes: item.system.fireModes,
       reload: item.system.reload,
       ammo: item.system.ammo
-    });
-    context.rangedWeapons = this.actor.itemTypes.weapon.filter(item => !item.system.isMelee).map(mapWeapon);
-    context.meleeWeapons = this.actor.itemTypes.weapon.filter(item => item.system.isMelee).map(mapWeapon);
+    }));
 
     context.gearItems = this.actor.itemTypes.gear.map(item => ({
       id: item.id,
@@ -233,9 +246,8 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
   static async #createWeapon(event, target) {
     const isMelee = target.dataset.category === "melee";
     await this.actor.createEmbeddedDocuments("Item", [{
-      name: game.i18n.localize("DH.Weapon.NewName"),
-      type: "weapon",
-      system: { group: isMelee ? "corpsACorps" : "base" }
+      name: game.i18n.localize(isMelee ? "DH.Weapon.NewName" : "DH.Weapon.NewRangedName"),
+      type: isMelee ? "weapon" : "rangedWeapon"
     }]);
   }
 

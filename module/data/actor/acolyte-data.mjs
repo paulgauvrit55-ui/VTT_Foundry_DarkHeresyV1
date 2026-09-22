@@ -60,8 +60,9 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
         insanity: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         corruption: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         experience: new SchemaField({
-          // "unspent" n'est pas stocké : dérivé de total - spent à chaque préparation.
-          spent: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+          // "spent" et "unspent" ne sont pas stockés : "spent" est dérivé de la somme des
+          // coûts de `progression` (demande utilisateur du 2026-09-22, remplace la saisie
+          // manuelle), et "unspent" de total - spent, à chaque préparation.
           total: new NumberField({ required: true, integer: true, min: 0, initial: 400 })
         }),
         thrones: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
@@ -107,7 +108,9 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
     // Plafond de Fatigue = Bonus d'Endurance (spec §2.3, §9.7) : dérivé, non stocké.
     this.resources.fatigueMax = this.characteristics.endurance.bonus;
 
-    // PX non dépensés = total - dépensé (spec §5.2) : dérivé, non stocké.
+    // PX dépensés = somme des coûts de la liste d'achats de progression (spec §5.2) ; PX non
+    // dépensés = total - dépensé. Les deux sont dérivés, non stockés.
+    this.resources.experience.spent = this.progression.reduce((sum, entry) => sum + (entry.cost ?? 0), 0);
     this.resources.experience.unspent = this.resources.experience.total - this.resources.experience.spent;
 
     // Poids porté = somme des poids des objets d'inventaire (spec §6.5) ; les armes en sont
