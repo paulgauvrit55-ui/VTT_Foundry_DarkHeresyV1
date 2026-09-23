@@ -1,13 +1,1905 @@
 [
   {
-    "name": "Nom de l'objet",
+    "name": "Accessoire de combat (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 2,
+      "price": 25,
+      "availability": "repandu",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. Baïonnette, lame tronçonneuse, etc. montée sur l'arme : au corps à corps, l'arme compte comme une lance. Armes concernées : toutes les armes de base à distance. Poids : +2 kg."
+    }
+  },
+  {
+    "name": "Cellule à surcharge (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 15,
+      "availability": "commun",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. Cellule énergétique améliorée : +1 dégât, autonomie de tir divisée par deux. Armes concernées : armes de base (laser) et de poing (laser). Poids : +0,5 kg."
+    }
+  },
+  {
+    "name": "Compacte (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 50,
+      "availability": "moyen",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. Version réduite, discrète : -1 dégât; poids, autonomie de tir et portée divisés par deux. Armes concernées : armes de base et de poing (bolts, lance-flammes, laser, MS, plasma). Poids : x 1/2."
+    }
+  },
+  {
+    "name": "Crosse de pistolet (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 25,
+      "availability": "repandu",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. Permet d'utiliser une arme de base à une seule main sans le malus de -20, mais la portée est divisée par deux. Armes concernées : toutes les armes de base à distance. Poids : x 1/3."
+    }
+  },
+  {
+    "name": "Exterminator (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 35,
+      "availability": "commun",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. Cartouche lance-flammes à usage unique fixée sur l'arme, résolue comme un lance-flammes; à remplacer après usage. Armes concernées : toutes les armes. Poids : +1 kg."
+    }
+  },
+  {
+    "name": "Lunette télescopique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 35,
+      "availability": "moyen",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. Image agrandie de la cible : si le tireur consacre une action complète à viser, il ignore les malus de portée longue et extrême. Armes concernées : toutes les armes de base (bolts, laser, MS, plasma, primitives). Poids : +1 kg."
+    }
+  },
+  {
+    "name": "Monomoléculaire (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 40,
+      "availability": "peuCourant",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. Tranchant qui ne s'émousse jamais : l'arme perd l'attribut primitive et gagne +2 en pénétration. Armes concernées : toutes les armes primitives de corps à corps."
+    }
+  },
+  {
+    "name": "Sélecteur de tir (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 25,
+      "availability": "peuCourant",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. Jusqu'à trois chargeurs différents dans l'arme; le tireur choisit le chargeur utilisé au début de son tour. Armes concernées : armes de base (bolts, MS) et de poing (bolts, MS). Poids : +0,5 kg."
+    }
+  },
+  {
+    "name": "Silencieux (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 10,
+      "availability": "repandu",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. Réduit le bruit et le cône de flamme : tests de Vigilance pour entendre le tir à -20 supplémentaire, et seulement à la moitié de la distance normale de détection. Armes concernées : automatique, canon de poing, fusil d'assaut, fusil de chasse, revolver. Poids : +0,5 kg."
+    }
+  },
+  {
+    "name": "Viseur à pointage laser (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 50,
+      "availability": "peuCourant",
+      "description": "Amélioration d'arme. Pose par un personnage ayant Métier (armurier) sur un test réussi; prix et disponibilité = pièces, main-d'oeuvre à part; la disponibilité de l'arme reste inchangée. +10 en Capacité de Tir au coup par coup. Compte comme un viseur (un seul par arme). Armes concernées : armes de base et de poing (bolts, laser, MS, plasma, primitives). Poids : +0,5 kg."
+    }
+  },
+  {
+    "name": "Balles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 1,
+      "availability": "repandu",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 20. Balles de conception et calibre variés; sauf similitude, non interchangeables entre types d'armes (balles de revolver utilisables dans un automatique, pas dans un fusil d'assaut). S'utilisent avec : automatique, canon de poing, fusil d'assaut, fusil de chasse, mitrailleuse lourde, pistolet-mitrailleur, revolver."
+    }
+  },
+  {
+    "name": "Balles dum-dum (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 5,
+      "availability": "peuCourant",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 6. Balles creuses : +2 dégâts, mais les points d'Armure de la cible sont doublés. S'utilisent avec : automatique, canon de poing, revolver."
+    }
+  },
+  {
+    "name": "Balles tueuses (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 5,
+      "availability": "peuCourant",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 6. Pointe dense perce-armure : pénétration de l'arme +3. S'utilisent avec : automatique, canon de poing, fusil d'assaut, pistolet-mitrailleur, revolver."
+    }
+  },
+  {
+    "name": "Bolts (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 16,
+      "availability": "rare",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1. Projectiles explosifs à masse réactive, coûteux et réservés aux plus riches ou aux mieux connectés. S'utilisent avec : bolter, bolter lourd, pistolet bolter."
+    }
+  },
+  {
+    "name": "Carburant (arme de base) (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 10,
+      "availability": "peuCourant",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1 réservoir = AT tirs. Carburant liquide de lance-flammes, du prométhéum pur aux alcools inflammables. S'utilise avec : lance-flammes."
+    }
+  },
+  {
+    "name": "Carburant (arme de poing) (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 8,
+      "availability": "peuCourant",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1 réservoir = AT tirs. S'utilise avec : pistolet lance-flammes."
+    }
+  },
+  {
+    "name": "Cartouches (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 1,
+      "availability": "commun",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 18. Dizaines de petits plombs se dispersant sur une large zone, pour le combat rapproché. S'utilisent avec : fusil, fusil à pompe, fusil à pompe de combat."
+    }
+  },
+  {
+    "name": "Cartouches Inferno (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 20,
+      "availability": "rare",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1. Gel phosphoré qui s'embrase à l'impact : la victime doit réussir un test d'Agilité pour ne pas prendre feu (dégâts de feu en plus de ceux de l'arme). Peut mettre le feu à autre chose que des êtres vivants (MJ). S'utilisent avec : fusil, fusil à pompe, fusil à pompe de combat, toutes les armes à bolts."
+    }
+  },
+  {
+    "name": "Cellule énergétique (arme de base) (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 15,
+      "availability": "commun",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1 cellule = AT tirs. Batterie pour armes laser. S'utilise avec : carabine laser, fusil laser, fusil laser long."
+    }
+  },
+  {
+    "name": "Cellule énergétique (arme de poing) (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 10,
+      "availability": "commun",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1 cellule = AT tirs. S'utilise avec : pistolet laser."
+    }
+  },
+  {
+    "name": "Cellule énergétique (arme lourde) (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 30,
+      "availability": "rare",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1 cellule = AT tirs. S'utilise avec : canon laser portatif."
+    }
+  },
+  {
+    "name": "Cellules pleine-bourre (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 15,
+      "availability": "peuCourant",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1. Cellule laser surpuissante à un seul tir : dégâts = deux jets, garder le meilleur; +1 dégât; pénétration portée à 4; autonomie de tir réduite à 1; l'arme perd l'attribut fiable. S'utilisent avec : carabine laser, fusil laser, fusil laser long, pistolet laser."
+    }
+  },
+  {
+    "name": "Flasque de plasma (arme de base) (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 18,
+      "availability": "rare",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1 flasque = AT tirs. Hydrogène photonique condensé en flasque renforcée. S'utilise avec : lance-plasma."
+    }
+  },
+  {
+    "name": "Flasque de plasma (arme de poing) (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 24,
+      "availability": "rare",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1 flasque = AT tirs. S'utilise avec : pistolet à plasma."
+    }
+  },
+  {
+    "name": "Flèches/carreaux (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 1,
+      "availability": "commun",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 20. De la branche grossière à pointe de silex à la hampe d'acier effilée. S'utilisent avec : arc, arbalète, arbalète de poing."
+    }
+  },
+  {
+    "name": "Munitions d'arme exotique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 20,
+      "availability": "tresRare",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1. Gel de lance-toile, projectiles d'aiguilles, etc.; le MJ peut augmenter le prix selon la rareté. S'utilisent avec : fusil à aiguilles, lance-toile, pistolet à aiguilles, pistolet lance-toile."
+    }
+  },
+  {
+    "name": "Plombs (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 1,
+      "availability": "commun",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 20. Billes de plomb ou de pierre avec charge de poudre noire. S'utilisent avec : pistolet à poudre noire, mousquet."
+    }
+  },
+  {
+    "name": "Réservoir de fuseur (arme de base) (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 15,
+      "availability": "rare",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1 réservoir = AT tirs. Produits de raffinerie sous haute pression. S'utilise avec : fuseur."
+    }
+  },
+  {
+    "name": "Réservoir de fuseur (arme de poing) (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 20,
+      "availability": "tresRare",
+      "description": "Munitions. Prix pour la quantité indiquée (AT = autonomie de tir de l'arme). Poids : la charge complète d'une arme représente 10 % du poids de l'arme. Quantité : 1 réservoir = AT tirs. S'utilise avec : pistolet Inferno."
+    }
+  },
+  {
+    "name": "Cape de caméléoline (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 500,
+      "availability": "rare",
+      "description": "Objet personnel. Fibres mimétiques : +20 aux tests de Dissimulation; si le porteur reste immobile et est visé par une arme à distance, il compte comme étant à portée extrême."
+    }
+  },
+  {
+    "name": "Collier explosif (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 55,
+      "availability": "rare",
+      "description": "Objet personnel. Porté par les recrues des légions pénales. La télécommande (portée habituelle 1 km) le fait exploser : mort du porteur et 1d10 dégâts explosifs dans un rayon de 3 m; elle peut aussi le désactiver. Retrait sans télécommande : test de Technomaîtrise Difficile (-20), échec sérieux = explosion."
+    }
+  },
+  {
+    "name": "Combinaison de survie (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 8,
+      "price": 100,
+      "availability": "repandu",
+      "description": "Objet personnel. Combinaison hermétique avec recycleur intégré : permet de survivre dans les environnements les plus hostiles, y compris le vide spatial."
+    }
+  },
+  {
+    "name": "Filtre nasal (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 15,
+      "availability": "commun",
+      "description": "Objet personnel. Bouchons filtrants dans les narines : +20 aux tests d'Endurance pour résister aux effets des gaz."
+    }
+  },
+  {
+    "name": "Gant anti-recul (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 85,
+      "availability": "commun",
+      "description": "Objet personnel. Plaques à câblage mémoriel se solidifiant autour de la main et du poignet : tir à une main avec une arme de base sans le malus de -20; les armes de poing nécessitant deux mains s'utilisent à une main sans malus."
+    }
+  },
+  {
+    "name": "Harnais de descente (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 2,
+      "price": 25,
+      "availability": "commun",
+      "description": "Objet personnel. Ligne de sûreté sur dérouleur à la ceinture, avec crochet ou ancrage magnétique : +30 aux tests d'Escalade en descente d'une surface verticale, pas de chute en cas d'échec."
+    }
+  },
+  {
+    "name": "Horologium (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 40,
+      "availability": "omnipresent",
+      "description": "Objet personnel. Mécanisme robuste de poche ou de poignet qui donne l'heure."
+    }
+  },
+  {
+    "name": "Lunettes infrarouges (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 275,
+      "availability": "rare",
+      "description": "Objet personnel. Perception des sources de chaleur : aucun malus dû à l'obscurité et +20 aux tests de Perception basés sur la vision de nuit. Les modèles aboutis ressemblent à de simples lunettes."
+    }
+  },
+  {
+    "name": "Masque à gaz/respirateur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 25,
+      "availability": "moyen",
+      "description": "Objet personnel. Couvre le nez et la bouche ou le visage entier : +30 aux tests d'Endurance pour résister aux gaz, avec relance en cas d'échec."
+    }
+  },
+  {
+    "name": "Peau synthétique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 2,
+      "price": 2500,
+      "availability": "tresRare",
+      "description": "Objet personnel. Substance bioréactive inerte et non réfléchissante moulée sur le corps : +2 points d'Armure sur toutes les localisations, +10 aux tests de Dissimulation et de Déplacement silencieux, invisible aux lunettes infrarouges et au trait Nyctalope."
+    }
+  },
+  {
+    "name": "Photoverres/photolentilles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 100,
+      "availability": "peuCourant",
+      "description": "Objet personnel. Intensifient la luminosité : le porteur gagne le trait Nyctalope. De bonne qualité, ils immunisent aux effets des grenades photoniques."
+    }
+  },
+  {
+    "name": "Porte-bonheur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Objet personnel. Prix variable (à négocier, fixé par le MJ). Médaillon, souvenir ou relique censée attirer le regard de l'Empereur; aucun bénéfice tangible, mais le MJ peut décider qu'il protège son porteur d'un malheur aléatoire."
+    }
+  },
+  {
+    "name": "Recycleur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 50,
+      "availability": "peuCourant",
+      "description": "Objet personnel. Masque ou casque avec réserve d'oxygène : immunité aux effets des gaz, survie sous l'eau. Bouteille d'environ 1 heure d'autonomie; remplacement en une action complète, bouteille de rechange 25 trônes (Inhabituel)."
+    }
+  },
+  {
+    "name": "Sac à dos (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 10,
+      "availability": "repandu",
+      "description": "Objet personnel. Contenant à bretelles pouvant porter environ 50 kg de matériel."
+    }
+  },
+  {
+    "name": "Vêtements (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "omnipresent",
+      "description": "Objet personnel. Prix variable selon l'importance de l'individu : haillons (qualité médiocre) pour quelques trônes, combinaison de travail (qualité moyenne), combinaison moulante (bonne qualité, confort et liberté de mouvement), robes flottantes (qualité exceptionnelle, plusieurs milliers de trônes, peu commodes)."
+    }
+  },
+  {
+    "name": "Amasec (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 50,
+      "availability": "peuCourant",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Liqueur distillée à partir du vin, du breuvage infâme au cru vieilli."
+    }
+  },
+  {
+    "name": "Cigalhos (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 10,
+      "availability": "commun",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Tubes de papier roulé contenant une substance végétale séchée légèrement narcotique, pouvant créer une dépendance; courants chez les soldats de la Garde et les travailleurs."
+    }
+  },
+  {
+    "name": "Dé-tox (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 65,
+      "availability": "rare",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Stimulant : met fin immédiatement aux effets persistants (positifs et négatifs) de tout stimulant, toxine ou gaz, sauf mention contraire. Effets secondaires pénibles : assommé pendant 1d10 moins bonus d'Endurance rounds (0 ou moins = aucun effet). Usage abusif : plus d'une dose du même stimulant en 24 h impose un test d'Endurance par dose supplémentaire avec malus cumulatif de -20; en cas d'échec, sans effet et inopérant pendant 24 h."
+    }
+  },
+  {
+    "name": "Frénézon (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 95,
+      "availability": "tresRare",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Stimulant de combat des légions pénales : confère le talent Frénésie et une immunité à la Peur pendant 1d10 minutes. Usage abusif : plus d'une dose du même stimulant en 24 h impose un test d'Endurance par dose supplémentaire avec malus cumulatif de -20; en cas d'échec, sans effet et inopérant pendant 24 h."
+    }
+  },
+  {
+    "name": "Huile consacrée (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 150,
+      "availability": "tresRare",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Huile de graissage bénie par l'Omnimessie. Appliquée sur une arme (action complète) : immunité à l'enrayement pour un nombre de tirs égal à l'autonomie de tir. Sur une arme enrayée : la désenraye immédiatement."
+    }
+  },
+  {
+    "name": "Injecteur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 5,
+      "availability": "omnipresent",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Seringue jetable, hypospray ou patch bioajusté contenant une dose unique de stimulant, administrée au prix d'une action complète."
+    }
+  },
+  {
+    "name": "Médikit (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 2,
+      "price": 150,
+      "availability": "commun",
+      "description": "Trousse de secours du personnel médical : 6 doses de stimm, patchs à cataplasmes, antiseptiques, peau artificielle. +20 aux tests de Medicae."
+    }
+  },
+  {
+    "name": "Obscura (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 285,
+      "availability": "rare",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Drogue prohibée mais très répandue : état de rêve éveillé pendant 1d5 heures (en combat, appliquer les effets d'une grenade hallucinogène), puis dépression profonde pendant 1d10 heures sauf nouvelle dose. Usage abusif : plus d'une dose du même stimulant en 24 h impose un test d'Endurance par dose supplémentaire avec malus cumulatif de -20; en cas d'échec, sans effet et inopérant pendant 24 h."
+    }
+  },
+  {
+    "name": "Rations (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 10,
+      "availability": "repandu",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Nourriture impériale traitée et emballée, des rations protidiques recyclées et algues de culture aux meilleures pièces de grox."
+    }
+  },
+  {
+    "name": "Reca (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 5,
+      "availability": "omnipresent",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Recaféiné : boisson chaude infusée très répandue, avec un excitant basique type caféine."
+    }
+  },
+  {
+    "name": "Slaught (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 75,
+      "availability": "peuCourant",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Stimulant (onslaught) : +3 aux bonus d'Agilité et de Perception pendant 2d10 minutes. Ensuite, test d'Endurance ou malus de -20 aux tests d'Agilité et de Perception pendant 1d5 heures. Usage abusif : plus d'une dose du même stimulant en 24 h impose un test d'Endurance par dose supplémentaire avec malus cumulatif de -20; en cas d'échec, sans effet et inopérant pendant 24 h."
+    }
+  },
+  {
+    "name": "Spook (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 395,
+      "availability": "rare",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Stimulant psychique. Sans Niveau Psy : test de Force Mentale, échec = 1d5 points de Folie; réussite = un pouvoir aléatoire de la Table 5-15 pendant 1d5 heures (sans Concentration, utilisable seulement sur test de Force Mentale Difficile (-20)). Avec Niveau Psy 1+ : test de Force Mentale, échec = 1 point de Folie; réussite = +2 aux jets de Puissance pendant 1 heure mais +25 à tous les jets sur la Table 6-2 phénomènes psychiques. Usage abusif : plus d'une dose du même stimulant en 24 h impose un test d'Endurance par dose supplémentaire avec malus cumulatif de -20; en cas d'échec, sans effet et inopérant pendant 24 h."
+    }
+  },
+  {
+    "name": "Stimm (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 20,
+      "availability": "moyen",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Stimulant antidouleur : pendant 3d10 rounds, le personnage ne peut pas être assommé et ignore les effets négatifs des dégâts et dégâts critiques sur ses caractéristiques. Ensuite, -20 aux tests de Force, d'Endurance et d'Agilité pendant 1 heure. Usage abusif : plus d'une dose du même stimulant en 24 h impose un test d'Endurance par dose supplémentaire avec malus cumulatif de -20; en cas d'échec, sans effet et inopérant pendant 24 h."
+    }
+  },
+  {
+    "name": "Tord-boyaux (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 10,
+      "availability": "omnipresent",
+      "description": "Consommable. Prix pour 1 dose (stimulants) ou 1 paquet/bouteille (rations, alcools, cigalhos). Terme générique pour les alcools fermentés les plus basiques."
+    }
+  },
+  {
+    "name": "Assourdisseur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 2,
+      "price": 25,
+      "availability": "moyen",
+      "description": "Outil. Génère des ondes étouffant les bruits : +30 aux tests de Déplacement silencieux une fois activé. Autonomie 20 minutes d'usage continu, recharge environ 1 heure."
+    }
+  },
+  {
+    "name": "Auspex/scanner (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 145,
+      "availability": "peuCourant",
+      "description": "Outil. Détecte émissions d'énergie, mouvements et formes de vie : +20 aux tests de Perception; test de Technomaîtrise pour détecter ce qui dépasse les sens humains (gaz invisibles, radiations.). Portée 50 m, bloqué par les murs de plus de 50 cm et certains isolants."
+    }
+  },
+  {
+    "name": "Auto-plume (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 55,
+      "availability": "peuCourant",
+      "description": "Outil. Instrument d'écriture recopiant les textes à grande vitesse et avec précision : +10 aux tests de Métier (copiste)."
+    }
+  },
+  {
+    "name": "Charge de démolition (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 250,
+      "availability": "peuCourant",
+      "description": "Outil. Engin explosif simple (porte, brèche, pont). 3d10 dégâts explosifs +2 par charge reliée, rayon de 5 m par charge. Pose et désamorçage : compétence Démolition."
+    }
+  },
+  {
+    "name": "Comm-vox (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 4,
+      "price": 300,
+      "availability": "peuCourant",
+      "description": "Outil. Appareil de communication longue portée, jusqu'aux vaisseaux en orbite. Recevoir ou transmettre : test de Technomaîtrise Assez facile (+10)."
+    }
+  },
+  {
+    "name": "Découpeur laser (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 4,
+      "price": 65,
+      "availability": "moyen",
+      "description": "Outil. Rayon intense de courte portée traversant roche, acier ou plaques d'armure : tranche ou soude 10 cm de métal par tour (selon épaisseur). Trop peu maniable pour le corps à corps."
+    }
+  },
+  {
+    "name": "Grappin (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 2,
+      "price": 30,
+      "availability": "commun",
+      "description": "Outil. Pistolet ou lanceur tirant un crochet ou une tête magnétique reliés à 100 m de câble; montée manuelle ou par treuil motorisé. Tiré sur une cible vivante, compte comme une arbalète à un coup."
+    }
+  },
+  {
+    "name": "Hurleur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 2,
+      "price": 140,
+      "availability": "peuCourant",
+      "description": "Outil. Alarme de proximité (mouvements ou bruits). À l'activation, le MJ fait un test de Technomaîtrise secret pour savoir s'il fonctionne. Perception 75 pour détecter un intrus; sirène audible jusqu'à 1 km (réduite par les obstacles)."
+    }
+  },
+  {
+    "name": "Jumelles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 55,
+      "availability": "moyen",
+      "description": "Outil. Instrument d'observation grossissant; les modèles avancés peuvent estimer les distances, détecter la chaleur, calculer des coordonnées ou prendre des clichés."
+    }
+  },
+  {
+    "name": "Lumiglobe/lampe (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 15,
+      "availability": "omnipresent",
+      "description": "Outil. Source de lumière éclairant une zone d'une dizaine de mètres de diamètre ou plus; autonomie 1d5 heures puis recharge ou remplacement des batteries."
+    }
+  },
+  {
+    "name": "Menottes (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 35,
+      "availability": "repandu",
+      "description": "Outil. Entraves résistantes des chasseurs de primes et agents de la loi."
+    }
+  },
+  {
+    "name": "Microvox (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 20,
+      "availability": "moyen",
+      "description": "Outil. Communicateur porté dans l'oreille, émission et réception jusqu'à 1 km (portée réduite par le mauvais temps, le terrain, la pierre et le plastacier)."
+    }
+  },
+  {
+    "name": "Multiclé (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 150,
+      "availability": "peuCourant",
+      "description": "Outil. Ouvre la plupart des verrous impériaux standard : +30 aux tests d'Intrusion pour ouvrir une serrure. Très recherchée par les criminels."
+    }
+  },
+  {
+    "name": "Nécessaire d'écriture (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 2,
+      "price": 20,
+      "availability": "commun",
+      "description": "Outil. Papier, encre et plumes."
+    }
+  },
+  {
+    "name": "Outil combiné (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 200,
+      "availability": "rare",
+      "description": "Outil. Instrument polyvalent de l'Adeptus Mechanicus : +10 aux tests de Technomaîtrise."
+    }
+  },
+  {
+    "name": "Pix-enregistreur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 100,
+      "availability": "moyen",
+      "description": "Outil. Capture des séquences d'images, parfois holographiques; la plupart servent aussi de lecteurs, certains sont intégrés à des serviteurs."
+    }
+  },
+  {
+    "name": "Psyconduit (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 100,
+      "availability": "rare",
+      "description": "Outil. Ossements bénis, bâton sculpté, icône ou cristaux permettant à un psyker de focaliser ses capacités : +10 aux tests de Concentration."
+    }
+  },
+  {
+    "name": "Tablette de données (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0.5,
+      "price": 25,
+      "availability": "commun",
+      "description": "Outil. Support de stockage et de lecture de textes, audio et vidéo, omniprésent dans l'Imperium; certaines ne contiennent qu'un seul document, d'autres peuvent recevoir ou transmettre des données."
+    }
+  },
+  {
+    "name": "Trousse d'excruciateur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 1,
+      "price": 375,
+      "availability": "tresRare",
+      "description": "Outil. Panoplie d'expliciteur (lames, aiguilles, produits chimiques, drogues, sondes thermiques, câbles neuraux) : +20 aux tests d'Interrogatoire."
+    }
+  },
+  {
+    "name": "Bionique de locomotion (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 1500,
+      "availability": "peuCourant",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Membre bionique : +2 au bonus d'Endurance contre les attaques sur cette localisation; Hémorragie ou effet critique inadapté = membre inopérant; mort = tue le porteur. Jambe, hanche, pelvis, etc., reliés au système spinal. Moyenne : fonctions normales. Médiocre : vitesse divisée par deux (arrondie au supérieur), test d'Agilité pour courir sous peine de chute. Bonne : talent Sprint et +20 aux tests d'Acrobaties pour sauter."
+    }
+  },
+  {
+    "name": "Bras bionique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 1000,
+      "availability": "peuCourant",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Membre bionique : +2 au bonus d'Endurance contre les attaques sur cette localisation; Hémorragie ou effet critique inadapté = membre inopérant; mort = tue le porteur. Moyenne : force, dextérité et toucher habituels. Médiocre : Agilité divisée par deux pour les manipulations de précision, -10 en CC et CT avec ce membre. Bonne : +10 aux tests d'Agilité de précision (Escamotage.) et +10 aux tests de Force avec ce membre."
+    }
+  },
+  {
+    "name": "Système respiratoire bionique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 800,
+      "availability": "rare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Moyenne : reproduit les poumons, +20 aux tests d'Endurance contre les gaz et toxines de l'air. Médiocre : idem mais difficulté augmentée d'un cran pour l'activité physique soutenue et -20 en Déplacement silencieux (voix rauque). Bonne : système auxiliaire prenant le relais des poumons; certains modèles passent inaperçus."
+    }
+  },
+  {
+    "name": "Détectaugures (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 1000,
+      "availability": "rare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Senseurs implantés (concentration et demi-action). Moyenne : fonctionne comme un auspex standard. Médiocre : un seul champ de détection (chaleur, radiations ou ondes), rayon 20 m. Bonne : comme moyenne, plus relance d'un test basé sur la Perception."
+    }
+  },
+  {
+    "name": "Implants corticaux (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 5000,
+      "availability": "tresRare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Moyenne : rend un semblant de normalité aux paralysés ou cerveaux détériorés; -1d10 permanent en CC, CT, Agilité, Intelligence et Sociabilité, +1d10 points de Folie. Médiocre : détruit personnalité et souvenirs (serviteur). Bonne : dix fois le prix, trait Intelligence surnaturelle (x2), fonctions d'un cogitateur, +1d10 points de Folie."
+    }
+  },
+  {
+    "name": "Mécadendrite de tir (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 600,
+      "availability": "tresRare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Tentacule d'épaule de 2 m intégrant un pistolet laser compact (amélioration compacte), utilisable en réaction comme la main non directrice sans malus au tir; sans dispositif de visée. Requiert Utilisation de mécadendrites (tir). Réservé à l'Adeptus Mechanicus. Toutes les mécadendrites sont considérées de bonne qualité sauf mention contraire."
+    }
+  },
+  {
+    "name": "Mécadendrite manipulatrice (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 500,
+      "availability": "tresRare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Membre d'épaule en céramite et acier, extension 1,50 m : +20 aux tests de Force avec ce bras; pinces pouvant se refermer sur un point d'ancrage (action gratuite). Au combat : arme primitive maniée comme un gourdin, 1d5+2 dégâts d'impact. Aucune tâche de précision. Requiert Utilisation de mécadendrites (manipulatrices). Réservé à l'Adeptus Mechanicus. Toutes les mécadendrites sont considérées de bonne qualité sauf mention contraire."
+    }
+  },
+  {
+    "name": "Mécadendrite medicae (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 500,
+      "availability": "tresRare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Membre flexible de 2 m (épaule ou sternum) : +10 aux tests de Medicae; six pistons d'injection (une dose de stimulant chacun, achetée à part); pinces à clamp stoppant une Hémorragie en demi-action; scalpel tronçonneur ramenant une amputation à Moyenne (+0), utilisable en arme improvisée 1d5 dégâts pénétrants; +10 aux tests d'Interrogatoire. Requiert Utilisation de mécadendrites (medicae). Réservé à l'Adeptus Mechanicus. Toutes les mécadendrites sont considérées de bonne qualité sauf mention contraire."
+    }
+  },
+  {
+    "name": "Mécadendrite optique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 400,
+      "availability": "tresRare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Membre caméra très flexible, extension 3 m, épaisseur d'un crayon : +10 aux tests basés sur la Perception; lampe à filtres, téléobjectif, microscope, infrarouge (aucun malus d'obscurité, +20 aux tests de Perception visuelle de nuit). Requiert Utilisation de mécadendrites (optiques). Réservé à l'Adeptus Mechanicus. Toutes les mécadendrites sont considérées de bonne qualité sauf mention contraire."
+    }
+  },
+  {
+    "name": "Mécadendrite utilitaire (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 500,
+      "availability": "tresRare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Membre de 2 m porte-outils : compte comme un outil combiné (+10 en Technomaîtrise); six pistons d'injection d'huile consacrée (achetée à part); encensoir (demi-action, toutes les 15 min) : -5 en CC pendant 1 round pour les créatures vivantes dans un rayon de 2 m, mais +10 aux tests de Perception olfactive pour détecter le porteur tant qu'il est actif; lame de découpe = couteau avec attribut défensive et amélioration monomoléculaire. Requiert Utilisation de mécadendrites (utilitaires). Réservé à l'Adeptus Mechanicus. Toutes les mécadendrites sont considérées de bonne qualité sauf mention contraire."
+    }
+  },
+  {
+    "name": "Sens cybernétiques (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 2250,
+      "availability": "rare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). Vue, ouïe, goût, toucher artificiels (prix par sens). Moyenne : réplique le sens humain, aucun effet. Médiocre : -20 aux tests impliquant ce sens. Bonne : talent Sens aiguisés pour ce sens et +20 pour résister aux attaques le ciblant; cybervision peut inclure lunette télescopique, photolentilles ou Nyctalope, cyber-ouïe un microvox interne, chaque ajout au prix d'un implant séparé."
+    }
+  },
+  {
+    "name": "Unité d'impulsion cérébrale (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 1750,
+      "availability": "rare",
+      "description": "Amélioration cybernétique (qualité moyenne pour le prix indiqué). Pose : installations médicales substantielles ou monde à haut niveau technologique, 2d10 moins bonus d'Endurance jours (1 minimum). UIC ou contacteur sensoriel : connexion spinale ou corticale (variantes avancées : sondes par le poignet ou mécadendrite). Moyenne : +10 aux tests de Conduite, Pilotage et Technomaîtrise connecté par prise UIC. Médiocre : test de Force Mentale pour fonctionner, -10 aux interactions avec les esprits de la machine. Bonne : +10 pour communiquer avec les esprits de la machine et +10 en CT, Conduite, Enquête, Logique, Pilotage et Technomaîtrise connecté par UIC."
+    }
+  },
+  {
+    "name": "Missile cyclonique (RT)",
     "img": "icons/svg/item-bag.svg",
     "type": "gear",
     "system": {
       "weight": 1,
       "price": 0,
-      "availability": "Banal",
-      "description": "Description de l'objet."
+      "availability": "quasiUnique",
+      "description": "Faith and Coin p. 86. Nom original : Cyclonic. Missile (munition de lance-missiles). 5d10+10 X, pén 1, attributs : -. Zone d'effet de dégâts (15); Zone d'effet de feu (25)."
+    }
+  },
+  {
+    "name": "Cartouches acides (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 129. Nom original : Acid Shells. Munitions spéciales. Effet : Dégâts ramenés à 1d10, pénétration 0; gagne Corrosive. S'utilise avec : fusils à pompe et armes à bolts non lourdes."
+    }
+  },
+  {
+    "name": "Réservoir aérotorche (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Into the Storm p. 129. Nom original : Airtorch Canister. Munitions spéciales. Effet : Gagne Dispersion et Surchauffe; portée réduite de moitié. S'utilise avec : toutes les armes à fusion."
+    }
+  },
+  {
+    "name": "Munitions bénies (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Faith and Coin p. 93. Nom original : Blessed Ammunition. Munitions spéciales. Effet : Gagne Sanctifiée. S'utilise avec : toute munition pouvant être consacrée."
+    }
+  },
+  {
+    "name": "Cartouches à bolt modifiées (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 61. Nom original : Bolt Shells, Modified. Munitions spéciales. Effet : 1d10+5 X, pén 4, gagne Déchirante, +30 m de portée, Peu fiable, perd Dispersion. S'utilise avec : tous les fusils à pompe."
+    }
+  },
+  {
+    "name": "Cartouches de brèche (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Rites of Battle p. 140. Nom original : Breaching Rounds. Munitions spéciales. Effet : Dégâts de type explosif, portée réduite de moitié. S'utilise avec : tous les fusils à pompe."
+    }
+  },
+  {
+    "name": "Cartouches à condensateur (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Faith and Coin p. 93. Nom original : Capacitor Rounds. Munitions spéciales. Effet : Gagne Décharge mais -4 dégâts. S'utilise avec : fusils à pompe et armes à bolts non lourdes."
+    }
+  },
+  {
+    "name": "Bolts Dragonfire (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Faith and Coin p. 92. Nom original : Dragonfire Bolts. Munitions spéciales. Effet : Gagne Zone d'effet (2) et Lance-flammes, -1 dégât. S'utilise avec : toutes les armes à bolts."
+    }
+  },
+  {
+    "name": "Bolts Dragonfire (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Deathwatch livre de base p. 160. Nom original : Dragonfire Shells. Munitions spéciales. Effet : Gagne Lance-flammes et Zone d'effet (2), -2 dégâts. S'utilise avec : toutes les armes à bolts."
+    }
+  },
+  {
+    "name": "Cartouches à fléchettes (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 61. Nom original : Flechette Rounds. Munitions spéciales. Effet : Portée x 1,1, +2 pénétration. S'utilise avec : tous les fusils à pompe."
+    }
+  },
+  {
+    "name": "Cartouches à fléchettes (toxiques) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Hostile Acquisitions p. 61. Nom original : Flechette Rounds (Toxic). Munitions spéciales. Effet : Portée x 1,1, +2 pénétration, Toxique (2). S'utilise avec : tous les fusils à pompe."
+    }
+  },
+  {
+    "name": "Balles à pointe de fycéline (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Hostile Acquisitions p. 61. Nom original : Fyceline-tipped Rounds. Munitions spéciales. Effet : +1 dégât (armes de base) ou +3 dégâts (armes lourdes). S'utilise avec : toutes les armes MS."
+    }
+  },
+  {
+    "name": "Bolts Hellfire (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Deathwatch livre de base p. 160. Nom original : Hellfire Rounds. Munitions spéciales. Effet : Gagne Vengeresse (9), ignore l'Armure naturelle. En arme lourde : cadence S/-/-, gagne Zone d'effet (3). S'utilise avec : toutes les armes à bolts."
+    }
+  },
+  {
+    "name": "Obus explosifs (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Faith and Coin p. 93. Nom original : High Explosive Rounds. Munitions spéciales. Effet : Gagne Zone d'effet (1), -2 pénétration. S'utilise avec : autocanons."
+    }
+  },
+  {
+    "name": "Balles Ignis (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Rites of Battle p. 140. Nom original : Ignis Rounds. Munitions spéciales. Effet : Gagne Lance-flammes. S'utilise avec : armes MS non lourdes."
+    }
+  },
+  {
+    "name": "Bolts à implosion (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Deathwatch livre de base p. 160. Nom original : Implosion Shells. Munitions spéciales. Effet : Après des dégâts, la cible subit 1d5 dégâts d'Agilité. S'utilise avec : toutes les armes à bolts."
+    }
+  },
+  {
+    "name": "Bolts Kraken (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Deathwatch livre de base p. 160. Nom original : Kraken Rounds. Munitions spéciales. Effet : Pénétration 8, portée x 1,5. S'utilise avec : toutes les armes à bolts."
+    }
+  },
+  {
+    "name": "Munitions de précision kroot (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Tau Character Guide p. 27. Nom original : Kroot Sniper Rounds. Munitions spéciales. Effet : Voir le fusil kroot. S'utilise avec : fusil kroot."
+    }
+  },
+  {
+    "name": "Bolts Metal Storm (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Deathwatch livre de base p. 160. Nom original : Metal Storm Rounds. Munitions spéciales. Effet : -2 dégâts et -2 pénétration, gagne Zone d'effet (2). S'utilise avec : toutes les armes à bolts."
+    }
+  },
+  {
+    "name": "Aiguilles à micro-charge (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Hostile Acquisitions p. 61. Nom original : Micro-blast Needles. Munitions spéciales. Effet : Perd Toxique, +4 dégâts, gagne Déchirante. S'utilise avec : pistolets et fusils à aiguilles."
+    }
+  },
+  {
+    "name": "Flasque à micro-impulsion (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Into the Storm p. 129. Nom original : Microburst Flask. Munitions spéciales. Effet : -2 dégâts, +2 pénétration, +10 m; perd Surchauffe et Maximale. S'utilise avec : armes à plasma non lourdes."
+    }
+  },
+  {
+    "name": "Réservoir de néphium (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 129. Nom original : Nephium Fuel Tank. Munitions spéciales. Effet : -10 aux tests d'Agilité pour éviter, +2 dégâts. S'utilise avec : toutes les armes lance-flammes."
+    }
+  },
+  {
+    "name": "Balles broyeuses (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Into the Storm p. 129. Nom original : Organgrinder Rounds. Munitions spéciales. Effet : Test d'Endurance (-20) ou 2d10 dégâts non réductibles. S'utilise avec : canons de poing, mitrailleuses lourdes et armes à bolts."
+    }
+  },
+  {
+    "name": "Balles Pyre (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "quasiUnique",
+      "description": "Faith and Coin p. 94. Nom original : Pyre Rounds. Munitions spéciales. Effet : Effets détaillés dans le livre. S'utilise avec : toutes les armes MS."
+    }
+  },
+  {
+    "name": "Cartouches déchiqueteuses (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "commun",
+      "description": "Rites of Battle p. 141. Nom original : Shredder Rounds. Munitions spéciales. Effet : +1 pénétration, gagne Déchirante. S'utilise avec : tous les fusils à pompe."
+    }
+  },
+  {
+    "name": "Cartouches immobilisantes (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Into the Storm p. 129. Nom original : Snare Shells. Munitions spéciales. Effet : -2 dégâts, Immobilisante (1). S'utilise avec : tous les fusils à pompe."
+    }
+  },
+  {
+    "name": "Bolts Stalker (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "commun",
+      "description": "Deathwatch livre de base p. 161. Nom original : Stalker Rounds. Munitions spéciales. Effet : -2 dégâts; -30 aux tests de Vigilance pour repérer le tireur. S'utilise avec : toutes les armes à bolts."
+    }
+  },
+  {
+    "name": "Cartouches étourdissantes (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 62. Nom original : Stun Shells. Munitions spéciales. Effet : Perd Dispersion, gagne Décharge. S'utilise avec : tous les fusils à pompe."
+    }
+  },
+  {
+    "name": "Prométhéum saturé de toxine (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 62. Nom original : Toxin-saturated Promethium. Munitions spéciales. Effet : Gagne Toxique (2). S'utilise avec : toutes les armes lance-flammes."
+    }
+  },
+  {
+    "name": "Bolts Vengeance (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Deathwatch livre de base p. 161. Nom original : Vengeance Rounds. Munitions spéciales. Effet : Gagne Abattage (4), pénétration 9; en cas d'enrayement, dégâts au bras du tireur. S'utilise avec : toutes les armes à bolts."
+    }
+  },
+  {
+    "name": "Balles du vide (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Into the Storm p. 130. Nom original : Void Rounds. Munitions spéciales. Effet : Utilisables dans le vide sans malus. S'utilise avec : toutes les armes MS."
+    }
+  },
+  {
+    "name": "Garde en adamantium (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Faith and Coin p. 92. Nom original : Adamantine Hilt Guard. Modification (arme ou armure). Applicable à : toute épée. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Matériaux avancés (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Hostile Acquisitions p. 64. Nom original : Advanced Materials. Modification (arme ou armure). Applicable à : toute armure primitive. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Tranchant béni (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Faith and Coin p. 92. Nom original : Blessed Edge. Modification (arme ou armure). Applicable à : toute arme à lame. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Évents de calamité (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 128. Nom original : Calamity Vents. Modification (arme ou armure). Applicable à : toute arme avec Surchauffe. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Réservoir filtrant consacré (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Faith and Coin p. 92. Nom original : Concecrated Filter Canister. Modification (arme ou armure). Applicable à : toute arme lance-flammes. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Construction déflectrice (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 64. Nom original : Deflective Construction. Modification (arme ou armure). Applicable à : toute armure non primitive. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Bloc de décharge (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Faith and Coin p. 93. Nom original : Discharge Pack. Modification (arme ou armure). Applicable à : toute arme de corps à corps. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Cellules de gel d'impact (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 64. Nom original : Impact Gel Cells. Modification (arme ou armure). Applicable à : toute armure non primitive. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Facture de Lathe (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "quasiUnique",
+      "description": "Hostile Acquisitions p. 64. Nom original : Lathe-Wrought. Modification (arme ou armure). Applicable à : armure carapace ou énergétique. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Esprit de loyauté (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Hostile Acquisitions p. 58. Nom original : Loyalty Spirit. Modification (arme ou armure). Applicable à : toute arme à distance non primitive. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Héraldique lumineuse (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 64. Nom original : Lumen-Heraldry. Modification (arme ou armure). Applicable à : toute armure. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Propulseur levmag (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Hostile Acquisitions p. 58. Nom original : Maglev Impeller. Modification (arme ou armure). Applicable à : toute arme MS. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Couche Nightshroud (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 65. Nom original : Nightshroud Layer. Modification (arme ou armure). Applicable à : toute armure complète, sauf armure énergétique. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Assistance énergétique (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Hostile Acquisitions p. 65. Nom original : Power Assissted. Modification (arme ou armure). Applicable à : toute armure complète non primitive, sauf armure énergétique. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Psyocculum (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Faith and Coin p. 93. Nom original : Psyocculum. Modification (arme ou armure). Applicable à : toute arme de base. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Buse lance-bûcher (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 59. Nom original : Pyre-lance Nozzle. Modification (arme ou armure). Applicable à : toute arme à fusion. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Revêtement réfléchissant (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 65. Nom original : Reflec Coating. Modification (arme ou armure). Applicable à : toute armure. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Servo-manipulateurs (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 65. Nom original : Servo-manipulators. Modification (arme ou armure). Applicable à : toute armure imposant un malus aux tests d'Agilité ou de manipulation fine. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Harnais stabilisateur (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 59. Nom original : Stabiliser Harness. Modification (arme ou armure). Applicable à : toute arme lourde. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Évents Starflare (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Hostile Acquisitions p. 60. Nom original : Starflare Vents. Modification (arme ou armure). Applicable à : toute arme à plasma. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Support d'outil (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "commun",
+      "description": "Hostile Acquisitions p. 65. Nom original : Tool Mount. Modification (arme ou armure). Applicable à : toute armure. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Déchargeur Whisper-Bolt (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 61. Nom original : Whisper-Bolt Discharger. Modification (arme ou armure). Applicable à : armes laser de poing ou de base. Effet : voir la page indiquée."
+    }
+  },
+  {
+    "name": "Bottes silencieuses (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Faith and Coin p. 96. Nom original : Whisper Boots. Objet personnel. 1 degré de réussite supplémentaire aux tests de Discrétion."
+    }
+  },
+  {
+    "name": "Lunettes Aetherscrye (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "quasiUnique",
+      "description": "Hostile Acquisitions p. 65. Nom original : Aetherscrye Goggles. Outil. Permettent de percevoir le Warp (plusieurs effets, voir la page)."
+    }
+  },
+  {
+    "name": "Crâne cendré (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Faith and Coin p. 98. Nom original : Ashen Skull. Outil. +10 aux tests de Force Mentale opposés."
+    }
+  },
+  {
+    "name": "Explosif en aérosol (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 136. Nom original : Bomb Spray. Outil. Explosif en aérosol : 1d5+3 X, Zone d'effet (2) par kilo."
+    }
+  },
+  {
+    "name": "Pointe de dérivation (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Faith and Coin p. 98. Nom original : Bypass Spike. Outil. +20 aux tests d'Intrusion."
+    }
+  },
+  {
+    "name": "Outils de chirurgien (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Faith and Coin p. 99. Nom original : Chirurgeon's Tools. Outil. Une fois par séance, relance d'un test de Medicae raté impliquant une chirurgie."
+    }
+  },
+  {
+    "name": "Métier à données (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Rogue Trader livre de base p. 148. Nom original : Data-Loom. Outil. +10 aux tests de Logique."
+    }
+  },
+  {
+    "name": "Cordeau détonant (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "commun",
+      "description": "Into the Storm p. 136. Nom original : Detcord/Det-tape. Outil. 1d5 X, Zone d'effet (5) par kilo."
+    }
+  },
+  {
+    "name": "Encens drusien (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Faith and Coin p. 100. Nom original : Drusine Incense. Outil. Les entités du Warp ne peuvent pas être incorporelles dans la fumée (et autres effets, voir la page)."
+    }
+  },
+  {
+    "name": "Abri d'urgence (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Into the Storm p. 136. Nom original : Emergency Hab. Outil. Abri robuste montable en quelques instants; couvert portable de 16 PA."
+    }
+  },
+  {
+    "name": "Trousse d'excruciateur (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Faith and Coin p. 100. Nom original : Excruciator. Outil. +20 aux tests d'Interrogatoire et +30 en Intimidation (voir la page)."
+    }
+  },
+  {
+    "name": "Aérosol pare-balles (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 136. Nom original : Flak Spray. Outil. Fait compter n'importe quel vêtement comme une armure pare-balles de 4 PA; colmate temporairement les fuites."
+    }
+  },
+  {
+    "name": "Tente souple (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Into the Storm p. 137. Nom original : Flex Tent. Outil. Tente légère."
+    }
+  },
+  {
+    "name": "Liber Heresius (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Faith and Coin p. 101. Nom original : Liber Heresius. Outil. +30 en Connaissances interdites (démonologie, hérésie, psykers, Warp)."
+    }
+  },
+  {
+    "name": "Maximes de Marquette (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Faith and Coin p. 101. Nom original : Maxims of Marquette. Outil. +10 aux tests de Marchandage et de Charisme face aux fidèles de l'Imperium."
+    }
+  },
+  {
+    "name": "Foreuse à fusion (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Stars of Inequity p. 95. Nom original : Melta Drill. Outil. 2d10+10 E, pén 13."
+    }
+  },
+  {
+    "name": "Notarikon des Sept (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Faith and Coin p. 101. Nom original : Notarikon of the Seven. Outil. +30 en Connaissances scholastiques (légendes, numérologie, occulte)."
+    }
+  },
+  {
+    "name": "Système de défense de périmètre (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 138. Nom original : Perimeter Defense System. Outil. 2d10+6 E, Décharge; nécessite plusieurs pylônes."
+    }
+  },
+  {
+    "name": "Siphon à plasma (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Faith and Coin p. 102. Nom original : Plasma Syphon. Outil. Perturbe gravement les armes à plasma."
+    }
+  },
+  {
+    "name": "Panneaux portatifs de réglage gravitique (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Stars of Inequity p. 96. Nom original : Portable Gravity Adjustment Panels. Outil. Panneau de 1 m x 1 m; agit sur 10 m au-dessus."
+    }
+  },
+  {
+    "name": "Planche énergétique (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "quasiUnique",
+      "description": "Into the Storm p. 138. Nom original : Power Board. Outil. Planche volante."
+    }
+  },
+  {
+    "name": "Prométhéum (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Rogue Trader livre de base p. 187. Nom original : Promethium. Outil. 1d10 E par kilo, Zone d'effet (4), Lance-flammes."
+    }
+  },
+  {
+    "name": "Psycristal (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "quasiUnique",
+      "description": "Into the Storm p. 138. Nom original : Psycrystal. Outil. Brille si un pouvoir psychique est utilisé à moins de 5 m."
+    }
+  },
+  {
+    "name": "Abri à déploiement rapide (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Stars of Inequity p. 97. Nom original : Rapid Deployment Shelter. Outil. Abri étanche à l'atmosphère, à la température et aux radiations."
+    }
+  },
+  {
+    "name": "Serviteur (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Rogue Trader livre de base p. 151. Nom original : Servitor. Outil. Serviteur (voir la page)."
+    }
+  },
+  {
+    "name": "Servocrâne (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Rogue Trader livre de base p. 150. Nom original : Servo-Skull. Outil. Servocrâne (voir la page)."
+    }
+  },
+  {
+    "name": "Kit de survie (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "rare",
+      "description": "Into the Storm p. 139. Nom original : Survival Kit. Outil. +10 aux tests de Survie."
+    }
+  },
+  {
+    "name": "Missel thorien (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Faith and Coin p. 102. Nom original : Thorian Missal. Outil. +20 en Connaissances générales/scholastiques (Credo impérial et Ecclésiarchie)."
+    }
+  },
+  {
+    "name": "Espars d'ondes éthériques (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Hostile Acquisitions p. 69. Nom original : Aetheric Wave-Spars. Cybernétique. Augmente le Niveau Psy en poussant; légèrement hérétique."
+    }
+  },
+  {
+    "name": "Renfort Blackbone (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 142. Nom original : Blackbone Bracing. Cybernétique. Coups à mains nues bien plus puissants."
+    }
+  },
+  {
+    "name": "Bionique gastrique (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "gear",
+    "system": {
+      "weight": 0,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Into the Storm p. 142. Nom original : Gastral Bionics. Cybernétique. Ignore les poisons et toxines ingérés avec la nourriture."
     }
   }
 ]

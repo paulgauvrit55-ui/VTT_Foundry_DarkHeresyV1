@@ -151,7 +151,8 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
     context.gearItems = [
       ...this.actor.itemTypes.gear,
       ...this.actor.itemTypes.weapon,
-      ...this.actor.itemTypes.rangedWeapon
+      ...this.actor.itemTypes.rangedWeapon,
+      ...this.actor.itemTypes.armour
     ].map(item => ({
       id: item.id,
       name: item.name,

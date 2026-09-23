@@ -1,0 +1,562 @@
+[
+  {
+    "name": "Casque carapace (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "carapace",
+      "locations": {
+        "tete": 4,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 0,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 2,
+      "price": 250,
+      "availability": "rare",
+      "description": "4 PA sur : tete. Armure carapace : armaplast, céramite ou autres matériaux hautement résistants; lourde et couvrant mal les articulations, mais protection bien supérieure aux armures composites, pare-balles et primitives. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Brassards carapace (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "carapace",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 5,
+        "brasGauche": 5,
+        "corps": 0,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 2,
+      "price": 300,
+      "availability": "rare",
+      "description": "5 PA sur : bras. Armure carapace : armaplast, céramite ou autres matériaux hautement résistants; lourde et couvrant mal les articulations, mais protection bien supérieure aux armures composites, pare-balles et primitives. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Jambières carapace (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "carapace",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 0,
+        "jambeDroite": 5,
+        "jambeGauche": 5
+      },
+      "weight": 3,
+      "price": 375,
+      "availability": "rare",
+      "description": "5 PA sur : jambes. Armure carapace : armaplast, céramite ou autres matériaux hautement résistants; lourde et couvrant mal les articulations, mais protection bien supérieure aux armures composites, pare-balles et primitives. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Carapace légère d'agent de la loi (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "carapace",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 5,
+        "brasGauche": 5,
+        "corps": 5,
+        "jambeDroite": 5,
+        "jambeGauche": 5
+      },
+      "weight": 15,
+      "price": 575,
+      "availability": "rare",
+      "description": "5 PA sur : corps, bras, jambes. Armure carapace : armaplast, céramite ou autres matériaux hautement résistants; lourde et couvrant mal les articulations, mais protection bien supérieure aux armures composites, pare-balles et primitives. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Plastron carapace (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "carapace",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 6,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 7,
+      "price": 600,
+      "availability": "rare",
+      "description": "6 PA sur : corps. Armure carapace : armaplast, céramite ou autres matériaux hautement résistants; lourde et couvrant mal les articulations, mais protection bien supérieure aux armures composites, pare-balles et primitives. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Armure carapace de la Garde (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "carapace",
+      "locations": {
+        "tete": 6,
+        "brasDroit": 6,
+        "brasGauche": 6,
+        "corps": 6,
+        "jambeDroite": 6,
+        "jambeGauche": 6
+      },
+      "weight": 17,
+      "price": 3750,
+      "availability": "tresRare",
+      "description": "6 PA sur : toutes. Armure carapace : armaplast, céramite ou autres matériaux hautement résistants; lourde et couvrant mal les articulations, mais protection bien supérieure aux armures composites, pare-balles et primitives. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Capuche composite (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "maille",
+      "locations": {
+        "tete": 3,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 0,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 0.5,
+      "price": 100,
+      "availability": "rare",
+      "description": "3 PA sur : tete. Armure composite : milliers de cellules de thermoplast tissées, de conception et parfois de facture xenos; très légère, se rigidifie momentanément pour disperser l'énergie de l'attaque. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Gants composites (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "maille",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 3,
+        "brasGauche": 3,
+        "corps": 0,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 0.5,
+      "price": 120,
+      "availability": "rare",
+      "description": "3 PA sur : bras. Armure composite : milliers de cellules de thermoplast tissées, de conception et parfois de facture xenos; très légère, se rigidifie momentanément pour disperser l'énergie de l'attaque. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Gilet composite (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "maille",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 4,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 1,
+      "price": 150,
+      "availability": "rare",
+      "description": "4 PA sur : corps. Armure composite : milliers de cellules de thermoplast tissées, de conception et parfois de facture xenos; très légère, se rigidifie momentanément pour disperser l'énergie de l'attaque. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Cape de combat composite (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "maille",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 4,
+        "brasGauche": 4,
+        "corps": 4,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 1.5,
+      "price": 350,
+      "availability": "tresRare",
+      "description": "4 PA sur : corps, bras. Armure composite : milliers de cellules de thermoplast tissées, de conception et parfois de facture xenos; très légère, se rigidifie momentanément pour disperser l'énergie de l'attaque. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Armure composite xenos (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "maille",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 4,
+        "brasGauche": 4,
+        "corps": 4,
+        "jambeDroite": 4,
+        "jambeGauche": 4
+      },
+      "weight": 2,
+      "price": 375,
+      "availability": "rare",
+      "description": "4 PA sur : corps, bras, jambes. Armure composite : milliers de cellules de thermoplast tissées, de conception et parfois de facture xenos; très légère, se rigidifie momentanément pour disperser l'énergie de l'attaque. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Armure énergétique légère (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "energetique",
+      "locations": {
+        "tete": 7,
+        "brasDroit": 7,
+        "brasGauche": 7,
+        "corps": 7,
+        "jambeDroite": 7,
+        "jambeGauche": 7
+      },
+      "weight": 40,
+      "price": 8500,
+      "availability": "tresRare",
+      "description": "7 PA sur : toutes. Armure énergétique : lourde et sophistiquée, intègre une alimentation qui confère +20 en Force et augmente la taille du porteur d'un cran. Nécessite une alimentation mobile (paquetage dorsal); une alimentation civile standard fournit 1d5 heures de fonctionnement avant remplacement ou recharge. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Armure énergétique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "energetique",
+      "locations": {
+        "tete": 8,
+        "brasDroit": 8,
+        "brasGauche": 8,
+        "corps": 8,
+        "jambeDroite": 8,
+        "jambeGauche": 8
+      },
+      "weight": 65,
+      "price": 15000,
+      "availability": "tresRare",
+      "description": "8 PA sur : toutes. Armure énergétique : lourde et sophistiquée, intègre une alimentation qui confère +20 en Force et augmente la taille du porteur d'un cran. Nécessite une alimentation mobile (paquetage dorsal); une alimentation civile standard fournit 1d5 heures de fonctionnement avant remplacement ou recharge. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Casque pare-balles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "pareBalles",
+      "locations": {
+        "tete": 2,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 0,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 2,
+      "price": 25,
+      "availability": "moyen",
+      "description": "2 PA sur : tete. Armure pare-balles : couches superposées de matériaux absorbants, efficace contre le petit calibre, le shrapnel et les explosions. Confère 5 points d'Armure contre les armes à zone d'effet si le porteur n'est pas au point d'origine de la zone. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Gantelets pare-balles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "pareBalles",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 2,
+        "brasGauche": 2,
+        "corps": 0,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 1,
+      "price": 50,
+      "availability": "moyen",
+      "description": "2 PA sur : bras. Armure pare-balles : couches superposées de matériaux absorbants, efficace contre le petit calibre, le shrapnel et les explosions. Confère 5 points d'Armure contre les armes à zone d'effet si le porteur n'est pas au point d'origine de la zone. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Manteau pare-balles léger (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "pareBalles",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 2,
+        "brasGauche": 2,
+        "corps": 2,
+        "jambeDroite": 2,
+        "jambeGauche": 2
+      },
+      "weight": 4,
+      "price": 80,
+      "availability": "peuCourant",
+      "description": "2 PA sur : corps, bras, jambes. Armure pare-balles : couches superposées de matériaux absorbants, efficace contre le petit calibre, le shrapnel et les explosions. Confère 5 points d'Armure contre les armes à zone d'effet si le porteur n'est pas au point d'origine de la zone. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Cape pare-balles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "pareBalles",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 3,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 8,
+      "price": 80,
+      "availability": "peuCourant",
+      "description": "3 PA sur : corps. Armure pare-balles : couches superposées de matériaux absorbants, efficace contre le petit calibre, le shrapnel et les explosions. Confère 5 points d'Armure contre les armes à zone d'effet si le porteur n'est pas au point d'origine de la zone. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Gilet pare-balles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "pareBalles",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 3,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 5,
+      "price": 50,
+      "availability": "moyen",
+      "description": "3 PA sur : corps. Armure pare-balles : couches superposées de matériaux absorbants, efficace contre le petit calibre, le shrapnel et les explosions. Confère 5 points d'Armure contre les armes à zone d'effet si le porteur n'est pas au point d'origine de la zone. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Tenue pare-balles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "pareBalles",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 3,
+        "brasGauche": 3,
+        "corps": 3,
+        "jambeDroite": 3,
+        "jambeGauche": 3
+      },
+      "weight": 6,
+      "price": 100,
+      "availability": "moyen",
+      "description": "3 PA sur : corps, bras, jambes. Armure pare-balles : couches superposées de matériaux absorbants, efficace contre le petit calibre, le shrapnel et les explosions. Confère 5 points d'Armure contre les armes à zone d'effet si le porteur n'est pas au point d'origine de la zone. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Armure pare-balles de la Garde (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "pareBalles",
+      "locations": {
+        "tete": 4,
+        "brasDroit": 4,
+        "brasGauche": 4,
+        "corps": 4,
+        "jambeDroite": 4,
+        "jambeGauche": 4
+      },
+      "weight": 11,
+      "price": 300,
+      "availability": "peuCourant",
+      "description": "4 PA sur : toutes. Armure pare-balles : couches superposées de matériaux absorbants, efficace contre le petit calibre, le shrapnel et les explosions. Confère 5 points d'Armure contre les armes à zone d'effet si le porteur n'est pas au point d'origine de la zone. Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Cuir souple (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "primitive",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 1,
+        "brasGauche": 1,
+        "corps": 1,
+        "jambeDroite": 1,
+        "jambeGauche": 1
+      },
+      "weight": 5,
+      "price": 25,
+      "availability": "moyen",
+      "description": "1 PA sur : corps, bras, jambes. Armure primitive : cuir ou métaux souples, protège mieux des lames que des balles. Pleinement efficace uniquement contre les armes dotées de l'attribut primitive; contre toutes les autres, ses points d'Armure sont divisés par 2 (arrondis au supérieur). Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Gilet matelassé (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "primitive",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 2,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 2,
+      "price": 10,
+      "availability": "commun",
+      "description": "2 PA sur : corps. Armure primitive : cuir ou métaux souples, protège mieux des lames que des balles. Pleinement efficace uniquement contre les armes dotées de l'attribut primitive; contre toutes les autres, ses points d'Armure sont divisés par 2 (arrondis au supérieur). Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Fourrures animales (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "primitive",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 2,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 10,
+      "price": 5,
+      "availability": "moyen",
+      "description": "2 PA sur : corps. Armure primitive : cuir ou métaux souples, protège mieux des lames que des balles. Pleinement efficace uniquement contre les armes dotées de l'attribut primitive; contre toutes les autres, ses points d'Armure sont divisés par 2 (arrondis au supérieur). Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Cuir épais (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "primitive",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 2,
+        "brasGauche": 2,
+        "corps": 2,
+        "jambeDroite": 2,
+        "jambeGauche": 2
+      },
+      "weight": 7,
+      "price": 100,
+      "availability": "commun",
+      "description": "2 PA sur : corps, bras, jambes. Armure primitive : cuir ou métaux souples, protège mieux des lames que des balles. Pleinement efficace uniquement contre les armes dotées de l'attribut primitive; contre toutes les autres, ses points d'Armure sont divisés par 2 (arrondis au supérieur). Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Peau de grox (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "primitive",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 3,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 14,
+      "price": 60,
+      "availability": "commun",
+      "description": "3 PA sur : corps. Armure primitive : cuir ou métaux souples, protège mieux des lames que des balles. Pleinement efficace uniquement contre les armes dotées de l'attribut primitive; contre toutes les autres, ses points d'Armure sont divisés par 2 (arrondis au supérieur). Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Manteau de mailles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "primitive",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 3,
+        "brasGauche": 3,
+        "corps": 3,
+        "jambeDroite": 3,
+        "jambeGauche": 3
+      },
+      "weight": 18,
+      "price": 50,
+      "availability": "moyen",
+      "description": "3 PA sur : corps, bras, jambes. Armure primitive : cuir ou métaux souples, protège mieux des lames que des balles. Pleinement efficace uniquement contre les armes dotées de l'attribut primitive; contre toutes les autres, ses points d'Armure sont divisés par 2 (arrondis au supérieur). Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Armure de plates (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "primitive",
+      "locations": {
+        "tete": 5,
+        "brasDroit": 5,
+        "brasGauche": 5,
+        "corps": 5,
+        "jambeDroite": 5,
+        "jambeGauche": 5
+      },
+      "weight": 30,
+      "price": 120,
+      "availability": "peuCourant",
+      "description": "5 PA sur : toutes. Armure primitive : cuir ou métaux souples, protège mieux des lames que des balles. Pleinement efficace uniquement contre les armes dotées de l'attribut primitive; contre toutes les autres, ses points d'Armure sont divisés par 2 (arrondis au supérieur). Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  },
+  {
+    "name": "Peau xenos (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "armour",
+    "system": {
+      "category": "primitive",
+      "locations": {
+        "tete": 0,
+        "brasDroit": 0,
+        "brasGauche": 0,
+        "corps": 6,
+        "jambeDroite": 0,
+        "jambeGauche": 0
+      },
+      "weight": 22,
+      "price": 5000,
+      "availability": "tresRare",
+      "description": "6 PA sur : corps. Armure primitive : cuir ou métaux souples, protège mieux des lames que des balles. Pleinement efficace uniquement contre les armes dotées de l'attribut primitive; contre toutes les autres, ses points d'Armure sont divisés par 2 (arrondis au supérieur). Les armures ne se cumulent pas : sur une localisation couverte plusieurs fois, seule la valeur la plus élevée compte."
+    }
+  }
+]

@@ -6,6 +6,7 @@ import AdvancedSkillData from "./data/item/advanced-skill-data.mjs";
 import WeaponData from "./data/item/weapon-data.mjs";
 import RangedWeaponData from "./data/item/ranged-weapon-data.mjs";
 import GearData from "./data/item/gear-data.mjs";
+import ArmourData from "./data/item/armour-data.mjs";
 import DarkHeresyActor from "./documents/actor.mjs";
 import AcolyteSheet from "./sheets/actor/acolyte-sheet.mjs";
 import NpcSheet from "./sheets/actor/npc-sheet.mjs";
@@ -14,6 +15,7 @@ import AdvancedSkillSheet from "./sheets/item/advanced-skill-sheet.mjs";
 import WeaponSheet from "./sheets/item/weapon-sheet.mjs";
 import RangedWeaponSheet from "./sheets/item/ranged-weapon-sheet.mjs";
 import GearSheet from "./sheets/item/gear-sheet.mjs";
+import ArmourSheet from "./sheets/item/armour-sheet.mjs";
 import { registerWeaponAttackCard } from "./chat/weapon-attack-card.mjs";
 import { seedCompendiums } from "./compendium-seed.mjs";
 
@@ -29,6 +31,7 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.weapon = WeaponData;
   CONFIG.Item.dataModels.rangedWeapon = RangedWeaponData;
   CONFIG.Item.dataModels.gear = GearData;
+  CONFIG.Item.dataModels.armour = ArmourData;
   CONFIG.ActiveEffect.legacyTransferral = false;
 
   foundry.applications.apps.DocumentSheetConfig.registerSheet(foundry.documents.Actor, game.system.id, AcolyteSheet, {
@@ -71,6 +74,12 @@ Hooks.once("init", () => {
     types: ["gear"],
     makeDefault: true,
     label: "DH.SheetLabel.Gear"
+  });
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(foundry.documents.Item, game.system.id, ArmourSheet, {
+    types: ["armour"],
+    makeDefault: true,
+    label: "DH.SheetLabel.Armour"
   });
 
   registerWeaponAttackCard();

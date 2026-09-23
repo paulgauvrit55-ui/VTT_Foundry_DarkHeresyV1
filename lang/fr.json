@@ -30,6 +30,7 @@
       "Weapon": "Fiche d'Arme de corps-à-corps",
       "RangedWeapon": "Fiche d'Arme à distance",
       "Gear": "Fiche d'Objet",
+      "Armour": "Fiche d'Armure",
       "Npc": "Fiche de PNJ/Créature"
     },
     "Tabs": {
@@ -177,7 +178,16 @@
       "Penetrant": "Pénétrant"
     },
     "Armour": {
-      "Title": "Armure"
+      "Title": "Armure",
+      "Category": "Catégorie",
+      "PA": "PA"
+    },
+    "ArmourCategory": {
+      "Primitive": "Primitive",
+      "Maille": "Maille",
+      "PareBalles": "Pare-balles",
+      "Carapace": "Carapace",
+      "Energetique": "Énergétique"
     },
     "ArmourLocation": {
       "Tete": "Tête",
@@ -252,6 +262,7 @@
       "Weapons": "Armes de corps à corps",
       "RangedWeapons": "Armes à distance",
       "Gear": "Objets",
+      "Armours": "Armures",
       "Error": "Dark Heresy V1 : échec du pré-remplissage du compendium « {name} » (voir la console)."
     }
   }

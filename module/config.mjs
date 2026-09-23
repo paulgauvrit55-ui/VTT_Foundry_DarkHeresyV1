@@ -92,6 +92,15 @@ DH.armourLocations = {
   jambeGauche: { label: "DH.ArmourLocation.JambeGauche", rangeLabel: "86-100", min: 86, max: 100 }
 };
 
+/** Catégories d'armure (spec §6.4), informatives sur l'Item `armour` — sans effet mécanique automatisé. */
+DH.armourCategories = {
+  primitive: "DH.ArmourCategory.Primitive",
+  maille: "DH.ArmourCategory.Maille",
+  pareBalles: "DH.ArmourCategory.PareBalles",
+  carapace: "DH.ArmourCategory.Carapace",
+  energetique: "DH.ArmourCategory.Energetique"
+};
+
 /**
  * Niveau de Menace des PNJ/créatures (spec §12) : catégorie qualifiant la nature de la menace.
  * Simple repère d'échelle pour le MJ, sans effet mécanique direct sur les jets.

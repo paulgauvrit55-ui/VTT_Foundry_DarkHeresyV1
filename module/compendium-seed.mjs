@@ -11,7 +11,8 @@ const SEEDS = [
   { key: "advanced-skills", label: "DH.CompendiumSeed.AdvancedSkills", file: "advanced-skills.json" },
   { key: "weapons", label: "DH.CompendiumSeed.Weapons", file: "weapons.json" },
   { key: "ranged-weapons", label: "DH.CompendiumSeed.RangedWeapons", file: "ranged-weapons.json" },
-  { key: "gear", label: "DH.CompendiumSeed.Gear", file: "gear.json" }
+  { key: "gear", label: "DH.CompendiumSeed.Gear", file: "gear.json" },
+  { key: "armours", label: "DH.CompendiumSeed.Armours", file: "armours.json" }
 ];
 
 /**

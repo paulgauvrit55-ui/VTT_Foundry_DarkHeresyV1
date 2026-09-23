@@ -117,7 +117,8 @@ export function computeCarriedWeight(actor) {
   const weighableItems = [
     ...(itemTypes.gear ?? []),
     ...(itemTypes.weapon ?? []),
-    ...(itemTypes.rangedWeapon ?? [])
+    ...(itemTypes.rangedWeapon ?? []),
+    ...(itemTypes.armour ?? [])
   ];
   return weighableItems.reduce((sum, item) => sum + (item.system.weight ?? 0), 0);
 }

@@ -1,0 +1,43 @@
+<div class="armour-body">
+  <header class="sheet-header">
+    <h1 class="itemname">
+      <input name="name" type="text" value="{{item.name}}">
+    </h1>
+  </header>
+
+  <div class="form-group">
+    <label>{{localize "DH.Armour.Category"}}</label>
+    <select name="system.category">
+      {{#each categories as |category|}}
+        <option value="{{category.key}}" {{#if category.selected}}selected{{/if}}>{{category.label}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  {{#each locations as |location|}}
+    <div class="form-group">
+      <label>{{localize "DH.Armour.PA"}} — {{location.label}}</label>
+      <input type="number" name="system.locations.{{location.key}}" value="{{location.value}}" min="0">
+    </div>
+  {{/each}}
+
+  <div class="form-group">
+    <label>{{localize "DH.Gear.Weight"}}</label>
+    <input type="number" name="system.weight" value="{{system.weight}}" step="0.1">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Gear.Price"}}</label>
+    <input type="number" name="system.price" value="{{system.price}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.Gear.Availability"}}</label>
+    <input type="text" name="system.availability" value="{{system.availability}}">
+  </div>
+
+  <div class="form-group stacked">
+    <label>{{localize "DH.Gear.Description"}}</label>
+    <textarea name="system.description">{{system.description}}</textarea>
+  </div>
+</div>
