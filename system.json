@@ -2,7 +2,7 @@
   "id": "dark-heresy-v1",
   "title": "Dark Heresy (V1 - VF)",
   "description": "Système non officiel (usage privé) pour Dark Heresy, 1ère édition (VF), sur Foundry VTT.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "compatibility": {
     "minimum": "13.351",
     "verified": "13.351"
@@ -47,6 +47,6 @@
   "gridUnits": "m",
   "primaryTokenAttribute": null,
   "secondaryTokenAttribute": null,
-  "download": "https://github.com/paulgauvrit55-ui/VTT_Foundry_DarkHeresyV1/releases/download/Test/VTT_Foundry_DarkHeresyV1_0.0.1.zip",
-  "manifest": "https://github.com/paulgauvrit55-ui/VTT_Foundry_DarkHeresyV1/releases/download/Test/system.json"
+  "download": "https://github.com/paulgauvrit55-ui/VTT_Foundry_DarkHeresyV1/releases/download/Latest/VTT_Foundry_DarkHeresyV1-latest.zip",
+  "manifest": "https://github.com/paulgauvrit55-ui/VTT_Foundry_DarkHeresyV1/releases/download/Latest/system.json"
 }
