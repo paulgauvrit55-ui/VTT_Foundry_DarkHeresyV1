@@ -244,7 +244,7 @@
       "RollDamage": "Lancer les dégâts",
       "Penetration": "Pénétration",
       "ForceBonus": "Bonus de Force",
-      "Total": "Dégâts totaux"
+      "Result": "Résultat :"
     },
     "Trait": {
       "Title": "Traits",

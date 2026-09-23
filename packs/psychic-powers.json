@@ -1,16 +1,1150 @@
 [
   {
-    "name": "Nom du pouvoir",
-    "img": "icons/svg/daze.svg",
+    "name": "Affaiblissement du voile (DH)",
+    "img": "icons/svg/item-bag.svg",
     "type": "psychicPower",
     "system": {
-      "discipline": "Discipline",
+      "discipline": "mineur",
+      "threshold": 9,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "30 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +10 m de portée.",
+      "description": "Affaiblit la matière de l'univers dans un rayon de 30 m : tout personnage à portée qui utilise un pouvoir psychique gagne +2 au jet de Puissance, mais un phénomène psychique se produit pour chaque 8, 9 ou 10 obtenu aux dés."
+    }
+  },
+  {
+    "name": "Atténuation de la douleur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, 1 niveau de Fatigue supplémentaire.",
+      "description": "Calme la douleur de n'importe quelle créature à portée, vous compris : la cible se débarrasse de 1 niveau de Fatigue."
+    }
+  },
+  {
+    "name": "Aura d'inspiration (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 6,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous semblez briller d'une lumière intérieure : tant que le pouvoir est actif, tous les alliés qui vous voient bénéficient de +20 aux tests pour résister à la Peur et à l'effroi."
+    }
+  },
+  {
+    "name": "Aura effrayante (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 7,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, degré de Peur +1.",
+      "description": "Vous paraissez plus inquiétant et dangereux : tant que le pouvoir est actif, vous disposez d'un degré de Peur de 2 (cf. p. 230)."
+    }
+  },
+  {
+    "name": "Bruit blanc (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +10 m de portée.",
+      "description": "Parasites dans le Warp : tout test pour détecter votre présence ou celle des personnes à portée par des moyens psychiques ou technologiques devient Difficile (-20). Si la détection ne requiert normalement pas de test, l'utilisateur effectue un test de Force Mentale Assez facile (+10) (détection psychique) ou d'Intelligence Assez facile (+10) (technologique)."
+    }
+  },
+  {
+    "name": "Caméléon (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 7,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous brouillez votre image : +30 aux tests de Dissimulation et -20 aux tests de Capacité de Tir des adversaires qui vous visent avec une arme à distance."
+    }
+  },
+  {
+    "name": "Chance (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 6,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Permet de relancer l'un de vos jets de dés (dégâts inclus), n'importe quand avant la fin de votre prochain tour de jeu."
+    }
+  },
+  {
+    "name": "Déjà-vu (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "30 m",
+      "overbleed": "-",
+      "description": "Boucle dans l'esprit d'une cible visible à portée : test de Force Mentale pour résister ; en cas d'échec, elle doit répéter l'action entreprise à son dernier tour (tirer sur une cible disparue, fuir un ennemi mort...). Une action présentant un danger immédiat pour la cible lui permet de résister automatiquement."
+    }
+  },
+  {
+    "name": "Détection des présences (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 7,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "50 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +10 m de portée.",
+      "description": "Vous détectez automatiquement toutes les créatures vivantes à portée ; les murs de plus de 1 m d'épaisseur bloquent la détection."
+    }
+  },
+  {
+    "name": "Distorsion visuelle (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "AG",
+      "sustained": false,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous disparaissez et une image de vous réapparaît à 10 m maximum. Jusqu'au début de votre prochain tour, vous êtes invisible aux yeux de tous, y compris pour les équipements de détection optique ; si votre position est découverte par un test de Psyniscience, les attaques vous visant sont Très difficiles (-30). Sans effet sur les créatures et senseurs ne faisant pas appel à la vue."
+    }
+  },
+  {
+    "name": "Étanchement (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, une cible supplémentaire.",
+      "description": "Arrête une Hémorragie dont vous souffrez ou dont souffre une cible à portée (cf. p. 211)."
+    }
+  },
+  {
+    "name": "Flash bruyant (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 6,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "20 m",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, la difficulté du test de Force Mentale augmente d'un cran.",
+      "description": "Flash de lumière vive et bruit assourdissant : tout personnage à portée doit réussir un test de Force Mentale Facile (+20) ou être assommé pendant 1 round."
+    }
+  },
+  {
+    "name": "Flétrissement (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 6,
+      "focusTime": "1AC",
+      "sustained": false,
+      "range": "3d10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +1d10 m de portée.",
+      "description": "Onde de pestilence invisible : toute forme normale de vie végétale à portée se flétrit et se décompose."
+    }
+  },
+  {
+    "name": "Flottement (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous vous élevez lentement du sol, uniquement à la verticale, jusqu'à 5 m. Peut arrêter une chute sur un test de Force Mentale Assez difficile (-10) réussi en plus du SP."
+    }
+  },
+  {
+    "name": "Guérison (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 7,
+      "focusTime": "1AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "-",
+      "description": "Une cible consentante (vous compris) se débarrasse de 1d5 points de dégâts (dégâts critiques d'abord). Si un personnage est ciblé plus d'une fois en 6 heures, il doit réussir un test d'Endurance ou subir 1d5 dégâts (non réduits par l'armure ni le bonus d'Endurance) au lieu d'être guéri."
+    }
+  },
+  {
+    "name": "Hululement warp (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1AC",
+      "sustained": false,
+      "range": "50 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +10 m de portée.",
+      "description": "Braillement cacophonique qui noie tous les autres sons à portée pendant 1 round."
+    }
+  },
+  {
+    "name": "Infliction de la douleur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "100 m",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, une cible supplémentaire.",
+      "description": "La cible a droit à un test de Force Mentale ; en cas d'échec, elle subit -10 à tous ses tests tant que le pouvoir est actif."
+    }
+  },
+  {
+    "name": "Invocation de créatures (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 9,
+      "focusTime": "1AC",
+      "sustained": false,
+      "range": "1 km",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +1 km de portée.",
+      "description": "Appelle des animaux primaires (rats, limaces des cendres, vermine) selon l'environnement : le plus souvent 1d10 créatures apparaissent après 2d10 minutes. Elles ne sont pas aux ordres du psyker et agissent selon leur nature. Sans effet si de telles créatures sont improbables."
+    }
+  },
+  {
+    "name": "Invocation d'objet (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 5,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "illimitée",
+      "overbleed": "-",
+      "description": "Un objet spécialement préparé apparaît dans votre main. Préparation : le marquer de glyphes et runes et y insuffler votre empreinte psychique en 1 heure de méditation ; l'objet doit tenir dans une main. Un seul objet marqué à la fois."
+    }
+  },
+  {
+    "name": "Mains spectrales (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
       "threshold": 10,
-      "focusTime": "Demi-action",
-      "sustainable": false,
-      "range": "Portée",
-      "overbleed": "Effet de surpuissance",
-      "description": "Description du pouvoir."
+      "focusTime": "1AC",
+      "sustained": false,
+      "range": "30 m",
+      "overbleed": "-",
+      "description": "Énergie invisible manipulant n'importe quel objet à portée avec une Force égale à votre Force Mentale, jusqu'à votre prochain tour : renverser, appuyer sur des boutons, tirer des leviers. Pas d'action de précision (code, goupille, détente) et aucune interaction avec des cibles vivantes."
+    }
+  },
+  {
+    "name": "Malédiction d'arme (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1AC",
+      "sustained": false,
+      "range": "50 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +10 m de portée ou une arme supplémentaire.",
+      "description": "Tous les objets mécaniques à portée cessent de fonctionner pendant 1 round ; un test de Force Mentale permet en plus d'enrayer une arme à portée (désenrayable normalement, cf. p. 196). L'Adeptus Mechanicus exècre ce pouvoir."
+    }
+  },
+  {
+    "name": "Marche aux murs (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Annule les malus des mondes à gravité faible ou élevée ; permet de marcher sur les murs et au plafond à la moitié de la vitesse normale. Test d'Agilité pour passer d'un mur au plafond (ou inversement), sauf à y consacrer une action complète."
+    }
+  },
+  {
+    "name": "Oubli (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 6,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP : une cible supplémentaire, +1d10 minutes de durée, ou difficulté du test augmentée d'un cran.",
+      "description": "Une cible à portée vous oublie instantanément (tout souvenir de vos rencontres précédentes est supprimé) ; test de Force Mentale Assez facile (+10) pour résister. La mémoire revient au bout de 1d10 minutes."
+    }
+  },
+  {
+    "name": "Précognition (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 6,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous entrevoyez les instants à venir : +10 aux tests d'Esquive et aux tests de Capacité de Combat pour parer tant que le pouvoir est actif."
+    }
+  },
+  {
+    "name": "Puanteur psychique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 5,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "contact",
+      "overbleed": "-",
+      "description": "Vous insufflez à un objet une odeur psychique perçue à 5 m par tous, quels que soient obstacles et autres odeurs ; chacun sent ce qu'il trouve le plus rebutant, même sans odorat. Dure 1d10 jours."
+    }
+  },
+  {
+    "name": "Résistance à la possession (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 6,
+      "focusTime": "R",
+      "sustained": false,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Barrières mentales : pendant l'heure qui suit, vous pouvez relancer tout test raté pour résister à la possession par un démon."
+    }
+  },
+  {
+    "name": "Ruse (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 5,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous influencez les probabilités aux jeux de hasard : sans la compétence Jeu, vous l'obtenez avec 2 niveaux de maîtrise tant que le pouvoir est actif ; si vous l'avez, +20 aux tests de Jeu ; si vous avez déjà une maîtrise en Jeu, aucun effet."
+    }
+  },
+  {
+    "name": "Spasme (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 7,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "50 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, une cible supplémentaire ou difficulté du test augmentée d'un cran.",
+      "description": "Les muscles de la cible se tétanisent : test de Force Mentale Moyen (+0) pour résister ; en cas d'échec, elle est prise de spasmes, tombe au sol (action se lever pour se relever) et, si elle tenait une arme de tir, un test de Capacité de Tir ordinaire détermine si la créature la plus proche est touchée."
+    }
+  },
+  {
+    "name": "Torche (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 5,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, taille doublée ou divisée par deux, ou boule flottant jusqu'à 1 m de votre corps.",
+      "description": "Boule de flammes psychiques de la taille de la paume, issue de n'importe quel point de votre corps, de la couleur de votre choix ; lumière équivalente à une lampe radiante, sans chaleur."
+    }
+  },
+  {
+    "name": "Toucher d'aliénation (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 11,
+      "focusTime": "1AC",
+      "sustained": false,
+      "range": "100 m",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, une cible supplémentaire.",
+      "description": "Vous forcez une cible à portée à croire quelque chose de faux : test de Force Mentale pour résister ; en cas d'échec, elle jette 1d100 sur la Table 8-6 : traumatismes mentaux (p. 233)."
+    }
+  },
+  {
+    "name": "Tour de main (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 7,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Jusqu'à la fin de votre prochain tour, +10 à l'un de vos tests, hormis les tests de combat."
+    }
+  },
+  {
+    "name": "Visée surnaturelle (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "mineur",
+      "threshold": 8,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Jusqu'à la fin de votre prochain tour, toutes vos attaques à distance comptent comme effectuées à bout portant (+30 pour toucher)."
+    }
+  },
+  {
+    "name": "Accroissement sensoriel (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 10,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, un sens supplémentaire.",
+      "description": "Choisissez l'un de vos cinq sens : +30 à tous les tests qui le font intervenir. Les organes concernés sont malmenés (yeux qui pleurent, peau qui rougit...)."
+    }
+  },
+  {
+    "name": "Aspiration des toxiques (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 11,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "contact (utilisateur)",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, une cible supplémentaire en contact avec vous ou avec une personne déjà purgée.",
+      "description": "Aspire les poisons de la chair : mêmes effets qu'une dose de dé-tox (p. 148), mais la cible perd une action complète le temps que les toxines s'expulsent."
+    }
+  },
+  {
+    "name": "Bioéclair (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 14,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +10 m de portée ; par tranche de 10 points, un projectile supplémentaire contre la même cible ou une autre.",
+      "description": "Vous canalisez votre force vitale en une décharge contre une cible à portée : 1d10 + bonus de Force Mentale dégâts d'énergie."
+    }
+  },
+  {
+    "name": "Cicatrisation (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 10,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP : +10 m de portée, un autre personnage ciblé, ou 1d10 + bonus de Force Mentale dégâts supplémentaires éliminés.",
+      "description": "Répare votre chair ou celle d'un personnage à portée : la cible se débarrasse de 1d10 + bonus de Force Mentale points de dégâts, critiques compris."
+    }
+  },
+  {
+    "name": "Contrôle cellulaire (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 16,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Transcendez les limites de votre corps : au choix, immunité à tous les poisons ; ignorer les températures extrêmes ; +10 à une caractéristique (sauf CC et CT) ; immunité à la Fatigue ; effets d'une combinaison de survie (il faut quand même respirer). Test d'Endurance à chaque round de maintien ; en cas d'échec, 1d5 dégâts ignorant bonus d'Endurance et armure. Peut être utilisé plusieurs fois simultanément avec des effets différents."
+    }
+  },
+  {
+    "name": "Ébullition (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 19,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +10 aux tests de Force Mentale opposés.",
+      "description": "Vous accélérez le coeur d'un ennemi jusqu'à rompre ses veines. À chaque round (y compris le premier), demi-action pour un test opposé Force Mentale contre Endurance : en cas de victoire, la cible encaisse 1 niveau de Fatigue +1 par degré de réussite jusqu'à l'inconscience ; chaque niveau au-delà de ce qu'elle peut endurer inflige 5 dégâts ; si ces dégâts égalent ses points de Blessures, son coeur et son cerveau éclatent."
+    }
+  },
+  {
+    "name": "Étranglement (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 13,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, difficulté du test d'Endurance augmentée d'un cran.",
+      "description": "La trachée de la cible se resserre : elle suffoque (cf. Asphyxie, p. 209). À chaque round, action complète pour un test d'Endurance Moyen (+0) ; réussite = elle se libère, échec = elle continue de suffoquer (activité épuisante)."
+    }
+  },
+  {
+    "name": "Poing d'acier (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 15,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Votre corps devient une machine de mort : bonus de Force multiplié par 4 et trait Armes naturelles (p. 329), mais aucune autre arme utilisable que vos mains nues."
+    }
+  },
+  {
+    "name": "Régénération (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 23,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "À chaque round actif, éliminez 1d5 points de dégâts (critiques d'abord) et tous vos niveaux de Fatigue. Une fois tous les dégâts annulés, organes et membres perdus peuvent repousser (pas ceux remplacés par des bioniques, sauf à les retirer d'abord)."
+    }
+  },
+  {
+    "name": "Remodelage charnel (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "biomancie",
+      "threshold": 19,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Modifiez votre apparence physique. À chaque utilisation, au choix : gagner un trait parmi Antigrav, Armes naturelles, Armure naturelle 2, Fouisseur 1, Nyctalope, Quadrupède, Reptation ou Vol (p. 329) ; prendre l'apparence de n'importe quelle créature (tests de Déguisement comme si vous aviez la compétence, +10, ou +20 supplémentaire si vous l'avez) ; faire pousser des Armes naturelles infligeant 1d10 + BF dégâts. Peut être utilisé plusieurs fois simultanément avec des effets différents."
+    }
+  },
+  {
+    "name": "Aperçu (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 18,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous parcourez la trame des issues possibles : jusqu'à la fin de votre prochain tour, +30 à l'un de vos tests de compétence."
+    }
+  },
+  {
+    "name": "Conscience surnaturelle (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 9,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, ajoutez une nouvelle fois votre bonus de Force Mentale à l'Initiative.",
+      "description": "Vos sens tourbillonnent autour de vous et vous pressentez les événements : +20 aux tests de Vigilance et bonus de Force Mentale ajouté à votre Initiative."
+    }
+  },
+  {
+    "name": "Esquive prémonitoire (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 11,
+      "focusTime": "AG",
+      "sustained": false,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous esquivez les projectiles avant qu'ils ne soient tirés : jusqu'à la fin de votre prochain tour, tous les tests de Capacité de Tir vous visant subissent -30."
+    }
+  },
+  {
+    "name": "Frappe prémonitoire (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 17,
+      "focusTime": "AG",
+      "sustained": false,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous anticipez les mouvements adverses : jusqu'à la fin de votre prochain tour, +20 à tous vos tests de Capacité de Combat et de Capacité de Tir."
+    }
+  },
+  {
+    "name": "Prédiction personnelle (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 14,
+      "focusTime": "1AC",
+      "sustained": false,
+      "range": "contact",
+      "overbleed": "-",
+      "description": "Sondez l'avenir d'une cible consentante sur une question qu'elle formule (plus elle est précise, plus la lecture l'est). Après 30 minutes avec votre psyconduit (Tarot, runes, entrailles...), test de Psyniscience : 0 degré = Fatalité (avertissement symbolique du plus grand péril) ; 1 = Influences malignes (le danger et deux autres influences négatives) ; 2 = Facteurs bénéfiques (le plus grand avantage ou la meilleure arme du demandeur) ; 3+ = Destin (tout ce qui précède plus un conseil mystique en une phrase)."
+    }
+  },
+  {
+    "name": "Psychométrie (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 16,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "utilisateur (cf. texte)",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, temps divisé par deux : une information tous les 5 rounds (+10), 2 rounds (+20), chaque round (+30).",
+      "description": "Lisez les traces psychiques laissées par les émotions intenses sur un objet (à manipuler) ou une zone (rayon en mètres égal à votre bonus de Force Mentale). Une information tous les 10 rounds de maintien : 10 = émotions fortes les plus récentes ; 20 = traits vagues de la personne ; 30 = image précise de ses traits ; 40 = son statut (plan de carrière et promotion) ; 50 = son nom ; +10 = un fait supplémentaire (MJ)."
+    }
+  },
+  {
+    "name": "Radiesthésie (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 11,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Localisez un objet ou une personne spécifique (personne déjà vue ou dont vous connaissez le nom). Test de Psyniscience modifié : lien étroit +10 ; portion du sujet +5 ; sujet à moins de 100 m +5 ; à plus de 500 m -10 ; entouré de spécimens semblables -10. Si le sujet est à moins de (bonus de Perception) km : 0 degré = direction générale ; 1 = direction précise et distance vague ; 2 = direction et distance exactes ; 4+ = image de l'endroit, direction et distance. Tant que le pouvoir est maintenu, une action complète actualise la position (même précision)."
+    }
+  },
+  {
+    "name": "Tir divin (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 15,
+      "focusTime": "AG",
+      "sustained": false,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Concentrez-vous sur une arme de tir en votre possession : vous touchez automatiquement une cible visible, quelle que soit la portée, sans esquive possible. Un seul tir touche, même en semi-automatique ou automatique ; les autres tirs suivent les tests normaux."
+    }
+  },
+  {
+    "name": "Vision à distance (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 17,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "1 km x bonus de Force Mentale",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, portée doublée.",
+      "description": "Observez un endroit à portée en annonçant une distance et une direction (échec si le point est dans un élément solide ; les bâtiments, l'eau et les gaz ne bloquent pas). Vous voyez depuis ce point jusqu'à votre portée de vision normale, avec rotation de 90 degrés par demi-action ; changer de point demande une nouvelle utilisation. Aucune perception spéciale ni son. Désorientation : une seule demi-action par round et -30 à tous vos tests."
+    }
+  },
+  {
+    "name": "Vision de l'âme (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "divination",
+      "threshold": 23,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Action complète et test de Psyniscience pour lire l'aura d'une personne visible (nouvelle utilisation par personne). 0 degré = Teinte : trois émotions dominantes, race, présence de pouvoirs d'une discipline, état physique et mental approximatif, intouchable ou non ; 1 = Fluctuations : tous les sentiments actuels et le caractère habituel (+10 en Sociabilité envers la cible tant que le pouvoir est actif), sous-courants biologiques, points de Blessures et Fatigue exacts, disciplines psychiques connues ; 2 = Forme : présence de Corruption, trois émotions majeures des 12 dernières heures, points de Folie, addictions et désordres mentaux, Niveau Psy ; 3+ = Motifs : points de Corruption exacts, présence de pouvoirs mineurs, authenticité de l'aura."
+    }
+  },
+  {
+    "name": "Extinction (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 16,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "5 m x bonus de Force Mentale",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, +5 m de portée.",
+      "description": "Étouffe immédiatement tous les feux à portée et neutralise les armes à feu au sens propre (lance-flammes) tant qu'elles sont à portée. Les substances s'enflammant au contact de l'air (prométhéum) reprennent feu dès que le pouvoir cesse ou hors de portée."
+    }
+  },
+  {
+    "name": "Flash aveuglant (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 11,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "12 m",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, +4 m de portée.",
+      "description": "Lumière cuisante aveuglant tous ceux qui vous voient à portée (immunité si regard protégé ou sans organes visuels) : test d'Agilité ou aveuglé pendant 1d10 x Niveau Psy rounds (échec automatique des tests basés sur la vue, vitesse réduite de moitié, -20 aux tests de combat, de déplacement et de réaction)."
+    }
+  },
+  {
+    "name": "Holocauste (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 23,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "6 m",
+      "overbleed": "-",
+      "description": "Tornade de flammes attisée par votre âme : 1d10 x bonus de Force Mentale dégâts d'énergie à tous les êtres et objets à portée, ignorant bonus d'Endurance et armure ; brûle aussi les entités du Warp et créatures immatérielles, qui disparaissent à jamais si elles sont tuées. Tant que vous maintenez le pouvoir, vous subissez 1d10+1 dégâts d'énergie par round (ignorant aussi Endurance et armure). Un pouvoir de pyromancie infligeant des dégâts peut embraser la cible (cf. p. 210)."
+    }
+  },
+  {
+    "name": "Incinération (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 19,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "10 m",
+      "overbleed": "-",
+      "description": "Chaleur intense concentrée sur un point unique : 1d10+1 dégâts d'énergie ignorant armure et bonus d'Endurance. À chaque round suivant où vous consacrez une action complète à la cible (à portée et en vue), elle subit les dégâts du round précédent +1. Un pouvoir de pyromancie infligeant des dégâts peut embraser la cible (cf. p. 210)."
+    }
+  },
+  {
+    "name": "Invocation de flammes (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 8,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Flamme de la taille et de l'intensité d'une torche au creux de la paume : +2 dégâts à vos attaques à mains nues, qui deviennent des attaques d'énergie ; sert à allumer des feux ou de base à d'autres pouvoirs (Sculpture des flammes). La main ne peut servir à rien d'autre."
+    }
+  },
+  {
+    "name": "Mur de feu (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 17,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "60 m",
+      "overbleed": "-",
+      "description": "Barrière immobile de flammes de 3 m de haut, 1 m de large et jusqu'à 10 m de long par point de bonus de Force Mentale, n'importe où à portée, même sur des adversaires (test d'Agilité Facile (+20) pour s'écarter). Rater ce test ou traverser le mur : 1d10+5 dégâts d'énergie ignorant l'armure et test d'Agilité ou prendre feu. Un pouvoir de pyromancie infligeant des dégâts peut embraser la cible (cf. p. 210)."
+    }
+  },
+  {
+    "name": "Poing ardent (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 10,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vos mains baignent de flammes : attaques à mains nues infligeant 1d10 + BF dégâts d'énergie, sans l'attribut primitive. Un pouvoir de pyromancie infligeant des dégâts peut embraser la cible (cf. p. 210)."
+    }
+  },
+  {
+    "name": "Projectile de feu (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 11,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "100 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, un projectile supplémentaire (cible à portée au choix, test distinct).",
+      "description": "Projectile ardent contre une cible en vue et à portée : test de Force Mentale Moyen (+0) pour toucher, 1d10+5 dégâts d'énergie. Un pouvoir de pyromancie infligeant des dégâts peut embraser la cible (cf. p. 210)."
+    }
+  },
+  {
+    "name": "Sculpture des flammes (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 13,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "5 m x bonus de Force Mentale",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, manipulation plus fine : effigies reconnaissables (+5), silhouettes criantes de vérité (+10) ; extension du feu multipliée (x2 du bonus à +5, x4 à +10, etc.).",
+      "description": "Appliquez à un feu existant, chaque round, l'un des effets : doubler sa zone (avec combustible) ; la réduire de moitié ; l'étendre dans une direction d'un nombre de m2 égal au bonus de Force Mentale ; lui donner des formes rudimentaires ; provoquer un jaillissement forçant les cibles adjacentes à un test d'Agilité ou prendre feu ; lui faire cracher de la fumée sur trois fois sa taille (comme du brouillard)."
+    }
+  },
+  {
+    "name": "Tempête de feu (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "pyromancie",
+      "threshold": 16,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "50 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +1d10 dégâts.",
+      "description": "Conflagration de 6 m de rayon autour d'un point ou d'un individu en vue et à portée : 1d10+5 dégâts d'énergie à tous les objets et créatures de la zone. Un pouvoir de pyromancie infligeant des dégâts peut embraser la cible (cf. p. 210)."
+    }
+  },
+  {
+    "name": "Arrêt des projectiles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 16,
+      "focusTime": "R",
+      "sustained": false,
+      "range": "1 m x bonus de Force Mentale",
+      "overbleed": "-",
+      "description": "Vous figez les projectiles solides en vol (sans effet sur les attaques d'énergie) : jusqu'à la fin de votre prochain tour, vous évitez automatiquement un nombre de projectiles solides égal à votre bonus de Force Mentale ; ils tombent au sol à la fin du pouvoir."
+    }
+  },
+  {
+    "name": "Bouclier télékinétique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 17,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, +1 point d'Armure.",
+      "description": "Champ d'énergie télékinétique : +1 point d'Armure sur chaque localisation, cumulable avec votre armure. En action complète, vous pouvez lui donner la couleur de votre choix ; il n'est pas opaque."
+    }
+  },
+  {
+    "name": "Écrasement psychique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 17,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +10 m de portée.",
+      "description": "Bandes d'énergie écrasant une cible à portée : test opposé Force Mentale contre Endurance ; en cas de victoire, 1d10 dégâts d'impact + bonus de Force Mentale, +2 dégâts par degré de réussite."
+    }
+  },
+  {
+    "name": "Jet (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 14,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +5 kg par point de bonus de Force Mentale.",
+      "description": "Soulevez un objet non tenu (jusqu'à 5 kg par point de bonus de Force Mentale) et projetez-le à bonus de Force Mentale x 3 mètres : test de Force Mentale pour toucher, résolu comme une attaque ; 1d10 dégâts d'impact, +1 par tranche de 5 kg."
+    }
+  },
+  {
+    "name": "Lame psychique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 19,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Épée d'énergie mentale : traitée comme une épée maniée par le psyker, sans main libre ni Formation aux armes de corps à corps requise, mais ne permet pas de parer ; attaque avec la Force Mentale au lieu de la Capacité de Combat. 1d10 dégâts pénétrants, +2 par point de bonus de Force Mentale ; pénétration égale à deux fois le bonus de Force Mentale."
+    }
+  },
+  {
+    "name": "Poussée (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 13,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +10 m de portée ou +10 au test de Force Mentale opposé.",
+      "description": "Boule d'énergie contre une cible à portée : test opposé Force Mentale contre Force ; en cas de victoire, la cible est jetée au sol et subit 1 niveau de Fatigue par degré de réussite."
+    }
+  },
+  {
+    "name": "Projectile de force (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 13,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m x bonus de Force Mentale",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, +1 dégât d'impact.",
+      "description": "Manifestation tangible de force mentale : test de Force Mentale pour toucher ; 1d10 dégâts d'impact + bonus de Force Mentale."
+    }
+  },
+  {
+    "name": "Rafale de force (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 21,
+      "focusTime": "1AC",
+      "sustained": false,
+      "range": "10 m x bonus de Force Mentale",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, un projectile supplémentaire.",
+      "description": "Comme Projectile de force, mais vous générez un projectile par point de bonus de Force Mentale, tous tirés en même temps."
+    }
+  },
+  {
+    "name": "Télékinésie (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 11,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "10 m",
+      "overbleed": "-",
+      "description": "Soulevez ou déplacez lentement, n'importe où à portée, tout objet inanimé pesant au plus 5 kg x bonus de Force Mentale. Sans effet sur les créatures vivantes, pas d'attaque possible avec les objets manipulés ; l'objet redescend lentement quand vous cessez de vous concentrer."
+    }
+  },
+  {
+    "name": "Télékinésie de précision (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telekinesie",
+      "threshold": 23,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "10 m",
+      "overbleed": "-",
+      "description": "Le scalpel de la télékinésie : tirer une goupille, presser un bouton, défaire un verrou, diriger de petits projectiles ; vous interagissez avec les objets comme si vous les manipuliez réellement, en substituant votre Force Mentale à toute caractéristique demandée par un test."
+    }
+  },
+  {
+    "name": "Disparition (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 14,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "20 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, une cible supplémentaire ou -10 au test de Force Mentale d'une cible.",
+      "description": "Vous effacez votre présence de l'esprit d'un nombre de cibles à portée égal à votre bonus de Force Mentale : chacune doit réussir un test de Force Mentale ou ne plus pouvoir vous percevoir d'aucune manière (ni vous attaquer directement) tant que le pouvoir est actif ; elles ne réagissent qu'aux effets de vos actes. Sans effet sur les créatures d'Intelligence 10 ou moins. Contamination psychique : si la cible a deux fois plus de points de Folie ou de Corruption que vous, test de Force Mentale ou 1d10 points de Folie ou de Corruption (second test si les deux valeurs sont concernées)."
+    }
+  },
+  {
+    "name": "Domination (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 24,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "8 m",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, +10 au test de Force Mentale opposé.",
+      "description": "Test opposé Force Mentale contre Force Mentale : en cas de victoire, vous contrôlez le corps de la cible comme une marionnette et répartissez vos actions entre vous et elle. La cible utilise ses propres caractéristiques avec -10 à tous ses tests ; toute action suicidaire lui accorde un nouveau test de Force Mentale. Contamination psychique : si la cible a deux fois plus de points de Folie ou de Corruption que vous, test de Force Mentale ou 1d10 points de Folie ou de Corruption (second test si les deux valeurs sont concernées)."
+    }
+  },
+  {
+    "name": "Examen mental (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 23,
+      "focusTime": "etendue",
+      "sustained": false,
+      "range": "contact",
+      "overbleed": "-",
+      "description": "Lisez l'esprit d'une cible touchée (test de Capacité de Combat sauf méthode particulière) : 5 rounds de tests de Force Mentale opposés ; une réussite de la cible met fin à l'examen. Round 1 : nom, humeur, points de Folie, état physique ; round 2 : pensées superficielles, un lieu/objet/événement/personne important (émotions seulement), points de Corruption ; round 3 : souvenirs des 12 dernières heures, deux autres éléments importants, mots de passe simples et habitudes ; round 4 : raisons de ces importances, croyances, motivations, contacts, codes complexes, moments clés de la vie ; round 5 : âme mise à nu, toute information disponible. En secret : -10 aux tests opposés, la cible ne ressent qu'un mal-être ; sinon elle a conscience de l'attaque. Contamination psychique : si la cible a deux fois plus de points de Folie ou de Corruption que vous, test de Force Mentale ou 1d10 points de Folie ou de Corruption (second test si les deux valeurs sont concernées)."
+    }
+  },
+  {
+    "name": "Hurlement psychique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 18,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "10 m",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, +10 m de portée.",
+      "description": "Vague d'énergie hurlante : toutes les créatures que vous désignez à portée doivent réussir un test de Force Mentale ou encaisser un nombre de niveaux de Fatigue égal à votre bonus de Force Mentale. Contamination psychique : si la cible a deux fois plus de points de Folie ou de Corruption que vous, test de Force Mentale ou 1d10 points de Folie ou de Corruption (second test si les deux valeurs sont concernées)."
+    }
+  },
+  {
+    "name": "Impulsion (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 17,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "8 m",
+      "overbleed": "Par tranche de 10 points au-dessus du SP, +10 au test de Force Mentale opposé.",
+      "description": "Test opposé Force Mentale contre Force Mentale : en cas de victoire, la cible obéit à un ordre simple réalisable en un round (fuis, attaque cette cible, danse la gigue). Un ordre suicidaire lui donne +20 au test opposé. Contamination psychique : si la cible a deux fois plus de points de Folie ou de Corruption que vous, test de Force Mentale ou 1d10 points de Folie ou de Corruption (second test si les deux valeurs sont concernées)."
+    }
+  },
+  {
+    "name": "Inspiration (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 9,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "6 m",
+      "overbleed": "-",
+      "description": "Un nombre de cibles égal à votre bonus de Force Mentale surmonte immédiatement les effets de Peur et d'effroi et y reste immunisé tant qu'elles restent à portée et que le pouvoir est actif."
+    }
+  },
+  {
+    "name": "Maître des bêtes (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 13,
+      "focusTime": "1/2AC",
+      "sustained": true,
+      "range": "8 m",
+      "overbleed": "-",
+      "description": "Dominez un animal à portée : à chaque round actif, une réaction permet de lui donner un ordre simple (viens, fuis, protège, attaque). S'il se sent menacé ou si l'ordre est contre sa nature, test de Force Mentale pour échapper à votre contrôle. Contamination psychique : si la cible a deux fois plus de points de Folie ou de Corruption que vous, test de Force Mentale ou 1d10 points de Folie ou de Corruption (second test si les deux valeurs sont concernées)."
+    }
+  },
+  {
+    "name": "Projection (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 21,
+      "focusTime": "1AC",
+      "sustained": true,
+      "range": "utilisateur",
+      "overbleed": "-",
+      "description": "Vous projetez une incarnation mentale voyageant à la vitesse de la pensée, pour communiquer avec tout être que vous connaissez bien dans le même système solaire. Votre corps est comme inconscient ; les créatures du Warp et les psykers peuvent attaquer la projection ; une cible récalcitrante peut vous renvoyer dans votre corps sur un test de Force Mentale opposé. Contamination psychique : si la cible a deux fois plus de points de Folie ou de Corruption que vous, test de Force Mentale ou 1d10 points de Folie ou de Corruption (second test si les deux valeurs sont concernées)."
+    }
+  },
+  {
+    "name": "Télépathie (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 11,
+      "focusTime": "AG",
+      "sustained": true,
+      "range": "1 km x bonus de Force Mentale",
+      "overbleed": "-",
+      "description": "Communiquez en projetant vos pensées : message à une ou plusieurs personnes d'un groupe (envoi placé) ou à tous ceux à portée (diffusion large). Contamination psychique : si la cible a deux fois plus de points de Folie ou de Corruption que vous, test de Force Mentale ou 1d10 points de Folie ou de Corruption (second test si les deux valeurs sont concernées)."
+    }
+  },
+  {
+    "name": "Terreur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "telepathie",
+      "threshold": 13,
+      "focusTime": "1/2AC",
+      "sustained": false,
+      "range": "8 m",
+      "overbleed": "Par tranche de 5 points au-dessus du SP, les cibles ajoutent +10 à leur jet sur la table de choc.",
+      "description": "Vous projetez le pire cauchemar d'un nombre de cibles à portée égal à votre bonus de Force Mentale : chacune doit réussir un test de Force Mentale ou jeter sur la table de choc (p. 231). Contamination psychique : si la cible a deux fois plus de points de Folie ou de Corruption que vous, test de Force Mentale ou 1d10 points de Folie ou de Corruption (second test si les deux valeurs sont concernées)."
     }
   }
 ]

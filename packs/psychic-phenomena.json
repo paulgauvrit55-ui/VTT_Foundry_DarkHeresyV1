@@ -1,12 +1,132 @@
 [
   {
-    "name": "Nom du phénomène",
-    "description": "Description du phénomène.",
-    "range": "01-74"
+    "name": "Sombre pressentiment",
+    "description": "Une brise très légère souffle sur le psyker et ceux qui l'entourent ; tous ont l'intuition troublante que quelque chose de tragique vient de survenir quelque part dans la galaxie.",
+    "range": "01-02"
+  },
+  {
+    "name": "Écho du Warp",
+    "description": "Des voix et d'autres bruits provoquent comme un écho pendant quelques secondes, quels que soient les environs.",
+    "range": "03-05"
+  },
+  {
+    "name": "Odeur éthérée",
+    "description": "L'air autour du psyker s'emplit d'une odeur ténue, agréable ou nauséabonde.",
+    "range": "06-08"
+  },
+  {
+    "name": "Montée de paranoïa",
+    "description": "Le psyker ressent un frisson entre les omoplates pendant quelques instants.",
+    "range": "09-11"
+  },
+  {
+    "name": "Froid sépulcral",
+    "description": "La température chute brutalement pendant quelques secondes et une fine couche de givre recouvre tout dans un rayon de 3d10 mètres autour du psyker.",
+    "range": "12-14"
+  },
+  {
+    "name": "Aura d'étrangeté",
+    "description": "Tous les animaux présents dans un rayon de 1d100 mètres sont affolés et s'agitent.",
+    "range": "15-17"
+  },
+  {
+    "name": "Ver mémoriel",
+    "description": "Toutes les personnes ayant le psyker dans leur champ de vision oublient quelque chose sans importance.",
+    "range": "18-20"
+  },
+  {
+    "name": "Rancissement",
+    "description": "La nourriture se gâte et les boissons s'éventent dans un rayon de 5d10 mètres.",
+    "range": "21-23"
+  },
+  {
+    "name": "Brise inquiétante",
+    "description": "Un vent modéré souffle autour du psyker pendant quelques secondes, emportant les objets très légers dans un rayon de 3d10 mètres.",
+    "range": "24-26"
+  },
+  {
+    "name": "Voile d'obscurité",
+    "description": "Pendant le reste du round, toutes les personnes dans un rayon de 3d10 mètres du psyker ont l'impression que la nuit est tombée et que la zone est plongée dans les ténèbres.",
+    "range": "27-29"
+  },
+  {
+    "name": "Distorsion",
+    "description": "Les miroirs se brisent, les autres surfaces réfléchissantes se déforment et se rident dans un rayon de 5d10 mètres autour du psyker.",
+    "range": "30-32"
+  },
+  {
+    "name": "Essoufflement",
+    "description": "Tous les personnages (y compris le psyker) ont le souffle coupé pendant 1 round et ne peuvent entreprendre d'action de course ou de charge.",
+    "range": "33-35"
+  },
+  {
+    "name": "Masque démoniaque",
+    "description": "Le psyker adopte fugacement une apparence démoniaque : degré de Peur de 1 pour le reste du round, mais il gagne 1 point de Corruption.",
+    "range": "36-38"
+  },
+  {
+    "name": "Dépérissement surnaturel",
+    "description": "Toutes les plantes flétrissent et meurent dans un rayon de 3d10 mètres autour du psyker.",
+    "range": "39-41"
+  },
+  {
+    "name": "Bourrasque spectrale",
+    "description": "Des vents hurlants soulèvent légèrement le psyker du sol ; lui et tous les individus dans un rayon de 4d10 mètres doivent réussir un test d'Agilité Très facile (+30) sous peine d'être jetés à terre.",
+    "range": "42-44"
+  },
+  {
+    "name": "Larmes de sang",
+    "description": "Du sang suinte de la pierre et du bois dans un rayon de 3d10 mètres ; les statues et représentations de personnes semblent pleurer des larmes de sang.",
+    "range": "45-47"
+  },
+  {
+    "name": "Protestation tellurique",
+    "description": "Le sol tremble : tous dans un rayon de 5d10 mètres, psyker compris, doivent réussir un test d'Agilité Assez facile (+10) sous peine d'être jetés à terre.",
+    "range": "48-50"
+  },
+  {
+    "name": "Décharge psy",
+    "description": "De l'électricité statique se propage sur 6d10 mètres, hérissant les cheveux de tous, tandis que le psyker s'élève de 1d5 mètres en l'air avant de retomber au bout d'une seconde ou deux.",
+    "range": "51-53"
+  },
+  {
+    "name": "Fantômes du Warp",
+    "description": "Des apparitions flottent et hurlent de douleur dans un rayon de 3d10 mètres autour du psyker ; tous les individus présents doivent réussir un test de Force Mentale sous peine de gagner 1 point de Folie.",
+    "range": "54-56"
+  },
+  {
+    "name": "Chute vers le haut",
+    "description": "La gravité s'inverse brièvement : tout ce qui se trouve dans un rayon de 2d10 mètres (psyker compris) s'élève de 1d10 mètres avant de retomber au bout d'une seconde ou deux.",
+    "range": "57-59"
+  },
+  {
+    "name": "Hurlement de mort",
+    "description": "Un braillement assourdissant résonne sur 1 kilomètre et fait voler le verre en éclats ; tous les individus présents (psyker compris) doivent réussir un test d'Endurance sous peine d'être assourdis pendant 1d10 rounds.",
+    "range": "60-62"
+  },
+  {
+    "name": "Déchaînement",
+    "description": "Le psyker est jeté au sol par des mains invisibles et se débat tandis que le vent hurle dans un rayon de 6d10 mètres ; les objets légers sont soulevés et tous ceux présents doivent réussir un test d'Agilité sous peine d'être jetés à terre.",
+    "range": "63-65"
+  },
+  {
+    "name": "Aperçu du Warp",
+    "description": "Le temps d'une fraction de seconde, tous les individus dans un rayon de 1d100 mètres ont une vision du Warp ; chacun (psyker compris) doit réussir un test de Force Mentale sous peine de gagner 1d5 points de Folie.",
+    "range": "66-68"
+  },
+  {
+    "name": "Technodégoût",
+    "description": "Tous les objets technologiques dans un rayon de 5d10 mètres connaissent une panne momentanée et toutes les armes à distance s'enrayent (cf. Chapitre VII).",
+    "range": "69-71"
+  },
+  {
+    "name": "Démence du Warp",
+    "description": "Une violente onde de discorde se propage : toutes les créatures dans un rayon de 2d10 mètres (sauf le psyker) sont prises de Frénésie pendant 1 round et gagnent 1 point de Corruption.",
+    "range": "72-74"
   },
   {
     "name": "Périls du Warp",
-    "description": "Lancez sur la table des Périls du Warp.",
+    "description": "L'emploi du pouvoir a engendré un maelström d'énergies du Warp : effectuez un jet sur la Table 6-3 : périls du Warp (p. 163) et appliquez les résultats au psyker.",
     "range": "75-100"
   }
 ]

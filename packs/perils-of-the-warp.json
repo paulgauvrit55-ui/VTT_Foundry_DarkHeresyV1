@@ -1,7 +1,92 @@
 [
   {
-    "name": "Nom du péril",
-    "description": "Description du péril.",
-    "range": "01-100"
+    "name": "Bégaiement incontrôlé",
+    "description": "Le psyker hurle de douleur alors que les énergies du Warp traversent son esprit sans résistance : test de Force Mentale sous peine de gagner 1d5 points de Folie.",
+    "range": "01-05"
+  },
+  {
+    "name": "Brûlure warp",
+    "description": "Une violente vague d'énergie du Warp s'écrase contre l'esprit du psyker : il est assommé pendant 1d5 rounds.",
+    "range": "06-09"
+  },
+  {
+    "name": "Concussion psychique",
+    "description": "Le psyker est plongé dans l'inconscience pendant 1d5 rounds et tous les personnages dans un rayon de 3d10 mètres doivent réussir un test de Force Mentale sous peine d'être assommés pendant 1 round.",
+    "range": "10-13"
+  },
+  {
+    "name": "Psydéflagration",
+    "description": "Une explosion de puissance projette le psyker de 1d10 mètres en l'air avant qu'il ne retombe au sol (dégâts de chute, p. 210).",
+    "range": "14-18"
+  },
+  {
+    "name": "Brûlure de l'âme",
+    "description": "La puissance du Warp brûle le psyker jusque dans son âme : il ne peut plus utiliser aucun pouvoir pendant 1 heure et gagne 5 points de Corruption.",
+    "range": "19-24"
+  },
+  {
+    "name": "Claustration",
+    "description": "L'esprit du psyker est emprisonné dans une cage immatérielle ; il tombe au sol, catatonique. À chaque round, action complète pour un test de Force Mentale ; en cas de réussite, son esprit regagne son corps.",
+    "range": "25-30"
+  },
+  {
+    "name": "Discontinuité temporelle",
+    "description": "Le temps se déforme : le psyker disparaît brusquement et réapparaît 1d10 rounds plus tard (ou 1 minute plus tard en temps narratif).",
+    "range": "31-38"
+  },
+  {
+    "name": "Réflexion psychique",
+    "description": "Le pouvoir se retourne contre le psyker : résolvez ses effets comme s'il en était la cible. Si le pouvoir devait lui être bénéfique, il lui inflige à la place 1d10+5 dégâts d'énergie (ignorant ses protections) et les effets bénéfiques sont annulés.",
+    "range": "39-46"
+  },
+  {
+    "name": "Murmures du Warp",
+    "description": "Des voix trompeuses de démons se propagent dans un rayon de 4d10 mètres ; tous les individus présents (psyker compris) doivent réussir un test de Force Mentale Difficile (-20) sous peine de gagner 1d10 points de Corruption.",
+    "range": "47-55"
+  },
+  {
+    "name": "Transfert",
+    "description": "Le psyker et un être déterminé au hasard dans un rayon de 50 mètres (acolyte ou ennemi) échangent leurs esprits pendant 1d10 rounds : chacun conserve CC, CT, Intelligence, Perception, Force Mentale et Sociabilité et acquiert les autres caractéristiques du corps d'accueil ; l'effet cesse si l'un des corps est tué ; chacun gagne 1d5 points de Folie. Sans créature à portée : test de Force Mentale ou catatonie pendant 1d5 rounds, et 1d5 points de Folie.",
+    "range": "56-61"
+  },
+  {
+    "name": "Sombre invocation",
+    "description": "Un démon mineur (Chapitre XII) apparaît à 3d10 mètres du psyker pendant 1d10 rounds ou jusqu'à ce qu'il soit tué ; il exècre le psyker et dirige ses attaques sur lui.",
+    "range": "62-67"
+  },
+  {
+    "name": "Tempête éthérée",
+    "description": "Toutes les créatures conscientes (psyker compris) dans un rayon de 1d100 mètres subissent 1d10 dégâts d'énergie ignorant les armures.",
+    "range": "68-72"
+  },
+  {
+    "name": "Pluie de sang",
+    "description": "Un orage psychique couvre une zone de 5d10 mètres : vents violents, pluie de sang, et tout pouvoir psychique utilisé dans la zone pendant 1d5 rounds engendre automatiquement un péril du Warp.",
+    "range": "73-78"
+  },
+  {
+    "name": "Déflagration cataclysmique",
+    "description": "La puissance entre en surcharge : tout personnage dans un rayon de 2d10 mètres (psyker compris) subit 1d10+5 dégâts d'énergie, et tous les vêtements et l'équipement du psyker sont détruits.",
+    "range": "79-82"
+  },
+  {
+    "name": "Possession de masse",
+    "description": "Des démons ravagent les esprits de toute créature vivante dans un rayon de 1d100 mètres pendant 2d10 rounds : test de Force Mentale au début de chaque tour ; en cas d'échec, le personnage passe son tour à lutter (sans défense) et gagne 1d5 points de Corruption.",
+    "range": "83-86"
+  },
+  {
+    "name": "Les liens fragiles de la matière",
+    "description": "La gravité s'inverse pendant 1d10 rounds dans un rayon de 1d100 mètres : créatures et objets non fixés décollent à 3 mètres par round, puis retombent quand la gravité reprend ses droits.",
+    "range": "87-90"
+  },
+  {
+    "name": "Possédé",
+    "description": "Test de Force Mentale Très difficile (-30) sous peine de devenir l'hôte d'un démon : générez un possédé libre (Chapitre XII) qui attaque sur-le-champ. Seule sa destruction libère le psyker, qui gagne 4d10 points de Corruption s'il survit.",
+    "range": "91-99"
+  },
+  {
+    "name": "Festin du Warp",
+    "description": "Une faille s'ouvre dans la réalité et le psyker est aspiré par le Warp. Son existence prend fin.",
+    "range": "100-100"
   }
 ]
