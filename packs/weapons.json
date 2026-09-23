@@ -1,6 +1,22 @@
 [
   {
-    "name": "Nom de l'arme de corps à corps",
+    "name": "Électrofléau (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+2",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Décharge, flexible, deux mains",
+      "weight": 4.5,
+      "price": 375,
+      "availability": "rare",
+      "description": "Arme à décharge, deux mains. Requiert Formation aux armes de corps à corps (décharge). Groupe de mèches tentaculaires reliées à un manche court; allonge réduite mais coups répétés très efficaces pour neutraliser un adversaire. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Matraque à décharge (DH)",
     "img": "icons/svg/item-bag.svg",
     "type": "weapon",
     "system": {
@@ -8,11 +24,651 @@
       "damageType": "impact",
       "penetration": 0,
       "bonus": 0,
-      "attributes": "Tags séparés par des virgules (ex. Déchirante, Primitive)",
+      "attributes": "Décharge",
+      "weight": 2.5,
+      "price": 150,
+      "availability": "peuCourant",
+      "description": "Arme à décharge. Requiert Formation aux armes de corps à corps (décharge). Arme de l'Adeptus Arbites et des escouades de maintien de l'ordre, conçue pour réprimer les émeutes mais tout aussi mortelle au combat. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Épée énergétique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+5",
+      "damageType": "energie",
+      "penetration": 6,
+      "bonus": 0,
+      "attributes": "Champ énergétique, équilibrée",
+      "weight": 3.5,
+      "price": 2500,
+      "availability": "tresRare",
+      "description": "Arme énergétique. Requiert Formation aux armes de corps à corps (énergétiques); désactivée, elle compte comme une arme primitive normale (Formation aux armes de corps à corps (primitives)). Rare et précieuse, souvent un héritage transmis de génération en génération. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Lame énergétique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+3",
+      "damageType": "energie",
+      "penetration": 6,
+      "bonus": 0,
+      "attributes": "Champ énergétique",
+      "weight": 1.5,
+      "price": 1750,
+      "availability": "tresRare",
+      "description": "Arme énergétique. Requiert Formation aux armes de corps à corps (énergétiques); désactivée, elle compte comme une arme primitive normale. Ressemble à une dague, facile à dissimuler, bien plus dangereuse que sa taille ne le laisse supposer. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Arme à deux mains (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "2d10",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Encombrante, primitive, deux mains",
+      "weight": 7,
+      "price": 70,
+      "availability": "peuCourant",
+      "description": "Arme primitive, deux mains. Requiert Formation aux armes de corps à corps (primitives). Version plus grande et plus lourde d'une épée, hache, marteau ou gourdin, infligeant des dégâts bien supérieurs à l'équivalent à une main. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Arme improvisée (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10-2",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Mal équilibrée, primitive",
+      "weight": 0,
+      "price": 0,
+      "availability": "omnipresent",
+      "description": "Arme primitive. Requiert Formation aux armes de corps à corps (primitives). Pied de table, membre tranché, douille vide, crosse d'une arme à feu, etc. Pas de poids, de prix ni de disponibilité définis. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Bâton (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Équilibrée, primitive, deux mains",
+      "weight": 3,
+      "price": 10,
+      "availability": "repandu",
+      "description": "Arme primitive, deux mains. Requiert Formation aux armes de corps à corps (primitives). Forme la plus élémentaire des armes d'hast, fréquente entre les mains des pèlerins. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Bouclier (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d5",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Défensive, primitive",
+      "weight": 3,
+      "price": 25,
+      "availability": "moyen",
+      "description": "Arme primitive. Requiert Formation aux armes de corps à corps (primitives). Porté seul ou avec une armure, en bois, plastique, alliage ou armaplast, de la rondache au pavois. Prévu pour la défense : malus de -20 aux tests d'attaque (en plus de l'attribut défensive). Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Coup-de-poing (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d5-1",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Primitive",
+      "weight": 0.5,
+      "price": 5,
+      "availability": "repandu",
+      "description": "Arme primitive. Requiert Formation aux armes de corps à corps (primitives). Porté autour des phalanges, procure un impact suffisant pour briser des os. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Couteau (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d5",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Primitive",
+      "weight": 0.5,
+      "price": 5,
+      "availability": "omnipresent",
+      "description": "Arme primitive, corps à corps ou jet (portée 3 m avec Formation aux armes de jet (primitives)). Arme de secours de tous les guerriers de l'Imperium, du truand des ruches au soldat d'élite. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Épée (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Équilibrée, primitive",
+      "weight": 3,
+      "price": 15,
+      "availability": "commun",
+      "description": "Arme primitive. Requiert Formation aux armes de corps à corps (primitives). Des modèles courts semblables à des dagues aux longues lames de duel, à simple ou double tranchant, de taille ou d'estoc. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Étoile/dague de lancer (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d5",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Primitive",
+      "weight": 0.5,
+      "price": 5,
+      "availability": "repandu",
+      "description": "Arme primitive de jet (portée 5 m). Requiert Formation aux armes de jet (primitives). Conçue exclusivement pour le lancer, le fil de la lame infligeant de sérieuses blessures. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Fléau (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+2",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Flexible, primitive, deux mains",
+      "weight": 4,
+      "price": 20,
+      "availability": "peuCourant",
+      "description": "Arme primitive, deux mains. Requiert Formation aux armes de corps à corps (primitives). Une ou plusieurs boules à pointes reliées à un manche par des chaînes; difficile à manier mais inflige de terribles blessures. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Gourdin (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Primitive",
+      "weight": 2,
+      "price": 5,
+      "availability": "omnipresent",
+      "description": "Arme primitive. Requiert Formation aux armes de corps à corps (primitives). Gourdins, matraques et massues : les armes les plus primaires, comptant sur le poids et la force brute. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Hache (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+1",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Mal équilibrée, primitive",
+      "weight": 4,
+      "price": 20,
+      "availability": "moyen",
+      "description": "Arme primitive. Requiert Formation aux armes de corps à corps (primitives). Arme ou outil; moins d'allonge et de capacité de parade qu'une épée, mais des dégâts plus conséquents. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Lance (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Primitive, deux mains",
+      "weight": 3,
+      "price": 15,
+      "availability": "commun",
+      "description": "Arme primitive, deux mains, corps à corps ou jet (portée 10 m avec Formation aux armes de jet (primitives)). Courante sur les mondes sauvages et médiévaux, prisée des chasseurs et des guerriers. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Marteau (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+1",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Mal équilibrée, primitive",
+      "weight": 4,
+      "price": 10,
+      "availability": "commun",
+      "description": "Arme primitive. Requiert Formation aux armes de corps à corps (primitives). Plus volumineux que l'outil, sa tête lestée rend les coups meurtriers; symbole de la justice de l'Empereur pour de nombreux prêtres. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Épée tronçonneuse (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+2",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Déchirante, équilibrée",
+      "weight": 6,
+      "price": 275,
+      "availability": "rare",
+      "description": "Arme tronçonneuse. Requiert Formation aux armes de corps à corps (tronçonneuses). Large coffrage plat abritant une chaîne à dents métalliques, ouvert sur la section avant et supérieure; bruyante et terrifiante. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Hache tronçonneuse (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+4",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "weight": 13,
+      "price": 450,
+      "availability": "tresRare",
+      "description": "Arme tronçonneuse. Requiert Formation aux armes de corps à corps (tronçonneuses). Lourde et dévastatrice, parfois à deux têtes avec chacune sa propre chaîne motorisée, restant opérationnelle si l'une se fausse. Les PJ ajoutent leur bonus de Force aux dégâts des armes de corps à corps."
+    }
+  },
+  {
+    "name": "Poing tronçonneur (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "2d10",
+      "damageType": "penetrant",
+      "penetration": 12,
+      "bonus": 0,
+      "attributes": "Déchirante, Encombrante",
+      "weight": 15,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Faith and Coin p. 90. Nom original : Chainfist. Famille : tronçonneuses."
+    }
+  },
+  {
+    "name": "Épée tronçonneuse (Hydraphur) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+3",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "weight": 9,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 56. Nom original : Chainsword (Hydraphur). Famille : tronçonneuses."
+    }
+  },
+  {
+    "name": "Couronne cramoisie (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+2",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "weight": 0.5,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 124. Nom original : Crimson Crown. Famille : tronçonneuses. Portée (jet ou allonge) : SB x 4."
+    }
+  },
+  {
+    "name": "Épée tronçonneuse à double tranchant (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+5",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "weight": 12,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Into the Storm p. 124. Nom original : Double-edged Chainsword. Famille : tronçonneuses. Utilisable à une ou deux mains."
+    }
+  },
+  {
+    "name": "Lame ardente (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+5",
+      "damageType": "energie",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Équilibrée, Lance-flammes, Champ énergétique",
+      "weight": 3,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Into the Storm p. 124. Nom original : Burning Blade. Famille : lance-flammes."
+    }
+  },
+  {
+    "name": "Bouclier de combat (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d5",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Défensive",
       "weight": 1,
       "price": 0,
-      "availability": "Banal",
-      "description": "Description libre de l'arme."
+      "availability": "peuCourant",
+      "description": "Into the Storm p. 124. Nom original : Combat Shield. Famille : primitives. +3 PA au bras qui le porte."
+    }
+  },
+  {
+    "name": "Falx (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+4",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Déchirante, Mal équilibrée, Spécial, Deux mains",
+      "weight": 6.5,
+      "price": 0,
+      "availability": "rare",
+      "description": "Faith and Coin p. 89. Nom original : Falx. Famille : primitives."
+    }
+  },
+  {
+    "name": "Marteau Lacusta (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+2",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Deux mains",
+      "weight": 5,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Into the Storm p. 124. Nom original : Lacusta Hammer. Famille : primitives."
+    }
+  },
+  {
+    "name": "Dague de parade (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d5",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Défensive",
+      "weight": 0.5,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Into the Storm p. 124. Nom original : Parrying Dagger. Famille : primitives. +5 à la parade."
+    }
+  },
+  {
+    "name": "Épée souple (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Équilibrée",
+      "weight": 1.5,
+      "price": 0,
+      "availability": "rare",
+      "description": "Into the Storm p. 124. Nom original : Soft Sword. Famille : primitives."
+    }
+  },
+  {
+    "name": "Marteau Cognatine (une main) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+8",
+      "damageType": "energie",
+      "penetration": 5,
+      "bonus": 0,
+      "attributes": "Champ énergétique, Encombrante",
+      "weight": 14,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Faith and Coin p. 90. Nom original : Cognatine Hammer (une main). Famille : énergétiques."
+    }
+  },
+  {
+    "name": "Marteau Cognatine (deux mains) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+10",
+      "damageType": "energie",
+      "penetration": 7,
+      "bonus": 0,
+      "attributes": "Champ énergétique, Encombrante, Deux mains",
+      "weight": 14,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Faith and Coin p. 90. Nom original : Cognatine Hammer (deux mains). Famille : énergétiques."
+    }
+  },
+  {
+    "name": "Lame énergétique d'avant-bras (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+1",
+      "damageType": "energie",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Équilibrée, Défensive, Champ énergétique",
+      "weight": 1.5,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 124. Nom original : Forearm Powerblade. Famille : énergétiques."
+    }
+  },
+  {
+    "name": "Griffes éclair (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+8",
+      "damageType": "energie",
+      "penetration": 8,
+      "bonus": 0,
+      "attributes": "Champ énergétique, Déchirante",
+      "weight": 12,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Faith and Coin p. 90. Nom original : Lightning Claws. Famille : énergétiques."
+    }
+  },
+  {
+    "name": "Hache énergétique Loi (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+7",
+      "damageType": "energie",
+      "penetration": 9,
+      "bonus": 0,
+      "attributes": "Champ énergétique, Mal équilibrée, Deux mains",
+      "weight": 9,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Into the Storm p. 124. Nom original : Loi Power Axe. Famille : énergétiques."
+    }
+  },
+  {
+    "name": "Claymore énergétique (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+10",
+      "damageType": "energie",
+      "penetration": 7,
+      "bonus": 0,
+      "attributes": "Champ énergétique, Encombrante, Dévastatrice (1), Deux mains",
+      "weight": 18,
+      "price": 0,
+      "availability": "quasiUnique",
+      "description": "Deathwatch (page non indiquée). Nom original : Power Claymore. Famille : énergétiques."
+    }
+  },
+  {
+    "name": "Disque énergétique (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10+4",
+      "damageType": "energie",
+      "penetration": 5,
+      "bonus": 0,
+      "attributes": "Champ énergétique",
+      "weight": 0.5,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Into the Storm p. 124. Nom original : Power Discus. Famille : énergétiques. Portée (jet ou allonge) : SB x 4."
+    }
+  },
+  {
+    "name": "Hache du châtiment (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "2d10",
+      "damageType": "penetrant",
+      "penetration": 6,
+      "bonus": 0,
+      "attributes": "Décharge, Déchirante, Mal équilibrée, Deux mains",
+      "weight": 10,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Faith and Coin p. 90. Nom original : Axe of Retribution. Famille : décharge."
+    }
+  },
+  {
+    "name": "Sabre d'officier (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Équilibrée, Décharge",
+      "weight": 3,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Rogue Trader livre de base p. 131. Nom original : Officer's Cutlass. Famille : décharge."
+    }
+  },
+  {
+    "name": "Étoiles à décharge (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Décharge",
+      "weight": 0.5,
+      "price": 0,
+      "availability": "rare",
+      "description": "Into the Storm p. 124. Nom original : Shock Stars. Famille : décharge. Portée (jet ou allonge) : SB x 3."
+    }
+  },
+  {
+    "name": "Bâton à décharge (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d5+3",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Décharge",
+      "weight": 2,
+      "price": 0,
+      "availability": "rare",
+      "description": "Rogue Trader livre de base p. 132. Nom original : Shock-Staff. Famille : décharge."
+    }
+  },
+  {
+    "name": "Filet à décharge (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Décharge, Immobilisante (2)",
+      "weight": 1,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Hostile Acquisitions p. 56. Nom original : Shocknet. Famille : décharge. Portée (jet ou allonge) : 5m."
+    }
+  },
+  {
+    "name": "Sphère étourdissante (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "weapon",
+    "system": {
+      "damageFormula": "1d10",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Décharge",
+      "weight": 0.5,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 56. Nom original : Stunsphere. Famille : décharge. Portée (jet ou allonge) : SB x 3."
     }
   }
 ]

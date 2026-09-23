@@ -1,11 +1,1784 @@
 [
   {
-    "name": "Nom du talent",
+    "name": "Agilité féline",
     "img": "icons/svg/item-bag.svg",
     "type": "talent",
     "system": {
-      "prerequisites": "Prérequis du talent (ex. caractéristique minimale, autre talent requis).",
-      "description": "Description talent (règles/effets)."
+      "prerequisites": "Ag 30",
+      "description": "En cas de chute, test d'Agilité en action gratuite : par degré de réussite, réduisez la hauteur de chute d'un nombre de mètres égal à votre bonus d'Agilité pour le calcul des dégâts."
+    }
+  },
+  {
+    "name": "Aide électrique",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (circuit électrotatoué/transformateur de puissance)",
+      "description": "Au contact d'une machine alimentée ou d'une batterie pleine, test d'Endurance Assez facile (+10) après 1 minute de méditation rituelle : élimine 1 niveau de Fatigue, +1 par degré de réussite."
+    }
+  },
+  {
+    "name": "Ambidextre",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 30",
+      "description": "Pas de malus de -20 pour attaquer avec la main non directrice. Spécial : avec Combat à deux armes, le malus des attaques à deux armes dans un même tour tombe à -10."
+    }
+  },
+  {
+    "name": "Âme noire",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Âme souillée : vous ne subissez que la moitié du malus habituel aux tests de malignité (Corruption, p. 235)."
+    }
+  },
+  {
+    "name": "Armure de mépris",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "FM 40",
+      "description": "Chaque fois que vous gagnez des points de Corruption, réduisez le montant de 1. Test de Force Mentale en action gratuite pour ignorer pendant 1 round les effets de la Corruption accumulée."
+    }
+  },
+  {
+    "name": "Assaut acharné",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 35",
+      "description": "Lorsque vous touchez un adversaire dans une action d'attaque à outrance, vous pouvez utiliser votre réaction pour porter une attaque supplémentaire (mêmes bonus et malus que l'attaque originelle)."
+    }
+  },
+  {
+    "name": "Assommement",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Demi-action pour annoncer un coup assommant avant de frapper : si vous touchez et infligez au moins 1 dégât, les dégâts sont ignorés mais l'adversaire doit réussir un test d'Endurance ou être assommé pendant 1 round."
+    }
+  },
+  {
+    "name": "Attaque éclair",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Attaque rapide",
+      "description": "Action complète : trois attaques au corps à corps. Remplace Attaque rapide. Coup double est inutilisable dans une action d'Attaque éclair."
+    }
+  },
+  {
+    "name": "Attaque rapide",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 35",
+      "description": "Action complète : deux attaques au corps à corps."
+    }
+  },
+  {
+    "name": "Attraction ferrique",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (circuit électrotatoué/transformateur de puissance)",
+      "description": "Test de Force Mentale (action complète) pour attirer dans votre main un objet en métal non fixé, visible, à 20 m maximum, pesant au plus 1 kg par point de bonus de Force Mentale."
+    }
+  },
+  {
+    "name": "Aura d'autorité",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Un test de Commandement réussi affecte 1d10 + bonus de Sociabilité cibles. Vous pouvez donner des ordres à des individus qui ne vous servent pas directement sur un test de Commandement à -10."
+    }
+  },
+  {
+    "name": "Autosanguin",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Implants filtrant le sang : pour la guérison, vous êtes toujours considéré Légèrement blessé et vous récupérez 2 points de dégâts par jour."
+    }
+  },
+  {
+    "name": "Aux portes de l'enfer",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Discipline de fer",
+      "description": "Tant que vous êtes dans leur champ de vision, vos sbires sont immunisés contre la Peur et l'effroi."
+    }
+  },
+  {
+    "name": "Biceps saillants",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "F 45",
+      "description": "Vous pouvez utiliser une arme lourde en tir automatique ou semi-automatique sans vous caler au préalable."
+    }
+  },
+  {
+    "name": "Blasé",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "FM 30",
+      "description": "Vous ne gagnez jamais de points de Folie à la vue du sang, de la mort, de la violence ou d'horreurs ordinaires; les terreurs surnaturelles vous affectent toujours."
+    }
+  },
+  {
+    "name": "Bon tireur",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CT 35",
+      "description": "Vous ne subissez plus de malus de portée longue ou extrême."
+    }
+  },
+  {
+    "name": "Bonne réputation (Administratum)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 50, Pair (même groupe)",
+      "description": "Très respecté au sein de ce cercle : bonus supplémentaire de +10 aux tests de Sociabilité avec lui, cumulable avec Pair (total +20)."
+    }
+  },
+  {
+    "name": "Bonne réputation (Ecclésiarchie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 50, Pair (même groupe)",
+      "description": "Très respecté au sein de ce cercle : bonus supplémentaire de +10 aux tests de Sociabilité avec lui, cumulable avec Pair (total +20)."
+    }
+  },
+  {
+    "name": "Bonne réputation (Garde Impériale)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 50, Pair (même groupe)",
+      "description": "Très respecté au sein de ce cercle : bonus supplémentaire de +10 aux tests de Sociabilité avec lui, cumulable avec Pair (total +20)."
+    }
+  },
+  {
+    "name": "Bonne réputation (Inquisition)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 50, Pair (même groupe)",
+      "description": "Très respecté au sein de ce cercle : bonus supplémentaire de +10 aux tests de Sociabilité avec lui, cumulable avec Pair (total +20)."
+    }
+  },
+  {
+    "name": "Bonne réputation (Marine Impériale)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 50, Pair (même groupe)",
+      "description": "Très respecté au sein de ce cercle : bonus supplémentaire de +10 aux tests de Sociabilité avec lui, cumulable avec Pair (total +20)."
+    }
+  },
+  {
+    "name": "Bonne réputation (pègre)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 50, Pair (même groupe)",
+      "description": "Très respecté au sein de ce cercle : bonus supplémentaire de +10 aux tests de Sociabilité avec lui, cumulable avec Pair (total +20)."
+    }
+  },
+  {
+    "name": "Cache énergétique",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (transformateur de puissance)",
+      "description": "Vous n'accumulez plus de Fatigue en utilisant Charge luminen, Choc luminen et Explosion luminen."
+    }
+  },
+  {
+    "name": "Cavité cachée",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Compartiment corporel (poche de tissu ou cavité d'implant) pouvant cacher un objet de la taille de la paume. Découvert sur un test de Fouille Assez difficile (-10), ou Assez facile (+10) avec un scanner medicae ou un renifleur chimique."
+    }
+  },
+  {
+    "name": "Charge de berserker",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Bonus de +20 en Capacité de Combat (au lieu de +10) lors d'une action de charge."
+    }
+  },
+  {
+    "name": "Charge luminen",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (circuit électrotatoué/transformateur de puissance)",
+      "description": "Test d'Endurance après 1 minute de méditation rituelle pour recharger ou alimenter une machine avec votre champ bioélectrique. Difficulté selon la technologie : Assez facile (+10) batterie chimique, lumiglobe; Moyenne (+0) cellule d'arme laser, tablette de données; Assez difficile (-10) cellule à surcharge, servocrâne; Difficile (-20) moteur de Land Speeder, cellule de canon laser, serviteur; Très difficile (-30) presse industrielle, cogitateur, technologie xenos. Chaque utilisation inflige 1 niveau de Fatigue."
+    }
+  },
+  {
+    "name": "Chimiocastration",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Toute tentative de séduction contre vous échoue automatiquement et les tests de Charisme vous visant voient leur difficulté augmenter d'un cran. Vous gagnez 1 point de Folie en prenant ce talent."
+    }
+  },
+  {
+    "name": "Choc luminen",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (circuit électrotatoué/transformateur de puissance)",
+      "description": "Au contact (test de Capacité de Tir ou saisie), inflige 1d10+3 dégâts d'énergie. Chaque utilisation inflige 1 niveau de Fatigue."
+    }
+  },
+  {
+    "name": "Cible rapide",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 40",
+      "description": "Lorsque vous chargez ou courez, les adversaires subissent -20 aux tests de Capacité de Tir pour vous toucher jusqu'au début de votre tour suivant."
+    }
+  },
+  {
+    "name": "Combat à deux armes (corps à corps)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 35 ou CT 35, Ag 35",
+      "description": "Armé de deux armes du type concerné, action complète pour attaquer avec les deux, chaque test d'attaque à -20 (p. 193). Les deux versions (corps à corps et tir) sont nécessaires pour combiner une arme à feu et une arme de corps à corps."
+    }
+  },
+  {
+    "name": "Combat à deux armes (tir)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 35 ou CT 35, Ag 35",
+      "description": "Armé de deux armes du type concerné, action complète pour attaquer avec les deux, chaque test d'attaque à -20 (p. 193). Les deux versions (corps à corps et tir) sont nécessaires pour combiner une arme à feu et une arme de corps à corps."
+    }
+  },
+  {
+    "name": "Combat aveugle",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Per 30",
+      "description": "Vous ne subissez que la moitié des malus habituels en combattant dans un environnement gênant la vue (brouillard, fumée, obscurité)."
+    }
+  },
+  {
+    "name": "Combat de rue",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Lorsque vous infligez des dégâts critiques avec un couteau ou à mains nues, vous infligez +2 dégâts."
+    }
+  },
+  {
+    "name": "Constitution solide",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+1 point de Blessures. Peut être acheté plusieurs fois si le plan de carrière le permet."
+    }
+  },
+  {
+    "name": "Contre-attaque",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 40",
+      "description": "Après une parade réussie, attaque immédiate avec l'arme ayant paré, avec un malus de -20."
+    }
+  },
+  {
+    "name": "Conversion du corpus",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 2",
+      "description": "Action gratuite : pour chaque tranche de 2 points de dégâts que vous acceptez de subir, ajoutez votre bonus de Force Mentale au jet de Puissance."
+    }
+  },
+  {
+    "name": "Convocation ferrique",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (circuit électrotatoué/transformateur de puissance), Attraction ferrique",
+      "description": "Test de Force Mentale (action complète) pour attirer dans votre main un objet en métal non fixé, visible, à 40 m maximum, pesant au plus 2 kg par point de bonus de Force Mentale."
+    }
+  },
+  {
+    "name": "Coup assassin",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 40, Acrobatie",
+      "description": "Après une attaque au corps à corps, test d'Acrobatie pour effectuer un demi-déplacement en action gratuite, sans attaque gratuite de l'adversaire."
+    }
+  },
+  {
+    "name": "Coup double",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 40, Combat à deux armes (corps à corps)",
+      "description": "Armé de deux armes de corps à corps, action complète pour frapper avec les deux sur un seul test de Capacité de Combat : en cas de succès, les deux armes touchent."
+    }
+  },
+  {
+    "name": "Coup handicapant",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 50",
+      "description": "Lorsque vous infligez des dégâts critiques avec une arme de corps à corps, vous infligez 1d5-1 dégâts critiques supplémentaires."
+    }
+  },
+  {
+    "name": "Coup précis",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 40, Coup infaillible",
+      "description": "Pas de malus de -20 pour les coups ciblés avec une arme de corps à corps."
+    }
+  },
+  {
+    "name": "Coup écrasant",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "F 40",
+      "description": "+2 dégâts avec les armes de corps à corps."
+    }
+  },
+  {
+    "name": "Coup infaillible",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 30",
+      "description": "Pour déterminer la localisation touchée, vous pouvez conserver le résultat du jet ou l'inverser (37 : jambe droite en 73 ou corps en 37)."
+    }
+  },
+  {
+    "name": "Décadence",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "E 30",
+      "description": "Vous ne perdez connaissance à cause de l'alcool qu'après avoir raté un nombre de tests d'Endurance égal au double de votre bonus d'Endurance. +10 aux tests pour continuer à faire usage de drogue pendant 24 heures."
+    }
+  },
+  {
+    "name": "Désarmement",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 30",
+      "description": "Action complète contre un ennemi armé au corps à corps : test de Capacité de Combat opposé; victoire = il lâche son arme à ses pieds; 3 degrés de réussite ou plus = l'arme est hors d'atteinte."
+    }
+  },
+  {
+    "name": "Discipline (biomancie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 3",
+      "description": "Bonus de +2 aux jets de Puissance pour manifester les pouvoirs de cette discipline."
+    }
+  },
+  {
+    "name": "Discipline (divination)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 3",
+      "description": "Bonus de +2 aux jets de Puissance pour manifester les pouvoirs de cette discipline."
+    }
+  },
+  {
+    "name": "Discipline (pyromancie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 3",
+      "description": "Bonus de +2 aux jets de Puissance pour manifester les pouvoirs de cette discipline."
+    }
+  },
+  {
+    "name": "Discipline (télékinésie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 3",
+      "description": "Bonus de +2 aux jets de Puissance pour manifester les pouvoirs de cette discipline."
+    }
+  },
+  {
+    "name": "Discipline (télépathie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 3",
+      "description": "Bonus de +2 aux jets de Puissance pour manifester les pouvoirs de cette discipline."
+    }
+  },
+  {
+    "name": "Discipline de fer",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "FM 30, Commandement",
+      "description": "Tant que vous êtes dans leur champ de vision, vos alliés peuvent relancer les tests de Force Mentale ratés pour résister à la Peur et à l'effroi."
+    }
+  },
+  {
+    "name": "Double équipier",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "En attaquant le même adversaire qu'un allié, bonus supplémentaire de +10 en Capacité de Combat (+20 si l'allié a aussi ce talent), en plus des bonus de surnombre."
+    }
+  },
+  {
+    "name": "Élu du Warp",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "FM 35",
+      "description": "Lorsqu'un jet de Puissance déclenche un phénomène psychique (p. 162), effectuez deux jets sur la table et conservez le plus favorable."
+    }
+  },
+  {
+    "name": "Endurci",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "E 40",
+      "description": "Pour la récupération des dégâts, vous êtes toujours considéré Légèrement blessé."
+    }
+  },
+  {
+    "name": "Explosion luminen",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (circuit électrotatoué/transformateur de puissance)",
+      "description": "Test de Capacité de Tir pour projeter une boule d'énergie bioélectrique sur une cible à 10 m maximum : 1d10 + bonus de Force Mentale dégâts d'énergie. Chaque utilisation inflige 1 niveau de Fatigue."
+    }
+  },
+  {
+    "name": "Fidèle aliéné",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Pour déterminer les effets de choc (p. 231), lancez deux fois et conservez le résultat le plus favorable."
+    }
+  },
+  {
+    "name": "Fin tireur",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CT 40, Tireur hors pair",
+      "description": "Pas de malus de -20 pour les coups ciblés à distance. Remplace Tireur hors pair."
+    }
+  },
+  {
+    "name": "Flagellant",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "20 minutes de prière quotidienne en s'infligeant 1 dégât non soignable : +10 aux tests de Force Mentale contre le contrôle mental et la malignité; avec Frénésie, entrée en rage en action gratuite. Sans flagellation, malus de -5 pour la journée."
+    }
+  },
+  {
+    "name": "Foi inébranlable",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Vous pouvez relancer tout test de Force Mentale raté pour éviter les effets de la Peur."
+    }
+  },
+  {
+    "name": "Formation aux armes de base (bolts)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de base, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de base (fusion)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de base, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de base (lance-flammes)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de base, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de base (lanceurs)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de base, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de base (laser)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de base, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de base (MS)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de base, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de base (plasma)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de base, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de base (primitives)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de base, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de corps à corps (décharge)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de corps à corps, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de corps à corps (énergétiques)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de corps à corps, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de corps à corps (primitives)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de corps à corps, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de corps à corps (tronçonneuses)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de corps à corps, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de jet (décharge)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de jet, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de jet (énergétiques)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de jet, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de jet (primitives)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de jet, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de jet (tronçonneuses)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de jet, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de poing (bolts)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de poing, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de poing (fusion)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de poing, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de poing (lance-flammes)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de poing, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de poing (lanceurs)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de poing, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de poing (laser)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de poing, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de poing (MS)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de poing, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de poing (plasma)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de poing, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes de poing (primitives)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes de poing, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes exotiques (au choix)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Groupe de talents : une arme exotique précise (fusil à aiguilles, lance-toile, pistolet à aiguilles, pistolet lance-toile.). Formé au maniement de cette arme exotique, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes lourdes (bolts)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes lourdes, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes lourdes (fusion)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes lourdes, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes lourdes (lance-flammes)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes lourdes, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes lourdes (lanceurs)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes lourdes, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes lourdes (laser)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes lourdes, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes lourdes (MS)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes lourdes, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes lourdes (plasma)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes lourdes, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Formation aux armes lourdes (primitives)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Formé au maniement de ce groupe d'armes lourdes, utilisable sans malus."
+    }
+  },
+  {
+    "name": "Forte tête",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "FM 30, Résistance (pouvoirs psychiques)",
+      "description": "Vous pouvez relancer un test de Force Mentale raté contre un pouvoir psychique affectant l'esprit (sans effet contre les pouvoirs physiques comme la télékinésie)."
+    }
+  },
+  {
+    "name": "Forteresse mentale",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "FM 50, Forte tête",
+      "description": "Un psyker vous ciblant doit réussir un test de Force Mentale ou subir 1d10 + votre bonus de Force Mentale dégâts d'impact à la tête, réduits de son propre bonus de Force Mentale, ignorant armure et bonus d'Endurance."
+    }
+  },
+  {
+    "name": "Frénésie",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "1 round de préparation, puis rage destructrice : +10 en Force et Force Mentale, -10 en Capacité de Combat et Intelligence; vous devez attaquer l'ennemi le plus proche au corps à corps (attaque à outrance si possible), sans fuir, battre en retraite ni parer, jusqu'à la fin du combat. Pas de pouvoirs psychiques en frénésie sauf talent contraire."
+    }
+  },
+  {
+    "name": "Grâce levmag",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (transformateur de puissance)",
+      "description": "Demi-action pour flotter à 20-30 cm du sol pendant 1d10 + bonus d'Endurance minutes, à vitesse de marche, en consacrant une demi-action par round à la concentration. Activable en chute : dégâts réduits à 1d10+3 impact. Une fois par 12 heures."
+    }
+  },
+  {
+    "name": "Grand orateur",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Vos tests de Sociabilité et de compétences liées affectent dix fois plus de monde."
+    }
+  },
+  {
+    "name": "Grand praticien",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Medicae +10",
+      "description": "+10 aux tests de Medicae. Un test réussi sur un patient Gravement ou Mortellement blessé rend 2 points de Blessures (au lieu de 1). +20 au test d'Endurance du patient pour ne pas perdre un membre sur un coup critique."
+    }
+  },
+  {
+    "name": "Grésillement strident",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (respirateur)",
+      "description": "Action complète : toutes les créatures (sauf démons et machines) dans un rayon de 30 m doivent réussir un test de Force Mentale ou perdre une demi-action au tour suivant. Réutilisable après 1d5 rounds."
+    }
+  },
+  {
+    "name": "Haine (criminels)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Bonus de +10 aux tests de Capacité de Combat contre les membres de ce groupe."
+    }
+  },
+  {
+    "name": "Haine (culte (spécifique))",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Bonus de +10 aux tests de Capacité de Combat contre les membres de ce groupe."
+    }
+  },
+  {
+    "name": "Haine (démons)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Bonus de +10 aux tests de Capacité de Combat contre les membres de ce groupe."
+    }
+  },
+  {
+    "name": "Haine (hérétiques)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Bonus de +10 aux tests de Capacité de Combat contre les membres de ce groupe."
+    }
+  },
+  {
+    "name": "Haine (mutants)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Bonus de +10 aux tests de Capacité de Combat contre les membres de ce groupe."
+    }
+  },
+  {
+    "name": "Haine (psykers)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Bonus de +10 aux tests de Capacité de Combat contre les membres de ce groupe."
+    }
+  },
+  {
+    "name": "Haine (xenos (spécifiques))",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Bonus de +10 aux tests de Capacité de Combat contre les membres de ce groupe."
+    }
+  },
+  {
+    "name": "Imitation",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Reproduire la voix d'autrui après l'avoir écoutée au moins 1 heure (même race, langue comprise). Les auditeurs doivent réussir un test de Psychologie Assez difficile (-10) pour percer la supercherie; Moyenne (+0) si l'imitation se base sur des enregistrements ou des comm-links. Échec automatique si l'on vous voit clairement."
+    }
+  },
+  {
+    "name": "Litanie de haine",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Haine (au choix)",
+      "description": "Action complète : test de Charisme pour étendre Haine à un nombre d'alliés égal à votre bonus de Sociabilité (+10 en Capacité de Combat contre les ennemis haïs) jusqu'à la fin de la rencontre."
+    }
+  },
+  {
+    "name": "Logis-implant",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "En réaction, test de Technomaîtrise : jusqu'à la fin de votre prochain tour, +10 en Capacité de Combat et Capacité de Tir. Chaque succès inflige 1 niveau de Fatigue."
+    }
+  },
+  {
+    "name": "Maître d'armes",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 30, Formation aux armes de corps à corps (au choix)",
+      "description": "Avec un couteau ou une épée de tout type (épées tronçonneuses et énergétiques incluses), vous pouvez relancer une attaque ratée une fois par round."
+    }
+  },
+  {
+    "name": "Maître du combat",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CC 30",
+      "description": "Les adversaires qui vous affrontent au corps à corps ne bénéficient d'aucun bonus de surnombre."
+    }
+  },
+  {
+    "name": "Méditation",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Transe : test de Force Mentale; en cas de réussite, élimine 1 niveau de Fatigue par tranche de 10 minutes de méditation."
+    }
+  },
+  {
+    "name": "Mur d'acier",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 35",
+      "description": "Une parade supplémentaire par round (seconde réaction réservée à la parade); une seule tentative de parade par attaque."
+    }
+  },
+  {
+    "name": "Nerfs d'acier",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Vous pouvez relancer un test de Force Mentale raté pour éviter ou éliminer un effet d'effroi."
+    }
+  },
+  {
+    "name": "Niveau Psy 1",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Choisissez un nombre de pouvoirs psychiques mineurs égal à la moitié de votre bonus de Force Mentale (arrondi au supérieur). Niveau Psy 1 : 1d10 + bonus de Force Mentale aux jets de Puissance. Spécial : une augmentation ultérieure du bonus de Force Mentale ne donne pas de pouvoirs supplémentaires rétroactivement."
+    }
+  },
+  {
+    "name": "Niveau Psy 2",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 1",
+      "description": "Choisissez un nombre de pouvoirs psychiques mineurs égal à la moitié de votre bonus de Force Mentale (arrondi au supérieur). Niveau Psy 2 : jusqu'à 2d10 + bonus de Force Mentale aux jets de Puissance. Spécial : une augmentation ultérieure du bonus de Force Mentale ne donne pas de pouvoirs supplémentaires rétroactivement."
+    }
+  },
+  {
+    "name": "Niveau Psy 3",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 2",
+      "description": "Choisissez une discipline et gagnez un pouvoir de celle-ci, plus un nombre de pouvoirs mineurs égal à la moitié de votre bonus de Force Mentale (arrondi au supérieur). Niveau Psy 3 : jusqu'à 3d10 + bonus de Force Mentale aux jets de Puissance. Spécial : une augmentation ultérieure du bonus de Force Mentale ne donne pas de pouvoirs supplémentaires rétroactivement."
+    }
+  },
+  {
+    "name": "Niveau Psy 4",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 3",
+      "description": "Gagnez un nombre de pouvoirs de disciplines connues égal à la moitié de votre bonus de Force Mentale et autant de pouvoirs mineurs (arrondi au supérieur), ou une nouvelle discipline et un pouvoir de celle-ci. Niveau Psy 4 : jusqu'à 4d10 + bonus de Force Mentale aux jets de Puissance. Spécial : une augmentation ultérieure du bonus de Force Mentale ne donne pas de pouvoirs supplémentaires rétroactivement."
+    }
+  },
+  {
+    "name": "Niveau Psy 5",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 4",
+      "description": "Gagnez un nombre de pouvoirs de disciplines connues égal à la moitié de votre bonus de Force Mentale (arrondi au supérieur), ou une nouvelle discipline et un pouvoir de celle-ci. Niveau Psy 5 : jusqu'à 5d10 + bonus de Force Mentale aux jets de Puissance. Spécial : une augmentation ultérieure du bonus de Force Mentale ne donne pas de pouvoirs supplémentaires rétroactivement."
+    }
+  },
+  {
+    "name": "Niveau Psy 6",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 5",
+      "description": "Gagnez un nombre de pouvoirs de disciplines connues égal à la moitié de votre bonus de Force Mentale et autant de pouvoirs mineurs (arrondi au supérieur), ou une nouvelle discipline et un pouvoir de celle-ci. Niveau Psy 6 : jusqu'à 6d10 + bonus de Force Mentale aux jets de Puissance. Spécial : une augmentation ultérieure du bonus de Force Mentale ne donne pas de pouvoirs supplémentaires rétroactivement."
+    }
+  },
+  {
+    "name": "Orthoproxy",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Circuit liturgique crânien : +20 aux tests de Force Mentale pour résister au contrôle mental et aux interrogatoires."
+    }
+  },
+  {
+    "name": "Pair (Adeptus Arbites)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (Adeptus Mechanicus)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (Administratum)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (aliénés)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (astropathes)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (classes moyennes)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (Ecclésiarchie)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (hors-monde)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (gouvernement)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (Inquisition)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (militaire)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (mondes sauvages)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (noblesse)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (ouvriers)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (pègre)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (ruches)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Pair (universitaire)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Soc 30",
+      "description": "Bonus de +10 aux tests de Sociabilité lors des interactions avec ce groupe."
+    }
+  },
+  {
+    "name": "Parade de projectiles",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 50",
+      "description": "Vous pouvez utiliser une réaction pour parer une attaque à distance effectuée avec une arme primitive ou de jet."
+    }
+  },
+  {
+    "name": "Paranoïa",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+2 aux jets d'Initiative; le MJ peut effectuer un test de Perception secret pour voir si vous remarquez une menace cachée."
+    }
+  },
+  {
+    "name": "Pas de côté",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 40, Esquive",
+      "description": "Une esquive supplémentaire par round (seconde réaction réservée à l'esquive); une seule tentative d'esquive par attaque."
+    }
+  },
+  {
+    "name": "Pistolero",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CT 40, Combat à deux armes (tir)",
+      "description": "Avec une arme de poing dans chaque main, le malus de combat à deux armes est réduit à -10; aucun malus avec Ambidextre."
+    }
+  },
+  {
+    "name": "Pouvoir psychique (au choix)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Groupe de talents : tous les pouvoirs psychiques. Vous gagnez un pouvoir psychique issu d'une discipline qui vous est connue."
+    }
+  },
+  {
+    "name": "Pouvoir psychique mineur (au choix)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Groupe de talents : tous les pouvoirs psychiques mineurs. Vous gagnez un pouvoir psychique mineur."
+    }
+  },
+  {
+    "name": "Prémonition",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Int 30",
+      "description": "10 minutes de réflexion sur un problème : +10 au test d'Intelligence associé."
+    }
+  },
+  {
+    "name": "Prosanguin",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Autosanguin",
+      "description": "Une fois par 12 heures, après 10 minutes de méditation rituelle, test de Technomaîtrise : réussite = élimine 1d5 points de dégâts; 96-100 = implants surmenés, Autosanguin et Prosanguin inopérants pendant 1 semaine."
+    }
+  },
+  {
+    "name": "Puits de pouvoir",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Niveau Psy 2",
+      "description": "+1 aux jets de Puissance. Peut être pris plusieurs fois, effets cumulatifs."
+    }
+  },
+  {
+    "name": "Purification",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Formation aux armes de base (lance-flammes)",
+      "description": "Les cibles de vos attaques de lance-flammes subissent -20 au test pour éviter d'être touchées."
+    }
+  },
+  {
+    "name": "Quelconque",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Visage passe-partout : -20 aux efforts pour vous remarquer dans la foule ou se souvenir de détails vous concernant."
+    }
+  },
+  {
+    "name": "Rage guerrière",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Frénésie",
+      "description": "Vous pouvez utiliser vos réactions pour parer en Frénésie."
+    }
+  },
+  {
+    "name": "Rage mentale",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Frénésie",
+      "description": "Vous pouvez utiliser vos pouvoirs psychiques en Frénésie."
+    }
+  },
+  {
+    "name": "Réaction rapide",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 40",
+      "description": "Lorsque vous êtes surpris ou victime d'un guet-apens, test d'Agilité pour agir normalement."
+    }
+  },
+  {
+    "name": "Rechargement rapide",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Temps de rechargement réduits de moitié (arrondi à l'inférieur) : demi-action > action gratuite, action complète > demi-action, etc."
+    }
+  },
+  {
+    "name": "Réflexes éclair",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Ajoutez deux fois votre bonus d'Agilité au d10 d'Initiative."
+    }
+  },
+  {
+    "name": "Résistance (chaleur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests visant à résister ou à éviter les effets de ce domaine."
+    }
+  },
+  {
+    "name": "Résistance (froid)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests visant à résister ou à éviter les effets de ce domaine."
+    }
+  },
+  {
+    "name": "Résistance (peur)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests visant à résister ou à éviter les effets de ce domaine."
+    }
+  },
+  {
+    "name": "Résistance (poisons)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests visant à résister ou à éviter les effets de ce domaine."
+    }
+  },
+  {
+    "name": "Résistance (pouvoirs psychiques)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests visant à résister ou à éviter les effets de ce domaine."
+    }
+  },
+  {
+    "name": "Résistance physique",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "E 40",
+      "description": "Les dégâts critiques subis sont réduits de moitié (arrondi au supérieur)."
+    }
+  },
+  {
+    "name": "Résonance binaire",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux actions visant à donner des ordres à des serviteurs, les programmer ou les interroger."
+    }
+  },
+  {
+    "name": "Rite de crainte",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (respirateur)",
+      "description": "Liturgie infrasonore de 2 minutes : tous les humains dans un rayon de 50 m éprouvent terreur et culpabilité et subissent -10 à leur prochain test de compétence (test de Force Mentale pour ignorer). Impossible de parler sur une autre fréquence pendant le rite."
+    }
+  },
+  {
+    "name": "Rite de l'armurier",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (circuit électrotatoué/transformateur de puissance)",
+      "description": "Action complète : test d'Intelligence pour désenrayer un nombre d'armes égal à votre bonus d'Intelligence dans un rayon de 10 m."
+    }
+  },
+  {
+    "name": "Rite de pensée pure",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (circuit céphalique)",
+      "description": "Hémisphère droit remplacé par un cogitateur : immunisé contre la Peur, l'effroi et les effets provoquant des troubles émotionnels; le MJ retire les troubles mentaux non applicables et en attribue de nouveaux."
+    }
+  },
+  {
+    "name": "Rite de peur",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (respirateur)",
+      "description": "Hymne infrasonore de 2 minutes : tous les humains dans un rayon de 50 m vous considèrent comme ayant Peur 1. Impossible de parler sur une autre fréquence pendant le rite."
+    }
+  },
+  {
+    "name": "Sans peur",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Immunisé contre les effets de la Peur et de l'effroi; pour battre en retraite ou quitter le combat, test de Force Mentale requis."
+    }
+  },
+  {
+    "name": "Sens aiguisés (goût)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests liés à ce sens."
+    }
+  },
+  {
+    "name": "Sens aiguisés (odorat)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests liés à ce sens."
+    }
+  },
+  {
+    "name": "Sens aiguisés (ouïe)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests liés à ce sens."
+    }
+  },
+  {
+    "name": "Sens aiguisés (toucher)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests liés à ce sens."
+    }
+  },
+  {
+    "name": "Sens aiguisés (vue)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests liés à ce sens."
+    }
+  },
+  {
+    "name": "Sommeil léger",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Per 30",
+      "description": "Vous êtes considéré comme toujours éveillé pour les tests de Vigilance, la surprise et les réveils précipités."
+    }
+  },
+  {
+    "name": "Souvenirs précis",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Int 30",
+      "description": "Vous vous souvenez automatiquement de tout fait banal ou détail connu; le MJ peut demander un test d'Intelligence pour un détail obscur."
+    }
+  },
+  {
+    "name": "Sprint",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Déplacement complet : +bonus d'Agilité mètres. Course : vitesse doublée pendant 1 round. Deux tours de suite = 1 niveau de Fatigue."
+    }
+  },
+  {
+    "name": "Sur ses gardes",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Vous pouvez user de réactivité (p. 193) au moyen d'une action gratuite."
+    }
+  },
+  {
+    "name": "Talentueux (au choix)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Groupe de talents : toutes les compétences. +10 aux tests de la compétence choisie."
+    }
+  },
+  {
+    "name": "Technoharmonisation",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Int 30",
+      "description": "Désenrayer n'importe quelle arme à feu au contact, au moyen d'une demi-action, une arme par round."
+    }
+  },
+  {
+    "name": "Tir double",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 40, Combat à deux armes (tir)",
+      "description": "Armé de deux armes de poing, action complète pour tirer avec les deux sur un seul test de Capacité de Tir : en cas de succès, les deux tirs touchent."
+    }
+  },
+  {
+    "name": "Tir en mouvement",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CT 40, Ag 40",
+      "description": "Action complète : un déplacement complet et une attaque avec une arme de poing."
+    }
+  },
+  {
+    "name": "Tir en puissance",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CT 40",
+      "description": "+2 dégâts avec les armes à distance."
+    }
+  },
+  {
+    "name": "Tireur chevronné",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CT 40",
+      "description": "Lorsqu'une attaque à distance cause des dégâts critiques, vous infligez +2 dégâts."
+    }
+  },
+  {
+    "name": "Tireur émérite",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CT 30, Formation aux armes de base (deux groupes au choix)",
+      "description": "Vous pouvez utiliser les armes à distance auxquelles vous n'êtes pas formé avec un malus de -10 au lieu de -20."
+    }
+  },
+  {
+    "name": "Tireur hors pair",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CT 30",
+      "description": "Les coups ciblés ne subissent qu'un malus de -10 (au lieu de -20)."
+    }
+  },
+  {
+    "name": "Transcendance levmag",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (transformateur de puissance), Grâce levmag",
+      "description": "Demi-action pour flotter à 20-30 cm du sol pendant 2d10 + bonus d'Endurance minutes, à vitesse de course, en consacrant une demi-action par round à la concentration. Activable en chute : aucun dégât si le rite est actif à l'atterrissage. Deux fois par 12 heures."
+    }
+  },
+  {
+    "name": "Trompe-la-mort",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "FM 40",
+      "description": "En cas d'Hémorragie, vous avez droit à deux jets pour éviter la mort."
+    }
+  },
+  {
+    "name": "Utilisation d'électro-implant",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "Connecté à un point de données via un électro-implant : +10 aux tests de Connaissances générales, Enquête et Technomaîtrise."
+    }
+  },
+  {
+    "name": "Utilisation de mécadendrites (manipulatrices)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (cyberchape/circuit céphalique)",
+      "description": "Entraînement, initiation et hypno-endoctrinement nécessaires pour utiliser ce type de mécadendrite."
+    }
+  },
+  {
+    "name": "Utilisation de mécadendrites (medicae)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (cyberchape/circuit céphalique)",
+      "description": "Entraînement, initiation et hypno-endoctrinement nécessaires pour utiliser ce type de mécadendrite."
+    }
+  },
+  {
+    "name": "Utilisation de mécadendrites (optiques)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (cyberchape/circuit céphalique)",
+      "description": "Entraînement, initiation et hypno-endoctrinement nécessaires pour utiliser ce type de mécadendrite."
+    }
+  },
+  {
+    "name": "Utilisation de mécadendrites (tir)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (cyberchape/circuit céphalique)",
+      "description": "Entraînement, initiation et hypno-endoctrinement nécessaires pour utiliser ce type de mécadendrite."
+    }
+  },
+  {
+    "name": "Utilisation de mécadendrites (utilitaires)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Technoprêtre (cyberchape/circuit céphalique)",
+      "description": "Entraînement, initiation et hypno-endoctrinement nécessaires pour utiliser ce type de mécadendrite."
+    }
+  },
+  {
+    "name": "Vigoureux",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "E 40",
+      "description": "Lorsque vous devriez être assommé, test d'Endurance pour ignorer l'effet."
+    }
+  },
+  {
+    "name": "Visée indépendante",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "CT 40",
+      "description": "En utilisant deux armes en même temps, vous pouvez tirer sur deux cibles séparées de plus de 10 m."
+    }
+  },
+  {
+    "name": "Vivacité",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 30",
+      "description": "Vous pouvez vous relever au moyen d'une action gratuite."
+    }
+  },
+  {
+    "name": "Voix troublante",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "-",
+      "description": "+10 aux tests d'Interrogatoire et d'Intimidation s'appuyant sur la voix; -10 aux tests de Sociabilité face aux individus que vos manières rebutent (psykers, enfants, grox nerveux.)."
+    }
+  },
+  {
+    "name": "Entraînement au bolter (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Formation aux armes (bolts)",
+      "description": "Deathwatch livre de base p. 114. Nom original : Bolter Drill. Tier 2, aptitude : Offence. Gagne un tir supplémentaire en tirant avec une arme à bolts en rafale courte ou longue."
+    }
+  },
+  {
+    "name": "Devoir jusqu'à la mort (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "FM 45",
+      "description": "Deathwatch livre de base p. 117. Nom original : Duty unto Death. Tier 3, aptitude : Toughness. Ignore la Fatigue, les blessures et l'assommement en combat."
+    }
+  },
+  {
+    "name": "Mur d'acier (DW)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "talent",
+    "system": {
+      "prerequisites": "Ag 35",
+      "description": "Deathwatch livre de base p. 130. Nom original : Wall of Steel. Tier 3, aptitude : Defence. Gagne une parade supplémentaire."
     }
   }
 ]

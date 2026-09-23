@@ -1,26 +1,2426 @@
 [
   {
-    "name": "Nom de l'arme à distance",
+    "name": "Bolter (DH)",
     "img": "icons/svg/item-bag.svg",
     "type": "rangedWeapon",
     "system": {
       "group": "base",
-      "damageFormula": "1d10",
+      "damageFormula": "1d10+5",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 90,
+      "fireModes": "S/2/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 24,
+        "max": 24
+      },
+      "weight": 7,
+      "price": 500,
+      "availability": "tresRare",
+      "description": "Arme à bolts (base). Requiert Formation aux armes de base (bolts). Tire des projectiles autopropulsés à masse réactive qui explosent après avoir pénétré la cible. Emblématique de l'Imperium, très rare et coûteuse, souvent transmise de vétéran en vétéran."
+    }
+  },
+  {
+    "name": "Bolter lourd (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "2d10",
+      "damageType": "explosif",
+      "penetration": 5,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 120,
+      "fireModes": "-/-/10",
+      "reload": "2AC",
+      "ammo": {
+        "current": 60,
+        "max": 60
+      },
+      "weight": 40,
+      "price": 2000,
+      "availability": "tresRare",
+      "description": "Arme à bolts (lourde). Requiert Formation aux armes lourdes (bolts). Version de soutien du bolter, au calibre bien plus gros, efficace à plus longue portée et contre les véhicules blindés. Rare hors du cadre militaire."
+    }
+  },
+  {
+    "name": "Pistolet bolter (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+5",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 30,
+      "fireModes": "S/2/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 8,
+        "max": 8
+      },
+      "weight": 3.5,
+      "price": 250,
+      "availability": "rare",
+      "description": "Arme à bolts (poing). Requiert Formation aux armes de poing (bolts). Signe de haut rang, coûteux à entretenir et à alimenter, mais d'une puissance destructrice incontestable."
+    }
+  },
+  {
+    "name": "Fuseur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "2d10+4",
+      "damageType": "energie",
+      "penetration": 12,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 20,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 5,
+        "max": 5
+      },
+      "weight": 8,
+      "price": 4000,
+      "availability": "rare",
+      "description": "Arme à fusion (base). Requiert Formation aux armes de base (fusion). Portée courte mais puissance dévastatrice, capable de faire fondre un blindage de char; sert aussi à éventrer des cloisons. Variante à citerne dorsale : autonomie doublée, +6 kg, +100 trônes."
+    }
+  },
+  {
+    "name": "Pistolet Inferno (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "2d10+4",
+      "damageType": "energie",
+      "penetration": 12,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 10,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 3,
+        "max": 3
+      },
+      "weight": 2.5,
+      "price": 7500,
+      "availability": "tresRare",
+      "description": "Arme à fusion (poing). Requiert Formation aux armes de poing (fusion). Technologie difficile à reproduire, arme exceptionnellement rare et coûteuse; en posséder un suggère un haut statut."
+    }
+  },
+  {
+    "name": "Automatique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+3",
       "damageType": "impact",
       "penetration": 0,
       "bonus": 0,
-      "attributes": "Tags séparés par des virgules (ex. Déchirante, Fiable)",
-      "range": 100,
-      "fireModes": "Simple/Rafale(3)/Auto(10)",
+      "attributes": "-",
+      "range": 30,
+      "fireModes": "S/3/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 9,
+        "max": 9
+      },
+      "weight": 1.5,
+      "price": 50,
+      "availability": "repandu",
+      "description": "Arme à munitions solides (poing). Requiert Formation aux armes de poing (MS). Aussi courant que le revolver, avec plus de modes de tir et une meilleure autonomie, au détriment de la fiabilité."
+    }
+  },
+  {
+    "name": "Canon de poing (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 35,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 5,
+        "max": 5
+      },
+      "weight": 3,
+      "price": 65,
+      "availability": "moyen",
+      "description": "Arme à munitions solides (poing). Requiert Formation aux armes de poing (MS). Variante massive du revolver tirant de gros projectiles aux détonations intimidantes. Fort recul : malus de -10 en Capacité de Tir si utilisé à une seule main."
+    }
+  },
+  {
+    "name": "Fusil (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Dispersion, fiable",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 2,
+        "max": 2
+      },
+      "weight": 5,
+      "price": 60,
+      "availability": "commun",
+      "description": "Arme à munitions solides (base). Requiert Formation aux armes de base (MS). Fusil à canon double, productible même par les usines les moins avancées; puissance d'arrêt à courte portée idéale en ville et à bord des vaisseaux."
+    }
+  },
+  {
+    "name": "Fusil à pompe (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Dispersion",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 8,
+        "max": 8
+      },
+      "weight": 5,
+      "price": 75,
+      "availability": "moyen",
+      "description": "Arme à munitions solides (base). Requiert Formation aux armes de base (MS). Prisé des agents de la loi : la puissance du fusil à canon double avec une meilleure autonomie de tir."
+    }
+  },
+  {
+    "name": "Fusil à pompe de combat (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Dispersion",
+      "range": 30,
+      "fireModes": "S/3/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 18,
+        "max": 18
+      },
+      "weight": 6.5,
+      "price": 150,
+      "availability": "peuCourant",
+      "description": "Arme à munitions solides (base). Requiert Formation aux armes de base (MS). Fusil à pompe automatique conçu pour la guerre, parfois alimenté par chargeur circulaire; redoutable à courte portée."
+    }
+  },
+  {
+    "name": "Fusil d'assaut (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 90,
+      "fireModes": "S/3/10",
       "reload": "1AC",
       "ammo": {
         "current": 30,
         "max": 30
       },
+      "weight": 3.5,
+      "price": 100,
+      "availability": "moyen",
+      "description": "Arme à munitions solides (base). Requiert Formation aux armes de base (MS). Bon marché, robuste, disponible partout ainsi que ses munitions; répandu dans tout l'Imperium."
+    }
+  },
+  {
+    "name": "Fusil de chasse (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Précise",
+      "range": 150,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 5,
+        "max": 5
+      },
+      "weight": 5,
+      "price": 100,
+      "availability": "peuCourant",
+      "description": "Arme à munitions solides (base). Requiert Formation aux armes de base (MS). Arme des trappeurs et des riches chasseurs, d'une grande précision entre des mains entraînées."
+    }
+  },
+  {
+    "name": "Mitrailleuse lourde (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 3,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 120,
+      "fireModes": "-/-/10",
+      "reload": "2AC",
+      "ammo": {
+        "current": 200,
+        "max": 200
+      },
+      "weight": 35,
+      "price": 750,
+      "availability": "peuCourant",
+      "description": "Arme à munitions solides (lourde). Requiert Formation aux armes lourdes (MS). Arme de soutien répandue sur les mondes à faible niveau technologique et dans les gangs des ruches. Variante à chargeur circulaire : autonomie réduite à 40, +100 trônes, rechargement en 1 action complète."
+    }
+  },
+  {
+    "name": "Pistolet-mitrailleur (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+2",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 30,
+      "fireModes": "S/-/6",
+      "reload": "1AC",
+      "ammo": {
+        "current": 18,
+        "max": 18
+      },
+      "weight": 2.5,
+      "price": 75,
+      "availability": "commun",
+      "description": "Arme à munitions solides (poing). Requiert Formation aux armes de poing (MS). Arme compacte prisée des membres de gang et des hors-la-loi."
+    }
+  },
+  {
+    "name": "Revolver (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+3",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fiable",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
       "weight": 1,
+      "price": 40,
+      "availability": "repandu",
+      "description": "Arme à munitions solides (poing). Requiert Formation aux armes de poing (MS). Conception ancienne et éprouvée, arme d'appoint idéale."
+    }
+  },
+  {
+    "name": "Lance-plasma (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+6",
+      "damageType": "energie",
+      "penetration": 6,
+      "bonus": 0,
+      "attributes": "Recharge, surchauffe",
+      "range": 90,
+      "fireModes": "S/2/-",
+      "reload": "8AC",
+      "ammo": {
+        "current": 20,
+        "max": 20
+      },
+      "weight": 11,
+      "price": 3000,
+      "availability": "tresRare",
+      "description": "Arme à plasma (base). Requiert Formation aux armes de base (plasma). Savoir-faire quasi perdu; la plupart des exemplaires ont des centaines ou des milliers d'années. Variante à réservoir dorsal : autonomie doublée, +6 kg, +100 trônes."
+    }
+  },
+  {
+    "name": "Pistolet à plasma (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+6",
+      "damageType": "energie",
+      "penetration": 6,
+      "bonus": 0,
+      "attributes": "Recharge, surchauffe",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "4AC",
+      "ammo": {
+        "current": 10,
+        "max": 10
+      },
+      "weight": 4,
+      "price": 4000,
+      "availability": "tresRare",
+      "description": "Arme à plasma (poing). Requiert Formation aux armes de poing (plasma). Peu d'armes de poing sont aussi meurtrières; permet d'abattre presque n'importe quel adversaire à courte portée, au prix du risque de surchauffe."
+    }
+  },
+  {
+    "name": "Fusil à aiguilles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Précise, toxique",
+      "range": 180,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 2,
+      "price": 1000,
+      "availability": "tresRare",
+      "description": "Arme exotique (base). Requiert Formation aux armes exotiques (fusil à aiguilles). Arme de sniper silencieuse et sans flamme de bouche, alliant portée, discrétion et puissance; presque inutile contre les cibles lourdement protégées."
+    }
+  },
+  {
+    "name": "Lance-toile (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Immobilisante, zone d'effet (5)",
+      "range": 50,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 8,
+      "price": 1800,
+      "availability": "rare",
+      "description": "Arme exotique (base). Requiert Formation aux armes exotiques (lance-toile). N'inflige pas de dégâts : projette une toile collante qui peut maîtriser un petit groupe par tir, utilisée pour le maintien de l'ordre. La toile se décompose au bout de 1d5 heures."
+    }
+  },
+  {
+    "name": "Pistolet à aiguilles (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Précise, toxique",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 1.5,
+      "price": 1250,
+      "availability": "tresRare",
+      "description": "Arme exotique (poing). Requiert Formation aux armes exotiques (pistolet à aiguilles). Un laser à basse puissance propulse des échardes cristallines enduites de toxines; silencieux et sans flamme de bouche, idéal pour les assassins."
+    }
+  },
+  {
+    "name": "Pistolet lance-toile (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Immobilisante",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 3.5,
+      "price": 1200,
+      "availability": "rare",
+      "description": "Arme exotique (poing). Requiert Formation aux armes exotiques (pistolet lance-toile). N'inflige pas de dégâts : projette une toile collante et quasi incassable. En plus des effets de l'attribut immobilisante, chaque test d'Agilité ou de Force raté pour se libérer inflige un malus cumulatif de -10 aux tests suivants; au-delà de -30, chaque nouvel échec inflige 1d5+1 dégâts. La toile se décompose au bout de 1d10 rounds."
+    }
+  },
+  {
+    "name": "Lance-flammes (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "energie",
+      "penetration": 3,
+      "bonus": 0,
+      "attributes": "Lance-flammes",
+      "range": 20,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 3,
+        "max": 3
+      },
+      "weight": 6,
+      "price": 300,
+      "availability": "peuCourant",
+      "description": "Arme lance-flammes (base). Requiert Formation aux armes de base (lance-flammes). Crache un cône de prométhéum enflammé sans distinction entre les cibles; tout indiqué contre les ennemis à couvert ou en espace confiné. Variante à citerne dorsale : autonomie doublée, +6 kg, +100 trônes."
+    }
+  },
+  {
+    "name": "Pistolet lance-flammes (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+4",
+      "damageType": "energie",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Lance-flammes",
+      "range": 10,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 2,
+        "max": 2
+      },
+      "weight": 3.5,
+      "price": 200,
+      "availability": "rare",
+      "description": "Arme lance-flammes (poing). Requiert Formation aux armes de poing (lance-flammes). Prévu pour le tir antipersonnel rapproché, où sa portée très courte et sa faible précision importent peu."
+    }
+  },
+  {
+    "name": "Canon laser (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "5d10+10",
+      "damageType": "energie",
+      "penetration": 10,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 300,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 5,
+        "max": 5
+      },
+      "weight": 55,
+      "price": 5000,
+      "availability": "tresRare",
+      "description": "Arme laser (lourde). Requiert Formation aux armes lourdes (laser). Alimenté par d'énormes cellules énergétiques à remplacer régulièrement, souvent servi par deux servants ou plus; transperce les blindages même à très longue distance."
+    }
+  },
+  {
+    "name": "Carabine laser (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+2",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fiable",
+      "range": 60,
+      "fireModes": "S/2/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 40,
+        "max": 40
+      },
+      "weight": 3,
+      "price": 75,
+      "availability": "commun",
+      "description": "Arme laser (base). Requiert Formation aux armes de base (laser). Version raccourcie du fusil laser, autonomie et portée réduites mais maniement plus facile, crosse souvent pliable. Tir à une main : malus de -10 seulement au lieu du -20 habituel des armes de base."
+    }
+  },
+  {
+    "name": "Fusil laser (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fiable",
+      "range": 100,
+      "fireModes": "S/3/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 60,
+        "max": 60
+      },
+      "weight": 4,
+      "price": 75,
+      "availability": "commun",
+      "description": "Arme laser (base). Requiert Formation aux armes de base (laser). Présent sur presque tous les mondes de l'Imperium; solide, fiable, arme de choix des fidèles de l'Empereur comme de leurs ennemis. Les cellules énergétiques peuvent être rechargées sur la plupart des sources d'alimentation (test de Techno-maîtrise, plusieurs heures)."
+    }
+  },
+  {
+    "name": "Fusil laser long (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "energie",
+      "penetration": 1,
+      "bonus": 0,
+      "attributes": "Fiable, précise",
+      "range": 150,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 40,
+        "max": 40
+      },
+      "weight": 4.5,
+      "price": 100,
+      "availability": "peuCourant",
+      "description": "Arme laser (base). Requiert Formation aux armes de base (laser). Version de sniper du fusil laser, au canon allongé pour plus de portée et de précision; peu adaptée au combat rapproché."
+    }
+  },
+  {
+    "name": "Pistolet laser (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+2",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fiable",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 30,
+        "max": 30
+      },
+      "weight": 1.5,
+      "price": 50,
+      "availability": "commun",
+      "description": "Arme laser (poing). Requiert Formation aux armes de poing (laser). Arme légère, compacte et fiable, courante dans tout l'Imperium, des héritages de famille ciselés aux versions rustiques des gangs."
+    }
+  },
+  {
+    "name": "Arbalète (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Primitive",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 3,
+      "price": 10,
+      "availability": "commun",
+      "description": "Arme primitive (base). Requiert Formation aux armes de base (primitives). Moins répandue que l'arc à cause de ses parties mécaniques, mais tout aussi redoutable."
+    }
+  },
+  {
+    "name": "Arbalète de poing (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Primitive",
+      "range": 15,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 1,
+      "price": 200,
+      "availability": "rare",
+      "description": "Arme primitive (poing). Requiert Formation aux armes de poing (primitives). Même impact qu'une arbalète mais utilisable à une main, à portée réduite; démontable et silencieuse, arme de choix des assassins."
+    }
+  },
+  {
+    "name": "Arc (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fiable, primitive",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "1/2AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 2,
+      "price": 10,
+      "availability": "commun",
+      "description": "Arme primitive (base). Requiert Formation aux armes de base (primitives). Rechargement : une demi-action. Arme silencieuse et fiable, appréciée des assassins et des gangs même sur les mondes avancés."
+    }
+  },
+  {
+    "name": "Bolas (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Immobilisante, imprécise, primitive",
+      "range": 10,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 1.5,
+      "price": 10,
+      "availability": "moyen",
+      "description": "Arme primitive (jet). Requiert Formation aux armes de jet (primitives). N'inflige pas de dégâts : les boules reliées par des cordes emmêlent la cible. Employée par les chasseurs de primes et les agents de la loi."
+    }
+  },
+  {
+    "name": "Fronde (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10-2",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Primitive",
+      "range": 15,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 10,
+      "availability": "repandu",
+      "description": "Arme primitive (base). Requiert Formation aux armes de base (primitives). Difficile à maîtriser mais projette n'importe quoi, du caillou à la grenade : dans ce cas, remplacer les dégâts par les effets de la grenade en conservant la portée de la fronde."
+    }
+  },
+  {
+    "name": "Mousquet (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+2",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Imprécise, peu fiable, primitive",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "5AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 7,
+      "price": 30,
+      "availability": "commun",
+      "description": "Arme primitive (base). Requiert Formation aux armes de base (primitives). Un seul tir avant rechargement, sujet aux incidents; ravageur contre les cibles sans armure."
+    }
+  },
+  {
+    "name": "Pistolet à poudre noire (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+2",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Imprécise, peu fiable, primitive",
+      "range": 15,
+      "fireModes": "S/-/-",
+      "reload": "3AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 4,
+      "price": 10,
+      "availability": "commun",
+      "description": "Arme primitive (poing). Requiert Formation aux armes de poing (primitives). Du pistolet d'apparat des nobles au simple tuyau rempli de poudre des sous-ruches."
+    }
+  },
+  {
+    "name": "Grenade antichar (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "2d10+4",
+      "damageType": "explosif",
+      "penetration": 6,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 0,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 50,
+      "availability": "rare",
+      "description": "Grenade (portée : BF x 3 mètres). Lancer une grenade ne requiert aucun talent (test de Capacité de Tir normal). Dite grenade krak : explosif condensé pour éventrer bunkers et blindages; pas de zone d'effet, peu adaptée à l'antipersonnel. Utilisable aussi dans un lance-grenades ou un lance-roquettes."
+    }
+  },
+  {
+    "name": "Grenade aveuglante (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fumigène",
+      "range": 0,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 25,
+      "availability": "peuCourant",
+      "description": "Grenade (portée : BF x 3 mètres). Lancer une grenade ne requiert aucun talent. Disperse fumée dense, parasites infrarouges et paillettes de brouillage : même les senseurs ne voient pas au travers. Nuage d'environ 3 m de large et 2 m de haut pendant 3 rounds par temps calme."
+    }
+  },
+  {
+    "name": "Grenade à fragmentation (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "2d10",
+      "damageType": "explosif",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Zone d'effet (4)",
+      "range": 0,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 10,
+      "availability": "commun",
+      "description": "Grenade (portée : BF x 3 mètres). Lancer une grenade ne requiert aucun talent. Charge explosive et fragments de métal, enveloppe striée pour l'éparpillement des éclats. Utilisable aussi dans un lance-grenades ou un lance-roquettes."
+    }
+  },
+  {
+    "name": "Grenade hallucinogène (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 0,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 40,
+      "availability": "rare",
+      "description": "Grenade (portée : BF x 3 mètres). Dégâts : spécial. Quiconque dans un rayon de 10 m du point d'impact doit réussir un test d'Endurance Assez difficile (-10) ou subir des hallucinations pendant 1d10 rounds : chaque tour, d100 : 1-50 agit normalement, 51-75 hurle et court au hasard, 76-100 attaque la personne la plus proche. Règle optionnelle : Table 5-8 effets des hallucinogènes."
+    }
+  },
+  {
+    "name": "Grenade incendiaire (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "1d10+3",
+      "damageType": "energie",
+      "penetration": 6,
+      "bonus": 0,
+      "attributes": "Zone d'effet (3)",
+      "range": 0,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 5,
+      "availability": "repandu",
+      "description": "Grenade (portée : BF x 3 mètres). Récipient fragile rempli de liquide combustible avec une mèche. Une cible touchée doit réussir un test d'Agilité pour éviter de prendre feu."
+    }
+  },
+  {
+    "name": "Grenade photonique (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 0,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 60,
+      "availability": "peuCourant",
+      "description": "Grenade (portée : BF x 3 mètres). Dégâts : spécial. Libère une lumière comparable à une étoile miniature : quiconque dans un rayon de 15 m du point d'impact doit réussir un test d'Endurance ou être aveuglé pendant 1d5 rounds."
+    }
+  },
+  {
+    "name": "Lance-grenades (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 60,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 9,
+      "price": 500,
+      "availability": "peuCourant",
+      "description": "Lanceur (base). Requiert Formation aux armes de base (lanceurs). Dégâts, pénétration et attributs dépendent de la grenade tirée. Propulse les grenades par gaz compressé, en tir direct ou en cloche contre des adversaires hors de vue."
+    }
+  },
+  {
+    "name": "Lance-roquettes (DH)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 120,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 15,
+      "price": 1200,
+      "availability": "rare",
+      "description": "Lanceur (lourde). Requiert Formation aux armes lourdes (lanceurs). Dégâts, pénétration et attributs dépendent du projectile tiré (toute grenade peut y être adaptée). Plus puissant que le lance-grenades, atteint avec précision une cible à plusieurs centaines de mètres."
+    }
+  },
+  {
+    "name": "Canne bolter (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+5",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "range": 30,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 3,
       "price": 0,
-      "availability": "Banal",
-      "description": "Description libre de l'arme."
+      "availability": "tresRare",
+      "description": "Into the Storm p. 114. Nom original : Bolter Cane. Famille : bolts."
+    }
+  },
+  {
+    "name": "Carabine bolter Ceres (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+5",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Fiable, Déchirante",
+      "range": 90,
+      "fireModes": "S/2/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 12,
+        "max": 12
+      },
+      "weight": 5,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Hostile Acquisitions p. 50. Nom original : Ceres Bolt Carbine. Famille : bolts."
+    }
+  },
+  {
+    "name": "Pistolet bolter Ceres (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+5",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "range": 30,
+      "fireModes": "S/2/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 8,
+        "max": 8
+      },
+      "weight": 3.5,
+      "price": 0,
+      "availability": "rare",
+      "description": "Rogue Trader livre de base p. 118. Nom original : Ceres Bolt Pistol. Famille : bolts."
+    }
+  },
+  {
+    "name": "Condemnor (bolter) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+5",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Sanctifiée, Déchirante",
+      "range": 100,
+      "fireModes": "S/2/3",
+      "reload": "2AC",
+      "ammo": {
+        "current": 24,
+        "max": 24
+      },
+      "weight": 7.5,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Faith and Coin p. 82. Nom original : Condemnor (Bolt). Famille : bolts."
+    }
+  },
+  {
+    "name": "Condemnor (arbalète) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Précise, Sanctifiée",
+      "range": 45,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Rogue Trader (page non indiquée). Nom original : Condemnor (Crossbow). Famille : bolts."
+    }
+  },
+  {
+    "name": "Pistolet bolter de Footfall (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+4",
+      "damageType": "explosif",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Déchirante, Peu fiable",
+      "range": 25,
+      "fireModes": "S/2/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 4.5,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 50. Nom original : Footfall Bolt Pistol. Famille : bolts."
+    }
+  },
+  {
+    "name": "Bolter de Footfall (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "explosif",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Déchirante, Peu fiable",
+      "range": 80,
+      "fireModes": "S/3/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 18,
+        "max": 18
+      },
+      "weight": 8,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 50. Nom original : Footfall Boltgun. Famille : bolts."
+    }
+  },
+  {
+    "name": "Bolter Locke (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+5",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "range": 90,
+      "fireModes": "S/3/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 24,
+        "max": 24
+      },
+      "weight": 7,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Rogue Trader livre de base p. 118. Nom original : Locke Bolter. Famille : bolts."
+    }
+  },
+  {
+    "name": "Bolter Perinetus \"Solo\" Mark II (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+5",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Précise, Déchirante, Fiable",
+      "range": 100,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 8,
+        "max": 8
+      },
+      "weight": 7,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 114. Nom original : Perinetus-Pattern \"Solo\" MarkII Boltgun. Famille : bolts."
+    }
+  },
+  {
+    "name": "Bolter relique (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+9",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Fiable, Sanctifiée, Déchirante",
+      "range": 120,
+      "fireModes": "S/3/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 30,
+        "max": 30
+      },
+      "weight": 10,
+      "price": 0,
+      "availability": "quasiUnique",
+      "description": "Hostile Acquisitions p. 50. Nom original : Relic Boltgun. Famille : bolts."
+    }
+  },
+  {
+    "name": "Pistolet bolter Sacristan (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+6",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "range": 30,
+      "fireModes": "S/2/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 3.5,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Faith and Coin p. 82. Nom original : Sacristan Bolt Pistol. Famille : bolts."
+    }
+  },
+  {
+    "name": "Bolter Scourge (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+5",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Fiable, Déchirante",
+      "range": 90,
+      "fireModes": "S/3/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 24,
+        "max": 24
+      },
+      "weight": 9,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Faith and Coin p. 82. Nom original : Scourge Pattern Bolter. Famille : bolts."
+    }
+  },
+  {
+    "name": "Bolter lourd Solar (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "1d10+7",
+      "damageType": "explosif",
+      "penetration": 5,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "range": 120,
+      "fireModes": "-/-/10",
+      "reload": "1AC",
+      "ammo": {
+        "current": 60,
+        "max": 60
+      },
+      "weight": 40,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Rogue Trader livre de base p. 118. Nom original : Solar Heavy Bolter. Famille : bolts."
+    }
+  },
+  {
+    "name": "Gantelet d'assaut (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 20,
+      "fireModes": "S/-/8",
+      "reload": "4AC",
+      "ammo": {
+        "current": 24,
+        "max": 24
+      },
+      "weight": 3,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 121. Nom original : Assault Gauntlet. Famille : exotiques."
+    }
+  },
+  {
+    "name": "Lance-toile lourd (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "-",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Zone d'effet (9), Immobilisante (3)",
+      "range": 70,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 3,
+        "max": 3
+      },
+      "weight": 14,
+      "price": 0,
+      "availability": "rare",
+      "description": "Into the Storm p. 121. Nom original : Heavy Webber. Famille : exotiques."
+    }
+  },
+  {
+    "name": "Canon à foudre (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "2d5+4",
+      "damageType": "energie",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Surchauffe, Décharge, Spécial",
+      "range": 60,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 2,
+        "max": 2
+      },
+      "weight": 0,
+      "price": 0,
+      "availability": "quasiUnique",
+      "description": "Into the Storm p. 121. Nom original : Lightning Cannon. Famille : exotiques."
+    }
+  },
+  {
+    "name": "Canon Meritech (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "2d10+4",
+      "damageType": "explosif",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Zone d'effet (1)",
+      "range": 15,
+      "fireModes": "S/-/-",
+      "reload": "3AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 0.5,
+      "price": 0,
+      "availability": "unique",
+      "description": "Into the Storm p. 121. Nom original : Meritech Cannon. Famille : exotiques."
+    }
+  },
+  {
+    "name": "Lance-épines (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Surchauffe, Déchirante",
+      "range": 50,
+      "fireModes": "S/-/6",
+      "reload": "2AC",
+      "ammo": {
+        "current": 50,
+        "max": 50
+      },
+      "weight": 5,
+      "price": 0,
+      "availability": "quasiUnique",
+      "description": "Into the Storm p. 121. Nom original : Quill Blaster. Famille : exotiques."
+    }
+  },
+  {
+    "name": "Lanceur de toile-rasoir (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "2d10+4",
+      "damageType": "penetrant",
+      "penetration": 5,
+      "bonus": 0,
+      "attributes": "Zone d'effet (1), Déchirante",
+      "range": 10,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 3,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Into the Storm p. 121. Nom original : Razorweb Launcher. Famille : exotiques."
+    }
+  },
+  {
+    "name": "Fusil à roquettes (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+5",
+      "damageType": "impact",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Déchirante",
+      "range": 80,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 4,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 121. Nom original : Rocketfire Gun. Famille : exotiques."
+    }
+  },
+  {
+    "name": "Fusil sonique (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "explosif",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Déchirante, Décharge",
+      "range": 30,
+      "fireModes": "S/2/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 8,
+        "max": 8
+      },
+      "weight": 3.5,
+      "price": 0,
+      "availability": "rare",
+      "description": "Into the Storm p. 121. Nom original : Sonic Rifle. Famille : exotiques."
+    }
+  },
+  {
+    "name": "Lance-flammes à impulsion (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "energie",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Lance-flammes, Recharge",
+      "range": 40,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 7,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 50. Nom original : Flameburst. Famille : lance-flammes."
+    }
+  },
+  {
+    "name": "Pistolet de duel Belasco (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+5",
+      "damageType": "energie",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Précise",
+      "range": 45,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 1.5,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Rogue Trader livre de base p. 119. Nom original : Belasco Dueling Pistol. Famille : laser."
+    }
+  },
+  {
+    "name": "Pistolet Clovis Twist (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+4",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Peu fiable",
+      "range": 20,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Faith and Coin p. 81. Nom original : Clovis Twist Pistol. Famille : laser."
+    }
+  },
+  {
+    "name": "Gantelets laser (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+4",
+      "damageType": "energie",
+      "penetration": 1,
+      "bonus": 0,
+      "attributes": "Fiable",
+      "range": 50,
+      "fireModes": "S/4/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 20,
+        "max": 20
+      },
+      "weight": 3,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Rogue Trader livre de base p. 119. Nom original : Las Gauntlets. Famille : laser."
+    }
+  },
+  {
+    "name": "Carabine laser Locke (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fiable",
+      "range": 60,
+      "fireModes": "S/2/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 40,
+        "max": 40
+      },
+      "weight": 2.5,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Rogue Trader livre de base p. 119. Nom original : Locke Lascarbine. Famille : laser."
+    }
+  },
+  {
+    "name": "Fusil infernal Lucius (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "energie",
+      "penetration": 7,
+      "bonus": 0,
+      "attributes": "Abattage (2)",
+      "range": 110,
+      "fireModes": "S/3/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 40,
+        "max": 40
+      },
+      "weight": 4,
+      "price": 0,
+      "availability": "rare",
+      "description": "Rogue Trader livre de base p. 119. Nom original : Lucius Hellgun. Famille : laser."
+    }
+  },
+  {
+    "name": "Pistolet infernal Lucius (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+4",
+      "damageType": "energie",
+      "penetration": 7,
+      "bonus": 0,
+      "attributes": "Abattage (2)",
+      "range": 35,
+      "fireModes": "S/2/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 30,
+        "max": 30
+      },
+      "weight": 6,
+      "price": 0,
+      "availability": "rare",
+      "description": "Rogue Trader livre de base p. 119. Nom original : Lucius Hellpistol. Famille : laser."
+    }
+  },
+  {
+    "name": "Pistolet laser Mark IV \"Dervish\" (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+3",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fiable",
+      "range": 25,
+      "fireModes": "S/4/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 20,
+        "max": 20
+      },
+      "weight": 1.5,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Into the Storm p. 114. Nom original : Mark IV \"Dervish\". Famille : laser."
+    }
+  },
+  {
+    "name": "Fusil laser d'assaut Merovech (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fiable",
+      "range": 50,
+      "fireModes": "S/-/5",
+      "reload": "2AC",
+      "ammo": {
+        "current": 120,
+        "max": 120
+      },
+      "weight": 4.5,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Into the Storm p. 114. Nom original : Merovech Pattern Assault Lasgun. Famille : laser."
+    }
+  },
+  {
+    "name": "Fusil laser Persuader (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+2",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Imprécise",
+      "range": 40,
+      "fireModes": "S/3/10",
+      "reload": "1AC",
+      "ammo": {
+        "current": 30,
+        "max": 30
+      },
+      "weight": 3.5,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Faith and Coin p. 81. Nom original : Persuader Lasgun. Famille : laser."
+    }
+  },
+  {
+    "name": "Fusil laser long \"Retribution\" (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Précise",
+      "range": 90,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 10,
+        "max": 10
+      },
+      "weight": 4,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Hostile Acquisitions p. 50. Nom original : Retribution' Long-las. Famille : laser."
+    }
+  },
+  {
+    "name": "Fusil laser à dispersion (shotlas) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "energie",
+      "penetration": 1,
+      "bonus": 0,
+      "attributes": "Dispersion",
+      "range": 20,
+      "fireModes": "S/3/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 40,
+        "max": 40
+      },
+      "weight": 4,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 50. Nom original : Shotlas. Famille : laser. Portée maximale 40 m."
+    }
+  },
+  {
+    "name": "Pistolet laser à rafales (stutter-las) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+2",
+      "damageType": "energie",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Imprécise",
+      "range": 35,
+      "fireModes": "S/-/5",
+      "reload": "1AC",
+      "ammo": {
+        "current": 25,
+        "max": 25
+      },
+      "weight": 2,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Hostile Acquisitions p. 50. Nom original : Stutter-las. Famille : laser."
+    }
+  },
+  {
+    "name": "Découpeur thermique (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "2d10+6",
+      "damageType": "energie",
+      "penetration": 10,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 20,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 5,
+        "max": 5
+      },
+      "weight": 40,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Stars of Inequity p. 84. Nom original : Thermal Cutter. Famille : laser."
+    }
+  },
+  {
+    "name": "Fuseur à faisceau (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "2d10+12",
+      "damageType": "energie",
+      "penetration": 13,
+      "bonus": 0,
+      "attributes": "Fusion, Volatile",
+      "range": 40,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 9,
+      "price": 0,
+      "availability": "tresRare",
+      "description": "Into the Storm p. 114. Nom original : Beamer Meltagun. Famille : fusion."
+    }
+  },
+  {
+    "name": "Découpeur à fusion (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "2d10+12",
+      "damageType": "energie",
+      "penetration": 13,
+      "bonus": 0,
+      "attributes": "Imprécise, Fusion, Dispersion, Volatile",
+      "range": 5,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 5,
+        "max": 5
+      },
+      "weight": 8,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 50. Nom original : Melta Cutter. Famille : fusion."
+    }
+  },
+  {
+    "name": "Multi-fuseur (Mars) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "2d10+17",
+      "damageType": "energie",
+      "penetration": 13,
+      "bonus": 0,
+      "attributes": "Zone d'effet (1), Fusion, Volatile",
+      "range": 60,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 10,
+        "max": 10
+      },
+      "weight": 40,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Rogue Trader livre de base p. 120. Nom original : Multi-Melta (Mars). Famille : fusion."
+    }
+  },
+  {
+    "name": "Lance-plasma Clovis (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+5",
+      "damageType": "energie",
+      "penetration": 6,
+      "bonus": 0,
+      "attributes": "Maximale, Surchauffe",
+      "range": 60,
+      "fireModes": "S/3/5",
+      "reload": "5AC",
+      "ammo": {
+        "current": 40,
+        "max": 40
+      },
+      "weight": 20,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Into the Storm p. 114. Nom original : Clovis Plasma Gun. Famille : plasma."
+    }
+  },
+  {
+    "name": "Pistolet à plasma Wrath (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+8",
+      "damageType": "energie",
+      "penetration": 6,
+      "bonus": 0,
+      "attributes": "Précise, Maximale, Surchauffe",
+      "range": 40,
+      "fireModes": "S/-/-",
+      "reload": "3AC",
+      "ammo": {
+        "current": 8,
+        "max": 8
+      },
+      "weight": 5,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Into the Storm p. 114. Nom original : Wrath Plasma Pistol. Famille : plasma."
+    }
+  },
+  {
+    "name": "Fusil de précision \"Absolution\" (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Précise",
+      "range": 220,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 4,
+      "price": 0,
+      "availability": "rare",
+      "description": "Into the Storm p. 114. Nom original : Absolution' Sniper Rifle. Famille : MS."
+    }
+  },
+  {
+    "name": "Arme à feu civile (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 60,
+      "fireModes": "S/2/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 6,
+        "max": 6
+      },
+      "weight": 3,
+      "price": 0,
+      "availability": "commun",
+      "description": "Into the Storm p. 114. Nom original : Civilian Firearm. Famille : MS."
+    }
+  },
+  {
+    "name": "Pistolet jetable (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "poing",
+      "damageFormula": "1d10+2",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Imprécise, Peu fiable",
+      "range": 30,
+      "fireModes": "S/2/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 8,
+        "max": 8
+      },
+      "weight": 2,
+      "price": 0,
+      "availability": "omnipresent",
+      "description": "Into the Storm p. 114. Nom original : Disposable Handgun. Famille : MS."
+    }
+  },
+  {
+    "name": "Mitrailleuse d'assaut Echon MkIII (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 3,
+      "bonus": 0,
+      "attributes": "Tempête",
+      "range": 100,
+      "fireModes": "-/-/6",
+      "reload": "2AC",
+      "ammo": {
+        "current": 200,
+        "max": 200
+      },
+      "weight": 21,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Into the Storm p. 114. Nom original : Echon Pattern MkIII Assault Stubber. Famille : MS."
+    }
+  },
+  {
+    "name": "Fusil à grox (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 4,
+      "bonus": 0,
+      "attributes": "Peu fiable",
+      "range": 110,
+      "fireModes": "S/-/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 5,
+        "max": 5
+      },
+      "weight": 6,
+      "price": 0,
+      "availability": "commun",
+      "description": "Faith and Coin p. 82. Nom original : Grox Gun. Famille : MS."
+    }
+  },
+  {
+    "name": "Fusil-harpon (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "Immobilisante (1), Déchirante",
+      "range": 60,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 5,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 50. Nom original : Harpoon Gun. Famille : MS."
+    }
+  },
+  {
+    "name": "Fusil d'abordage de Lathe (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+5",
+      "damageType": "impact",
+      "penetration": 1,
+      "bonus": 0,
+      "attributes": "Imprécise, Fiable, Dispersion",
+      "range": 30,
+      "fireModes": "S/3/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 3,
+        "max": 3
+      },
+      "weight": 6,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 50. Nom original : Lathe Boarding Gun. Famille : MS."
+    }
+  },
+  {
+    "name": "Fusil à pompe Lucius Mk22c (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+5",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Dispersion, Peu fiable",
+      "range": 30,
+      "fireModes": "S/3/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 8,
+        "max": 8
+      },
+      "weight": 5.5,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Faith and Coin p. 82. Nom original : Lucius-pattern Mk22c Shotgun. Famille : MS."
+    }
+  },
+  {
+    "name": "Mitrailleuse lourde Orthlack (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "1d10+5",
+      "damageType": "impact",
+      "penetration": 3,
+      "bonus": 0,
+      "attributes": "Résistante aux ogryns",
+      "range": 120,
+      "fireModes": "-/-/10",
+      "reload": "2AC",
+      "ammo": {
+        "current": 200,
+        "max": 200
+      },
+      "weight": 35,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Rogue Trader livre de base p. 118. Nom original : Orthlack Heavy Stubber. Famille : MS."
+    }
+  },
+  {
+    "name": "Fusil à pompe de combat Persecutor (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Fiable, Dispersion",
+      "range": 35,
+      "fireModes": "S/3/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 20,
+        "max": 20
+      },
+      "weight": 6,
+      "price": 0,
+      "availability": "rare",
+      "description": "Hostile Acquisitions p. 50. Nom original : Persecutor Combat Shotgun. Famille : MS. Compte comme un bâton à décharge au corps à corps."
+    }
+  },
+  {
+    "name": "Fusil à grêle-rasoir (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+2",
+      "damageType": "penetrant",
+      "penetration": 1,
+      "bonus": 0,
+      "attributes": "Dispersion, Déchirante",
+      "range": 35,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 5,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Hostile Acquisitions p. 50. Nom original : Razorhail Gun. Famille : MS."
+    }
+  },
+  {
+    "name": "Mitrailleuse lourde Ursid (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "lourde",
+      "damageFormula": "1d10+5",
+      "damageType": "impact",
+      "penetration": 3,
+      "bonus": 0,
+      "attributes": "Résistante aux ogryns",
+      "range": 120,
+      "fireModes": "-/-/10",
+      "reload": "1AC",
+      "ammo": {
+        "current": 40,
+        "max": 40
+      },
+      "weight": 35,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Rogue Trader livre de base p. 118. Nom original : Ursid Heavy Stubber. Famille : MS."
+    }
+  },
+  {
+    "name": "Fusil-harpon du vide (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+2",
+      "damageType": "penetrant",
+      "penetration": 2,
+      "bonus": 0,
+      "attributes": "-",
+      "range": 10,
+      "fireModes": "S/-/-",
+      "reload": "1AC",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 1.5,
+      "price": 0,
+      "availability": "moyen",
+      "description": "Into the Storm p. 114. Nom original : Void Speargun. Famille : MS."
+    }
+  },
+  {
+    "name": "Fusil-mitrailleur Wrath (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+4",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Imprécise, Déchirante, Peu fiable",
+      "range": 60,
+      "fireModes": "S/3/-",
+      "reload": "2AC",
+      "ammo": {
+        "current": 20,
+        "max": 20
+      },
+      "weight": 4,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 50. Nom original : Wrath Auto-Stubber. Famille : MS."
+    }
+  },
+  {
+    "name": "Carabine automatique Zayth (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "base",
+      "damageFormula": "1d10+3",
+      "damageType": "impact",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Imprécise",
+      "range": 35,
+      "fireModes": "-/-/5",
+      "reload": "1AC",
+      "ammo": {
+        "current": 20,
+        "max": 20
+      },
+      "weight": 3,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Hostile Acquisitions p. 50. Nom original : Zayth Auto-Carbine. Famille : MS."
+    }
+  },
+  {
+    "name": "Microgrenade (fragmentation) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "2d10",
+      "damageType": "explosif",
+      "penetration": 0,
+      "bonus": 0,
+      "attributes": "Zone d'effet (2), Spécial",
+      "range": 0,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Hostile Acquisitions p. 53. Nom original : Microgrenade (Frag). Famille : grenades. Portée : SB x 3 mètres."
+    }
+  },
+  {
+    "name": "Microgrenade (antichar) (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "2d10+2",
+      "damageType": "explosif",
+      "penetration": 5,
+      "bonus": 0,
+      "attributes": "Spécial",
+      "range": 0,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 0,
+      "availability": "extremementRare",
+      "description": "Hostile Acquisitions p. 53. Nom original : Microgrenade (Krak). Famille : grenades. Portée : SB x 3 mètres."
+    }
+  },
+  {
+    "name": "Grenade hurleuse (RT)",
+    "img": "icons/svg/item-bag.svg",
+    "type": "rangedWeapon",
+    "system": {
+      "group": "jet",
+      "damageFormula": "3d10",
+      "damageType": "explosif",
+      "penetration": 1,
+      "bonus": 0,
+      "attributes": "Zone d'effet (3), Décharge",
+      "range": 0,
+      "fireModes": "S/-/-",
+      "reload": "-",
+      "ammo": {
+        "current": 1,
+        "max": 1
+      },
+      "weight": 0.5,
+      "price": 0,
+      "availability": "peuCourant",
+      "description": "Into the Storm p. 118. Nom original : Howler. Famille : grenades. Portée : SB x 3 mètres. Zone d'effet (10) : surdité; dure 1d5 rounds."
     }
   }
 ]
