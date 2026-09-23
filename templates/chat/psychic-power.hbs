@@ -1,0 +1,21 @@
+<div class="dark-heresy-v1 chat-card psychic-power {{#if success}}success{{else}}failure{{/if}}">
+  <h3 class="card-title">{{label}}</h3>
+  <p>{{localize "DH.PsychicPower.Threshold"}} : {{threshold}}</p>
+  <div class="damage-breakdown">
+    {{#each dice as |die|}}
+      <span class="damage-part die {{#if die.isNine}}psychic-nine{{/if}}">{{die.value}}</span>
+    {{/each}}
+  </div>
+  <p>{{localize "DH.PsychicPower.WillpowerBonus"}} : +{{willpowerBonus}}</p>
+  {{#if modifier}}<p>{{localize "DH.PsychicPower.Modifier"}} : {{modifier}}</p>{{/if}}
+  <p>{{localize "DH.Attack.Total"}} : {{total}}</p>
+  <p class="outcome">
+    {{#if success}}{{localize "DH.Roll.Success"}}{{else}}{{localize "DH.Roll.Failure"}}{{/if}}
+    ({{margin}})
+  </p>
+  {{#if success}}{{#if overbleed}}<p>{{localize "DH.PsychicPower.Overbleed"}} : {{overbleed}}</p>{{/if}}{{/if}}
+  {{#if phenomena}}
+    <p class="psychic-warning">{{localize "DH.PsychicPower.PhenomenaTriggered"}} : {{phenomena}}</p>
+    <button type="button" class="psychic-phenomenon-roll">{{localize "DH.PsychicPower.RollPhenomenon"}}</button>
+  {{/if}}
+</div>

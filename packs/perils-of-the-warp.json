@@ -1,0 +1,7 @@
+[
+  {
+    "name": "Nom du péril",
+    "description": "Description du péril.",
+    "range": "01-100"
+  }
+]

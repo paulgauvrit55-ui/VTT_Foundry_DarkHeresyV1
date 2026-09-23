@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Nom du phénomène",
+    "description": "Description du phénomène.",
+    "range": "01-74"
+  },
+  {
+    "name": "Périls du Warp",
+    "description": "Lancez sur la table des Périls du Warp.",
+    "range": "75-100"
+  }
+]

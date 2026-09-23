@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Nom du pouvoir",
+    "img": "icons/svg/daze.svg",
+    "type": "psychicPower",
+    "system": {
+      "discipline": "Discipline",
+      "threshold": 10,
+      "focusTime": "Demi-action",
+      "sustainable": false,
+      "range": "Portée",
+      "overbleed": "Effet de surpuissance",
+      "description": "Description du pouvoir."
+    }
+  }
+]

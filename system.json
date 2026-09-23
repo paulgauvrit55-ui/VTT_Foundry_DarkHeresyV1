@@ -43,6 +43,9 @@
       },
       "armour": {
         "htmlFields": ["description"]
+      },
+      "psychicPower": {
+        "htmlFields": ["description"]
       }
     }
   },

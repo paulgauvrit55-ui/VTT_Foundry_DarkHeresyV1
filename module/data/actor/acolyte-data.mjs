@@ -1,3 +1,4 @@
+import { DH } from "../../config.mjs";
 import {
   characteristicsSchema,
   resourcePoolField,
@@ -46,6 +47,9 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
         // talents/équipements pouvant faire varier le seuil réel.
         carryCapacity: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
       }),
+      // Niveau Psy (spec §7.1) : 0 = non psyker, 1 à 6 = nombre maximal de d10 d'un jet de
+      // Puissance (§7.2). Champ manuel : il s'acquiert par talents, sans moteur d'acquisition.
+      psyRating: new NumberField({ required: true, integer: true, min: 0, max: DH.maxPsyRating, initial: 0 }),
       mentalDisorders: new ArrayField(nameDescriptionField()),
       // Malignités (spec §2.5) : fonctionnellement identique aux troubles mentaux, mais liée
       // aux Points de Corruption plutôt qu'aux Points de Folie — décision utilisateur du

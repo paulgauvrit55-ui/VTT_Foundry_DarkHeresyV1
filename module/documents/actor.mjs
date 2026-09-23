@@ -1,6 +1,7 @@
 import { rollCharacteristicTest } from "../dice/characteristic-roll.mjs";
 import { rollBaseSkillTest, rollAdvancedSkillTest } from "../dice/skill-roll.mjs";
 import { rollWeaponAttackTest, rollWeaponDamageTest } from "../dice/weapon-roll.mjs";
+import { rollPsychicPowerTest } from "../dice/psychic-roll.mjs";
 
 export default class DarkHeresyActor extends Actor {
   /**
@@ -41,5 +42,13 @@ export default class DarkHeresyActor extends Actor {
    */
   async rollWeaponDamageTest(item) {
     return rollWeaponDamageTest(this, item);
+  }
+
+  /**
+   * Lance le jet de Puissance d'un pouvoir psychique (spec §7.2) pour cet acteur.
+   * @param {Item} item Item `psychicPower` possédé par cet acteur.
+   */
+  async rollPsychicPowerTest(item) {
+    return rollPsychicPowerTest(this, item);
   }
 }

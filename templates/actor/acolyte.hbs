@@ -403,5 +403,65 @@
         </div>
       </div>
     </div>
+
+    <div class="tab-content" data-tab="psychic">
+      <div class="psychic-summary">
+        <div class="resource-single">
+          <label>{{localize "DH.PsychicPower.PsyRating"}}</label>
+          <input type="number" name="system.psyRating" value="{{system.psyRating}}" min="0" max="{{maxPsyRating}}">
+        </div>
+        <div class="resource-single">
+          <label>{{localize "DH.PsychicPower.WillpowerBonus"}}</label>
+          <span class="resource-derived">{{willpowerBonus}}</span>
+        </div>
+      </div>
+
+      <div class="psychic-powers">
+        <div class="weapons-header">
+          <h3>{{localize "DH.PsychicPower.Title"}}</h3>
+          <a data-action="createPsychicPower" title="{{localize 'DH.PsychicPower.Add'}}"><i class="fa-solid fa-plus"></i></a>
+        </div>
+        {{#each psychicPowers as |power|}}
+          <div class="weapon-entry psychic-power-entry" data-item-id="{{power.id}}">
+            <div class="weapon-entry-header">
+              <input type="text" class="weapon-name" value="{{power.name}}" data-item-field="name">
+              <a data-action="rollPsychicPower" title="{{localize 'DH.PsychicPower.Roll'}}"><i class="fa-solid fa-brain"></i></a>
+              <a class="weapon-toggle" data-action="togglePsychicPower" title="{{localize 'DH.PsychicPower.Toggle'}}"><i class="fa-solid fa-chevron-down"></i></a>
+              <a class="delete-row" data-action="deleteItem" title="{{localize 'DH.PsychicPower.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+            <div class="weapon-profile">
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.Discipline"}}</label>
+                <input type="text" data-item-field="system.discipline" value="{{power.discipline}}">
+              </div>
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.Threshold"}}</label>
+                <input type="number" data-item-field="system.threshold" value="{{power.threshold}}">
+              </div>
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.FocusTime"}}</label>
+                <input type="text" data-item-field="system.focusTime" value="{{power.focusTime}}">
+              </div>
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.Sustainable"}}</label>
+                <input type="checkbox" data-item-field="system.sustainable" {{#if power.sustainable}}checked{{/if}}>
+              </div>
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.Range"}}</label>
+                <input type="text" data-item-field="system.range" value="{{power.range}}">
+              </div>
+              <div class="weapon-field weapon-field-attributes">
+                <label>{{localize "DH.PsychicPower.Overbleed"}}</label>
+                <input type="text" data-item-field="system.overbleed" value="{{power.overbleed}}">
+              </div>
+              <div class="weapon-field weapon-field-attributes">
+                <label>{{localize "DH.PsychicPower.Description"}}</label>
+                <textarea class="psychic-power-description" data-item-field="system.description">{{power.description}}</textarea>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
   </section>
 </div>

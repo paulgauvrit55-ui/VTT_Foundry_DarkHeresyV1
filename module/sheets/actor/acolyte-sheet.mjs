@@ -7,7 +7,8 @@ const { ActorSheetV2 } = foundry.applications.sheets;
 const TABS = [
   { id: "characteristics", label: "DH.Tabs.Characteristics" },
   { id: "combat", label: "DH.Tabs.Combat" },
-  { id: "resources", label: "DH.Tabs.Resources" }
+  { id: "resources", label: "DH.Tabs.Resources" },
+  { id: "psychic", label: "DH.Tabs.Psychic" }
 ];
 
 export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
@@ -37,7 +38,10 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       addMalignancy: AcolyteSheet.#addMalignancy,
       deleteMalignancy: AcolyteSheet.#deleteMalignancy,
       addProgression: AcolyteSheet.#addProgression,
-      deleteProgression: AcolyteSheet.#deleteProgression
+      deleteProgression: AcolyteSheet.#deleteProgression,
+      createPsychicPower: AcolyteSheet.#createPsychicPower,
+      togglePsychicPower: AcolyteSheet.#togglePsychicPower,
+      rollPsychicPower: AcolyteSheet.#rollPsychicPower
     }
   };
 
@@ -168,6 +172,22 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       value: this.actor.system.armour[key].value
     }));
 
+    // Onglet Pouvoirs psychiques (spec §7) : Niveau Psy + profil de chaque pouvoir, édité en
+    // ligne comme les armes.
+    context.maxPsyRating = DH.maxPsyRating;
+    context.willpowerBonus = this.actor.system.characteristics.forceMentale.bonus;
+    context.psychicPowers = this.actor.itemTypes.psychicPower.map(item => ({
+      id: item.id,
+      name: item.name,
+      discipline: item.system.discipline,
+      threshold: item.system.threshold,
+      focusTime: item.system.focusTime,
+      sustainable: item.system.sustainable,
+      range: item.system.range,
+      overbleed: item.system.overbleed,
+      description: item.system.description
+    }));
+
     return context;
   }
 
@@ -280,6 +300,22 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       name: game.i18n.localize("DH.Gear.NewName"),
       type: "gear"
     }]);
+  }
+
+  static async #createPsychicPower() {
+    await this.actor.createEmbeddedDocuments("Item", [{
+      name: game.i18n.localize("DH.PsychicPower.NewName"),
+      type: "psychicPower"
+    }]);
+  }
+
+  static async #togglePsychicPower(event, target) {
+    target.closest(".psychic-power-entry")?.classList.toggle("collapsed");
+  }
+
+  static async #rollPsychicPower(event, target) {
+    const item = this.actor.items.get(target.closest("[data-item-id]")?.dataset.itemId);
+    if (item) await this.actor.rollPsychicPowerTest(item);
   }
 
   static async #addMentalDisorder() {

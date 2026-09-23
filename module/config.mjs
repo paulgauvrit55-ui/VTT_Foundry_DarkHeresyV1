@@ -101,6 +101,21 @@ DH.armourCategories = {
   energetique: "DH.ArmourCategory.Energetique"
 };
 
+/** Niveau Psy maximal (spec §7.1). */
+DH.maxPsyRating = 6;
+
+/**
+ * Tables aléatoires des pouvoirs psychiques (spec §7.3), pré-remplies en RollTables (cf.
+ * `compendium-seed.mjs`) et retrouvées par leur drapeau `tableKey` (clé de cet objet).
+ */
+DH.psychicTables = {
+  psychicPhenomena: { label: "DH.PsychicTable.Phenomena", file: "psychic-phenomena.json" },
+  perilsOfTheWarp: { label: "DH.PsychicTable.Perils", file: "perils-of-the-warp.json" }
+};
+
+/** Résultat sur la table des Phénomènes psychiques à partir duquel on tire sur les Périls du Warp (spec §7.3). */
+DH.perilsOfTheWarpThreshold = 75;
+
 /**
  * Niveau de Menace des PNJ/créatures (spec §12) : catégorie qualifiant la nature de la menace.
  * Simple repère d'échelle pour le MJ, sans effet mécanique direct sur les jets.

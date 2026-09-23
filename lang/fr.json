@@ -31,12 +31,42 @@
       "RangedWeapon": "Fiche d'Arme à distance",
       "Gear": "Fiche d'Objet",
       "Armour": "Fiche d'Armure",
+      "PsychicPower": "Fiche de Pouvoir psychique",
       "Npc": "Fiche de PNJ/Créature"
     },
     "Tabs": {
       "Characteristics": "Caractéristiques et Compétences",
       "Combat": "Inventaire & Combat",
-      "Resources": "Ressources & Progression"
+      "Resources": "Ressources & Progression",
+      "Psychic": "Pouvoirs psychiques"
+    },
+    "PsychicPower": {
+      "Title": "Pouvoirs psychiques",
+      "Add": "Ajouter un pouvoir psychique",
+      "Delete": "Supprimer ce pouvoir",
+      "Toggle": "Afficher/masquer le profil",
+      "Roll": "Jet de Puissance",
+      "NewName": "Nouveau pouvoir",
+      "PsyRating": "Niveau Psy",
+      "WillpowerBonus": "Bonus de Force Mentale",
+      "Discipline": "Discipline",
+      "Threshold": "Seuil Psychique",
+      "FocusTime": "Temps de focalisation",
+      "Sustainable": "Prolongeable",
+      "Range": "Portée",
+      "Overbleed": "Surpuissance",
+      "Description": "Description",
+      "PromptTitle": "Jet de Puissance",
+      "DiceCount": "Nombre de dés",
+      "Modifier": "Modificateur",
+      "NoPsyRating": "Ce personnage n'a pas de Niveau Psy : impossible de manifester un pouvoir psychique.",
+      "PhenomenaTriggered": "9 naturels — Phénomènes psychiques à tirer",
+      "RollPhenomenon": "Tirer un Phénomène psychique",
+      "TableNotFound": "Table « {name} » introuvable (ni dans le monde, ni dans les compendiums)."
+    },
+    "PsychicTable": {
+      "Phenomena": "Phénomènes psychiques",
+      "Perils": "Périls du Warp"
     },
     "Identity": {
       "Homeworld": "Monde natal",
@@ -263,6 +293,8 @@
       "RangedWeapons": "Armes à distance",
       "Gear": "Objets",
       "Armours": "Armures",
+      "PsychicPowers": "Pouvoirs psychiques",
+      "PsychicTables": "Tables psychiques",
       "Error": "Dark Heresy V1 : échec du pré-remplissage du compendium « {name} » (voir la console)."
     }
   }

@@ -1,0 +1,42 @@
+<div class="psychic-power-body">
+  <header class="sheet-header">
+    <h1 class="itemname">
+      <input name="name" type="text" value="{{item.name}}">
+    </h1>
+  </header>
+
+  <div class="form-group">
+    <label>{{localize "DH.PsychicPower.Discipline"}}</label>
+    <input type="text" name="system.discipline" value="{{system.discipline}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.PsychicPower.Threshold"}}</label>
+    <input type="number" name="system.threshold" value="{{system.threshold}}" min="0">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.PsychicPower.FocusTime"}}</label>
+    <input type="text" name="system.focusTime" value="{{system.focusTime}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.PsychicPower.Sustainable"}}</label>
+    <input type="checkbox" name="system.sustainable" {{#if system.sustainable}}checked{{/if}}>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.PsychicPower.Range"}}</label>
+    <input type="text" name="system.range" value="{{system.range}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "DH.PsychicPower.Overbleed"}}</label>
+    <input type="text" name="system.overbleed" value="{{system.overbleed}}">
+  </div>
+
+  <div class="form-group stacked">
+    <label>{{localize "DH.PsychicPower.Description"}}</label>
+    <textarea name="system.description">{{system.description}}</textarea>
+  </div>
+</div>
