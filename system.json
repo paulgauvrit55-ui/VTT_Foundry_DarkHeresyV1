@@ -2,7 +2,7 @@
   "id": "dark-heresy-v1",
   "title": "Dark Heresy (V1 - VF)",
   "description": "Système non officiel (usage privé) pour Dark Heresy, 1ère édition (VF), sur Foundry VTT.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "compatibility": {
     "minimum": "13.351",
     "verified": "13.351"
