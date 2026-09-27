@@ -38,22 +38,34 @@
         </div>
       </div>
 
-      <div class="npc-speed-row">
-        <div class="npc-speed-field">
-          <label>{{localize "DH.Speed.Half"}}</label>
-          <input type="number" name="system.resources.speed.half" value="{{system.resources.speed.half}}">
+      <div class="header-bottom-row">
+        <div class="npc-speed-row">
+          <div class="npc-speed-field">
+            <label>{{localize "DH.Speed.Half"}}</label>
+            <input type="number" name="system.resources.speed.half" value="{{system.resources.speed.half}}">
+          </div>
+          <div class="npc-speed-field">
+            <label>{{localize "DH.Speed.Full"}}</label>
+            <input type="number" name="system.resources.speed.full" value="{{system.resources.speed.full}}">
+          </div>
+          <div class="npc-speed-field">
+            <label>{{localize "DH.Speed.Charge"}}</label>
+            <input type="number" name="system.resources.speed.charge" value="{{system.resources.speed.charge}}">
+          </div>
+          <div class="npc-speed-field">
+            <label>{{localize "DH.Speed.Run"}}</label>
+            <input type="number" name="system.resources.speed.run" value="{{system.resources.speed.run}}">
+          </div>
         </div>
-        <div class="npc-speed-field">
-          <label>{{localize "DH.Speed.Full"}}</label>
-          <input type="number" name="system.resources.speed.full" value="{{system.resources.speed.full}}">
-        </div>
-        <div class="npc-speed-field">
-          <label>{{localize "DH.Speed.Charge"}}</label>
-          <input type="number" name="system.resources.speed.charge" value="{{system.resources.speed.charge}}">
-        </div>
-        <div class="npc-speed-field">
-          <label>{{localize "DH.Speed.Run"}}</label>
-          <input type="number" name="system.resources.speed.run" value="{{system.resources.speed.run}}">
+
+        <div class="header-initiative">
+          <label>{{localize "DH.Initiative.Die"}}</label>
+          <div class="initiative-controls">
+            <input type="text" name="system.initiativeDie" value="{{system.initiativeDie}}" placeholder="1d10">
+            <button type="button" data-action="rollInitiative" title="{{localize 'DH.Initiative.Hint'}}">
+              <i class="fa-solid fa-dice-d10"></i> {{localize "DH.Initiative.Roll"}}
+            </button>
+          </div>
         </div>
       </div>
 

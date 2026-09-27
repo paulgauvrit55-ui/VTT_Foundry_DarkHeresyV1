@@ -230,6 +230,7 @@
 .dark-heresy-v1.sheet.actor .npc-speed-row {
   display: flex;
   gap: 0.5rem;
+  flex: 1;
 }
 
 .dark-heresy-v1.sheet.actor .npc-speed-field {

@@ -17,6 +17,7 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     form: { submitOnChange: true, closeOnSubmit: false },
     actions: {
       rollCharacteristic: NpcSheet.#rollCharacteristic,
+      rollInitiative: NpcSheet.#rollInitiative,
       rollBaseSkill: NpcSheet.#rollBaseSkill,
       rollAdvancedSkill: NpcSheet.#rollAdvancedSkill,
       createAdvancedSkill: NpcSheet.#createAdvancedSkill,
@@ -206,6 +207,10 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       left: this.position.left + 10
     });
     return fp.browse();
+  }
+
+  static async #rollInitiative() {
+    await this.actor.rollInitiativeTest();
   }
 
   static async #rollCharacteristic(event, target) {

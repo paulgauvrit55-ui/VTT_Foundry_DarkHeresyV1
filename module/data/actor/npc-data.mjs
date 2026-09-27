@@ -38,6 +38,9 @@ export default class NpcData extends foundry.abstract.TypeDataModel {
         }),
         carryCapacity: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
       }),
+      // Dé d'initiative : même fonctionnement que l'acolyte (formule libre + BA, cf.
+      // `DarkHeresyActor#getRollData`/`rollInitiativeTest`).
+      initiativeDie: new StringField({ required: true, blank: true, initial: "1d10" }),
       skills: baseSkillsSchema(),
       armour: armourSchema(),
       // Traits (spec §12) : capacités innées propres aux créatures (non accessibles aux PJ),
