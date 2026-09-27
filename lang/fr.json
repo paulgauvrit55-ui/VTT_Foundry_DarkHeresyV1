@@ -39,6 +39,11 @@
       "Combat": "Inventaire & Combat",
       "Resources": "Ressources & Progression",
       "Psychic": "Pouvoirs psychiques",
+      "Notes": "Biographie & Notes"
+    },
+    "Biography": {
+      "Biography": "Biographie",
+      "Description": "Description",
       "Notes": "Notes"
     },
     "AdvancedSettings": {
@@ -79,7 +84,11 @@
     },
     "Identity": {
       "Homeworld": "Monde natal",
-      "Career": "Carrière"
+      "Career": "Carrière",
+      "Divination": "Divination impériale",
+      "AdvancedCareer": "Carrière avancée",
+      "Background": "Historique",
+      "SanctioningEffect": "Effet de l'assermentation"
     },
     "Resources": {
       "Wounds": "Points de Blessures",

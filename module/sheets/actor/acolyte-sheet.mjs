@@ -13,6 +13,13 @@ const TABS = [
   { id: "notes", label: "DH.Tabs.Notes" }
 ];
 
+/** Zones de texte riche de l'onglet Biographie & Notes, dans l'ordre d'affichage. */
+const RICH_TEXT_FIELDS = [
+  { key: "biography", label: "DH.Biography.Biography" },
+  { key: "description", label: "DH.Biography.Description" },
+  { key: "notes", label: "DH.Biography.Notes" }
+];
+
 export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
     classes: ["dark-heresy-v1", "sheet", "actor", "acolyte"],
@@ -197,11 +204,18 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       description: item.system.description
     }));
 
-    context.notesField = this.actor.system.schema.fields.notes;
-    context.enrichedNotes = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.actor.system.notes ?? "", {
-      secrets: this.actor.isOwner,
-      relativeTo: this.actor
-    });
+    // Onglet Biographie & Notes : zones de texte riche éditées via `<prose-mirror>` (helper `formInput`).
+    const { TextEditor } = foundry.applications.ux;
+    context.richTexts = await Promise.all(RICH_TEXT_FIELDS.map(async ({ key, label }) => ({
+      key,
+      label: game.i18n.localize(label),
+      field: this.actor.system.schema.fields[key],
+      value: this.actor.system[key],
+      enriched: await TextEditor.implementation.enrichHTML(this.actor.system[key] ?? "", {
+        secrets: this.actor.isOwner,
+        relativeTo: this.actor
+      })
+    })));
 
     return context;
   }

@@ -25,9 +25,15 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
       characteristics: characteristicsSchema(),
-      // Champs libres (spec §5) : pas de moteur de carrière, juste affichés dans l'en-tête de fiche.
+      // Champs libres (spec §5) : pas de moteur de carrière, affichés en tête de l'onglet
+      // Biographie & Notes avec les autres champs d'identité en texte simple.
       homeworld: new StringField({ required: false, blank: true }),
       career: new StringField({ required: false, blank: true }),
+      divination: new StringField({ required: false, blank: true }),
+      advancedCareer: new StringField({ required: false, blank: true }),
+      background: new StringField({ required: false, blank: true }),
+      // Effet de l'assermentation : affiché uniquement si `psyker` est coché.
+      sanctioningEffect: new StringField({ required: false, blank: true }),
       resources: new SchemaField({
         wounds: resourcePoolField(),
         fate: resourcePoolField(),
@@ -71,8 +77,9 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
       // contrairement aux listes d'armes/objets) et avec le précédent Mouvement/port de charge.
       armour: armourSchema(),
       skills: baseSkillsSchema(),
+      // Onglet Biographie & Notes : trois zones de texte riche libre.
       biography: new HTMLField({ required: false, blank: true }),
-      // Onglet Notes : texte riche libre.
+      description: new HTMLField({ required: false, blank: true }),
       notes: new HTMLField({ required: false, blank: true })
     };
   }

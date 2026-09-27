@@ -16,17 +16,6 @@
         <input name="name" type="text" value="{{actor.name}}">
       </h1>
 
-      <div class="identity-row">
-        <div class="identity-field">
-          <label>{{localize "DH.Identity.Homeworld"}}</label>
-          <input type="text" name="system.homeworld" value="{{system.homeworld}}">
-        </div>
-        <div class="identity-field">
-          <label>{{localize "DH.Identity.Career"}}</label>
-          <input type="text" name="system.career" value="{{system.career}}">
-        </div>
-      </div>
-
       <div class="header-resources">
         <div class="header-resource wounds">
           <label>{{localize "DH.Resources.Wounds"}}</label>
@@ -471,9 +460,42 @@
 
     <div class="tab-content" data-tab="notes">
       <h2 class="section-title">{{localize "DH.Tabs.Notes"}}</h2>
-      <div class="notes-editor">
-        {{formInput notesField name="system.notes" value=system.notes enriched=enrichedNotes toggled=true}}
+
+      <div class="identity-grid">
+        <div class="identity-field">
+          <label>{{localize "DH.Identity.Homeworld"}}</label>
+          <input type="text" name="system.homeworld" value="{{system.homeworld}}">
+        </div>
+        <div class="identity-field">
+          <label>{{localize "DH.Identity.Career"}}</label>
+          <input type="text" name="system.career" value="{{system.career}}">
+        </div>
+        <div class="identity-field">
+          <label>{{localize "DH.Identity.Divination"}}</label>
+          <input type="text" name="system.divination" value="{{system.divination}}">
+        </div>
+        <div class="identity-field">
+          <label>{{localize "DH.Identity.AdvancedCareer"}}</label>
+          <input type="text" name="system.advancedCareer" value="{{system.advancedCareer}}">
+        </div>
+        <div class="identity-field">
+          <label>{{localize "DH.Identity.Background"}}</label>
+          <input type="text" name="system.background" value="{{system.background}}">
+        </div>
+        {{#if system.psyker}}
+          <div class="identity-field">
+            <label>{{localize "DH.Identity.SanctioningEffect"}}</label>
+            <input type="text" name="system.sanctioningEffect" value="{{system.sanctioningEffect}}">
+          </div>
+        {{/if}}
       </div>
+
+      {{#each richTexts as |text|}}
+        <div class="notes-editor">
+          <h3>{{text.label}}</h3>
+          {{formInput text.field name=(concat "system." text.key) value=text.value enriched=text.enriched toggled=true}}
+        </div>
+      {{/each}}
     </div>
   </section>
 </div>
