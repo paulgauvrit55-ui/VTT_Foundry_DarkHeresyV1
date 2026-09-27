@@ -1,4 +1,5 @@
 import { DH } from "../../config.mjs";
+import { applyCollapsedSections, toggleSection } from "./collapsible-sections.mjs";
 import AcolyteSettingsConfig from "../../apps/acolyte-settings.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -40,6 +41,7 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       deleteItem: AcolyteSheet.#deleteItem,
       changeTab: AcolyteSheet.#changeTab,
       toggleTalent: AcolyteSheet.#toggleTalent,
+      toggleSection: AcolyteSheet.#toggleSection,
       editImage: AcolyteSheet.#editImage,
       createWeapon: AcolyteSheet.#createWeapon,
       toggleWeapon: AcolyteSheet.#toggleWeapon,
@@ -227,6 +229,7 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
     for (const element of this.element.querySelectorAll("[data-item-field]")) {
       element.addEventListener("change", this.#onItemFieldChange.bind(this));
     }
+    applyCollapsedSections(this.element, this.actor);
     this.#applyActiveTab();
   }
 
@@ -253,6 +256,10 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
   static async #changeTab(event, target) {
     this.#activeTab = target.dataset.tab;
     this.#applyActiveTab();
+  }
+
+  static async #toggleSection(event, target) {
+    toggleSection(this.actor, target);
   }
 
   static async #toggleTalent(event, target) {

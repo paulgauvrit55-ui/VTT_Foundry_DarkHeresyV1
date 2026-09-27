@@ -1,4 +1,5 @@
 import { DH } from "../../config.mjs";
+import { applyCollapsedSections, toggleSection } from "./collapsible-sections.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -24,6 +25,7 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       createTalent: NpcSheet.#createTalent,
       deleteItem: NpcSheet.#deleteItem,
       toggleTalent: NpcSheet.#toggleTalent,
+      toggleSection: NpcSheet.#toggleSection,
       addTrait: NpcSheet.#addTrait,
       deleteTrait: NpcSheet.#deleteTrait,
       toggleTrait: NpcSheet.#toggleTrait,
@@ -175,6 +177,7 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     for (const element of this.element.querySelectorAll("[data-item-field]")) {
       element.addEventListener("change", this.#onItemFieldChange.bind(this));
     }
+    applyCollapsedSections(this.element, this.actor);
   }
 
   async #onItemFieldChange(event) {
@@ -186,6 +189,10 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const field = input.dataset.itemField;
     const value = input.type === "checkbox" ? input.checked : input.type === "number" ? Number(input.value) : input.value;
     await item.update({ [field]: value });
+  }
+
+  static async #toggleSection(event, target) {
+    toggleSection(this.actor, target);
   }
 
   static async #toggleTalent(event, target) {
