@@ -1,6 +1,6 @@
 import { rollCharacteristicTest } from "../dice/characteristic-roll.mjs";
 import { rollBaseSkillTest, rollAdvancedSkillTest } from "../dice/skill-roll.mjs";
-import { rollWeaponAttackTest, rollWeaponDamageTest } from "../dice/weapon-roll.mjs";
+import { rollWeaponAttackTest, rollWeaponDamageTest, rollRighteousFury } from "../dice/weapon-roll.mjs";
 import { rollPsychicPowerTest } from "../dice/psychic-roll.mjs";
 
 export default class DarkHeresyActor extends Actor {
@@ -42,6 +42,15 @@ export default class DarkHeresyActor extends Actor {
    */
   async rollWeaponDamageTest(item) {
     return rollWeaponDamageTest(this, item);
+  }
+
+  /**
+   * Fureur du juste (10 naturel aux dégâts) : test de la caractéristique de l'arme puis d10 explosifs ajoutés.
+   * @param {Item} item Arme ayant infligé les dégâts.
+   * @param {number} baseTotal Total de dégâts à compléter.
+   */
+  async rollRighteousFury(item, baseTotal) {
+    return rollRighteousFury(this, item, baseTotal);
   }
 
   /**

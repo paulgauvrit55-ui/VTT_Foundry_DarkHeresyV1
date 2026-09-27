@@ -1,0 +1,20 @@
+<div class="dark-heresy-v1 chat-card righteous-fury {{#if success}}success{{else}}failure{{/if}}">
+  <h3 class="card-title">{{localize "DH.RighteousFury.Title"}} — {{label}}</h3>
+  <p>{{localize "DH.Roll.Target"}} : {{target}}{{#if modifier}} ({{modifier}}){{/if}}</p>
+  <p>{{localize "DH.Roll.Result"}} : {{result}}</p>
+  <p class="outcome">
+    {{#if success}}{{localize "DH.Roll.Success"}}{{else}}{{localize "DH.Roll.Failure"}}{{/if}}
+    — {{localize "DH.Roll.Degree"}} {{degree}}
+  </p>
+  {{#if success}}
+    <div class="damage-breakdown">
+      {{#each furyBreakdown as |part|}}
+        <span class="damage-part die {{#if part.isTen}}fury-ten{{/if}}">+{{part.display}}</span>
+      {{/each}}
+    </div>
+    <p>{{localize "DH.RighteousFury.Extra"}} : +{{extra}}</p>
+    <p class="outcome">{{localize "DH.RighteousFury.NewTotal"}} : {{baseTotal}} + {{extra}} = {{total}}</p>
+  {{else}}
+    <p>{{localize "DH.RighteousFury.NoEffect"}}</p>
+  {{/if}}
+</div>

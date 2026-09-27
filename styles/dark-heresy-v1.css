@@ -934,3 +934,25 @@
   font-style: italic;
   opacity: 0.85;
 }
+
+/* ---------- Fureur du juste ---------- */
+
+.dark-heresy-v1.chat-card .damage-part.fury-ten {
+  background: #c62828;
+  color: #fff;
+}
+
+.dark-heresy-v1.chat-card .righteous-fury-roll {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.dark-heresy-v1.chat-card.righteous-fury.success .outcome {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.dark-heresy-v1.chat-card.righteous-fury.failure .outcome {
+  color: #c62828;
+  font-weight: bold;
+}

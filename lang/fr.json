@@ -265,6 +265,13 @@
       "Result": "Résultat :",
       "Total": "Total"
     },
+    "RighteousFury": {
+      "Title": "Fureur du juste",
+      "Roll": "Fureur du juste",
+      "Extra": "Dégâts supplémentaires",
+      "NewTotal": "Nouveau total",
+      "NoEffect": "Test raté : pas de dégâts supplémentaires."
+    },
     "Trait": {
       "Title": "Traits",
       "Description": "Description",
