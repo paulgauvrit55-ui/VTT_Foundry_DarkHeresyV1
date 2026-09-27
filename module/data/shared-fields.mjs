@@ -64,26 +64,28 @@ export function armourSchema() {
   );
 }
 
-/** Valeurs « Surnaturel » par caractéristique (paramètres avancés de l'acolyte), 0 = aucun effet. */
+/**
+ * Valeurs « Surnaturel » (paramètres avancés de l'acolyte), 0 = aucun effet. Uniquement pour
+ * les caractéristiques dotées d'un bonus : CC/CT n'en ont pas en V1, donc pas de Surnaturel.
+ */
 export function unnaturalSchema() {
   return new SchemaField(
-    Object.fromEntries(Object.keys(DH.characteristics).map(key => [key, new NumberField({ required: true, integer: true, min: 0, initial: 0 })]))
+    Object.fromEntries(Object.entries(DH.characteristics)
+      .filter(([, config]) => config.hasBonus)
+      .map(([key]) => [key, new NumberField({ required: true, integer: true, min: 0, initial: 0 })]))
   );
 }
 
 /**
  * Bonus de caractéristique = chiffre des dizaines (spec §2.2) + valeur « Surnaturel » éventuelle
- * (additive), recalculé à chaque préparation. CC/CT n'ont pas de bonus en V1 : ils n'en
- * obtiennent un que si une valeur Surnaturel non nulle leur est attribuée. Mute `characteristics`
- * en place.
+ * (additive), recalculé à chaque préparation. Mute `characteristics` en place.
  * @param {object} characteristics
  * @param {object} [unnatural] Map clé de caractéristique → valeur Surnaturel.
  */
 export function computeCharacteristicBonuses(characteristics, unnatural = {}) {
   for (const [key, characteristic] of Object.entries(characteristics)) {
-    const extra = unnatural[key] ?? 0;
-    characteristic.bonus = DH.characteristics[key].hasBonus || extra > 0
-      ? Math.floor(characteristic.value / 10) + extra
+    characteristic.bonus = DH.characteristics[key].hasBonus
+      ? Math.floor(characteristic.value / 10) + (unnatural[key] ?? 0)
       : null;
   }
 }

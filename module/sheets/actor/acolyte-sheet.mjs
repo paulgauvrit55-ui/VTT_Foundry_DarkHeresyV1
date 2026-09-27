@@ -72,8 +72,7 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       key,
       value: characteristic.value,
       bonus: characteristic.bonus,
-      // CC/CT n'ont de bonus qu'avec une valeur Surnaturel (cf. `computeCharacteristicBonuses`).
-      hasBonus: characteristic.bonus !== null,
+      hasBonus: DH.characteristics[key].hasBonus,
       label: game.i18n.localize(DH.characteristics[key].label),
       abbrev: game.i18n.localize(DH.characteristics[key].abbrev)
     }));

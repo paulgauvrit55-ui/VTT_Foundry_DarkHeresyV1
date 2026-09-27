@@ -29,7 +29,7 @@ export default class AcolyteSettingsConfig extends HandlebarsApplicationMixin(Do
     const context = await super._prepareContext(options);
     const system = this.document.system;
     context.system = system;
-    context.unnatural = Object.entries(DH.characteristics).map(([key, config]) => ({
+    context.unnatural = Object.entries(DH.characteristics).filter(([, config]) => config.hasBonus).map(([key, config]) => ({
       key,
       label: game.i18n.format("DH.AdvancedSettings.Unnatural", { name: game.i18n.localize(config.label) }),
       value: system.unnatural[key]
