@@ -46,7 +46,7 @@
       "Psyker": "Psyker",
       "PsykerHint": "Affiche l'onglet « Pouvoirs psychiques » de la fiche.",
       "UnnaturalTitle": "Caractéristiques surnaturelles",
-      "UnnaturalHint": "Valeur ajoutée au bonus de la caractéristique (0 = aucun effet). Pour CC et CT, qui n'ont pas de bonus en V1, une valeur non nulle fait apparaître un bonus (dizaine + valeur).",
+      "UnnaturalHint": "Valeur ajoutée au bonus de la caractéristique.",
       "Unnatural": "{name} surnaturelle"
     },
     "PsychicPower": {
@@ -253,7 +253,8 @@
       "RollDamage": "Lancer les dégâts",
       "Penetration": "Pénétration",
       "ForceBonus": "Bonus de Force",
-      "Result": "Résultat :"
+      "Result": "Résultat :",
+      "Total": "Total"
     },
     "Trait": {
       "Title": "Traits",
@@ -281,13 +282,13 @@
     },
     "Size": {
       "Title": "Taille",
-      "TresPetite": "Très petite",
-      "Petite": "Petite",
-      "Normale": "Normale",
-      "Grande": "Grande",
-      "Enorme": "Énorme",
-      "Massive": "Massive",
-      "Titanesque": "Titanesque"
+      "TresPetite": "Très petite (-20)",
+      "Petite": "Petite (-10)",
+      "Normale": "Normale (+0)",
+      "Grande": "Grande (+10)",
+      "Enorme": "Énorme (+20)",
+      "Massive": "Massive (+30)",
+      "Titanesque": "Titanesque (+40)"
     },
     "Speed": {
       "Half": "Demi-mvt",
