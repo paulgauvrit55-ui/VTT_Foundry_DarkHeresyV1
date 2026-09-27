@@ -94,6 +94,7 @@
       "Wounds": "Points de Blessures",
       "Fate": "Points de Destin",
       "Movement": "Mouvement",
+      "MovementHint": "Calculé depuis le Bonus d'Agilité (BA) : demi = BA, complet = 2×BA, charge = 3×BA, course = 6×BA.",
       "Fatigue": "Fatigue",
       "FatigueMax": "Fatigue maximale (Bonus d'Endurance)",
       "Insanity": "Points de Folie",

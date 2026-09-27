@@ -7,6 +7,7 @@ import {
   armourSchema,
   unnaturalSchema,
   computeCharacteristicBonuses,
+  computeMovement,
   computeBaseSkillTotals,
   computeCarriedWeight
 } from "../shared-fields.mjs";
@@ -37,7 +38,6 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
       resources: new SchemaField({
         wounds: resourcePoolField(),
         fate: resourcePoolField(),
-        movement: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         fatigue: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         insanity: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         corruption: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
@@ -92,6 +92,10 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
 
   prepareDerivedData() {
     computeCharacteristicBonuses(this.characteristics, this.unnatural);
+
+    // Mouvement (demi/complet/charge/course) : dérivé du Bonus d'Agilité, non stocké — remplace
+    // l'ancien champ manuel unique `resources.movement` (demande utilisateur du 2026-09-27).
+    this.resources.movement = computeMovement(this.characteristics.agilite.bonus);
 
     // Plafond de Fatigue = Bonus d'Endurance (spec §2.3, §9.7) : dérivé, non stocké.
     this.resources.fatigueMax = this.characteristics.endurance.bonus;

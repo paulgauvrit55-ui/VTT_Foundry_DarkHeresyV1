@@ -3,13 +3,7 @@
     <a class="advanced-settings-button" data-action="openAdvancedSettings" title="{{localize 'DH.AdvancedSettings.Title'}}">
       <i class="fa-solid fa-gear"></i> {{localize "DH.AdvancedSettings.Title"}}
     </a>
-    <div class="portrait-block">
-      <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}" data-action="editImage" data-edit="img">
-      <div class="movement-field">
-        <label>{{localize "DH.Resources.Movement"}}</label>
-        <input type="number" name="system.resources.movement" value="{{system.resources.movement}}">
-      </div>
-    </div>
+    <img class="profile-img" src="{{actor.img}}" alt="{{actor.name}}" data-action="editImage" data-edit="img">
 
     <div class="header-fields">
       <h1 class="charname">
@@ -42,6 +36,16 @@
             <span>/</span>
             <span class="resource-derived" title="{{localize 'DH.Resources.FatigueMax'}}">{{system.resources.fatigueMax}}</span>
           </div>
+        </div>
+      </div>
+
+      <div class="header-movement" title="{{localize 'DH.Resources.MovementHint'}}">
+        <label>{{localize "DH.Resources.Movement"}} :</label>
+        <div class="movement-values">
+          <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Half"}}</span> {{system.resources.movement.half}}</span>
+          <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Full"}}</span> {{system.resources.movement.full}}</span>
+          <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Run"}}</span> {{system.resources.movement.run}}</span>
+          <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Charge"}}</span> {{system.resources.movement.charge}}</span>
         </div>
       </div>
     </div>

@@ -59,22 +59,45 @@
   width: 96px;
 }
 
-.dark-heresy-v1.sheet.actor .movement-field {
+/* En-tête de l'acolyte (mockup `Exemples/Layout Header.png`) : grand portrait carré à gauche,
+   couvrant la hauteur du nom, des trois ressources et de la ligne de Mouvement. */
+.dark-heresy-v1.sheet.actor.acolyte .sheet-header .profile-img {
+  width: 140px;
+  height: 140px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .header-resources {
+  gap: 1.5rem;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .header-resource {
+  border-radius: 8px;
+}
+
+.dark-heresy-v1.sheet.actor .header-movement {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.1rem;
+  gap: 0.2rem;
 }
 
-.dark-heresy-v1.sheet.actor .movement-field label {
-  font-size: 0.75rem;
+.dark-heresy-v1.sheet.actor .header-movement > label {
   font-weight: bold;
-  opacity: 0.8;
 }
 
-.dark-heresy-v1.sheet.actor .movement-field input {
-  width: 100%;
-  text-align: center;
+.dark-heresy-v1.sheet.actor .movement-values {
+  display: flex;
+  gap: 1.5rem;
+  padding-left: 1rem;
+}
+
+.dark-heresy-v1.sheet.actor .movement-value {
+  font-weight: bold;
+}
+
+.dark-heresy-v1.sheet.actor .movement-label {
+  font-weight: normal;
+  font-size: 0.8rem;
+  opacity: 0.8;
 }
 
 .dark-heresy-v1.sheet.actor .header-fields {

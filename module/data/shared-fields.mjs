@@ -91,6 +91,18 @@ export function computeCharacteristicBonuses(characteristics, unnatural = {}) {
 }
 
 /**
+ * Vitesses de déplacement (spec §11.1) dérivées du Bonus d'Agilité (BA) : demi-déplacement = BA,
+ * déplacement complet = 2×BA, charge = 3×BA, course = 6×BA. Avec un BA nul, valeurs minimales
+ * fixes 0,5 / 1 / 2 / 3.
+ * @param {number} agilityBonus
+ * @returns {{half: number, full: number, charge: number, run: number}}
+ */
+export function computeMovement(agilityBonus) {
+  if (!agilityBonus) return { half: 0.5, full: 1, charge: 2, run: 3 };
+  return { half: agilityBonus, full: 2 * agilityBonus, charge: 3 * agilityBonus, run: 6 * agilityBonus };
+}
+
+/**
  * Valeur finale d'une compétence de base (spec §3) : caractéristique liée (divisée par deux si
  * non acquise) + palier de maîtrise + bonus libre. Mute `skills` en place.
  */
