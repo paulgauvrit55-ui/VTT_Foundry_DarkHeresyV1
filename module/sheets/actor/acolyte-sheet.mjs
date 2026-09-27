@@ -1,14 +1,16 @@
 import { DH } from "../../config.mjs";
+import AcolyteSettingsConfig from "../../apps/acolyte-settings.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
-/** Onglets de la fiche (mockup `Exemples/LayoutTab1.png`) : seul le premier est développé pour l'instant. */
+/** Onglets de la fiche (mockup `Exemples/LayoutTab1.png`). `psykerOnly` : masqué si le paramètre avancé Psyker est décoché. */
 const TABS = [
   { id: "characteristics", label: "DH.Tabs.Characteristics" },
   { id: "combat", label: "DH.Tabs.Combat" },
   { id: "resources", label: "DH.Tabs.Resources" },
-  { id: "psychic", label: "DH.Tabs.Psychic" }
+  { id: "psychic", label: "DH.Tabs.Psychic", psykerOnly: true },
+  { id: "notes", label: "DH.Tabs.Notes" }
 ];
 
 export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
@@ -41,7 +43,8 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       deleteProgression: AcolyteSheet.#deleteProgression,
       createPsychicPower: AcolyteSheet.#createPsychicPower,
       togglePsychicPower: AcolyteSheet.#togglePsychicPower,
-      rollPsychicPower: AcolyteSheet.#rollPsychicPower
+      rollPsychicPower: AcolyteSheet.#rollPsychicPower,
+      openAdvancedSettings: AcolyteSheet.#openAdvancedSettings
     }
   };
 
@@ -54,16 +57,23 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
   /** Onglet actif, conservé sur l'instance pour survivre aux re-renders déclenchés par les updates. */
   #activeTab = TABS[0].id;
 
+  /** Fenêtre de paramètres avancés, créée à la première ouverture. */
+  #advancedSettings = null;
+
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     context.actor = this.actor;
     context.system = this.actor.system;
-    context.tabs = TABS.map(tab => ({ id: tab.id, label: game.i18n.localize(tab.label) }));
+    const visibleTabs = TABS.filter(tab => !tab.psykerOnly || this.actor.system.psyker);
+    // L'onglet actif peut disparaître (Psyker décoché pendant qu'il était ouvert) : repli sur le premier.
+    if (!visibleTabs.some(tab => tab.id === this.#activeTab)) this.#activeTab = TABS[0].id;
+    context.tabs = visibleTabs.map(tab => ({ id: tab.id, label: game.i18n.localize(tab.label) }));
     context.characteristics = Object.entries(this.actor.system.characteristics).map(([key, characteristic]) => ({
       key,
       value: characteristic.value,
       bonus: characteristic.bonus,
-      hasBonus: DH.characteristics[key].hasBonus,
+      // CC/CT n'ont de bonus qu'avec une valeur Surnaturel (cf. `computeCharacteristicBonuses`).
+      hasBonus: characteristic.bonus !== null,
       label: game.i18n.localize(DH.characteristics[key].label),
       abbrev: game.i18n.localize(DH.characteristics[key].abbrev)
     }));
@@ -187,6 +197,12 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
       overbleed: item.system.overbleed,
       description: item.system.description
     }));
+
+    context.notesField = this.actor.system.schema.fields.notes;
+    context.enrichedNotes = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.actor.system.notes ?? "", {
+      secrets: this.actor.isOwner,
+      relativeTo: this.actor
+    });
 
     return context;
   }
@@ -316,6 +332,12 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
   static async #rollPsychicPower(event, target) {
     const item = this.actor.items.get(target.closest("[data-item-id]")?.dataset.itemId);
     if (item) await this.actor.rollPsychicPowerTest(item);
+  }
+
+  static async #openAdvancedSettings() {
+    // Une seule fenêtre par acteur : ré-ouvrir met simplement l'existante au premier plan.
+    this.#advancedSettings ??= new AcolyteSettingsConfig({ document: this.actor });
+    await this.#advancedSettings.render({ force: true });
   }
 
   static async #addMentalDisorder() {

@@ -38,7 +38,16 @@
       "Characteristics": "Caractéristiques et Compétences",
       "Combat": "Inventaire & Combat",
       "Resources": "Ressources & Progression",
-      "Psychic": "Pouvoirs psychiques"
+      "Psychic": "Pouvoirs psychiques",
+      "Notes": "Notes"
+    },
+    "AdvancedSettings": {
+      "Title": "Paramètres avancés",
+      "Psyker": "Psyker",
+      "PsykerHint": "Affiche l'onglet « Pouvoirs psychiques » de la fiche.",
+      "UnnaturalTitle": "Caractéristiques surnaturelles",
+      "UnnaturalHint": "Valeur ajoutée au bonus de la caractéristique (0 = aucun effet). Pour CC et CT, qui n'ont pas de bonus en V1, une valeur non nulle fait apparaître un bonus (dizaine + valeur).",
+      "Unnatural": "{name} surnaturelle"
     },
     "PsychicPower": {
       "Title": "Pouvoirs psychiques",

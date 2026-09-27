@@ -19,10 +19,13 @@ export async function rollWeaponAttackTest(actor, item) {
     label: `${item.name} (${game.i18n.localize(characteristicConfig.abbrev)})`,
     target: characteristic.value + (item.system.bonus ?? 0),
     template: `systems/${game.system.id}/templates/chat/weapon-attack.hbs`,
+    // Attributs affichés quel que soit le résultat : certains (Précise, Fiable…) jouent aussi sur un échec.
     buildExtraContext: ({ result, success }) => {
-      if (!success) return {};
+      const attributes = item.system.attributes?.trim() ?? "";
+      if (!success) return { attributes };
       const location = DH.getHitLocation(result);
       return {
+        attributes,
         actorId: actor.id,
         itemId: item.id,
         locationLabel: game.i18n.localize(DH.armourLocations[location].label),
@@ -80,6 +83,7 @@ export async function rollWeaponDamageTest(actor, item) {
       label: item.name,
       damageTypeLabel: game.i18n.localize(DH.damageTypes[item.system.damageType]),
       penetration: item.system.penetration,
+      attributes: item.system.attributes?.trim() ?? "",
       forceBonus,
       breakdown: buildDamageBreakdown(roll),
       total

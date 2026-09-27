@@ -1,0 +1,16 @@
+<div class="acolyte-settings-body">
+  <div class="form-group">
+    <label>{{localize "DH.AdvancedSettings.Psyker"}}</label>
+    <input type="checkbox" name="system.psyker" {{#if system.psyker}}checked{{/if}}>
+  </div>
+  <p class="hint">{{localize "DH.AdvancedSettings.PsykerHint"}}</p>
+
+  <h3>{{localize "DH.AdvancedSettings.UnnaturalTitle"}}</h3>
+  <p class="hint">{{localize "DH.AdvancedSettings.UnnaturalHint"}}</p>
+  {{#each unnatural as |entry|}}
+    <div class="form-group">
+      <label>{{entry.label}}</label>
+      <input type="number" name="system.unnatural.{{entry.key}}" value="{{entry.value}}" min="0">
+    </div>
+  {{/each}}
+</div>

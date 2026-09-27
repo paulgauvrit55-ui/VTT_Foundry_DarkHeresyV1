@@ -1,5 +1,6 @@
 <div class="dark-heresy-v1 chat-card weapon-attack {{#if success}}success{{else}}failure{{/if}}">
   <h3 class="card-title">{{label}}</h3>
+  {{#if attributes}}<p class="weapon-attributes">{{localize "DH.Weapon.Attributes"}} : {{attributes}}</p>{{/if}}
   <p>{{localize "DH.Roll.Target"}} : {{target}}{{#if modifier}} ({{modifier}}){{/if}}</p>
   <p>{{localize "DH.Roll.Result"}} : {{result}}</p>
   <p class="outcome">

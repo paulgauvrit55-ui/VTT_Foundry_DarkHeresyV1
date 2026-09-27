@@ -5,12 +5,13 @@ import {
   nameDescriptionField,
   baseSkillsSchema,
   armourSchema,
+  unnaturalSchema,
   computeCharacteristicBonuses,
   computeBaseSkillTotals,
   computeCarriedWeight
 } from "../shared-fields.mjs";
 
-const { SchemaField, NumberField, StringField, HTMLField, ArrayField } = foundry.data.fields;
+const { SchemaField, NumberField, StringField, BooleanField, HTMLField, ArrayField } = foundry.data.fields;
 
 /** Achat de progression (spec §5.2) : entrée libre nom + coût en PX consigné par le joueur. */
 function progressionEntryField() {
@@ -50,6 +51,11 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
       // Niveau Psy (spec §7.1) : 0 = non psyker, 1 à 6 = nombre maximal de d10 d'un jet de
       // Puissance (§7.2). Champ manuel : il s'acquiert par talents, sans moteur d'acquisition.
       psyRating: new NumberField({ required: true, integer: true, min: 0, max: DH.maxPsyRating, initial: 0 }),
+      // Paramètres avancés (fenêtre dédiée, `AcolyteSettingsConfig`) : `psyker` conditionne
+      // l'affichage de l'onglet Pouvoirs psychiques ; `unnatural` ajoute une valeur fixe au bonus
+      // de chaque caractéristique (Surnaturel).
+      psyker: new BooleanField({ required: true, initial: false }),
+      unnatural: unnaturalSchema(),
       mentalDisorders: new ArrayField(nameDescriptionField()),
       // Malignités (spec §2.5) : fonctionnellement identique aux troubles mentaux, mais liée
       // aux Points de Corruption plutôt qu'aux Points de Folie — décision utilisateur du
@@ -65,12 +71,20 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
       // contrairement aux listes d'armes/objets) et avec le précédent Mouvement/port de charge.
       armour: armourSchema(),
       skills: baseSkillsSchema(),
-      biography: new HTMLField({ required: false, blank: true })
+      biography: new HTMLField({ required: false, blank: true }),
+      // Onglet Notes : texte riche libre.
+      notes: new HTMLField({ required: false, blank: true })
     };
   }
 
+  /** Acteurs antérieurs au paramètre `psyker` : un Niveau Psy déjà renseigné vaut psyker, pour ne pas masquer leur onglet. */
+  static migrateData(source) {
+    if (source.psyker === undefined && source.psyRating > 0) source.psyker = true;
+    return super.migrateData(source);
+  }
+
   prepareDerivedData() {
-    computeCharacteristicBonuses(this.characteristics);
+    computeCharacteristicBonuses(this.characteristics, this.unnatural);
 
     // Plafond de Fatigue = Bonus d'Endurance (spec §2.3, §9.7) : dérivé, non stocké.
     this.resources.fatigueMax = this.characteristics.endurance.bonus;
