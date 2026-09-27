@@ -1021,3 +1021,9 @@
   color: #c62828;
   font-weight: bold;
 }
+
+/* 1 / 100 naturel : mention sous l'issue du test. */
+.dark-heresy-v1.chat-card .automatic-outcome {
+  font-style: italic;
+  font-size: 0.85rem;
+}

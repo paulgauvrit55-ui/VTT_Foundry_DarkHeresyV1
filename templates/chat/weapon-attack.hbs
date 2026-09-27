@@ -7,6 +7,7 @@
     {{#if success}}{{localize "DH.Roll.Success"}}{{else}}{{localize "DH.Roll.Failure"}}{{/if}}
     — {{localize "DH.Roll.Degree"}} {{degree}}
   </p>
+  {{#if automatic}}<p class="automatic-outcome">{{#if success}}{{localize "DH.Roll.NaturalOne"}}{{else}}{{localize "DH.Roll.NaturalHundred"}}{{/if}}</p>{{/if}}
   {{#if success}}
     <p>{{localize "DH.Attack.Location"}} : {{locationLabel}}</p>
     <p>{{localize "DH.Attack.DamageType"}} : {{damageTypeLabel}}</p>

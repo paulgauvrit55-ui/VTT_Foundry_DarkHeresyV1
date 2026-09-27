@@ -195,7 +195,9 @@
       "Result": "Résultat",
       "Success": "Réussite",
       "Failure": "Échec",
-      "Degree": "Degré :"
+      "Degree": "Degré :",
+      "NaturalOne": "1 naturel : réussite automatique",
+      "NaturalHundred": "100 naturel : échec automatique"
     },
     "Weapon": {
       "RangedTitle": "Armes à distance",

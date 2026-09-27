@@ -1,5 +1,5 @@
 import { DH } from "../config.mjs";
-import { resolveTargetTest } from "./roll-test.mjs";
+import { resolveTargetTest, resolveD100 } from "./roll-test.mjs";
 import { promptDifficultyModifier } from "../apps/roll-dialog.mjs";
 
 /**
@@ -139,8 +139,7 @@ export async function rollRighteousFury(actor, item, baseTotal) {
   const target = Math.max(0, test.target + modifier);
   const testRoll = await new Roll("1d100").evaluate();
   const result = testRoll.total;
-  const success = result <= target;
-  const degree = Math.floor(Math.abs(target - result) / 10);
+  const { success, degree, automatic } = resolveD100(result, target);
 
   const rolls = [testRoll];
   let furyBreakdown = [];
@@ -161,6 +160,7 @@ export async function rollRighteousFury(actor, item, baseTotal) {
       result,
       success,
       degree,
+      automatic,
       furyBreakdown,
       extra,
       baseTotal,
