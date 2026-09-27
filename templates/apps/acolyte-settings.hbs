@@ -5,6 +5,12 @@
   </div>
   <p class="hint">{{localize "DH.AdvancedSettings.PsykerHint"}}</p>
 
+  <div class="form-group">
+    <label>{{localize "DH.AdvancedSettings.InfluenceRules"}}</label>
+    <input type="checkbox" name="system.influenceRules" {{#if system.influenceRules}}checked{{/if}}>
+  </div>
+  <p class="hint">{{localize "DH.AdvancedSettings.InfluenceRulesHint"}}</p>
+
   <h3>{{localize "DH.AdvancedSettings.UnnaturalTitle"}}</h3>
   <p class="hint">{{localize "DH.AdvancedSettings.UnnaturalHint"}}</p>
   {{#each unnatural as |entry|}}

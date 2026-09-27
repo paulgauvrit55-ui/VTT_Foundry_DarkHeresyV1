@@ -39,13 +39,25 @@
         </div>
       </div>
 
-      <div class="header-movement" title="{{localize 'DH.Resources.MovementHint'}}">
-        <label>{{localize "DH.Resources.Movement"}} :</label>
-        <div class="movement-values">
-          <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Half"}}</span> {{system.resources.movement.half}}</span>
-          <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Full"}}</span> {{system.resources.movement.full}}</span>
-          <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Run"}}</span> {{system.resources.movement.run}}</span>
-          <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Charge"}}</span> {{system.resources.movement.charge}}</span>
+      <div class="header-bottom-row">
+        <div class="header-movement" title="{{localize 'DH.Resources.MovementHint'}}">
+          <label>{{localize "DH.Resources.Movement"}} :</label>
+          <div class="movement-values">
+            <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Half"}}</span> {{system.resources.movement.half}}</span>
+            <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Full"}}</span> {{system.resources.movement.full}}</span>
+            <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Run"}}</span> {{system.resources.movement.run}}</span>
+            <span class="movement-value"><span class="movement-label">{{localize "DH.Speed.Charge"}}</span> {{system.resources.movement.charge}}</span>
+          </div>
+        </div>
+
+        <div class="header-initiative">
+          <label>{{localize "DH.Initiative.Die"}}</label>
+          <div class="initiative-controls">
+            <input type="text" name="system.initiativeDie" value="{{system.initiativeDie}}" placeholder="1d10">
+            <button type="button" data-action="rollInitiative" title="{{localize 'DH.Initiative.Hint'}}">
+              <i class="fa-solid fa-dice-d10"></i> {{localize "DH.Initiative.Roll"}}
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -371,14 +383,23 @@
           </div>
 
           <div class="thrones-row">
-            <div class="resource-single">
-              <label>{{localize "DH.Resources.Thrones"}}</label>
-              <input type="number" name="system.resources.thrones" value="{{system.resources.thrones}}">
-            </div>
-            <div class="resource-single">
-              <label>{{localize "DH.Resources.MonthlyIncome"}}</label>
-              <input type="number" name="system.resources.monthlyIncome" value="{{system.resources.monthlyIncome}}">
-            </div>
+            {{#if system.influenceRules}}
+              <div class="resource-single influence">
+                <a class="rollable" data-action="rollInfluence" title="{{localize 'DH.Resources.InfluenceRoll'}}">
+                  <label>{{localize "DH.Resources.Influence"}}</label>
+                </a>
+                <input type="number" name="system.resources.influence" value="{{system.resources.influence}}">
+              </div>
+            {{else}}
+              <div class="resource-single">
+                <label>{{localize "DH.Resources.Thrones"}}</label>
+                <input type="number" name="system.resources.thrones" value="{{system.resources.thrones}}">
+              </div>
+              <div class="resource-single">
+                <label>{{localize "DH.Resources.MonthlyIncome"}}</label>
+                <input type="number" name="system.resources.monthlyIncome" value="{{system.resources.monthlyIncome}}">
+              </div>
+            {{/if}}
           </div>
         </div>
 

@@ -16,3 +16,18 @@ export async function rollCharacteristicTest(actor, characteristicKey) {
     target: characteristic.value
   });
 }
+
+/**
+ * Lance un test d'Influence (règle alternative) : test d100 roll-under contre la valeur
+ * d'Influence, résolu comme un test de caractéristique.
+ * @param {Actor} actor
+ */
+export async function rollInfluenceTest(actor) {
+  const influence = actor.system.resources?.influence;
+  if (influence === undefined) return null;
+
+  return resolveTargetTest(actor, {
+    label: game.i18n.localize("DH.Resources.Influence"),
+    target: influence
+  });
+}

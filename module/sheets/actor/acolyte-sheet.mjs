@@ -29,6 +29,8 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
     form: { submitOnChange: true, closeOnSubmit: false },
     actions: {
       rollCharacteristic: AcolyteSheet.#rollCharacteristic,
+      rollInfluence: AcolyteSheet.#rollInfluence,
+      rollInitiative: AcolyteSheet.#rollInitiative,
       addMentalDisorder: AcolyteSheet.#addMentalDisorder,
       deleteMentalDisorder: AcolyteSheet.#deleteMentalDisorder,
       rollBaseSkill: AcolyteSheet.#rollBaseSkill,
@@ -272,6 +274,14 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
 
   static async #rollCharacteristic(event, target) {
     await this.actor.rollCharacteristicTest(target.dataset.characteristic);
+  }
+
+  static async #rollInitiative() {
+    await this.actor.rollInitiativeTest();
+  }
+
+  static async #rollInfluence() {
+    await this.actor.rollInfluenceTest();
   }
 
   static async #rollBaseSkill(event, target) {

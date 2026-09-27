@@ -49,6 +49,9 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
         }),
         thrones: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         monthlyIncome: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        // Influence (règle alternative, `influenceRules`) : valeur testée au d100 comme une
+        // caractéristique, affichée à la place des Trônes/revenu mensuel.
+        influence: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         // Port de charge (spec §11.2) : champ manuel, pas de calcul dérivé depuis BF+BE — même
         // logique que Mouvement (Guide_Implementation_FVTT.md §2.5, décision actée §3.8), des
         // talents/équipements pouvant faire varier le seuil réel.
@@ -60,7 +63,13 @@ export default class AcolyteData extends foundry.abstract.TypeDataModel {
       // Paramètres avancés (fenêtre dédiée, `AcolyteSettingsConfig`) : `psyker` conditionne
       // l'affichage de l'onglet Pouvoirs psychiques ; `unnatural` ajoute une valeur fixe au bonus
       // de chaque caractéristique (Surnaturel).
+      // Dé d'initiative : formule libre (comme les dégâts d'arme), le BA y est ajouté au jet
+      // (cf. `CONFIG.Combat.initiative` et `DarkHeresyActor#getRollData`).
+      initiativeDie: new StringField({ required: true, blank: true, initial: "1d10" }),
       psyker: new BooleanField({ required: true, initial: false }),
+      // Règle alternative « Influence » : remplace Trônes/revenu mensuel sur la fiche. Les
+      // valeurs des deux modes restent stockées, décocher réaffiche simplement les Trônes.
+      influenceRules: new BooleanField({ required: true, initial: false }),
       unnatural: unnaturalSchema(),
       mentalDisorders: new ArrayField(nameDescriptionField()),
       // Malignités (spec §2.5) : fonctionnellement identique aux troubles mentaux, mais liée

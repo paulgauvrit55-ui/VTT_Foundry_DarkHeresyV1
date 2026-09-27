@@ -50,6 +50,8 @@
       "Title": "Paramètres avancés",
       "Psyker": "Psyker",
       "PsykerHint": "Affiche l'onglet « Pouvoirs psychiques » de la fiche.",
+      "InfluenceRules": "Règles alternatives : Influence",
+      "InfluenceRulesHint": "Remplace les Trônes et le revenu mensuel par une valeur d'Influence, testée au d100 comme une caractéristique.",
       "UnnaturalTitle": "Caractéristiques surnaturelles",
       "UnnaturalHint": "Valeur ajoutée au bonus de la caractéristique.",
       "Unnatural": "{name} surnaturelle"
@@ -101,7 +103,9 @@
       "Corruption": "Points de Corruption",
       "Experience": "Points d'Expérience",
       "Thrones": "Trônes",
-      "MonthlyIncome": "Revenu mensuel"
+      "MonthlyIncome": "Revenu mensuel",
+      "Influence": "Influence",
+      "InfluenceRoll": "Lancer un test d'Influence"
     },
     "MentalDisorders": {
       "Title": "Troubles mentaux",
@@ -265,6 +269,13 @@
       "ForceBonus": "Bonus de Force",
       "Result": "Résultat :",
       "Total": "Total"
+    },
+    "Initiative": {
+      "Die": "Dé d'initiative",
+      "Roll": "Lancer l'initiative",
+      "Hint": "Lance le dé d'initiative + Bonus d'Agilité ; place le personnage dans l'ordre de tour si un combat est actif.",
+      "Flavor": "Initiative",
+      "Error": "Impossible de lancer l'initiative : formule du dé d'initiative invalide ?"
     },
     "RighteousFury": {
       "Title": "Fureur du juste",

@@ -74,6 +74,42 @@
   border-radius: 8px;
 }
 
+/* Ligne sous les ressources : Mouvement à gauche, dé d'initiative à droite. */
+.dark-heresy-v1.sheet.actor .header-bottom-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dark-heresy-v1.sheet.actor .header-initiative {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 0 0 auto;
+}
+
+.dark-heresy-v1.sheet.actor .header-initiative > label {
+  font-weight: bold;
+}
+
+.dark-heresy-v1.sheet.actor .initiative-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dark-heresy-v1.sheet.actor .initiative-controls input {
+  width: 4.5rem;
+  text-align: center;
+}
+
+.dark-heresy-v1.sheet.actor .initiative-controls button {
+  flex: 0 0 auto;
+  width: auto;
+  white-space: nowrap;
+}
+
 .dark-heresy-v1.sheet.actor .header-movement {
   display: flex;
   flex-direction: column;
@@ -86,7 +122,7 @@
 
 .dark-heresy-v1.sheet.actor .movement-values {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   padding-left: 1rem;
 }
 
@@ -726,6 +762,12 @@
 .dark-heresy-v1.sheet.actor .resource-single label {
   font-weight: bold;
   font-size: 0.8rem;
+}
+
+/* Libellé d'Influence cliquable (test d100) : le curseur du lien doit l'emporter sur celui du label. */
+.dark-heresy-v1.sheet.actor .resource-single.influence .rollable,
+.dark-heresy-v1.sheet.actor .resource-single.influence .rollable label {
+  cursor: pointer;
 }
 
 .dark-heresy-v1.sheet.actor .resource-single input,

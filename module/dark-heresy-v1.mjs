@@ -37,6 +37,9 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.armour = ArmourData;
   CONFIG.Item.dataModels.psychicPower = PsychicPowerData;
   CONFIG.ActiveEffect.legacyTransferral = false;
+  // Initiative = dé d'initiative de l'acteur + Bonus d'Agilité ; les deux variables sont fournies
+  // par `DarkHeresyActor#getRollData` (repli sur 1d10 pour les acteurs sans dé d'initiative, PNJ).
+  CONFIG.Combat.initiative = { formula: "@initiativeDie + @agilityBonus", decimals: 0 };
 
   foundry.applications.apps.DocumentSheetConfig.registerSheet(foundry.documents.Actor, game.system.id, AcolyteSheet, {
     types: ["acolyte"],
