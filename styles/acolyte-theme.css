@@ -132,8 +132,13 @@
   color: var(--dh-text);
 }
 
+/* Foundry v13 redessine les cases à cocher (`appearance: none` + pseudo-éléments) à partir de
+   ses propres variables, définies par thème : `accent-color` est donc sans effet. */
 .dark-heresy-v1.sheet.actor.acolyte input[type="checkbox"] {
-  accent-color: var(--dh-foreground);
+  --checkbox-checked-color: var(--dh-foreground);
+  --checkbox-background-color: var(--dh-input-bg);
+  --checkbox-checkmark-color: var(--dh-title);
+  --checkbox-border-color: var(--dh-border);
 }
 
 .dark-heresy-v1.sheet.actor.acolyte button {
