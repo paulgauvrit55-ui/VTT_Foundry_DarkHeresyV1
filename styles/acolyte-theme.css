@@ -1,0 +1,509 @@
+/* Thème visuel de la fiche d'acolyte, repris du système Dark Heresy 2E
+   (`ExempleProject/DarkHeresy2E-FoundryVTT-develop/less`, rendu `Exemples/V2SheetA.png` /
+   `V2SheetB.png`) : fond parchemin, police Caslon Antique, bandeaux de titre brun foncé,
+   barre d'onglets bordeaux, champs « cuir » à ombre interne. Seuls les couleurs, textures et
+   l'apparence des contrôles sont repris, pas la mise en page.
+   Fichier chargé après `dark-heresy-v1.css` et limité à `.acolyte` (le PNJ garde le style de
+   base). Le fond parchemin étant fixe, la couleur de texte est forcée en foncé partout : le
+   thème sombre de Foundry rendrait sinon le texte clair illisible. */
+
+@font-face {
+  font-family: "Caslon Antique";
+  src: url("../assets/fonts/caslon-antique.ttf");
+}
+
+@font-face {
+  font-family: "Caslon Antique";
+  src: url("../assets/fonts/caslon-antique-Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Caslon Antique";
+  src: url("../assets/fonts/caslon-antique-bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Caslon Antique";
+  src: url("../assets/fonts/caslon-antique-boldItalic.ttf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte {
+  --dh-text: #191813;
+  --dh-title: #fff;
+  --dh-border: #000;
+  --dh-highlight: red;
+  --dh-foreground: #7a1404;
+  --dh-shadow: #ab4c00;
+  --dh-tab-bar: #562e2e;
+  --dh-band-dark: #1b0f08b8;
+  --dh-band-brown: #5d2f149e;
+  --dh-input-bg: #c1908161;
+  --dh-input-inset: #7b3000;
+  --dh-font: "Caslon Antique", serif;
+}
+
+/* ---------- Fond et typographie ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .window-content {
+  background: #d8cbb3 url("../assets/images/background.jpg") center / cover;
+  color: var(--dh-text);
+  font-family: var(--dh-font);
+  font-size: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #4e4438 transparent;
+}
+
+/* `:where()` garde cette règle générique à faible spécificité, pour que le texte blanc des
+   bandeaux de titre (plus bas) l'emporte. */
+.dark-heresy-v1.sheet.actor.acolyte .window-content :where(label, span, a, p, h1, h2, h3, h4) {
+  color: var(--dh-text);
+  font-family: var(--dh-font);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .window-content label {
+  font-weight: bold;
+}
+
+/* Survol des éléments cliquables : halo rouge (comme les onglets et les jets du système 2E). */
+.dark-heresy-v1.sheet.actor.acolyte .window-content a:hover,
+.dark-heresy-v1.sheet.actor.acolyte .rollable:hover {
+  text-shadow: 0 0 8px var(--dh-highlight);
+}
+
+/* ---------- Contrôles de formulaire ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte input[type="text"],
+.dark-heresy-v1.sheet.actor.acolyte input[type="number"],
+.dark-heresy-v1.sheet.actor.acolyte select,
+.dark-heresy-v1.sheet.actor.acolyte textarea,
+.dark-heresy-v1.sheet.actor.acolyte .resource-derived {
+  background: var(--dh-input-bg);
+  border: 1px solid var(--dh-border);
+  border-radius: 3px;
+  box-shadow: inset 0 0 6px var(--dh-input-inset);
+  color: var(--dh-text);
+  font-family: var(--dh-font);
+  font-size: 13px;
+  height: auto;
+  min-height: 1.6rem;
+  line-height: 16px;
+  padding: 2px 4px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .resource-derived {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  text-align: center;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte input[type="number"]::-webkit-outer-spin-button,
+.dark-heresy-v1.sheet.actor.acolyte input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte input[type="text"]:focus,
+.dark-heresy-v1.sheet.actor.acolyte input[type="number"]:focus,
+.dark-heresy-v1.sheet.actor.acolyte select:focus,
+.dark-heresy-v1.sheet.actor.acolyte textarea:focus {
+  border: 1px solid var(--dh-border);
+  box-shadow: 0 0 10px var(--dh-shadow);
+  outline: none;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte input::placeholder,
+.dark-heresy-v1.sheet.actor.acolyte textarea::placeholder {
+  color: rgba(25, 24, 19, 0.55);
+}
+
+/* La liste déroulante native ne suit pas le fond translucide du select. */
+.dark-heresy-v1.sheet.actor.acolyte select option {
+  background: #e3d6c1;
+  color: var(--dh-text);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte input[type="checkbox"] {
+  accent-color: var(--dh-foreground);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte button {
+  background: var(--dh-input-bg);
+  border: 1px solid var(--dh-border);
+  border-radius: 3px;
+  box-shadow: inset 0 0 6px var(--dh-input-inset);
+  color: var(--dh-text);
+  font-family: var(--dh-font);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte button:hover,
+.dark-heresy-v1.sheet.actor.acolyte button:focus {
+  background: var(--dh-foreground);
+  color: var(--dh-title);
+  box-shadow: none;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte button:hover i,
+.dark-heresy-v1.sheet.actor.acolyte button:focus i {
+  color: var(--dh-title);
+}
+
+/* ---------- Panneaux encadrés ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .sheet-header,
+.dark-heresy-v1.sheet.actor.acolyte .collapsible-section,
+.dark-heresy-v1.sheet.actor.acolyte .talents,
+.dark-heresy-v1.sheet.actor.acolyte .armour-section,
+.dark-heresy-v1.sheet.actor.acolyte .inventory-section,
+.dark-heresy-v1.sheet.actor.acolyte .insanity-column,
+.dark-heresy-v1.sheet.actor.acolyte .corruption-column,
+.dark-heresy-v1.sheet.actor.acolyte .progression,
+.dark-heresy-v1.sheet.actor.acolyte .psychic-powers,
+.dark-heresy-v1.sheet.actor.acolyte .identity-grid,
+.dark-heresy-v1.sheet.actor.acolyte .notes-editor {
+  border: 2px solid var(--dh-border);
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .talents,
+.dark-heresy-v1.sheet.actor.acolyte .progression {
+  margin-top: 0.5rem;
+}
+
+/* Les séparateurs d'origine (bordures gauche/haut entre colonnes) sont remplacés par les
+   panneaux encadrés ci-dessus, ou réduits à un filet sombre à l'intérieur d'un panneau. */
+.dark-heresy-v1.sheet.actor.acolyte .skills-columns,
+.dark-heresy-v1.sheet.actor.acolyte .combat-columns {
+  border-top: none;
+  padding-top: 0;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .skills-columns {
+  margin-top: 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .combat-columns {
+  margin-top: 0.5rem;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .skills.advanced-skills,
+.dark-heresy-v1.sheet.actor.acolyte .melee-weapons {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .inventory-section {
+  padding-left: 5px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .corruption-column {
+  padding-left: 5px;
+}
+
+/* ---------- Bandeaux de titre ---------- */
+
+/* Titre de panneau : bandeau brun foncé, texte blanc en capitales. */
+.dark-heresy-v1.sheet.actor.acolyte .section-title,
+.dark-heresy-v1.sheet.actor.acolyte .section-toggle,
+.dark-heresy-v1.sheet.actor.acolyte .talents-header,
+.dark-heresy-v1.sheet.actor.acolyte .inventory-header,
+.dark-heresy-v1.sheet.actor.acolyte .armour-section h3,
+.dark-heresy-v1.sheet.actor.acolyte .notes-editor h3 {
+  background: var(--dh-band-dark);
+  border: none;
+  border-radius: 3px;
+  padding: 3px 6px;
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .section-toggle {
+  justify-content: center;
+}
+
+/* Sous-titre de liste : bandeau brun clair (« Mental Disorder + » du système 2E). */
+.dark-heresy-v1.sheet.actor.acolyte .skills-header,
+.dark-heresy-v1.sheet.actor.acolyte .weapons-header,
+.dark-heresy-v1.sheet.actor.acolyte .mental-disorders-header,
+.dark-heresy-v1.sheet.actor.acolyte .malignancies-header,
+.dark-heresy-v1.sheet.actor.acolyte .progression-list-header {
+  background: var(--dh-band-brown);
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin-bottom: 0.3rem;
+}
+
+/* Texte et icônes blancs dans tous les bandeaux. */
+.dark-heresy-v1.sheet.actor.acolyte .section-title,
+.dark-heresy-v1.sheet.actor.acolyte .section-toggle,
+.dark-heresy-v1.sheet.actor.acolyte .section-toggle i,
+.dark-heresy-v1.sheet.actor.acolyte .armour-section h3,
+.dark-heresy-v1.sheet.actor.acolyte .notes-editor h3,
+.dark-heresy-v1.sheet.actor.acolyte .talents-header *,
+.dark-heresy-v1.sheet.actor.acolyte .inventory-header *,
+.dark-heresy-v1.sheet.actor.acolyte .skills-header *,
+.dark-heresy-v1.sheet.actor.acolyte .weapons-header *,
+.dark-heresy-v1.sheet.actor.acolyte .mental-disorders-header *,
+.dark-heresy-v1.sheet.actor.acolyte .malignancies-header *,
+.dark-heresy-v1.sheet.actor.acolyte .progression-list-header * {
+  color: var(--dh-title);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .talents-header h3,
+.dark-heresy-v1.sheet.actor.acolyte .inventory-header h3,
+.dark-heresy-v1.sheet.actor.acolyte .skills-header h3,
+.dark-heresy-v1.sheet.actor.acolyte .weapons-header h3,
+.dark-heresy-v1.sheet.actor.acolyte .mental-disorders-header h4,
+.dark-heresy-v1.sheet.actor.acolyte .malignancies-header h4,
+.dark-heresy-v1.sheet.actor.acolyte .progression-list-header h4 {
+  border: none;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .talents-header h3,
+.dark-heresy-v1.sheet.actor.acolyte .inventory-header h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+/* En-têtes de colonnes des compétences. */
+.dark-heresy-v1.sheet.actor.acolyte .skill-row-header {
+  border-bottom: 1px solid var(--dh-border);
+  font-size: 13px;
+}
+
+/* ---------- En-tête persistant ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .sheet-header .profile-img {
+  border: 2px solid var(--dh-border);
+  border-radius: 3px;
+  background: radial-gradient(closest-side, var(--dh-foreground) 0%, transparent 100%);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .sheet-header .profile-img:hover {
+  box-shadow: 0 0 10px var(--dh-highlight);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .sheet-header .charname input {
+  font-size: 1.4rem;
+  font-weight: bold;
+  min-height: 2rem;
+}
+
+/* PB / PD / Fatigue : panneaux encadrés à bandeau de titre au lieu des boîtes colorées. */
+.dark-heresy-v1.sheet.actor.acolyte .header-resource {
+  background: transparent;
+  border: 2px solid var(--dh-border);
+  border-radius: 3px;
+  padding: 0 0 4px;
+  overflow: hidden;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .header-resource label {
+  align-self: stretch;
+  background: var(--dh-band-dark);
+  color: var(--dh-title);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 13px;
+  padding: 2px 4px;
+  margin-bottom: 4px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .header-resource-values input,
+.dark-heresy-v1.sheet.actor.acolyte .header-resource-values .resource-derived {
+  background: var(--dh-input-bg);
+  border: 1px solid var(--dh-border);
+  color: var(--dh-text);
+  font-size: 15px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .movement-label {
+  opacity: 0.75;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .advanced-settings-button {
+  opacity: 0.75;
+}
+
+/* ---------- Onglets ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .sheet-tabs {
+  background: var(--dh-tab-bar);
+  border-radius: 3px;
+  margin: 8px 0;
+  padding: 0 8px;
+  gap: 0;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .sheet-tab,
+.dark-heresy-v1.sheet.actor.acolyte .sheet-tab.active {
+  background: transparent;
+  color: var(--dh-title);
+  border-radius: 0;
+  padding: 5px;
+  font-family: var(--dh-font);
+  font-size: 17px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .sheet-tab.active {
+  text-shadow: 0 0 10px var(--dh-highlight);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .sheet-tab:hover {
+  text-shadow: 0 0 8px var(--dh-highlight);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .sheet-body {
+  padding: 0;
+}
+
+/* ---------- Caractéristiques ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .characteristic-label {
+  font-size: 18px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .characteristic-value-row {
+  background: transparent;
+  overflow: visible;
+  gap: 3px;
+  justify-content: center;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .characteristic-value-row input {
+  flex: 0 0 50px;
+  height: 50px;
+  font-size: 24px;
+  background: var(--dh-input-bg);
+  border: 1px solid var(--dh-border);
+  color: var(--dh-text);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .characteristic-value-row.has-bonus .characteristic-bonus {
+  flex: 0 0 36px;
+  height: 36px;
+  align-self: flex-end;
+  background: var(--dh-band-brown);
+  border: 1px solid var(--dh-border);
+  border-radius: 3px;
+  box-shadow: inset 0 0 6px var(--dh-input-inset);
+  color: var(--dh-title);
+  font-size: 18px;
+}
+
+/* ---------- Compétences ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .skill-label,
+.dark-heresy-v1.sheet.actor.acolyte span.skill-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Total de compétence cliquable : petite case « cuir » (case « -20 » du système 2E). */
+.dark-heresy-v1.sheet.actor.acolyte .skill-total {
+  background: var(--dh-input-bg);
+  border: 1px solid var(--dh-border);
+  border-radius: 3px;
+  box-shadow: inset 0 0 6px var(--dh-input-inset);
+  font-size: 13px;
+  line-height: 1.5rem;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .skill-total:hover {
+  background: var(--dh-foreground);
+  color: var(--dh-title);
+  text-shadow: none;
+}
+
+/* ---------- Listes (talents, armes, inventaire, troubles…) ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .talent-description,
+.dark-heresy-v1.sheet.actor.acolyte .weapon-profile {
+  background: rgba(193, 144, 129, 0.25);
+  border: 1px solid var(--dh-border);
+  color: var(--dh-text);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .weapon-profile label {
+  color: var(--dh-text);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .gear-row:nth-child(odd of .gear-row),
+.dark-heresy-v1.sheet.actor.acolyte .skill-row.advanced:nth-child(odd of .skill-row.advanced:not(.skill-row-header)) {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .delete-row:hover,
+.dark-heresy-v1.sheet.actor.acolyte .delete-row:hover i {
+  color: var(--dh-foreground);
+}
+
+/* ---------- Armure ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .armour-box {
+  background: transparent;
+  border: 2px solid var(--dh-border);
+  border-radius: 3px;
+  color: var(--dh-text);
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .armour-box label {
+  font-size: 15px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .armour-box input {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  background: var(--dh-input-bg);
+  border: 1px solid var(--dh-border);
+}
+
+/* ---------- Ressources & Progression ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .resource-current input {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .resource-single {
+  border: 2px solid var(--dh-border);
+  border-radius: 3px;
+}
+
+/* ---------- Biographie & Notes ---------- */
+
+.dark-heresy-v1.sheet.actor.acolyte .identity-field label {
+  opacity: 1;
+  font-size: 14px;
+}
+
+.dark-heresy-v1.sheet.actor.acolyte .notes-editor prose-mirror {
+  background: rgba(193, 144, 129, 0.25);
+  border: 1px solid var(--dh-border);
+  border-radius: 3px;
+  color: var(--dh-text);
+  font-family: var(--dh-font);
+  font-size: 15px;
+}
