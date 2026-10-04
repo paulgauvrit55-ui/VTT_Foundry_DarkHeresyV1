@@ -342,5 +342,20 @@
       "PsychicTables": "Tables psychiques",
       "Error": "Dark Heresy V1 : échec du pré-remplissage du compendium « {name} » (voir la console)."
     }
+  },
+  "TYPES": {
+    "Actor": {
+      "acolyte": "Acolyte",
+      "npc": "PNJ/Créature"
+    },
+    "Item": {
+      "talent": "Talent",
+      "advancedSkill": "Compétence avancée",
+      "weapon": "Arme de corps-à-corps",
+      "rangedWeapon": "Arme à distance",
+      "gear": "Équipement",
+      "armour": "Armure",
+      "psychicPower": "Pouvoir psychique"
+    }
   }
 }

@@ -1045,11 +1045,22 @@
   cursor: pointer;
 }
 
-.dark-heresy-v1.sheet.actor .section-toggle i {
+.dark-heresy-v1.sheet.actor .section-toggle > i {
   transition: transform 0.15s;
 }
 
-.dark-heresy-v1.sheet.actor .collapsible-section.collapsed .section-toggle i {
+/* Bouton d'ajout dans l'en-tête d'une section repliable (talents / traits du PNJ) : calé à
+   droite quel que soit l'alignement du titre. */
+.dark-heresy-v1.sheet.actor .section-toggle {
+  position: relative;
+}
+
+.dark-heresy-v1.sheet.actor .section-toggle .section-add {
+  position: absolute;
+  right: 6px;
+}
+
+.dark-heresy-v1.sheet.actor .collapsible-section.collapsed .section-toggle > i {
   transform: rotate(-90deg);
 }
 
