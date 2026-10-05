@@ -223,8 +223,9 @@
 
 /* ---------- Fiche PNJ (profil condensé, spec §12, pas d'onglets) ---------- */
 
+/* PB + Folie + Corruption côte à côte. */
 .dark-heresy-v1.sheet.actor.npc .header-resources {
-  max-width: 10rem;
+  max-width: 30rem;
 }
 
 .dark-heresy-v1.sheet.actor .npc-speed-row {

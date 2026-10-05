@@ -78,11 +78,32 @@
             <input type="number" name="system.resources.wounds.max" value="{{system.resources.wounds.max}}">
           </div>
         </div>
+
+        <div class="header-resource insanity">
+          <label>{{localize "DH.Resources.Insanity"}}</label>
+          <div class="header-resource-values">
+            <input type="number" name="system.resources.insanity" value="{{system.resources.insanity}}">
+          </div>
+        </div>
+
+        <div class="header-resource corruption">
+          <label>{{localize "DH.Resources.Corruption"}}</label>
+          <div class="header-resource-values">
+            <input type="number" name="system.resources.corruption" value="{{system.resources.corruption}}">
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <section class="sheet-body">
+    <div class="collapsible-section notes-editor" data-section="notes">
+      <a class="section-toggle" data-action="toggleSection"><i class="fa-solid fa-chevron-down"></i> {{localize "DH.Biography.Notes"}}</a>
+      <div class="section-content">
+        {{formInput notesField name="system.notes" value=system.notes enriched=notesEnriched toggled=true}}
+      </div>
+    </div>
+
     <div class="collapsible-section" data-section="characteristics">
       <a class="section-toggle" data-action="toggleSection"><i class="fa-solid fa-chevron-down"></i> {{localize "DH.Sections.Characteristics"}}</a>
       <div class="section-content">
@@ -325,6 +346,65 @@
             {{/each}}
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="collapsible-section psychic-powers" data-section="psychic">
+      <div class="section-toggle" data-action="toggleSection">
+        <i class="fa-solid fa-chevron-down"></i> {{localize "DH.Tabs.Psychic"}}
+        <a class="section-add" data-action="createPsychicPower" title="{{localize 'DH.PsychicPower.Add'}}"><i class="fa-solid fa-plus"></i></a>
+      </div>
+      <div class="section-content">
+        <div class="psychic-summary">
+          <div class="resource-single">
+            <label>{{localize "DH.PsychicPower.PsyRating"}}</label>
+            <input type="number" name="system.psyRating" value="{{system.psyRating}}" min="0" max="{{maxPsyRating}}">
+          </div>
+          <div class="resource-single">
+            <label>{{localize "DH.PsychicPower.WillpowerBonus"}}</label>
+            <span class="resource-derived">{{willpowerBonus}}</span>
+          </div>
+        </div>
+        {{#each psychicPowers as |power|}}
+          <div class="weapon-entry psychic-power-entry" data-item-id="{{power.id}}">
+            <div class="weapon-entry-header">
+              <input type="text" class="weapon-name" value="{{power.name}}" data-item-field="name">
+              <a data-action="rollPsychicPower" title="{{localize 'DH.PsychicPower.Roll'}}"><i class="fa-solid fa-brain"></i></a>
+              <a class="weapon-toggle" data-action="togglePsychicPower" title="{{localize 'DH.PsychicPower.Toggle'}}"><i class="fa-solid fa-chevron-down"></i></a>
+              <a class="delete-row" data-action="deleteItem" title="{{localize 'DH.PsychicPower.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+            <div class="weapon-profile">
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.Discipline"}}</label>
+                <input type="text" data-item-field="system.discipline" value="{{power.discipline}}">
+              </div>
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.Threshold"}}</label>
+                <input type="number" data-item-field="system.threshold" value="{{power.threshold}}">
+              </div>
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.FocusTime"}}</label>
+                <input type="text" data-item-field="system.focusTime" value="{{power.focusTime}}">
+              </div>
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.Sustainable"}}</label>
+                <input type="checkbox" data-item-field="system.sustainable" {{#if power.sustainable}}checked{{/if}}>
+              </div>
+              <div class="weapon-field">
+                <label>{{localize "DH.PsychicPower.Range"}}</label>
+                <input type="text" data-item-field="system.range" value="{{power.range}}">
+              </div>
+              <div class="weapon-field weapon-field-attributes">
+                <label>{{localize "DH.PsychicPower.Overbleed"}}</label>
+                <input type="text" data-item-field="system.overbleed" value="{{power.overbleed}}">
+              </div>
+              <div class="weapon-field weapon-field-attributes">
+                <label>{{localize "DH.PsychicPower.Description"}}</label>
+                <textarea class="psychic-power-description" data-item-field="system.description">{{power.description}}</textarea>
+              </div>
+            </div>
+          </div>
+        {{/each}}
       </div>
     </div>
 

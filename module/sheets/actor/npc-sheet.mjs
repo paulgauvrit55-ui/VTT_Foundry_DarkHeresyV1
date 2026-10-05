@@ -7,7 +7,8 @@ const { ActorSheetV2 } = foundry.applications.sheets;
 /**
  * Fiche de PNJ/créature (spec §12) : profil condensé sur une seule page, sans onglets
  * (contrairement à la fiche d'Acolyte) — réutilise les mêmes blocs (caractéristiques,
- * compétences, armes, armure, objets) et ajoute Traits/Niveau de Menace/Taille.
+ * compétences, armes, pouvoirs psychiques, armure, objets) et ajoute Traits/Niveau de
+ * Menace/Taille.
  */
 export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
@@ -34,7 +35,10 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       toggleWeapon: NpcSheet.#toggleWeapon,
       rollWeaponAttack: NpcSheet.#rollWeaponAttack,
       rollWeaponDamage: NpcSheet.#rollWeaponDamage,
-      createGear: NpcSheet.#createGear
+      createGear: NpcSheet.#createGear,
+      createPsychicPower: NpcSheet.#createPsychicPower,
+      togglePsychicPower: NpcSheet.#togglePsychicPower,
+      rollPsychicPower: NpcSheet.#rollPsychicPower
     }
   };
 
@@ -169,6 +173,29 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       value: this.actor.system.armour[key].value
     }));
 
+    // Pouvoirs psychiques : même section que l'onglet éponyme de l'acolyte, toujours affichée
+    // (pas de paramètre Psyker sur le PNJ) — un Niveau Psy à 0 refuse simplement le jet.
+    context.maxPsyRating = DH.maxPsyRating;
+    context.willpowerBonus = this.actor.system.characteristics.forceMentale.bonus;
+    context.psychicPowers = this.actor.itemTypes.psychicPower.map(item => ({
+      id: item.id,
+      name: item.name,
+      discipline: item.system.discipline,
+      threshold: item.system.threshold,
+      focusTime: item.system.focusTime,
+      sustainable: item.system.sustainable,
+      range: item.system.range,
+      overbleed: item.system.overbleed,
+      description: item.system.description
+    }));
+
+    // Section Notes : texte riche édité via `<prose-mirror>` (helper `formInput`), comme l'acolyte.
+    context.notesField = this.actor.system.schema.fields.notes;
+    context.notesEnriched = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.actor.system.notes ?? "", {
+      secrets: this.actor.isOwner,
+      relativeTo: this.actor
+    });
+
     return context;
   }
 
@@ -279,6 +306,22 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       name: game.i18n.localize("DH.Gear.NewName"),
       type: "gear"
     }]);
+  }
+
+  static async #createPsychicPower() {
+    await this.actor.createEmbeddedDocuments("Item", [{
+      name: game.i18n.localize("DH.PsychicPower.NewName"),
+      type: "psychicPower"
+    }]);
+  }
+
+  static async #togglePsychicPower(event, target) {
+    target.closest(".psychic-power-entry")?.classList.toggle("collapsed");
+  }
+
+  static async #rollPsychicPower(event, target) {
+    const item = this.actor.items.get(target.closest("[data-item-id]")?.dataset.itemId);
+    if (item) await this.actor.rollPsychicPowerTest(item);
   }
 
   static async #addTrait() {

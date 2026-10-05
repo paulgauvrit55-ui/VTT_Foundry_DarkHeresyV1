@@ -17,8 +17,9 @@ const { SchemaField, NumberField, StringField, HTMLField, ArrayField } = foundry
  * (caractéristiques, compétences de base, armure, armes/objets en Items partagés) et n'ajoute
  * que ce que le format condensé introduit par rapport à `AcolyteData` — Traits, Niveau de
  * Menace, modificateur de taille, et un Mouvement en quatre vitesses au lieu d'un champ unique.
- * Ressources propres au PJ (Destin, Folie, Corruption, PX, Trônes...) volontairement absentes :
- * la table de la spec ne les mentionne pas pour ce profil.
+ * Ressources propres au PJ (Destin, PX, Trônes...) volontairement absentes : la table de la
+ * spec ne les mentionne pas pour ce profil. Folie, Corruption et Niveau Psy ajoutés à la
+ * demande de l'utilisateur (2026-10-05), en simples compteurs sans listes associées.
  */
 export default class NpcData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
@@ -26,6 +27,8 @@ export default class NpcData extends foundry.abstract.TypeDataModel {
       characteristics: characteristicsSchema(),
       resources: new SchemaField({
         wounds: resourcePoolField(),
+        insanity: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        corruption: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
         // Déplacement (spec §11.1, §12) : le profil condensé de PNJ affiche les quatre vitesses
         // (demi-déplacement/déplacement complet/charge/course) telles quelles, à la différence
         // du PJ qui n'affiche qu'un Mouvement unique en en-tête — champs manuels dans les deux
@@ -41,6 +44,8 @@ export default class NpcData extends foundry.abstract.TypeDataModel {
       // Dé d'initiative : même fonctionnement que l'acolyte (formule libre + BA, cf.
       // `DarkHeresyActor#getRollData`/`rollInitiativeTest`).
       initiativeDie: new StringField({ required: true, blank: true, initial: "1d10" }),
+      // Niveau Psy (spec §7.1) : même champ que l'acolyte, 0 = non psyker (jet de Puissance refusé).
+      psyRating: new NumberField({ required: true, integer: true, min: 0, max: DH.maxPsyRating, initial: 0 }),
       skills: baseSkillsSchema(),
       armour: armourSchema(),
       // Traits (spec §12) : capacités innées propres aux créatures (non accessibles aux PJ),
@@ -58,7 +63,9 @@ export default class NpcData extends foundry.abstract.TypeDataModel {
       // l'appliquerait automatiquement aux tests d'attaque/Esquive/mouvement (cohérent avec les
       // autres tables non automatisées du projet) — le MJ applique l'ajustement lui-même.
       size: new StringField({ required: true, initial: "normale", choices: Object.keys(DH.sizeCategories) }),
-      biography: new HTMLField({ required: false, blank: true })
+      biography: new HTMLField({ required: false, blank: true }),
+      // Section Notes (texte riche) affichée entre l'en-tête et les Caractéristiques.
+      notes: new HTMLField({ required: false, blank: true })
     };
   }
 
