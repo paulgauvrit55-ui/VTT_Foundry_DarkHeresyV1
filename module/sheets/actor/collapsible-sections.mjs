@@ -32,3 +32,32 @@ export function toggleSection(actor, target) {
   else collapsed.add(key);
   section.classList.toggle("collapsed", collapsed.has(key));
 }
+
+/**
+ * Entrées de liste repliables (talents) : repliées par défaut, seules celles que le joueur a
+ * dépliées sont mémorisées (même portée que les sections : par acteur, pour la session du
+ * client) — sans quoi chaque re-render les replierait à nouveau.
+ */
+const expandedByActor = new Map();
+
+function expandedSet(actor) {
+  let set = expandedByActor.get(actor.uuid);
+  if (!set) expandedByActor.set(actor.uuid, set = new Set());
+  return set;
+}
+
+/** Vrai si l'entrée `id` a été dépliée par le joueur. */
+export function isEntryExpanded(actor, id) {
+  return expandedSet(actor).has(id);
+}
+
+/** Bascule l'entrée `entrySelector` contenant `target` (identifiée par `data-item-id`) et mémorise son état. */
+export function toggleEntry(actor, target, entrySelector) {
+  const entry = target.closest(entrySelector);
+  const id = entry?.dataset.itemId;
+  if (!id) return;
+  const expanded = expandedSet(actor);
+  if (expanded.has(id)) expanded.delete(id);
+  else expanded.add(id);
+  entry.classList.toggle("collapsed", !expanded.has(id));
+}

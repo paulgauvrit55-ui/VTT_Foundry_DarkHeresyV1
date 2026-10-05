@@ -1,5 +1,5 @@
 import { DH } from "../../config.mjs";
-import { applyCollapsedSections, toggleSection } from "./collapsible-sections.mjs";
+import { applyCollapsedSections, toggleSection, isEntryExpanded, toggleEntry } from "./collapsible-sections.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -113,7 +113,8 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.talents = this.actor.itemTypes.talent.map(item => ({
       id: item.id,
       name: item.name,
-      description: item.system.description
+      description: item.system.description,
+      expanded: isEntryExpanded(this.actor, item.id)
     }));
 
     const weaponGroupOptions = Object.entries(DH.weaponGroups).map(([key, label]) => ({
@@ -223,7 +224,7 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   }
 
   static async #toggleTalent(event, target) {
-    target.closest(".talent-entry")?.classList.toggle("collapsed");
+    toggleEntry(this.actor, target, ".talent-entry");
   }
 
   static async #toggleTrait(event, target) {

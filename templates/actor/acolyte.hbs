@@ -162,16 +162,18 @@
           <h3>{{localize "DH.Talent.Title"}}</h3>
           <a data-action="createTalent" title="{{localize 'DH.Talent.Add'}}"><i class="fa-solid fa-plus"></i></a>
         </div>
-        {{#each talents as |talent|}}
-          <div class="talent-entry" data-item-id="{{talent.id}}">
-            <div class="talent-entry-header">
-              <input type="text" class="talent-name" value="{{talent.name}}" data-item-field="name">
-              <a class="talent-toggle" data-action="toggleTalent" title="{{localize 'DH.Talent.Toggle'}}"><i class="fa-solid fa-chevron-down"></i></a>
-              <a class="delete-row" data-action="deleteItem" title="{{localize 'DH.Talent.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+        <div class="talent-entries">
+          {{#each talents as |talent|}}
+            <div class="talent-entry {{#unless talent.expanded}}collapsed{{/unless}}" data-item-id="{{talent.id}}">
+              <div class="talent-entry-header">
+                <input type="text" class="talent-name" value="{{talent.name}}" data-item-field="name">
+                <a class="talent-toggle" data-action="toggleTalent" title="{{localize 'DH.Talent.Toggle'}}"><i class="fa-solid fa-chevron-down"></i></a>
+                <a class="delete-row" data-action="deleteItem" title="{{localize 'DH.Talent.Delete'}}"><i class="fa-solid fa-trash"></i></a>
+              </div>
+              <textarea class="talent-description" data-item-field="system.description" placeholder="{{localize 'DH.Talent.Description'}}">{{talent.description}}</textarea>
             </div>
-            <textarea class="talent-description" data-item-field="system.description" placeholder="{{localize 'DH.Talent.Description'}}">{{talent.description}}</textarea>
-          </div>
-        {{/each}}
+          {{/each}}
+        </div>
       </div>
     </div>
 
