@@ -1,0 +1,914 @@
+[
+  {
+    "damageType": "energie",
+    "location": "tete",
+    "name": "Effets critiques d'énergie (tête)",
+    "results": [
+      {
+        "name": "1",
+        "description": "Le coup écorche le crâne de la cible et lui émousse les sens, lui imposant un malus de –10 à tous les tests (excepté ceux d'Endurance) pendant 1 round.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "Le rayon d'énergie éblouit la cible, l'aveuglant pendant 1 round.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'attaque cuit littéralement l'oreille de la cible, l'assommant pendant 1 round et lui infligeant 1 niveau de Fatigue.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "L'énergie de l'attaque brûle tous les cheveux de la cible, qui titube sous la douleur. L'attaque lui inflige 2 niveaux de Fatigue et elle est aveuglée pendant 1d5 rounds.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "Une rafale d'énergie enveloppe la tête de la cible, lui brûlant le visage et les cheveux, si bien qu'elle se met à brailler comme un grox qu'on égorge. En plus de perdre ses cheveux, elle est aveuglée pendant 1d10 rounds et encaisse 3 niveaux de Fatigue.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "L'attaque cuit littéralement le visage de la cible, faisant fondre ses traits et endommageant ses yeux. Elle est aveuglée pendant 1d10 heures, sa Sociabilité est à jamais réduite de 1d10 points elle encaisse 1d5 niveaux de Fatigue.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "Offrant un abominable spectacle, la peau du crâne de la cible est brûlée et se détache en lambeaux, exposant les muscles et les os grillés. Elle est à jamais aveuglée et encaisse 1d10 niveaux de Fatigue. On lance aussi 1d10 pour déterminer sa nouvelle valeur de Sociabilité, à moins qu'elle soit déjà inférieure ou égale à 10, auquel cas personne ne verra vraiment la différence.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "La tête de la cible est littéralement calcinée dans un brasier aveuglant. Elle ne survit pas.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "Porté à une température extrême par l'attaque, le cerveau de la cible explose, faisant éclater son crâne et projetant des morceaux de viande embrasée aux alentours. Paix à son âme.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, sauf que le corps entier de la cible prend feu et court comme un poulet décapité sur une distance de 2d10 mètres dans une direction aléatoire (utilisez le schéma de dispersion, page 195). Tout corps inflammable devant laquelle elle passe (y compris les personnages) doit réussir un test d'Agilité sous peine de prendre feu (cf. Dégâts spéciaux, page 210).",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "energie",
+    "location": "bras",
+    "name": "Effets critiques d'énergie (bras)",
+    "results": [
+      {
+        "name": "1",
+        "description": "Le bras touché par le coup est engourdi et picote. Les tests impliquant l'utilisation de ce membre subissent un malus de –30 pendant 1 round.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "L'énergie frappe le bras de plein fouet et des vagues crépitantes le parcourent du bout des doigts jusqu'à l'épaule. Le membre est inutilisable pendant 1d5 rounds et le personnage encaisse 1 niveau de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'attaque brûle le bras de la cible, l'assommant pendant 1 round et lui infligeant 2 niveaux de Fatigue. Le membre est inutilisable pendant 1d5 rounds.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "Le traumatisme fait vomir la cible. Elle est assommée pendant 1 round et encaisse 3 niveaux de Fatigue. Le membre est inutilisable pendant 1d10 rounds.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "Le bras subit des brûlures superficielles infligeant une douleur cuisante à la cible. Ses valeurs de CC et de CT sont réduites de moitié (arrondir à l'entier inférieur) pendant 1 round et elle encaisse 1d5 niveaux de Fatigue.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "Le bras est enveloppé de flammes qui brûlent les vêtements et l'armure, les doigts se retrouvant temporairement collés et fondus. Les valeurs de CC et de CT de la cible sont réduites de moitié (arrondir à l'entier inférieur) pendant 1d10 rounds, elle encaisse 1d5 niveaux de Fatigue et doit réussir un test d'Endurance sous peine de perdre à jamais l'usage de cette main.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "Avec un effroyable claquement, la chaleur de l'attaque porte la moelle du bras de la cible à ébullition, faisant éclater l'os. Le membre est brisé et à moins qu'il ne soit réparé, on considère que la cible est manchote. La victime est assommée pendant 1 round et encaisse également 1d5 niveaux de Fatigue.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "L'énergie traverse le bras et le déchire à hauteur de l'épaule, l'arrachant du corps. La cible doit réussir un test d'Endurance sous peine d'être assommée pendant 1 round. De plus, elle encaisse 1d10 niveaux de Fatigue et souffre désormais d'une Hémorragie. La cible n'a désormais plus qu'un bras.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "Le feu dévore le bras de la cible, brûlant la chair jusqu'à l'os. La cible doit aussitôt réussir un test d'Endurance sous peine de mourir en raison du traumatisme subi. Si elle survit, elle encaisse 1d10 niveaux de Fatigue et est assommée pendant 1 round. Évidemment, elle est désormais manchote.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "L'attaque réduit le bras en un nuage de cendres et la cible se tortille au sol, où elle meurt aussitôt en raison du choc en serrant son moignon encore fumant.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "energie",
+    "location": "corps",
+    "name": "Effets critiques d'énergie (corps)",
+    "results": [
+      {
+        "name": "1",
+        "description": "L'impact coupe le souffle à la cible. Elle ne peut entreprendre qu'une demi-action à son prochain tour de jeu.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "La rafale vide les poumons de la cible, qui encaisse 1 niveau de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'attaque cuit littéralement la peau de la poitrine et de l'abdomen de la cible, lui infligeant 2 niveaux de Fatigue et l'assommant pendant 1 round.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "L'énergie se répand en vagues successives dans tout le corps du personnage, le grillant entièrement et lui infligeant 1d10 niveaux de Fatigue.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "La puissance de l'attaque projette la cible au sol où elle se protège désespérément le visage et pousse un gémissement déchirant. Elle est à terre et doit réussir un test d'Agilité sous peine de prendre feu (cf. Dégâts spéciaux, page 210). Elle encaisse 1d5 niveaux de Fatigue et doit recourir à l'action se lever pour se remettre sur pieds.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "Atteinte de plein fouet par l'attaque, la cible va bouler au sol tandis que des volutes de fumée s'échappent de la blessure. Elle est à terre, assommée pendant 1d10 rounds, et encaisse 1d5 niveaux de Fatigue. De plus, elle doit réussir un test d'Agilité sous peine de prendre feu (cf. Dégâts spéciaux, page 210).",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "L'énergie intense issue de l'attaque cuit littéralement les organes de la cible, lui brûlant les poumons et le cœur. Elle est assommée pendant 2d10 rounds et son Endurance est réduite de moitié (arrondir à l'entier inférieur).",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "Tandis que l'énergie déferle sur le personnage, sa peau noircit et se détache pendant que sa graisse filtre de ses vêtements et de son armure. La cible est assommée pendant 2d10 rounds et l'attaque réduit de moitié sa Force, son Endurance et son Agilité. Les cicatrices réduisent à jamais sa Sociabilité de moitié.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "La cible est enveloppée d'une véritable vague de feu, sa peau fond et ses yeux éclatent comme des œufs trop cuits. Son cadavre calciné s'effondre au sol.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus. De plus, si la cible portait des munitions, elles ont 50 % de risques d'exploser. À moins qu'elles ne réussissent un test d'Esquive, toutes les créatures situées dans un rayon de 1d5 mètres subissent alors 1d10+5 points de dégâts explosifs. Si la cible portait des grenades ou des missiles, un round après que les dégâts ont été résolus, les armes explosent à l'endroit où s'est effondré le cadavre et produisent les effets habituels.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "energie",
+    "location": "jambe",
+    "name": "Effets critiques d'énergie (jambe)",
+    "results": [
+      {
+        "name": "1",
+        "description": "Le choc coupe le souffle de la cible. Elle encaisse 1 niveau de Fatigue.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "L'impact écorche la jambe de la cible, la ralentissant un instant. Tous ses déplacements sont réduits de moitié pendant 1 round.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "La rafale brise la jambe de la cible, l'assommant pendant 1 round et réduisant tous ses déplacements de moitié pendant 1d5 rounds.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "Le rude coup infligé à la jambe envoie de douloureuses vagues électriques dans le corps de la cible. Celle-ci encaisse 1d5 niveaux de Fatigue et réduit tous ses déplacements de moitié pendant 1d5 rounds.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "La cible subit d'horribles brûlures qui fondent vêtements, armure, chair et os. Elle encaisse 1 niveau de Fatigue et ses déplacements sont réduits de moitié pendant 2d10 rounds.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "L'attaque brûle le pied de la cible, calcinant la chair et dégageant une odeur répugnante. Elle doit réussir un test d'Endurance sous peine de perdre son pied. En cas de succès, sa vitesse de déplacement est réduite de moitié jusqu'à ce qu'elle bénéficie de soins. De plus, elle encaisse 2 niveaux de Fatigue.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "L'énergie grille littéralement la jambe qui n'est plus qu'une masse de chair noircie. Le membre est cassé et on considère que la cible a une jambe en moins jusqu'à ce que la fracture soit résorbée. Elle doit réussir un test d'Endurance sous peine d'être assommée pendant 1 round. De plus, elle encaisse 1d5 niveaux de Fatigue.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "L'énergie traverse la jambe et la coupe. La cible doit réussir un test d'Endurance sous peine d'être assommée pendant 1 round. De plus, elle encaisse 1d10 niveaux de Fatigue et souffre désormais d'une Hémorragie. La cible n'a désormais plus qu'une jambe.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "La puissance de l'attaque réduit la jambe à une masse de cartilages grésillante. La cible doit réussir un test d'Endurance sous peine de mourir à cause du choc. La jambe est perdue.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Offrant un effroyable spectacle, la jambe prend feu et la cible est entièrement consumée. Elle meurt au bout de quelques secondes, dans d'atroces souffrances.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "explosif",
+    "location": "tete",
+    "name": "Effets critiques explosifs (tête)",
+    "results": [
+      {
+        "name": "1",
+        "description": "La cible est désorientée par l'explosion. Elle ne peut entreprendre qu'une demi-action à son prochain tour de jeu et encaisse 1 niveau de Fatigue.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "Le bruit et l'explosion de lumière aveuglent et assourdissent la cible pendant 1 round. Elle encaisse 2 niveaux de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "La détonation provoque l'apparition de petites entailles sur le visage de la cible, maintenant ensanglantée. Elle encaisse 2 niveaux de Fatigue.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "La force de l'explosion jette la cible à terre et l'assomme pendant 1 round. Elle encaisse 2 niveaux de Fatigue.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "L'explosion lacère le visage de la cible et lui perce les tympans. Elle est assommée pendant 1d10 rounds et restera sourde à jamais. Elle encaisse 1d5 niveaux de Fatigue et ne peut effectuer que des demi-actions pendant 1d5 heures. Enfin, sa Sociabilité est réduite de 1d10 points à cause de ses horribles cicatrices.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "La tête de la cible explose sous la force de l'attaque et du sang jaillit pendant quelques minutes de son cadavre décapité. Cela va sans dire : la blessure lui est fatale.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "La tête et le corps de la victime sont réduits en une bouillie immonde, et elle meurt aussitôt. De plus, si la cible portait des munitions, elles explosent, infligeant 1d10+5 points de dégâts d'énergie à toutes les créatures situées dans un rayon de 1d5 mètres. Si la cible portait des grenades ou des missiles, eux aussi explosent.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "Au cours d'une série d'explosions, la tête et le torse du personnage sont arrachés, laissant une bouillie sanguinolente sur le sol. Durant le reste du combat, quiconque passe à cet endroit doit réussir un test d'Agilité sous peine de tomber.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "La cible cesse immédiatement d'exister, entièrement transformée en une sorte de brume écarlate. On ne peut pas être plus mort que ça, à part peut-être…",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais la cible a été tuée d'une manière si atroce que tous ses alliés situés dans un rayon de 2 mètres doivent réussir un test de Force Mentale sous peine de passer leur prochain tour à fuir son meurtrier.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "explosif",
+    "location": "bras",
+    "name": "Effets critiques explosifs (bras)",
+    "results": [
+      {
+        "name": "1",
+        "description": "L'attaque projette le bras en arrière, le tordant douloureusement et infligeant 1 niveau de Fatigue.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "L'attaque provoque une fracture au bras. La cible lâche ce qu'elle avait dans la main et encaisse 2 niveaux de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'explosion arrache 1d5 doigts de la main de la cible. Cette dernière encaisse 3 niveaux de Fatigue et tout ce qu'elle tenait à la main est détruit. S'il s'agissait d'un explosif, il se déclenche. Pas de chance.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "L'impact fait hurler la cible de douleur. Elle encaisse 1d5 niveaux de Fatigue, est assommée pendant 1 round et le membre est inutilisable jusqu'à ce qu'elle ait reçu des soins.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "Des fragments de l'explosion déchirent la main de la cible, entaillant la chair et les muscles. Elle doit immédiatement réussir un test d'Endurance sous peine de perdre la main. En cas de succès, la main reste tout de même inutilisable jusqu'à ce que des soins soient prodigués. La cible encaisse 1d5 niveaux de Fatigue.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "L'explosion éclate les os et mutile la chair, transformant le bras de la cible en une masse écarlate et lui infligeant 1d5 niveaux de Fatigue. Le membre est cassé et on considère qu'elle n'a qu'un bras jusqu'à ce que la fracture soit résorbée. De plus, la blessure est si grave que la cible souffre désormais d'une Hémorragie.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "Dans un bruit de chair déchirée, le bras est arraché. La cible doit aussitôt réussir un test d'Endurance sous peine de mourir en raison du choc. En cas de succès, elle est assommée pendant 1d10 rounds, encaisse 1d10 niveaux de Fatigue et subit une Hémorragie. Elle n'a plus qu'un bras désormais.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "Le bras se désintègre sous la force de l'explosion, emportant avec lui une bonne partie de l'épaule et du torse. La cible est projetée au sol en hurlant, puis meurt dans une bouillie de sang et d'organes.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "Dans une puissante détonation, le bras est arraché du corps de la cible, qui meurt instantanément dans une pluie de gouttelettes de sang. De plus, si la cible tenait une arme dotée d'une source d'énergie dans la main (comme une épée énergétique ou une épée tronçonneuse), elle explose, infligeant 1d10+5 points de dégâts à quiconque situé dans un rayon de 2 mètres.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais si la cible portait des munitions, elles explosent en infligeant 1d10+5 points de dégâts à quiconque situé dans un rayon de 1d10 mètres (en plus des dégâts causés par l'explosion des armes énergétiques notée plus haut). Si la cible portait des grenades ou des missiles, eux aussi explosent.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "explosif",
+    "location": "corps",
+    "name": "Effets critiques explosifs (corps)",
+    "results": [
+      {
+        "name": "1",
+        "description": "La cible est projetée en arrière de 1d5 mètres et encaisse 1 niveau de Fatigue par mètre parcouru. Quand elle atterrit, elle est à terre.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "La cible est projetée en arrière de 1d10 mètres et encaisse 1 niveau de Fatigue par mètre parcouru. Si elle heurte un objet solide, elle encaisse 1d5 niveaux de Fatigue supplémentaires.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'explosion détruit l'armure qui protégeait le corps, quelle qu'elle soit. Si la cible n'en portait pas, elle est projetée en arrière de 1d10 mètres, comme ci-dessus, mais elle encaisse 2 niveaux de Fatigue par mètre parcouru.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "L'explosion jette la cible au sol. Elle encaisse 1d5 niveaux de Fatigue, est assommée pendant 1 round et doit entreprendre une action complète pour se remettre sur pieds.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "L'impact de l'explosion jette la cible au sol et lui broie les tripes. Elle est assommée pendant 1 round et encaisse 1d10 niveaux de Fatigue.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "La force de l'attaque arrache des pans de chair entiers de la cible qui se retrouve avec une énorme plaie sanglante. Elle est assommée pendant 1 round, encaisse 1d10 niveaux de Fatigue et souffre d'une Hémorragie.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "La force explosive de l'attaque déchire les chairs de la cible et brouille son système nerveux, la projetant au sol. Elle tombe, est assommée pendant 1d10 rounds et encaisse 1d10 niveaux de Fatigue. De plus, elle souffre désormais d'une Hémorragie et ne peut entreprendre que des demi-actions pendant les 1d10 heures suivantes, tentant de reprendre peu à peu le contrôle de son corps.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "La poitrine de la cible explose, vomissant un flot d'organes partiellement cuits, ce qui la tue instantanément.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "Des morceaux du corps déchiqueté de la cible volent en tous sens. De plus, si elle porte des munitions, celles-ci explosent, infligeant 1d10+5 points de dégâts d'énergie aux créatures situées dans un rayon de 1d10 mètres. Si elle porte des grenades ou des missiles, eux aussi explosent.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais tous ceux qui se trouvent dans un rayon de 1d10 mètres de la cible sont couverts de morceaux de chair sanguinolente et doivent réussir un test d'Agilité sous peine de subir un malus de –10 en CC et en CT pendant 1 round, la vue obstruée par le sang.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "explosif",
+    "location": "jambe",
+    "name": "Effets critiques explosifs (jambe)",
+    "results": [
+      {
+        "name": "1",
+        "description": "Une rafale propulse la cible en arrière de 1 mètre.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "La force de l'explosion envoie la cible à la renverse. Elle est jetée à terre et encaisse 1 niveau de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "La force du choc brise la jambe de la cible, l'assommant pendant 1 round et réduisant de moitié ses déplacements pendant 1d5 rounds. Elle encaisse 1 niveau de Fatigue.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "L'explosion envoie tournoyer la cible dans les airs. Elle est propulsée à 1d5 mètres de la déflagration et encaisse 1 niveau de Fatigue par mètre parcouru. Il lui faut une action complète pour se remettre sur pieds et ses déplacements sont réduits de moitié pendant 1d10 rounds.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "La force de l'explosion arrache une partie du pied de la cible et l'éparpille sur une vaste zone. Elle doit aussitôt réussir un test d'Endurance sous peine de perdre à jamais l'usage de son pied, encaissant 1d5 niveaux de Fatigue. En cas de succès, elle encaisse quand même les 1d5 niveaux de Fatigue et ses déplacements sont réduits de moitié jusqu'à ce qu'elle bénéficie de soins.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "Le choc brise les os de la jambe de la victime et fend sa chair, lui infligeant 1d10 niveaux de Fatigue. Le membre est brisé et on considère que la cible n'a qu'une jambe jusqu'à ce que la fracture soit résorbée. De plus, elle souffre d'une Hémorragie à cause de l'abominable blessure.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "L'explosion réduit la jambe de la cible à une masse de viande fumante. La victime doit aussitôt réussir un test d'Endurance sous peine de mourir à cause du choc. En cas de réussite, elle est assommée pendant 1d10 rounds, encaisse 1d10 niveaux de Fatigue et souffre d'une Hémorragie. La cible n'a désormais plus qu'une jambe.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "La déflagration arrache la jambe dans un geyser écarlate et projette la cible à terre, son sang jaillissant comme une fontaine. Elle meurt instantanément.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "La jambe explose dans une pluie de sang. La cible meurt immédiatement et de minuscules fragments d'os, de vêtements et d'armure sont projetés dans toutes les directions. Quiconque situé dans un rayon de 2 mètres de la cible subit 1d10+2 points de dégâts d'impact.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais si la cible porte des munitions, celles-ci explosent, infligeant 1d10+5 points de dégâts d'énergie à toute créature située dans un rayon de 1d10 mètres. Si la cible portait des grenades ou des missiles, eux aussi explosent.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "impact",
+    "location": "tete",
+    "name": "Effets critiques d'impact (tête)",
+    "results": [
+      {
+        "name": "1",
+        "description": "L'impact résonne atrocement dans le crâne de la cible, qui doit réussir un test d'Endurance sous peine d'encaisser 1 niveau de Fatigue.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "L'attaque est si violente que la cible voit des étoiles. Elle encaisse 1 niveau de Fatigue et subit un malus de –10 aux tests de CC et de CT pendant 1 round.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "Le nez de la cible explose dans un torrent de sang, l'aveuglant pendant 1 round et lui infligeant 2 niveaux de Fatigue.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "La puissance du coup fait tituber la cible, qui encaisse 1d5 niveaux de Fatigue.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "La force du coup fait tituber la cible de douleur. Elle est assommée pendant 1 round.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "La tête de la cible est violemment rejetée en arrière par l'attaque, ce qui la fait vaciller pendant qu'elle tente de maîtriser une douleur étourdissante. Elle est assommée pendant 1d5 rounds et encaisse 2 niveaux de Fatigue.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "L'attaque frappe la tête de la cible de plein fouet, lui fracturant le crâne et lui ouvrant une longue entaille dans le cuir chevelu. Elle est assommée pendant 1d10 rounds et tous ses déplacements sont réduits de moitié pendant 1d10 heures.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "Du sang se met à couler du nez, de la bouche, des oreilles et des yeux de la cible dont l'attaque a pulvérisé le cerveau. La victime n'y survit pas.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "La tête de la cible explose comme un fruit mûr en projetant du sang, des esquilles et des morceaux de cervelle dans toutes les directions. Toutes les créatures situées dans un rayon de 4 mètres doivent réussir un test d'Agilité sous peine de subir un malus de –10 en CC et en CT à leur tour de jeu suivant à cause des morceaux qui ont fini leur course sur leurs yeux ou leur viseur.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais l'attaque est si puissante qu'elle a traversé la victime et risque d'atteindre une autre cible proche. S'il s'agissait de l'attaque d'une arme de corps à corps, l'assaillant a aussitôt droit à une nouvelle attaque (avec la même arme) contre toute autre cible qu'il peut atteindre sans se déplacer. S'il s'agissait d'une attaque à distance, l'assaillant a aussitôt droit à une autre attaque (avec la même arme) contre toute autre cible située directement derrière la cible originelle et se trouvant toujours à portée de son arme.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "impact",
+    "location": "bras",
+    "name": "Effets critiques d'impact (bras)",
+    "results": [
+      {
+        "name": "1",
+        "description": "L'attaque engourdit le bras de la cible, qui lâche ce qu'elle a dans la main.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "Le coup laisse une douloureuse ecchymose. La cible encaisse 1 niveau de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'impact inflige une douleur insoutenable. La cible encaisse 1 niveau de Fatigue et lâche ce qu'elle a dans la main.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "L'impact fait tituber la cible de douleur. Elle est assommée pendant 1 round. Le membre est inutilisable pendant 1d5 rounds et la cible encaisse 1 niveau de Fatigue.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "Les muscles et les os sont mis à rude épreuve, car l'attaque écrase le bras. La CC et la CT de la cible sont réduites de moitié (arrondir à l'entier inférieur) pendant 1d10 rounds. De plus, la cible encaisse 1 niveau de Fatigue et doit réussir un test d'Agilité sous peine de lâcher ce qu'elle a dans la main.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "L'attaque pulvérise la main de la cible, écrasant et brisant 1d5 doigts. La victime encaisse 1 niveau de Fatigue et doit aussitôt réussir un test d'Endurance sous peine de perdre l'usage de sa main.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "Produisant un claquement sonore, le bras se casse et pend mollement au côté de la cible, dégoulinant de sang. Le membre est brisé et on considère que la cible n'a qu'un bras jusqu'à ce que la fracture soit résorbée. Elle encaisse 2 niveaux de Fatigue.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "La force de l'impact arrache le bras juste sous l'épaule, répandant une pluie de sang à terre. La cible doit immédiatement réussir un test d'Endurance sous peine de mourir suite au choc. En cas de succès, elle est tout de même assommée pendant 1d10 rounds, encaisse 1d5 niveaux de Fatigue et souffre d'une Hémorragie. Elle n'a désormais plus qu'un bras.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "Dans une pluie de sang et de morceaux de chair sanguinolents, le bras de la victime est arraché de son corps. Poussant des hurlements incohérents, elle se tord de douleur pendant quelques secondes avant de s'effondrer au sol en poussant un dernier soupir.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais en étant arraché, le bras explose sous la force de l'impact et des morceaux d'os, de vêtements et d'armure sont projetés comme de la mitraille. Quiconque se trouve dans un rayon de 2 mètres de subit 1d10–8 points de dégâts d'impact.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "impact",
+    "location": "corps",
+    "name": "Effets critiques d'impact (corps)",
+    "results": [
+      {
+        "name": "1",
+        "description": "L'impact coupe le souffle à la cible. Elle ne peut entreprendre qu'une demi-action à son prochain tour de jeu.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "L'impact vide les poumons de la cible, qui encaisse 1 niveau de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'attaque brise une côte à la cible et lui inflige 2 niveaux de Fatigue. Elle est également assommée pendant 1 round.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "Le coup enfonce la poitrine de la cible et lui brise les côtes. Elle encaisse 1d5 niveaux de Fatigue et est assommée pendant 1 round.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "Un coup puissant à la poitrine coupe la respiration de la cible qui se recroqueville momentanément, prostrée, versant des larmes de douleur. Elle encaisse 1d5 niveaux de Fatigue et est assommée pendant 2 rounds.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "L'attaque envoie la cible bouler au sol. La victime vole de 1d5 mètres dans la direction opposée à celle de son assaillant et tombe à terre (si elle heurte un mur ou un autre objet solide, elle s'arrête avant). Elle encaisse 1d5 niveaux de Fatigue et est assommée pendant 2 rounds.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "Produisant un craquement sonore, 1d5 côtes de la cible se brisent. La cible peut rester couchée et attendre de recevoir des soins (un test de Medicae réussi permet de remettre les côtes en place) ou continuer d'agir, mais dans ce cas, elle a 20 % de risques par round de voir une côte brisée perforer un organe vital, la tuant sur le coup. Elle encaisse également 1d5 niveaux de Fatigue.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "La force de l'attaque fait éclater plusieurs des organes de la cible et la jette à terre, haletante et souffrant le martyre. Elle subit une Hémorragie et encaisse 1d10 niveaux de Fatigue.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "La cible se cambre sous la force du coup, rejetant la tête arrière et vomissant un jet de sang avant de s'effondrer, raide morte.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais la cible est projetée à 1d10 mètres de l'attaque. Quiconque se trouve sur son chemin doit réussir un jet d'Agilité sous peine d'être jeté à terre.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "impact",
+    "location": "jambe",
+    "name": "Effets critiques d'impact (jambe)",
+    "results": [
+      {
+        "name": "1",
+        "description": "Un coup léger à la jambe coupe le souffle de la victime, qui encaisse 1 niveau de Fatigue.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "L'impact écorche la jambe de la cible, la ralentissant un instant. Tous ses déplacements sont réduits de moitié pendant 1 round et elle encaisse 1 niveau de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "Le choc brise la jambe de la cible, l'assommant pendant 1 round et réduisant ses déplacements de moitié pendant 1d5 rounds. Elle encaisse aussi 1 niveau de Fatigue.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "Le rude coup infligé à la jambe envoie d'insoutenables vagues de douleur dans le corps de la cible. Celle-ci encaisse 1d5 niveaux de Fatigue et réduit ses déplacements de moitié pendant 1d5 rounds.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "Un puissant impact provoque des microfractures dans les os de la cible, lui infligeant de terribles douleurs. L'Agilité de la cible est réduite de –20 pendant 1d10 rounds et elle encaisse 1d5 niveaux de Fatigue.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "Plusieurs des os minuscules des pieds de la cible cassent dans un craquement de brindilles. La victime doit immédiatement réussir un test d'Endurance sous peine de perdre à jamais l'usage de son pied. En cas de succès, ses déplacements sont réduits de moitié jusqu'à ce qu'elle bénéficie de soins. Elle encaisse 2 niveaux de Fatigue.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "Avec un bruit de craquement effrayant, la jambe est brisée et la cible tombe à terre en gémissant de douleur. Tant que le membre n'est pas soigné, on considère que la cible n'a qu'une jambe. Elle encaisse 2 niveaux de Fatigue.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "La force du coup emporte la partie inférieure de la jambe dans un éclaboussement de sang. La cible doit immédiatement réussir un test d'Endurance sous peine de mourir suite au choc. En cas de succès, elle est assommée pendant 1d10 rounds, encaisse 1d5 niveaux de Fatigue et subit une Hémorragie. Elle n'a plus qu'une jambe.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "Le coup arrache les muscles de la jambe, faisant jaillir du sang dans toutes les directions. Tandis que la cible tente en vain de stopper l'affreuse hémorragie, elle tombe à terre et meurt dans la mare de sang qui s'étend.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais la cible meurt dans de telles souffrances que ses cris pitoyables couvrent toute conversation dans un rayon de 2d10 mètres pendant le reste du round.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "penetrant",
+    "location": "tete",
+    "name": "Effets critiques pénétrants (tête)",
+    "results": [
+      {
+        "name": "1",
+        "description": "L'attaque arrache la peau du visage de la cible, qui encaisse 1 niveau de Fatigue. Si la victime porte un casque, cet effet ne s'applique pas.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "L'attaque fend le cuir chevelu de la cible, qui se met aussitôt à saigner abondamment. À cause du sang qui lui coule dans les yeux, elle subit un malus de –10 en CC et en CT pendant les 1d10 prochains tours de jeu. Elle encaisse également 1 niveau de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'attaque arrache le casque de la cible. Si elle n'en portait pas, elle perd une oreille et encaisse 2 niveaux de Fatigue.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "L'attaque crève l'un des yeux de la cible, lui infligeant 1d5 niveaux de Fatigue et l'assommant pendant 1 round.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "L'attaque ouvre le visage de la cible, l'assommant pendant 1d5 rounds et lui infligeant 1d5 niveaux de Fatigue. Si elle portait un casque, celui-ci est arraché.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "Le coup atteint violemment la cible au visage et lui en emporte une partie. Lancez 1d10 pour savoir ce que la cible a perdu. 1–3 : œil (cf. Effets permanents, page 201) ; 4–7 : nez (Sociabilité à jamais réduite de moitié) ; 8–10 : oreille (Sociabilité à jamais réduite de 1d10, le personnage peut toujours cacher sa blessure avec ses cheveux). Par ailleurs, la cible souffre d'une Hémorragie et encaisse 1d5 niveaux de Fatigue.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "Dans une explosion de chair et de dents, l'attaque arrache la majeure partie du visage de la cible. Celle-ci est à tout jamais aveugle et sa Sociabilité est réduite de 1d10 points. Désormais, la victime aura également du mal à parler autrement qu'en marmonnant. De plus, elle subit une Hémorragie et encaisse 1d10 niveaux de Fatigue.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "Le coup fend le côté du crâne de la cible, faisant jaillir l'œil de l'orbite et couler sa cervelle sur sa joue comme de la confiture. Elle meurt avant d'avoir touché le sol.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "Avec un son d'éponge mouillée déchirée en deux, la tête de la cible se détache de son corps et est propulsée dans les airs. Elle atterrit, intacte, à 2d10 mètres, en produisant un bruit sourd et humide. La cible est tuée sur le coup.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais une fontaine de sang jaillit du cou de la victime, aspergeant tous les individus proches et les forçant à effectuer un test d'Agilité. Ceux qui échouent subissent un malus de –10 en CC et en CT à leur tour de jeu suivant à cause du sang qui se dépose sur leurs yeux ou leur viseur.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "penetrant",
+    "location": "bras",
+    "name": "Effets critiques pénétrants (bras)",
+    "results": [
+      {
+        "name": "1",
+        "description": "Le coup arrache tout objet non fixé que la cible avait en main.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "Une profonde entaille force la cible à lâcher ce qu'elle tenait et lui inflige 1 niveau de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'attaque coupante fait hurler la cible de douleur. Elle encaisse 2 niveaux de Fatigue et lâche ce qu'elle tenait dans cette main.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "L'attaque arrache la peau, remplissant l'air d'une éclaboussure de sang et des hurlements de la victime. Elle tombe à terre à cause de la douleur atroce et encaisse 2 niveaux de Fatigue. Le membre est inutilisable pendant 1d10 rounds.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "Le coup creuse un sillon sanglant à l'aspect particulièrement douloureux dans le bras de la cible. Celle-ci encaisse 1d5 niveaux de Fatigue et vomit à cause de la souffrance. Elle lâche ce qu'elle tenait et le membre est inutilisable jusqu'à ce qu'elle bénéficie de soins. Elle souffre également d'une Hémorragie.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "Le coup déchire la chair et les muscles de la main de la cible, coupant 1d5 doigts au passage (un 5 signifie que le pouce est lui aussi arraché). Elle encaisse 3 niveaux de Fatigue et doit aussitôt réussir un test d'Endurance sous peine de perdre l'usage de sa main.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "L'attaque arrache la peau, les muscles, les tendons et les os, transformant le bras de la cible en une masse inutilisable et lui infligeant 1d5 niveaux de Fatigue. Le membre est brisé et on considère que la cible n'a qu'un bras tant que la fracture n'est pas résorbée. De plus, de nombreuses veines sont sectionnées et la cible souffre désormais d'une Hémorragie.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "Produisant toute une série de bruits humides et curieux, le bras se détache du corps, s'envolant en traçant dans les airs un arc de cercle écarlate. La cible doit aussitôt réussir un test d'Endurance sous peine de mourir à cause du choc. En cas de succès, elle est assommée pendant 1d10 rounds et subit une Hémorragie. Elle encaisse également 1d10 niveaux de Fatigue et n'a désormais plus qu'un bras.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "L'attaque entaille le bras, le transperce et atteint le torse, inondant le sol de sang et tuant la cible sur le coup.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus. Cependant, tandis que le bras tombe à terre, les doigts de la cible sont agités de spasmes incontrôlables, pressant la détente de l'arme qu'elle tient (le cas échéant). Si la victime tenait une arme à distance, elle a 5 % de risques de toucher une cible choisie au hasard dans un rayon de 2d10 mètres. Si c'est le cas, on résout les dégâts comme pour une attaque normale.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "penetrant",
+    "location": "corps",
+    "name": "Effets critiques pénétrants (corps)",
+    "results": [
+      {
+        "name": "1",
+        "description": "Si la cible ne porte pas d'armure sur cette localisation, elle encaisse 1 niveau de Fatigue en raison de la douloureuse entaille infligée. Si elle porte une armure, aucun effet ne s'applique. Ouf !",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "L'attaque endommage l'armure de la cible, réduisant de 1 ses PA. De plus, la victime encaisse 1 niveau de Fatigue. Si elle n'a pas d'armure, elle est également assommée pendant 1 round.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'attaque arrache une bonne section de peau du torse de la cible et la douleur lui coupe le souffle. Elle est assommée pendant 1 round et encaisse 2 niveaux de Fatigue.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "Un torrent de sang coule des profondes entailles créées, rendant le sol glissant. Tous les personnages qui tentent de traverser cette mare de sang doivent réussir un test d'Agilité sous peine de tomber à terre. La cible encaisse 1d5 niveaux de Fatigue.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "Le coup a ouvert une large plaie dans le torse de la cible, la pliant en deux de douleur. Elle encaisse 1d5 niveaux de Fatigue.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "La puissance de l'attaque arrache un bon morceau de chair à la cible et la jette au sol, agrippée à sa blessure sanglante et hurlant de douleur. Elle est à terre et encaisse 1d10 niveaux de Fatigue.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "L'attaque ouvre l'abdomen de la cible, causant une Hémorragie considérable et exposant une partie de ses entrailles. La victime peut utiliser un bras pour retenir ses tripes (jusqu'à ce qu'un médecin les empêche de sortir en réussissant un test de Medicae) ou combattre malgré tout, en ayant 20 % de risques par tour de jeu de voir son ventre s'ouvrir, répandant ses intestins à terre et infligeant 2d10 dégâts supplémentaires. Dans tous les cas, la cible encaisse 1d5 niveaux de Fatigue et souffre désormais d'une Hémorragie.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "Produisant un bruit de déchirement ignoble, la peau de la poitrine de la cible est arrachée, révélant un amas écarlate de muscles déchiquetés. Elle doit réussir un test d'Endurance sous peine de mourir. En cas de succès, sa valeur d'Endurance est à jamais réduite de 1d10 points, elle encaisse 1d10 niveaux de Fatigue et souffre désormais d'une Hémorragie.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "Le coup puissant ouvre la cible de la gorge à l'aine, révélant ses organes internes et les répandant à terre devant elle. La victime est morte.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais la cible et les environs sont aspergés de sang. Pendant le reste du combat, quiconque se trouve dans un rayon de 4 mètres du cadavre doit réussir un test d'Agilité sous peine de tomber.",
+        "range": "10"
+      }
+    ]
+  },
+  {
+    "damageType": "penetrant",
+    "location": "jambe",
+    "name": "Effets critiques pénétrants (jambe)",
+    "results": [
+      {
+        "name": "1",
+        "description": "L'attaque projette le membre en arrière, le tordant douloureusement et infligeant 1 niveau de Fatigue.",
+        "range": "1"
+      },
+      {
+        "name": "2",
+        "description": "Le genou de la cible est ouvert. Elle doit réussir un test d'Agilité sous peine de tomber à terre. Quoi qu'il en soit, elle encaisse 1 niveau de Fatigue.",
+        "range": "2"
+      },
+      {
+        "name": "3",
+        "description": "L'attaque arrache un morceau de chair à la jambe et l'entaille saigne abondamment. La cible encaisse 1 niveau de Fatigue et souffre d'une Hémorragie.",
+        "range": "3"
+      },
+      {
+        "name": "4",
+        "description": "L'attaque arrache la rotule de la jambe et la cible s'effondre. Elle se déplace à la moitié de sa vitesse habituelle jusqu'à ce qu'elle reçoive des soins. De plus, elle encaisse 2 niveaux de Fatigue.",
+        "range": "4"
+      },
+      {
+        "name": "5",
+        "description": "Dans une éclaboussure de sang, la jambe de la cible est ouverte, exposant les os, les tendons et les muscles. Elle encaisse 1d5 niveaux de Fatigue et ses déplacements sont réduits de moitié pendant 1d10 heures.",
+        "range": "5"
+      },
+      {
+        "name": "6",
+        "description": "Le coup tranche quelques centimètres du bout du pied de la cible. Celle-ci doit réussir aussitôt un test d'Endurance sous peine de perdre à jamais l'usage de son pied. En cas de succès, ses déplacements sont réduits de moitié jusqu'à ce qu'elle reçoive des soins. Dans tous les cas, la cible encaisse 1d5 niveaux de Fatigue.",
+        "range": "6"
+      },
+      {
+        "name": "7",
+        "description": "Le coup pénètre profondément dans la jambe, frottant l'os et déchirant les ligaments. Le membre est brisé et la cible est considérée comme n'ayant qu'une jambe jusqu'à ce que la fracture soit résorbée. De plus, la blessure est si grave que la cible souffre désormais d'une Hémorragie. Elle encaisse également 1d10 niveaux de Fatigue.",
+        "range": "7"
+      },
+      {
+        "name": "8",
+        "description": "La jambe de la cible est tranchée d'un coup et ses fluides vitaux s'épanchent au sol. La cible doit aussitôt réussir un test d'Endurance sous peine de mourir à cause du choc. En cas de succès, elle est assommée pendant 1d10 rounds, encaisse 1d10 niveaux de Fatigue et souffre d'une Hémorragie. Elle n'a désormais plus qu'une jambe.",
+        "range": "8"
+      },
+      {
+        "name": "9",
+        "description": "Produisant un bruit sourd, la jambe est coupée à hauteur de la hanche. La cible s'effondre en hurlant de douleur avant de mourir quelques instants plus tard.",
+        "range": "9"
+      },
+      {
+        "name": "10+",
+        "description": "Comme ci-dessus, mais le flot de sang est si important que pour le reste du combat, quiconque entreprend une action de course ou de charge dans un rayon de 6 mètres du cadavre doit réussir un test d'Agilité sous peine de tomber.",
+        "range": "10"
+      }
+    ]
+  }
+]

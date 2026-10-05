@@ -9,7 +9,8 @@ import { DH } from "./config.mjs";
  * la main dans `packs/`.
  * Chaque entrée précise le type de document du compendium et comment construire ses documents :
  * directement depuis un fichier JSON pour les Items, ou assemblés depuis plusieurs fichiers pour
- * les tables aléatoires des pouvoirs psychiques (cf. `buildPsychicTables`).
+ * les tables aléatoires des pouvoirs psychiques et des effets critiques (cf. `buildPsychicTables`,
+ * `buildCriticalTables`).
  */
 const SEEDS = [
   { key: "talents", label: "DH.CompendiumSeed.Talents", type: "Item", build: () => loadPackFile("talents.json") },
@@ -19,7 +20,8 @@ const SEEDS = [
   { key: "gear", label: "DH.CompendiumSeed.Gear", type: "Item", build: () => loadPackFile("gear.json") },
   { key: "armours", label: "DH.CompendiumSeed.Armours", type: "Item", build: () => loadPackFile("armours.json") },
   { key: "psychic-powers", label: "DH.CompendiumSeed.PsychicPowers", type: "Item", build: () => loadPackFile("psychic-powers.json") },
-  { key: "psychic-tables", label: "DH.CompendiumSeed.PsychicTables", type: "RollTable", build: buildPsychicTables }
+  { key: "psychic-tables", label: "DH.CompendiumSeed.PsychicTables", type: "RollTable", build: buildPsychicTables },
+  { key: "critical-tables", label: "DH.CompendiumSeed.CriticalTables", type: "RollTable", build: buildCriticalTables }
 ];
 
 /**
@@ -87,6 +89,35 @@ async function buildPsychicTables() {
     });
   }
   return tables;
+}
+
+/**
+ * Tables d'effets critiques (Tables 7-11 à 7-26) : une RollTable par type de dégâts ×
+ * localisation, depuis `packs/critical-effects.json` (`{ damageType, location, name, results }`,
+ * chaque résultat `{ name, description, range }` où "10+" couvre la plage 10). Formule 1d10 pour
+ * un tirage rapide ; en jeu, le MJ consulte normalement l'entrée correspondant aux dégâts
+ * critiques réels. Le drapeau `tableKey` (`critical.<type>.<localisation>`) identifie chaque
+ * table indépendamment de son nom affiché, en vue d'une éventuelle automatisation.
+ */
+async function buildCriticalTables() {
+  const tables = await loadPackFile("critical-effects.json");
+  return tables.map(table => ({
+    name: table.name,
+    formula: "1d10",
+    replacement: true,
+    displayRoll: true,
+    flags: { [game.system.id]: { tableKey: `critical.${table.damageType}.${table.location}` } },
+    results: table.results.map(entry => {
+      const range = parseRange(entry.range);
+      return {
+        type: CONST.TABLE_RESULT_TYPES.TEXT,
+        name: entry.name,
+        description: entry.description,
+        range,
+        weight: range[1] - range[0] + 1
+      };
+    })
+  }));
 }
 
 function parseRange(range) {

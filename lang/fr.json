@@ -340,6 +340,7 @@
       "Armours": "Armures",
       "PsychicPowers": "Pouvoirs psychiques",
       "PsychicTables": "Tables psychiques",
+      "CriticalTables": "Effets critiques",
       "Error": "Dark Heresy V1 : échec du pré-remplissage du compendium « {name} » (voir la console)."
     }
   },
