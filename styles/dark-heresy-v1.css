@@ -651,6 +651,12 @@
   color: #1b1b1b;
 }
 
+/* Absorption dérivée (PA + BE), affichée sous le champ de PA. */
+.dark-heresy-v1.sheet.actor .armour-soak {
+  font-size: 0.75rem;
+  cursor: help;
+}
+
 .dark-heresy-v1.sheet.actor .armour-tete { grid-column: 2; grid-row: 1; }
 .dark-heresy-v1.sheet.actor .armour-brasDroit { grid-column: 1; grid-row: 2; }
 .dark-heresy-v1.sheet.actor .armour-corps { grid-column: 2; grid-row: 2; }

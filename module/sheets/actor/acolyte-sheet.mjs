@@ -186,11 +186,15 @@ export default class AcolyteSheet extends HandlebarsApplicationMixin(ActorSheetV
     context.carriedWeight = this.actor.system.resources.carriedWeight;
     context.carryCapacity = this.actor.system.resources.carryCapacity;
 
+    // Absorption (réduction des dégâts) par localisation : PA + Bonus d'Endurance (Surnaturel
+    // compris), calculée à l'affichage, non stockée.
+    const toughnessBonus = this.actor.system.characteristics.endurance.bonus ?? 0;
     context.armourLocations = Object.entries(DH.armourLocations).map(([key, config]) => ({
       key,
       label: game.i18n.localize(config.label),
       rangeLabel: config.rangeLabel,
-      value: this.actor.system.armour[key].value
+      value: this.actor.system.armour[key].value,
+      soak: this.actor.system.armour[key].value + toughnessBonus
     }));
 
     // Onglet Pouvoirs psychiques (spec §7) : Niveau Psy + profil de chaque pouvoir, édité en

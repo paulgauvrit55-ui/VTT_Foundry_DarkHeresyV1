@@ -240,7 +240,9 @@
     "Armour": {
       "Title": "Armure",
       "Category": "Catégorie",
-      "PA": "PA"
+      "PA": "PA",
+      "Soak": "Absorption",
+      "SoakHint": "Réduction des dégâts sur cette localisation : PA + Bonus d'Endurance"
     },
     "ArmourCategory": {
       "Primitive": "Primitive",

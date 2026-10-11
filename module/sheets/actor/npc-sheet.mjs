@@ -167,11 +167,15 @@ export default class NpcSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.carriedWeight = this.actor.system.resources.carriedWeight;
     context.carryCapacity = this.actor.system.resources.carryCapacity;
 
+    // Absorption (réduction des dégâts) par localisation : PA + Bonus d'Endurance (Surnaturel
+    // compris), calculée à l'affichage, non stockée.
+    const toughnessBonus = this.actor.system.characteristics.endurance.bonus ?? 0;
     context.armourLocations = Object.entries(DH.armourLocations).map(([key, config]) => ({
       key,
       label: game.i18n.localize(config.label),
       rangeLabel: config.rangeLabel,
-      value: this.actor.system.armour[key].value
+      value: this.actor.system.armour[key].value,
+      soak: this.actor.system.armour[key].value + toughnessBonus
     }));
 
     // Pouvoirs psychiques : même section que l'onglet éponyme de l'acolyte, toujours affichée

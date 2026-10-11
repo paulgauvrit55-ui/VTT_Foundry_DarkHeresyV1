@@ -419,6 +419,7 @@
               <label>{{location.label}}</label>
               <span class="armour-range">{{location.rangeLabel}}</span>
               <input type="number" name="system.armour.{{location.key}}.value" value="{{location.value}}">
+              <span class="armour-soak" title="{{localize 'DH.Armour.SoakHint'}}">{{localize "DH.Armour.Soak"}} <strong>{{location.soak}}</strong></span>
             </div>
           {{/each}}
         </div>
